@@ -59,7 +59,7 @@ public class VentanaPrincipal {
 		panel.setToolTipText("");
 		panel.setForeground(Color.MAGENTA);
 		panel.setBorder(new EtchedBorder(EtchedBorder.LOWERED, Color.PINK, Color.RED));
-		panel.setBounds(194, 110, 194, 165);
+		panel.setBounds(194, 110, 194, 149);
 		frmAsd.getContentPane().add(panel);
 		
 		JButton btnCargarCuentasEmpresa = new JButton("Cargar cuentas empresa");

@@ -1,26 +1,35 @@
 package vista;
 
+import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
+import javax.swing.JList;
 import javax.swing.JButton;
-import java.awt.BorderLayout;
+import javax.swing.JTextField;
+import javax.swing.border.BevelBorder;
+import javax.swing.border.CompoundBorder;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import javax.swing.JPanel;
-import javax.swing.border.LineBorder;
+import javax.swing.JTextPane;
 import java.awt.Color;
-import java.awt.FlowLayout;
-import javax.swing.border.EtchedBorder;
-import javax.swing.JToolBar;
-import org.eclipse.wb.swing.FocusTraversalOnArray;
-import java.awt.Component;
-import javax.swing.JTextArea;
 import java.awt.Font;
+import javax.swing.JRadioButton;
+import javax.swing.JScrollPane;
+import javax.swing.Box;
+import javax.swing.JPopupMenu;
+import java.awt.Component;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
-public class VentanaPrincipal {
+public class VentanaPrincipal extends JFrame {
 
-	private JFrame frmAsd;
+	private JPanel contentPane;
 
 	/**
 	 * Launch the application.
@@ -29,8 +38,8 @@ public class VentanaPrincipal {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					VentanaPrincipal window = new VentanaPrincipal();
-					window.frmAsd.setVisible(true);
+					VentanaPrincipal frame = new VentanaPrincipal();
+					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -39,70 +48,65 @@ public class VentanaPrincipal {
 	}
 
 	/**
-	 * Create the application.
+	 * Create the frame.
 	 */
 	public VentanaPrincipal() {
-		initialize();
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setForeground(Color.WHITE);
+		contentPane.setBorder(null);
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JTextPane txtpnSssss = new JTextPane();
+		txtpnSssss.setFont(new Font("SimSun", Font.BOLD, 20));
+		txtpnSssss.setToolTipText("");
+		txtpnSssss.setForeground(Color.WHITE);
+		txtpnSssss.setBackground(Color.BLUE);
+		txtpnSssss.setText("Bienvenido a \u00BFD\u00F3nde Invierto?");
+		txtpnSssss.setBounds(52, 0, 335, 37);
+		contentPane.add(txtpnSssss);
+		
+		JButton btnCargarCuentaEmpresa = new JButton("Cuenta");
+		btnCargarCuentaEmpresa.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnCargarCuentaEmpresa.setBounds(23, 82, 180, 40);
+		contentPane.add(btnCargarCuentaEmpresa);
+		
+		JButton btnIndicador = new JButton("Indicador");
+		btnIndicador.setBounds(213, 82, 180, 40);
+		contentPane.add(btnIndicador);
+		
+		JButton btnMetodologa = new JButton("Metodolog\u00EDa");
+		btnMetodologa.setBounds(23, 143, 180, 40);
+		contentPane.add(btnMetodologa);
+		
+		JButton btnVisualizargrficoComparativo = new JButton("Visualizar Gr\u00E1fico Comparativo");
+		btnVisualizargrficoComparativo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnVisualizargrficoComparativo.setBounds(217, 143, 180, 40);
+		contentPane.add(btnVisualizargrficoComparativo);
 	}
-
-	/**
-	 * Initialize the contents of the frame.
-	 */
-	private void initialize() {
-		frmAsd = new JFrame();
-		frmAsd.setTitle("\u00BFDonde invierto?");
-		frmAsd.getContentPane().setEnabled(false);
-		frmAsd.getContentPane().setLayout(null);
-		
-		JPanel panel = new JPanel();
-		FlowLayout flowLayout = (FlowLayout) panel.getLayout();
-		panel.setToolTipText("");
-		panel.setForeground(Color.MAGENTA);
-		panel.setBorder(new EtchedBorder(EtchedBorder.LOWERED, Color.PINK, Color.RED));
-		panel.setBounds(194, 110, 194, 149);
-		frmAsd.getContentPane().add(panel);
-		
-		JButton btnCargarCuentasEmpresa = new JButton("Cargar cuentas empresa");
-		panel.add(btnCargarCuentasEmpresa);
-		btnCargarCuentasEmpresa.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+	private static void addPopup(Component component, final JPopupMenu popup) {
+		component.addMouseListener(new MouseAdapter() {
+			public void mousePressed(MouseEvent e) {
+				if (e.isPopupTrigger()) {
+					showMenu(e);
+				}
+			}
+			public void mouseReleased(MouseEvent e) {
+				if (e.isPopupTrigger()) {
+					showMenu(e);
+				}
+			}
+			private void showMenu(MouseEvent e) {
+				popup.show(e.getComponent(), e.getX(), e.getY());
 			}
 		});
-		
-		JButton btnGenerarIndicador = new JButton("Generar indicador");
-		panel.add(btnGenerarIndicador);
-		
-		JButton btnCargarMetodologia = new JButton("Cargar metodologia");
-		btnCargarMetodologia.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		panel.add(btnCargarMetodologia);
-		
-		JButton btnGenerarGraficoComparativo = new JButton("Generar grafico comparativo");
-		panel.add(btnGenerarGraficoComparativo);
-		
-		JButton btnConsultarValoresIndicador = new JButton("Consultar valores indicador");
-		panel.add(btnConsultarValoresIndicador);
-		panel.setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{btnCargarCuentasEmpresa, btnGenerarIndicador, btnCargarMetodologia, btnGenerarGraficoComparativo, btnConsultarValoresIndicador}));
-		
-		JTextArea txtrdondeInvierto = new JTextArea();
-		txtrdondeInvierto.setTabSize(10);
-		txtrdondeInvierto.setFont(new Font("Monotype Corsiva", Font.PLAIN, 24));
-		txtrdondeInvierto.setForeground(Color.MAGENTA);
-		txtrdondeInvierto.setText("Bienvenido a \u00BFDonde invierto?");
-		txtrdondeInvierto.setBounds(31, 26, 464, 32);
-		frmAsd.getContentPane().add(txtrdondeInvierto);
-		
-		JTextArea txtrElijaUnaOpcion = new JTextArea();
-		txtrElijaUnaOpcion.setText("Por favor, elija una opci\u00F3n");
-		txtrElijaUnaOpcion.setBounds(181, 77, 220, 22);
-		frmAsd.getContentPane().add(txtrElijaUnaOpcion);
-		btnCargarMetodologia.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		frmAsd.setBounds(100, 100, 595, 387);
-		frmAsd.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 }

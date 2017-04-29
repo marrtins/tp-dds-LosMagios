@@ -9,10 +9,13 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JTextField;
+import java.awt.Color;
 
 public class VentanaCuenta extends JFrame {
 
 	private JPanel contentPane;
+	private JTextField txtPorFavorSeleccione;
 
 	/**
 	 * Launch the application.
@@ -58,5 +61,17 @@ public class VentanaCuenta extends JFrame {
 		});
 		btnConsultarCuenta.setBounds(205, 74, 166, 46);
 		contentPane.add(btnConsultarCuenta);
+		
+		txtPorFavorSeleccione = new JTextField();
+		txtPorFavorSeleccione.setForeground(Color.WHITE);
+		txtPorFavorSeleccione.setBackground(Color.DARK_GRAY);
+		txtPorFavorSeleccione.setText("Por favor seleccione una opci\u00F3n:");
+		txtPorFavorSeleccione.setBounds(10, 21, 166, 29);
+		contentPane.add(txtPorFavorSeleccione);
+		txtPorFavorSeleccione.setColumns(10);
+		
+		JButton btnFiltrar = new JButton("Filtrar valores de Cuentas");
+		btnFiltrar.setBounds(118, 144, 183, 46);
+		contentPane.add(btnFiltrar);
 	}
 }

@@ -5,50 +5,35 @@ import java.util.ArrayList;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonParser;
+import java.io.Serializable;
 
 import clases.Periodo;
-public class Empresa {
-	String nombreEmpresa;
-	static ArrayList<Periodo> periodos = new ArrayList<Periodo>();
-	
-	
-		
-	
-	public Empresa(String nombreEmpresa,Periodo unPeriodo) {
-		super();
-		this.nombreEmpresa = nombreEmpresa;
-		this.agregarPeriodo(unPeriodo);
+
+public class Empresa implements Serializable {
+
+	private int id;
+	private String nombre;
+
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 
-	
-	public void visualizarGrafico(Periodo unPeriodo){
-		//TODO: implementar mas adelante
-	}
-	
-	
-	
-	//GETTERS & SETTERS
-	public void agregarPeriodo(Periodo unPeriodo){
-		periodos.add(unPeriodo);
-	}
-	public int caca(){
-		return 1;
-	}
-	public String getNombreEmpresa() {
-		return nombreEmpresa;
-	}
-	public void setNombreEmpresa(String nombreEmpresa) {
-		this.nombreEmpresa = nombreEmpresa;
-	}
-	public static ArrayList<Periodo> getPeriodos() {
-		return periodos;
-	}
-	public static void setPeriodos(ArrayList<Periodo> periodos) {
-		Empresa.periodos = periodos;
-	}
 
-	
-
-
-	
 }
+
+
+
+
+
+
+
+

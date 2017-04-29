@@ -8,6 +8,10 @@ public class Periodo {
 	static ArrayList<Indicador> indicadores = new ArrayList<Indicador>();
 	
 	
+	public Periodo(int anio) {
+		super();
+		this.anio = anio;
+	}
 	public void agregarIndicador(Indicador unIndicador){
 		indicadores.add(unIndicador);
 	}

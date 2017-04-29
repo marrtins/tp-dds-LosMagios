@@ -3,7 +3,7 @@ package clases;
 import clases.Periodo;
 
 public class Cuenta extends Dato {
-	Empresa empresaAsociada = new Empresa();
+	Empresa empresaAsociada = new Empresa(nombre, null);
 	
 	
 	public Cuenta(Empresa unaEmpresaAsociada, int unValor,Periodo unPeriodo, String unNombre) {

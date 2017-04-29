@@ -71,6 +71,8 @@ public class VentanaPrincipal extends JFrame {
 		JButton btnCargarCuentaEmpresa = new JButton("Cuenta");
 		btnCargarCuentaEmpresa.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				VentanaCuenta frameVentanaCuenta = new VentanaCuenta();
+				frameVentanaCuenta.setVisible(true);
 			}
 		});
 		btnCargarCuentaEmpresa.setBounds(23, 82, 180, 40);
@@ -91,6 +93,14 @@ public class VentanaPrincipal extends JFrame {
 		});
 		btnVisualizargrficoComparativo.setBounds(217, 143, 180, 40);
 		contentPane.add(btnVisualizargrficoComparativo);
+		
+		JButton btnVerDatosDe = new JButton("Ver datos de empresas");
+		btnVerDatosDe.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnVerDatosDe.setBounds(128, 202, 180, 37);
+		contentPane.add(btnVerDatosDe);
 	}
 	private static void addPopup(Component component, final JPopupMenu popup) {
 		component.addMouseListener(new MouseAdapter() {

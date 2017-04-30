@@ -1,17 +1,23 @@
 [
 		{
 			"id":0,
-			"nombreCuenta": "EsITDA",
-			"valorCuenta":100
+			"nombreCuenta": "EITsDA",
+			"valorCuenta":100,
+			"empresaAsociada":"facebook",
+			"periodoDeCuenta":2010
 		},
 		{
 			"id":2,
 			"nombreCuenta": "FDS",
-			"valorCuenta":100
+			"valorCuenta":230,
+			"empresaAsociada":"facebook",
+			"periodoDeCuenta":2011
 		},
 		{
 			"id":3,
 			"nombreCuenta": "free cash flow",
-			"valorCuenta":100
+			"valorCuenta":100,
+			"empresaAsociada":"Google",
+			"periodoDeCuenta":2017
 		}
 ]

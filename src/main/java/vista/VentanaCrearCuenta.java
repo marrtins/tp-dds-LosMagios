@@ -101,13 +101,13 @@ public class VentanaCrearCuenta extends JFrame {
 		lstEmpresas.setBounds(34, 24, 129, 150);
 		getContentPane().add(lstEmpresas);
 		
-		DAOJsonEmpresa daoe = new DAOJsonEmpresa();
+		/*DAOJsonEmpresa daoe = new DAOJsonEmpresa();
 		daoe.setFilePath("C:\\Users\\martin\\Git\\3-LosMagios\\bd\\empresas.json");
 		this.repoEmpresas = new RepositorioDeEmpresas(daoe);
 		empresas = repoEmpresas.getAllEmpresas();
 		list_model2.setEmpresas(empresas);
 		lstEmpresas.setModel(list_model2);
-
+*/
 		
 		
 		
@@ -156,16 +156,25 @@ public class VentanaCrearCuenta extends JFrame {
 		
 		JButton btnCrearCuenta = new JButton("Crear cuenta");
 		btnCrearCuenta.addActionListener(new ActionListener() {
+			private RepositorioDeCuentas repoCuentas;
+
 			public void actionPerformed(ActionEvent arg0) {
-			int id = cuentas.size() + 1;
-			int valor = Integer.parseInt(txtValor.getText());
-			String nombre = txtNombre.getText();
-			Object empresaAsociada = lstEmpresas.getSelectedValue();
-			Object periodoAsociado = lstPeriodo.getSelectedValue();
-			Cuenta nuevaCuenta = new Cuenta(id,nombre,valor);
-			cuentas.add(nuevaCuenta);
-			Cuenta otra = new Cuenta(10,"asd",100);
-			cuentas.add(otra);
+			this.repoCuentas = new RepositorioDeCuentas(daoc);
+			int id = 23;
+			int valor =3;
+			//String nombre = txtNombre.getText();
+			//Object empresaAsociada = lstEmpresas.getSelectedValue();
+			//Object periodoAsociado = lstPeriodo.getSelectedValue();
+			
+			/*try 
+			{
+			Cuenta nuevaCuenta = new Cuenta(10,"aswwwd",10);
+			repoCuentas.add(nuevaCuenta);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}*/
+			
 			}
 		});
 		btnCrearCuenta.setBounds(288, 198, 138, 23);

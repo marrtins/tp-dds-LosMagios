@@ -25,6 +25,7 @@ public class VentanaCuenta extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
+					
 					VentanaCuenta frame = new VentanaCuenta();
 					frame.setVisible(true);
 				} catch (Exception e) {
@@ -65,6 +66,16 @@ public class VentanaCuenta extends JFrame {
 		JButton btnConsultarCuenta = new JButton("Consultar valor de Cuentas");
 		btnConsultarCuenta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				VentanaConsultarValorDeCuenta nueva;
+				try {
+					nueva = new VentanaConsultarValorDeCuenta();
+					nueva.setVisible(true);
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				//frame.setVisible(false);
 			}
 		});
 		btnConsultarCuenta.setBounds(205, 74, 166, 46);

@@ -15,21 +15,21 @@ public class Cuenta extends Dato implements Serializable {
 	private int idCuenta;
 	private String nombreCuenta;
 	private int valorCuenta;
-	//private int periodoDeCuenta;
-	//private String empresaAsociada;
+	private int periodoDeCuenta;
+	private String empresaAsociada;
 	//private Object periodoDeCuenta;
 	//private Object empresaAsociada;
 	
 	public int getIdCuenta() {
 		return idCuenta;
 	}
-	public Cuenta(int _id,String _nombre,int _valor) {
+	public Cuenta(int _id,String _nombre,int _valor,int _periodo,String _empresa) {
 		super();
 		this.idCuenta = _id;
 		this.nombreCuenta = _nombre;
 		this.valorCuenta = _valor;
-		//this.empresaAsociada = _empresa;
-		//this.periodoDeCuenta=_periodo;
+		this.empresaAsociada = _empresa;
+		this.periodoDeCuenta=_periodo;
 	}
 	public void setIdCuenta(int idCuenta) {
 		this.idCuenta = idCuenta;
@@ -45,6 +45,18 @@ public class Cuenta extends Dato implements Serializable {
 	}
 	public void setValorCuenta(int valorCuenta) {
 		this.valorCuenta = valorCuenta;
+	}
+	public int getPeriodoDeCuenta() {
+		return periodoDeCuenta;
+	}
+	public void setPeriodoDeCuenta(int periodoDeCuenta) {
+		this.periodoDeCuenta = periodoDeCuenta;
+	}
+	public String getEmpresaAsociada() {
+		return empresaAsociada;
+	}
+	public void setEmpresaAsociada(String empresaAsociada) {
+		this.empresaAsociada = empresaAsociada;
 	}
 	
 	

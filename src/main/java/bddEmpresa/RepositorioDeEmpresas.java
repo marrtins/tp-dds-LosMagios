@@ -16,7 +16,7 @@ public class RepositorioDeEmpresas {
 		this.daoEmpresa.add(empresa);
 	}
 
-	public void delete(Empresa empresa){
+	public void delete(Empresa empresa) throws IOException{
 		this.daoEmpresa.delete(empresa);
 	}
 
@@ -25,7 +25,7 @@ public class RepositorioDeEmpresas {
 	}
 
 	
-	public void update(Empresa empresa){
+	public void update(Empresa empresa) throws IOException{
 		this.daoEmpresa.update(empresa);
 	}
 }

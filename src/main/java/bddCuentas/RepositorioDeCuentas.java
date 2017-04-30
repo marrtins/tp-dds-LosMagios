@@ -17,7 +17,7 @@ public class RepositorioDeCuentas {
 		this.daoCuenta.add(cuenta);
 	}
 	
-	public void delete(Cuenta cuenta){
+	public void delete(Cuenta cuenta) throws IOException{
 		this.daoCuenta.delete(cuenta);
 	}
 	
@@ -25,7 +25,7 @@ public class RepositorioDeCuentas {
 		return this.daoCuenta.getAllCuentas();
 	}
 	
-	public void update(Cuenta cuenta){
+	public void update(Cuenta cuenta) throws IOException{
 		this.daoCuenta.update(cuenta);
 	}
 	

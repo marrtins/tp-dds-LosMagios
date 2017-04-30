@@ -55,7 +55,16 @@ public class DAOJsonCuenta implements DAOCuenta {
 		this.writeJson(cuentaSerializada);
 	}
 	
-	public void delete(Cuenta cuenta){
+	public void delete(Cuenta cuenta) throws IOException{
+		ArrayList<Cuenta> cuentas = this.getAllCuentas();
+		
+		for(int i=0; i<cuentas.size(); i++){
+			if(cuentas.get(i).getIdCuenta()==cuenta.getIdCuenta()){
+				cuentas.remove(cuentas.get(i));
+			}
+		}
+		String cuentaSerializada = myGson.toJson(cuentas);
+		this.writeNewJson(cuentaSerializada);
 
 	}
 	
@@ -65,10 +74,17 @@ public class DAOJsonCuenta implements DAOCuenta {
 		ArrayList<Cuenta> cuentas = this.myGson.fromJson(getJson(), new TypeToken<ArrayList<Cuenta>>(){}.getType());
 		return cuentas;
 	}
-	public List
+	//public List
 	
-	public void update(Cuenta cuenta){
-
+	public void update(Cuenta cuenta) throws IOException{
+		ArrayList<Cuenta> cuentas = this.getAllCuentas();
+		for(int i=0; i<cuentas.size(); i++){
+			if(cuentas.get(i).getIdCuenta()==cuenta.getIdCuenta()){
+				cuentas.set(i, cuenta);
+			}
+		}
+		String empleadoSerializado = myGson.toJson(cuentas);
+		this.writeNewJson(empleadoSerializado);
 	}
 	
 	private String getJson() throws IOException{
@@ -84,6 +100,12 @@ public class DAOJsonCuenta implements DAOCuenta {
 	private void writeJson(String cuentaSerialized) throws IOException{
 		this.bufferToWrite = new BufferedWriter(new FileWriter(this.filePath, true));
 		this.bufferToWrite.append(cuentaSerialized);
+		this.bufferToWrite.close();
+	}
+	
+	private void writeNewJson(String cuentaSerialized) throws IOException{
+		this.bufferToWrite = new BufferedWriter(new FileWriter(this.filePath, false));
+		this.bufferToWrite.write(cuentaSerialized);
 		this.bufferToWrite.close();
 	}
 

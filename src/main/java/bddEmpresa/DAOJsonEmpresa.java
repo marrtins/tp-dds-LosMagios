@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
+
+import clases.Cuenta;
 import clases.Empresa;
 
 //import Domain.Empleado;
@@ -36,8 +38,16 @@ public class DAOJsonEmpresa implements DAOEmpresa {
 		this.writeJson(empresaSerializada);
 	}
 
-	public void delete(Empresa empresa){
-
+	public void delete(Empresa empresa) throws IOException{
+		ArrayList<Empresa> empresas = this.getAllEmpresas();
+		
+		for(int i=0; i<empresas.size(); i++){
+			if(empresas.get(i).getId()==empresa.getId()){
+				empresas.remove(empresas.get(i));
+			}
+		}
+		String empresaSerializada = myGson.toJson(empresa);
+		this.writeNewJson(empresaSerializada);
 	}
 
 	public ArrayList<Empresa> getAllEmpresas() throws IOException{
@@ -47,8 +57,15 @@ public class DAOJsonEmpresa implements DAOEmpresa {
 		return empresas;
 	}
 
-	public void update(Empresa empresa){
-
+	public void update(Empresa empresa) throws IOException{
+		ArrayList<Empresa> empresas = this.getAllEmpresas();
+		for(int i=0; i<empresas.size(); i++){
+			if(empresas.get(i).getId()==empresa.getId()){
+				empresas.set(i, empresa);
+			}
+		}
+		String empresaSerializada = myGson.toJson(empresas);
+		this.writeNewJson(empresaSerializada);
 	}
 	
 	private String getJson() throws IOException{
@@ -64,6 +81,12 @@ public class DAOJsonEmpresa implements DAOEmpresa {
 	private void writeJson(String empresaSerialized) throws IOException{
 		this.bufferToWrite = new BufferedWriter(new FileWriter(this.filePath, true));
 		this.bufferToWrite.append(empresaSerialized);
+		this.bufferToWrite.close();
+	}
+	
+	private void writeNewJson(String empresaSerialized) throws IOException{
+		this.bufferToWrite = new BufferedWriter(new FileWriter(this.filePath, false));
+		this.bufferToWrite.write(empresaSerialized);
 		this.bufferToWrite.close();
 	}
 }

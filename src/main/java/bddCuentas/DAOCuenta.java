@@ -8,8 +8,8 @@ import clases.Cuenta;
 public interface DAOCuenta {
 	
 	public void add(Cuenta cuenta) throws IOException;
-	public void delete(Cuenta cuenta);
+	public void delete(Cuenta cuenta) throws IOException;
 	public ArrayList<Cuenta> getAllCuentas() throws IOException;
-	public void update(Cuenta cuenta); 
+	public void update(Cuenta cuenta) throws IOException; 
 
 }

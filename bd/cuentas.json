@@ -1,0 +1,17 @@
+[
+		{
+			"id":0,
+			"nombreCuenta": "EsITDA",
+			"valorCuenta":100
+		},
+		{
+			"id":2,
+			"nombreCuenta": "FDS",
+			"valorCuenta":100
+		},
+		{
+			"id":3,
+			"nombreCuenta": "free cash flow",
+			"valorCuenta":100
+		}
+]

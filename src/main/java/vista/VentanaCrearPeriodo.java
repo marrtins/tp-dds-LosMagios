@@ -13,6 +13,7 @@ import javax.swing.JSpinner;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.awt.event.ActionEvent;
 
 public class VentanaCrearPeriodo extends JFrame {
@@ -57,10 +58,17 @@ public class VentanaCrearPeriodo extends JFrame {
 		JButton btnCrearPeriodo = new JButton("Crear Periodo");
 		btnCrearPeriodo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				int anio = Integer.parseInt(txtAnio.getText());
-				Periodo nuevoPeriodo = new Periodo(anio);
-				VentanaCrearCuenta ventanaCrearCuenta = new VentanaCrearCuenta();
-				ventanaCrearCuenta.setVisible(true);
+				//int anio = Integer.parseInt(txtAnio.getText());
+				//Periodo nuevoPeriodo = new Periodo(anio);
+				VentanaCrearCuenta ventanaCrearCuenta;
+				try {
+					ventanaCrearCuenta = new VentanaCrearCuenta();
+					ventanaCrearCuenta.setVisible(true);
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
 				//ventanaCrearCuenta.agregarPeriodo(nuevoPeriodo);
 				//this.cerrarVentana();
 			}

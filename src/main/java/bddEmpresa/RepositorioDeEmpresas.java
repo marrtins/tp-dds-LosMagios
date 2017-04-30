@@ -24,6 +24,7 @@ public class RepositorioDeEmpresas {
 		return this.daoEmpresa.getAllEmpresas();
 	}
 
+
 	
 	public void update(Empresa empresa){
 		this.daoEmpresa.update(empresa);

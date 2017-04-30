@@ -38,6 +38,20 @@ public class TestDAOJsonCuentas {
 			e.printStackTrace();
 		}
 	}
+	@Test
+	public void agrego(){
+		try {
+			this.cuentas = repoCuentas.getAllCuentas();
+			Cuenta nuevaCuenta = new Cuenta(10,"asd",10);
+			cuentas.add(nuevaCuenta);
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		Assert.assertEquals(1,cuentas.size());
+	}
 	
 
 }

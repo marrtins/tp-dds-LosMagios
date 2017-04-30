@@ -65,7 +65,8 @@ public class DAOJsonCuenta implements DAOCuenta {
 		ArrayList<Cuenta> cuentas = this.myGson.fromJson(getJson(), new TypeToken<ArrayList<Cuenta>>(){}.getType());
 		return cuentas;
 	}
-	public List
+	
+	
 	
 	public void update(Cuenta cuenta){
 

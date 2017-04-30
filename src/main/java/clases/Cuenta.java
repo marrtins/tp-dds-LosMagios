@@ -15,13 +15,21 @@ public class Cuenta extends Dato implements Serializable {
 	private int idCuenta;
 	private String nombreCuenta;
 	private int valorCuenta;
-	private int periodoDeCuenta;
-	private String empresaAsociada;
-	//private Periodo periodoDeCuenta;
-	//private Empresa empresaAsociada;
+	//private int periodoDeCuenta;
+	//private String empresaAsociada;
+	//private Object periodoDeCuenta;
+	//private Object empresaAsociada;
 	
 	public int getIdCuenta() {
 		return idCuenta;
+	}
+	public Cuenta(int _id,String _nombre,int _valor) {
+		super();
+		this.idCuenta = _id;
+		this.nombreCuenta = _nombre;
+		this.valorCuenta = _valor;
+		//this.empresaAsociada = _empresa;
+		//this.periodoDeCuenta=_periodo;
 	}
 	public void setIdCuenta(int idCuenta) {
 		this.idCuenta = idCuenta;
@@ -39,17 +47,7 @@ public class Cuenta extends Dato implements Serializable {
 		this.valorCuenta = valorCuenta;
 	}
 	
-	public List leerCuentasDeJson() throws IOException{
-		ArrayList<Cuenta> cuentas;
-		RepositorioDeCuentas repoCuentas;
-		DAOJsonCuenta dao = new DAOJsonCuenta();
-		dao.setFilePath("C:\\Users\\martin\\Git\\3-LosMagios\\bd\\cuentas.json");
-		//this.repoCuentas = new RepositorioDeCuentas(dao);
-		repoCuentas = new RepositorioDeCuentas(dao);
-		cuentas = repoCuentas.getAllCuentas();
-		return cuentas;
-		
-	}
+	
 	
 	
 	

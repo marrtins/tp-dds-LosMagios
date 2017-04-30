@@ -8,6 +8,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextField;
 import java.awt.Color;
@@ -47,8 +48,15 @@ public class VentanaCuenta extends JFrame {
 		JButton btnCrearCuenta = new JButton("Crear Cuenta");
 		btnCrearCuenta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				VentanaCrearCuenta ventanaCrearCuenta = new VentanaCrearCuenta();
-				ventanaCrearCuenta.setVisible(true);
+				VentanaCrearCuenta ventanaCrearCuenta;
+				try {
+					ventanaCrearCuenta = new VentanaCrearCuenta();
+					ventanaCrearCuenta.setVisible(true);
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
 			}
 		});
 		btnCrearCuenta.setBounds(46, 74, 149, 46);

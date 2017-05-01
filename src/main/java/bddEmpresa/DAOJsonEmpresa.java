@@ -34,8 +34,12 @@ public class DAOJsonEmpresa implements DAOEmpresa {
 	}
 
 	public void add(Empresa empresa) throws IOException{
-		String empresaSerializada = myGson.toJson(empresa);
-		this.writeJson(empresaSerializada);
+		/*String empresaSerializada = myGson.toJson(empresa);
+		this.writeJson(empresaSerializada);*/
+		ArrayList<Empresa> empresas = this.getAllEmpresas();
+		empresas.add(empresa);
+		String empresasSerializadas = myGson.toJson(empresas);
+		this.writeNewJson(empresasSerializadas);
 	}
 
 	public void delete(Empresa empresa) throws IOException{

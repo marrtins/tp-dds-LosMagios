@@ -30,6 +30,8 @@ import java.awt.Component;
 import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
 import javax.swing.ListSelectionModel;
+import java.awt.Font;
+import java.awt.Color;
 
 public class VentanaCrearCuenta extends JFrame {
 
@@ -78,33 +80,37 @@ public class VentanaCrearCuenta extends JFrame {
 		
 		
 		JList lstPeriodo = new JList();
-		lstPeriodo.setBounds(173, 24, 66, 150);
+		lstPeriodo.setBounds(187, 63, 66, 157);
 		getContentPane().add(lstPeriodo);
 		
 		JLabel lblEmpresa = new JLabel("Empresa");
-		lblEmpresa.setBounds(34, 11, 129, 14);
+		lblEmpresa.setFont(new Font("Calibri", Font.BOLD, 14));
+		lblEmpresa.setBounds(22, 34, 129, 20);
 		getContentPane().add(lblEmpresa);
 		
 		JLabel lblPeriodo = new JLabel("Periodo");
-		lblPeriodo.setBounds(173, 11, 46, 14);
+		lblPeriodo.setFont(new Font("Calibri", Font.BOLD, 14));
+		lblPeriodo.setBounds(195, 40, 46, 14);
 		getContentPane().add(lblPeriodo);
 		
 		textField = new JTextField();
-		textField.setBounds(90, 185, 86, 20);
+		textField.setBounds(91, 154, 86, 20);
 		getContentPane().add(textField);
 		textField.setColumns(10);
 		
 		JLabel lblNombre = new JLabel("Nombre");
-		lblNombre.setBounds(34, 188, 46, 14);
+		lblNombre.setFont(new Font("Calibri", Font.BOLD, 14));
+		lblNombre.setBounds(22, 157, 59, 14);
 		getContentPane().add(lblNombre);
 		
 		textField_1 = new JTextField();
-		textField_1.setBounds(90, 216, 86, 20);
+		textField_1.setBounds(91, 199, 86, 20);
 		getContentPane().add(textField_1);
 		textField_1.setColumns(10);
 		
 		JLabel lblValor = new JLabel("Valor");
-		lblValor.setBounds(34, 219, 46, 14);
+		lblValor.setFont(new Font("Calibri", Font.BOLD, 14));
+		lblValor.setBounds(22, 202, 46, 14);
 		getContentPane().add(lblValor);
 		
 		JButton btnOtraEmpresa = new JButton("Otra Empresa");
@@ -129,6 +135,14 @@ public class VentanaCrearCuenta extends JFrame {
 		});
 		btnAtras.setBounds(395, 238, 89, 23);
 		contentPane.add(btnAtras);
+		
+		JTextPane txtpnCrearCuenta = new JTextPane();
+		txtpnCrearCuenta.setFont(new Font("Calibri", Font.BOLD, 14));
+		txtpnCrearCuenta.setText("Crear Cuenta");
+		txtpnCrearCuenta.setForeground(Color.WHITE);
+		txtpnCrearCuenta.setBackground(Color.BLUE);
+		txtpnCrearCuenta.setBounds(209, 0, 82, 28);
+		contentPane.add(txtpnCrearCuenta);
 		
 		
 		

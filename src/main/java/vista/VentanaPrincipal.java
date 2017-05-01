@@ -110,15 +110,15 @@ public class VentanaPrincipal extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnVisualizargrficoComparativo.setBounds(217, 143, 180, 40);
+		btnVisualizargrficoComparativo.setBounds(213, 143, 180, 40);
 		contentPane.add(btnVisualizargrficoComparativo);
 		
-		JButton btnVerDatosDe = new JButton("Ver datos de empresas");
+		JButton btnVerDatosDe = new JButton("Ver Datos de Empresas");
 		btnVerDatosDe.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnVerDatosDe.setBounds(128, 202, 180, 37);
+		btnVerDatosDe.setBounds(123, 197, 180, 37);
 		contentPane.add(btnVerDatosDe);
 		
 		JButton btnSalir = new JButton("Salir");
@@ -127,7 +127,7 @@ public class VentanaPrincipal extends JFrame {
 				dispose();
 			}
 		});
-		btnSalir.setBounds(345, 227, 89, 23);
+		btnSalir.setBounds(345, 239, 89, 23);
 		contentPane.add(btnSalir);
 	}
 	private static void addPopup(Component component, final JPopupMenu popup) {

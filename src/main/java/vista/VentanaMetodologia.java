@@ -78,7 +78,7 @@ public class VentanaMetodologia extends JDialog {
 		
 		JTextPane txtpnCargarMetodologia = new JTextPane();
 		txtpnCargarMetodologia.setFont(new Font("Calibri", Font.BOLD, 14));
-		txtpnCargarMetodologia.setText("Cargar Metodologia");
+		txtpnCargarMetodologia.setText("Cargar Metodolog\u00EDa");
 		txtpnCargarMetodologia.setForeground(Color.WHITE);
 		txtpnCargarMetodologia.setBackground(Color.BLUE);
 		txtpnCargarMetodologia.setBounds(152, 0, 123, 30);
@@ -94,7 +94,7 @@ public class VentanaMetodologia extends JDialog {
 				getRootPane().setDefaultButton(okButton);
 			}
 			{
-				JButton cancelButton = new JButton("Atras");
+				JButton cancelButton = new JButton("Atr\u00E1s");
 				cancelButton.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						VentanaPrincipal ventPrincipal = new VentanaPrincipal();

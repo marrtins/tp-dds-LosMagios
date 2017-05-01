@@ -94,7 +94,7 @@ public class VentanaIndicador extends JDialog {
 				getRootPane().setDefaultButton(okButton);
 			}
 			{
-				JButton cancelButton = new JButton("Atras");
+				JButton cancelButton = new JButton("Atr\u00E1s");
 				cancelButton.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						VentanaPrincipal ventPrincipal = new VentanaPrincipal();

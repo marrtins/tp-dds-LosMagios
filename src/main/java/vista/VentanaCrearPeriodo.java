@@ -14,12 +14,16 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JTextPane;
+import java.awt.Color;
+import java.awt.Font;
 
 public class VentanaCrearPeriodo extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField txtAnio;
 	private JButton btnAtras;
+	private JTextPane txtpnCrearPerodo;
 
 	/**
 	 * Launch the application.
@@ -51,11 +55,11 @@ public class VentanaCrearPeriodo extends JFrame {
 		
 		txtAnio = new JTextField();
 		txtAnio.setText("A\u00F1o");
-		txtAnio.setBounds(95, 122, 86, 20);
+		txtAnio.setBounds(96, 122, 86, 20);
 		contentPane.add(txtAnio);
 		txtAnio.setColumns(10);
 		
-		JButton btnCrearPeriodo = new JButton("Crear Periodo");
+		JButton btnCrearPeriodo = new JButton("Crear ");
 		btnCrearPeriodo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				int anio = Integer.parseInt(txtAnio.getText());
@@ -66,10 +70,10 @@ public class VentanaCrearPeriodo extends JFrame {
 				//this.cerrarVentana();
 			}
 		});
-		btnCrearPeriodo.setBounds(219, 121, 139, 23);
+		btnCrearPeriodo.setBounds(220, 122, 86, 20);
 		contentPane.add(btnCrearPeriodo);
 		
-		btnAtras = new JButton("Atras");
+		btnAtras = new JButton("Atr\u00E1s");
 		btnAtras.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
@@ -77,5 +81,13 @@ public class VentanaCrearPeriodo extends JFrame {
 		});
 		btnAtras.setBounds(335, 227, 89, 23);
 		contentPane.add(btnAtras);
+		
+		txtpnCrearPerodo = new JTextPane();
+		txtpnCrearPerodo.setFont(new Font("Calibri", Font.BOLD, 14));
+		txtpnCrearPerodo.setText("Crear Per\u00EDodo");
+		txtpnCrearPerodo.setBackground(Color.BLUE);
+		txtpnCrearPerodo.setForeground(Color.WHITE);
+		txtpnCrearPerodo.setBounds(164, 0, 89, 28);
+		contentPane.add(txtpnCrearPerodo);
 	}
 }

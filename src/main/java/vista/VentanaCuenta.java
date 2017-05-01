@@ -11,6 +11,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextField;
 import java.awt.Color;
+import java.awt.Font;
 
 public class VentanaCuenta extends JFrame {
 
@@ -56,7 +57,7 @@ public class VentanaCuenta extends JFrame {
 		btnCrearCuenta.setBounds(46, 74, 149, 46);
 		contentPane.add(btnCrearCuenta);
 		
-		JButton btnConsultarCuenta = new JButton("Consultar valor de Cuentas");
+		JButton btnConsultarCuenta = new JButton("Consultar Valor de Cuenta");
 		btnConsultarCuenta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				VentanaConsultarValorDeCuenta ventConsultValorCuenta = new VentanaConsultarValorDeCuenta();
@@ -68,19 +69,20 @@ public class VentanaCuenta extends JFrame {
 		contentPane.add(btnConsultarCuenta);
 		
 		txtPorFavorSeleccione = new JTextField();
+		txtPorFavorSeleccione.setFont(new Font("Calibri", Font.BOLD, 14));
 		txtPorFavorSeleccione.setForeground(Color.WHITE);
-		txtPorFavorSeleccione.setBackground(Color.DARK_GRAY);
+		txtPorFavorSeleccione.setBackground(Color.BLUE);
 		txtPorFavorSeleccione.setText("Por favor seleccione una opci\u00F3n:");
-		txtPorFavorSeleccione.setBounds(10, 21, 166, 29);
+		txtPorFavorSeleccione.setBounds(0, 0, 200, 29);
 		contentPane.add(txtPorFavorSeleccione);
 		txtPorFavorSeleccione.setColumns(10);
 		
-		JButton btnFiltrar = new JButton("Filtrar valores de Cuentas");
+		JButton btnFiltrar = new JButton("Filtrar Valores de Cuentas");
 		btnFiltrar.setBounds(118, 144, 183, 46);
 		contentPane.add(btnFiltrar);
 		
 		
-		JButton btnAtras = new JButton("Atras");
+		JButton btnAtras = new JButton("Atr\u00E1s");
 		btnAtras.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				VentanaPrincipal ventPrincipal = new VentanaPrincipal();

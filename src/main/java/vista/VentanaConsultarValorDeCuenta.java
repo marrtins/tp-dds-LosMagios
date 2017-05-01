@@ -26,6 +26,8 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
+import java.awt.Font;
 
 public class VentanaConsultarValorDeCuenta extends JFrame {
 
@@ -85,22 +87,22 @@ public class VentanaConsultarValorDeCuenta extends JFrame {
 		lstCuenta.setModel(list_modelCuenta);
 		
 		JLabel lblNombre = new JLabel("New label");
-		lblNombre.setBounds(357, 142, 220, 23);
+		lblNombre.setBounds(357, 130, 220, 14);
 		contentPane.add(lblNombre);
 		lblNombre.setVisible(false);
 		
 		JLabel lblPeriodo = new JLabel("New label");
-		lblPeriodo.setBounds(357, 166, 237, 14);
+		lblPeriodo.setBounds(357, 155, 237, 14);
 		contentPane.add(lblPeriodo);
 		lblPeriodo.setVisible(false);
 		
 		JLabel lblEmpresa = new JLabel("New label");
-		lblEmpresa.setBounds(357, 191, 203, 14);
+		lblEmpresa.setBounds(357, 180, 203, 14);
 		contentPane.add(lblEmpresa);
 		lblEmpresa.setVisible(false);
 		
 		JLabel lblValor = new JLabel("New label");
-		lblValor.setBounds(357, 217, 203, 14);
+		lblValor.setBounds(357, 205, 203, 14);
 		contentPane.add(lblValor);
 		lblValor.setVisible(false);
 		
@@ -125,9 +127,26 @@ public class VentanaConsultarValorDeCuenta extends JFrame {
 				
 			}
 		});
-		btnNewButton.setBounds(444, 54, 116, 23);
+		btnNewButton.setBounds(478, 39, 116, 23);
 		contentPane.add(btnNewButton);
 		
+		JTextPane txtpnConsultarValorDe = new JTextPane();
+		txtpnConsultarValorDe.setFont(new Font("Calibri", Font.BOLD, 14));
+		txtpnConsultarValorDe.setText("Consultar Valor de Cuenta");
+		txtpnConsultarValorDe.setForeground(Color.WHITE);
+		txtpnConsultarValorDe.setBackground(Color.BLUE);
+		txtpnConsultarValorDe.setBounds(206, 0, 160, 28);
+		contentPane.add(txtpnConsultarValorDe);
 		
+		JButton btnAtras = new JButton("Atr\u00E1s");
+		btnAtras.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaPrincipal ventPrincipal = new VentanaPrincipal();
+				ventPrincipal.setVisible(true);
+				dispose();
+			}
+		});
+		btnAtras.setBounds(478, 83, 116, 23);
+		contentPane.add(btnAtras);
 	}
 }

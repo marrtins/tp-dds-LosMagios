@@ -141,8 +141,8 @@ public class VentanaConsultarValorDeCuenta extends JFrame {
 		JButton btnAtras = new JButton("Atr\u00E1s");
 		btnAtras.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				VentanaPrincipal ventPrincipal = new VentanaPrincipal();
-				ventPrincipal.setVisible(true);
+				VentanaCuenta ventCuenta = new VentanaCuenta();
+				ventCuenta.setVisible(true);
 				dispose();
 			}
 		});

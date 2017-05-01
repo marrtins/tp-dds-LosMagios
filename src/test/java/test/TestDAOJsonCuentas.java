@@ -38,20 +38,33 @@ public class TestDAOJsonCuentas {
 			e.printStackTrace();
 		}
 	}
-	/*@Test
-	public void agrego(){
+	@Test
+	public void add(){
 		try {
 			this.cuentas = repoCuentas.getAllCuentas();
-			Cuenta nuevaCuenta = new Cuenta(10,"aswwwd",10);
+			Cuenta nuevaCuenta = new Cuenta(4,"CuentaDePrueba",999, 2010, "EmpresaDePrueba");
 			repoCuentas.add(nuevaCuenta);
+			Assert.assertEquals(4,cuentas.size());
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		Assert.assertEquals(1,cuentas.size());
-	}*/
 	
+	}
+	@Test
+	public void delete(){
+		try {
+			this.cuentas = repoCuentas.getAllCuentas();
+			Cuenta eliminarCuenta = new Cuenta(0,"EITsDA",100, 2010, "facebook");
+			repoCuentas.delete(eliminarCuenta);
+			Assert.assertEquals(2,cuentas.size());
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	
+	}
 
 }

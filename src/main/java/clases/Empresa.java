@@ -13,6 +13,12 @@ public class Empresa implements Serializable {
 
 	private int id;
 	private String nombre;
+	
+	public Empresa(int _id,String _nombre) {
+		super();
+		this.id = _id;
+		this.nombre = _nombre;
+	}
 
 	public int getId() {
 		return id;

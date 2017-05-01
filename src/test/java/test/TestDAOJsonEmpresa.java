@@ -8,6 +8,7 @@ import org.junit.Test;
 
 import bddEmpresa.DAOJsonEmpresa;
 import bddEmpresa.RepositorioDeEmpresas;
+import clases.Cuenta;
 import clases.Empresa;
 
 public class TestDAOJsonEmpresa {
@@ -32,6 +33,35 @@ public class TestDAOJsonEmpresa {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	@Test
+	public void add(){
+		try {
+			this.empresas = repoEmpresas.getAllEmpresas();
+			Empresa nuevaEmpresa = new Empresa(4, "EmpresaDePrueba");
+			repoEmpresas.add(nuevaEmpresa);
+			Assert.assertEquals(4,empresas.size());
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	
+	}
+	@Test
+	public void delete(){
+		try {
+			this.empresas = repoEmpresas.getAllEmpresas();
+			Empresa eliminarCuenta = new Empresa(4, "EmpresaDePrueba");
+			repoEmpresas.delete(eliminarCuenta);
+			Assert.assertEquals(2,empresas.size());
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	
 	}
 	
 	/*@Test

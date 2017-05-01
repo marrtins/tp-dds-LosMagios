@@ -53,7 +53,7 @@ public class TestDAOJsonEmpresa {
 	public void delete(){
 		try {
 			this.empresas = repoEmpresas.getAllEmpresas();
-			Empresa eliminarCuenta = new Empresa(4, "EmpresaDePrueba");
+			Empresa eliminarCuenta = new Empresa(0, "Philips");
 			repoEmpresas.delete(eliminarCuenta);
 			Assert.assertEquals(2,empresas.size());
 			

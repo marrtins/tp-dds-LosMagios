@@ -51,8 +51,12 @@ public class DAOJsonCuenta implements DAOCuenta {
 	}
 	
 	public void add(Cuenta cuenta) throws IOException{
-		String cuentaSerializada = myGson.toJson(cuenta);
-		this.writeJson(cuentaSerializada);
+		/*String cuentaSerializada = myGson.toJson(cuenta);
+		this.writeJson(cuentaSerializada);*/
+		ArrayList<Cuenta> cuentas = this.getAllCuentas();
+		cuentas.add(cuenta);
+		String cuentasSerializadas = myGson.toJson(cuentas);
+		this.writeNewJson(cuentasSerializadas);
 	}
 	
 	public void delete(Cuenta cuenta) throws IOException{

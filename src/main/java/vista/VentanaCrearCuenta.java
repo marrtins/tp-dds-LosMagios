@@ -9,6 +9,7 @@ import javax.swing.border.EmptyBorder;
 
 import bddCuentas.DAOCuenta;
 import bddCuentas.DAOJsonCuenta;
+import bddCuentas.RepositorioDeCuentas;
 import clases.Cuenta;
 import clases.Empresa;
 import clases.Periodo;
@@ -18,6 +19,7 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 import javax.swing.DropMode;
@@ -37,11 +39,14 @@ public class VentanaCrearCuenta extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField txtNombreCuenta;
-	private JTextField txtValor;
 	private int valorCuenta;
 	String nombreCuenta;
-	private JTextField textField;
-	private JTextField textField_1;
+	private JTextField txtNombre;
+	private JTextField txtValor;
+	private JTextField txtPeriodo;
+	private ArrayList<Cuenta> cuentas;
+	private RepositorioDeCuentas repoCuentas;
+	private JTextField txtEmpresa;
 	 
 	/* Launch the application.
 	 */
@@ -73,56 +78,75 @@ public class VentanaCrearCuenta extends JFrame {
 		Cuenta cuenta = new Cuenta();
 		cuentas = cuenta.leerCuentasDeJson();
 
-		JList lstEmpresas = new JList(cuentas);
+		
+		JList lstEmpresas = new JList();
 		lstEmpresas.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-		lstEmpresas.setBounds(34, 24, 129, 150);
-		getContentPane().add(lstEmpresas);*/
-		
-		
-		JList lstPeriodo = new JList();
-		lstPeriodo.setBounds(187, 63, 66, 157);
-		getContentPane().add(lstPeriodo);
-		
+		lstEmpresas.setBounds(32, 63, 129, 134);
+		getContentPane().add(lstEmpresas);
+		*/
 		JLabel lblEmpresa = new JLabel("Empresa");
 		lblEmpresa.setFont(new Font("Calibri", Font.BOLD, 14));
-		lblEmpresa.setBounds(22, 34, 129, 20);
+		lblEmpresa.setBounds(138, 90, 66, 20);
 		getContentPane().add(lblEmpresa);
 		
 		JLabel lblPeriodo = new JLabel("Periodo");
 		lblPeriodo.setFont(new Font("Calibri", Font.BOLD, 14));
-		lblPeriodo.setBounds(195, 40, 46, 14);
+		lblPeriodo.setBounds(138, 40, 46, 14);
 		getContentPane().add(lblPeriodo);
 		
-		textField = new JTextField();
-		textField.setBounds(91, 154, 86, 20);
-		getContentPane().add(textField);
-		textField.setColumns(10);
+		txtNombre = new JTextField();
+		txtNombre.setBounds(42, 60, 86, 20);
+		getContentPane().add(txtNombre);
+		txtNombre.setColumns(10);
 		
 		JLabel lblNombre = new JLabel("Nombre");
 		lblNombre.setFont(new Font("Calibri", Font.BOLD, 14));
-		lblNombre.setBounds(22, 157, 59, 14);
+		lblNombre.setBounds(42, 40, 59, 14);
 		getContentPane().add(lblNombre);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(91, 199, 86, 20);
-		getContentPane().add(textField_1);
-		textField_1.setColumns(10);
+		txtValor = new JTextField();
+		txtValor.setBounds(42, 118, 86, 20);
+		getContentPane().add(txtValor);
+		txtValor.setColumns(10);
 		
 		JLabel lblValor = new JLabel("Valor");
 		lblValor.setFont(new Font("Calibri", Font.BOLD, 14));
-		lblValor.setBounds(22, 202, 46, 14);
+		lblValor.setBounds(42, 93, 46, 14);
 		getContentPane().add(lblValor);
 		
-		JButton btnOtraEmpresa = new JButton("Otra Empresa");
-		btnOtraEmpresa.setBounds(288, 60, 138, 23);
+		/*JButton btnOtraEmpresa = new JButton("Otra Empresa");
+		btnOtraEmpresa.setBounds(42, 208, 110, 23);
 		getContentPane().add(btnOtraEmpresa);
-		
-		JButton btnOtroPeriodo = new JButton("Otro Periodo");
-		btnOtroPeriodo.setBounds(288, 110, 138, 23);
-		getContentPane().add(btnOtroPeriodo);
-		
+		*/
 		JButton btnCrearCuenta = new JButton("Crear cuenta");
-		btnCrearCuenta.setBounds(288, 198, 138, 23);
+		btnCrearCuenta.addActionListener(new ActionListener() {
+			private RepositorioDeCuentas repoCuentas;
+
+			public void actionPerformed(ActionEvent arg0) {
+				DAOJsonCuenta dao = new DAOJsonCuenta();
+				dao.setFilePath("C:\\Users\\martin\\Git\\3-LosMagios\\bd\\cuentas.json");
+				this.repoCuentas = new RepositorioDeCuentas(dao);
+				try {
+					cuentas = repoCuentas.getAllCuentas();
+					String nombre = txtNombre.getText();
+					int id = cuentas.size();
+					int valor = Integer.getInteger(txtValor.getText());
+					int periodo = Integer.getInteger(txtPeriodo.getText());
+					String empresa =txtEmpresa.getText();
+					Cuenta nuevaCuenta = new Cuenta(id, nombre, valor,periodo, empresa);
+					repoCuentas.add(nuevaCuenta);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+			}
+
+			
+
+			
+		});
+		btnCrearCuenta.setBounds(311, 90, 138, 39);
 		getContentPane().add(btnCrearCuenta);
 		
 		JButton btnAtras = new JButton("Atras");
@@ -144,7 +168,28 @@ public class VentanaCrearCuenta extends JFrame {
 		txtpnCrearCuenta.setBounds(209, 0, 82, 28);
 		contentPane.add(txtpnCrearCuenta);
 		
+		txtPeriodo = new JTextField();
+		txtPeriodo.setBounds(138, 60, 86, 20);
+		contentPane.add(txtPeriodo);
+		txtPeriodo.setColumns(10);
+		
+		txtEmpresa = new JTextField();
+		txtEmpresa.setBounds(138, 118, 86, 20);
+		contentPane.add(txtEmpresa);
+		txtEmpresa.setColumns(10);
+		
 		
 		
 	}
+	public ArrayList<Cuenta> cargarCuentas() throws IOException{
+		this.cargarRepositorioDeCuentas();
+		cuentas = repoCuentas.getAllCuentas();
+		return cuentas;
+	}
+	public void cargarRepositorioDeCuentas(){
+		DAOJsonCuenta dao = new DAOJsonCuenta();
+		dao.setFilePath("C:\\Users\\martin\\Git\\3-LosMagios\\bd\\cuentas.json");
+		this.repoCuentas = new RepositorioDeCuentas(dao);
+	}
+	
 }

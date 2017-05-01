@@ -10,6 +10,7 @@ import bddEmpresa.DAOJsonEmpresa;
 import bddEmpresa.RepositorioDeEmpresas;
 import clases.Cuenta;
 import clases.Empresa;
+import clases.Empresa;
 
 public class TestDAOJsonEmpresa {
 	private ArrayList<Empresa> empresas;
@@ -26,9 +27,9 @@ public class TestDAOJsonEmpresa {
 	public void leoEmpresasYNombresSonCorrectos(){
 		try {
 			this.empresas = repoEmpresas.getAllEmpresas();
-			Assert.assertEquals("Philips", empresas.get(0).getNombre());
-			Assert.assertEquals("walmart", empresas.get(1).getNombre());
-			Assert.assertEquals("Sanyo", empresas.get(2).getNombre());
+			Assert.assertEquals("facebook", empresas.get(0).getNombre());
+			Assert.assertEquals("google", empresas.get(1).getNombre());
+			Assert.assertEquals("apple", empresas.get(2).getNombre());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -36,12 +37,16 @@ public class TestDAOJsonEmpresa {
 	}
 	
 	@Test
-	public void add(){
+	public void agregoUnaEmpresaYAumentaElTamanioDeLaLIsta(){
 		try {
 			this.empresas = repoEmpresas.getAllEmpresas();
-			Empresa nuevaEmpresa = new Empresa(4, "EmpresaDePrueba");
+			Empresa nuevaEmpresa = new Empresa(3,"facebook");
+			int tamanioAntesDeAgregar = empresas.size();
 			repoEmpresas.add(nuevaEmpresa);
-			Assert.assertEquals(4,empresas.size());
+			int tamanioDespuesDeAgregar = empresas.size();
+			this.empresas = repoEmpresas.getAllEmpresas();
+			Assert.assertEquals(tamanioAntesDeAgregar,empresas.size() - 1);
+			repoEmpresas.delete(nuevaEmpresa);
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -50,12 +55,16 @@ public class TestDAOJsonEmpresa {
 	
 	}
 	@Test
-	public void delete(){
+	public void borroUnaEmpresaYDisminuyeElTamnioDeLaLista(){
 		try {
 			this.empresas = repoEmpresas.getAllEmpresas();
-			Empresa eliminarCuenta = new Empresa(0, "Philips");
-			repoEmpresas.delete(eliminarCuenta);
-			Assert.assertEquals(2,empresas.size());
+			Empresa empresaABorrar = empresas.get(2);
+			int tamanioEmpresaAntesDeBorrar = empresas.size();
+			repoEmpresas.delete(empresaABorrar);
+			this.empresas = repoEmpresas.getAllEmpresas();
+			int tamanioEmpresaDespuesDeBorrar = empresas.size();
+			Assert.assertEquals(tamanioEmpresaDespuesDeBorrar +1,tamanioEmpresaAntesDeBorrar);
+			repoEmpresas.add(empresaABorrar);
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -63,22 +72,23 @@ public class TestDAOJsonEmpresa {
 		}
 	
 	}
-	
-	/*@Test
-	public void agregoEmpleadoYLoRecupero(){
-		Empresa empleado = new Empresa();
-		empleado.setId(4);
-		empleado.setNombre("Monica");
-		empleado.setApellido("Morado");
-		empleado.setDireccion("Avenida de Mayo 850,CABA");
-		
+	@Test
+	public void cambioElNombreDeUnaEmpresaPorCOCACOLA(){
 		try {
-			this.repoEmpleados.add(empleado);
-			this.empleados = repoEmpresas.getAllEmpleados();
-			Assert.assertTrue(empresas.contains(empleado));
+			this.empresas = repoEmpresas.getAllEmpresas();
+			Empresa empresaAModificar = empresas.get(2);
+			String nombreAntesDeModificar = empresas.get(2).getNombre();
+			empresaAModificar.setNombre("COCA COLA");
+			repoEmpresas.update(empresaAModificar);
+			Assert.assertEquals("COCA COLA",empresas.get(2).getNombre());
+			empresaAModificar.setNombre(nombreAntesDeModificar);
+			repoEmpresas.update(empresaAModificar);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	}*/
+	
+	}
+	
+
 }

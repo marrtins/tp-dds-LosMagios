@@ -65,6 +65,7 @@ public class DAOJsonCuenta implements DAOCuenta {
 		for(int i=0; i<cuentas.size(); i++){
 			if(cuentas.get(i).getIdCuenta()==cuenta.getIdCuenta()){
 				cuentas.remove(cuentas.get(i));
+				i = cuentas.size();
 			}
 		}
 		String cuentaSerializada = myGson.toJson(cuentas);

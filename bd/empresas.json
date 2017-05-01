@@ -1,14 +1,1 @@
-[
-		{
-			"id":0,
-			"nombre": "Philips"
-		},
-		{
-			"id":2,
-			"nombre": "wsssalmart"
-		},
-		{
-			"id":3,
-			"nombre": "Sanyo"
-		}
-]
+[{"id":0,"nombre":"facebook"},{"id":1,"nombre":"google"},{"id":2,"nombre":"apple"}]

@@ -12,6 +12,7 @@ import org.junit.Test;
 import bddCuentas.DAOJsonCuenta;
 import bddCuentas.RepositorioDeCuentas;
 import clases.Cuenta;
+import clases.Empresa;
 
 
 public class TestDAOJsonCuentas {
@@ -39,12 +40,15 @@ public class TestDAOJsonCuentas {
 		}
 	}
 	@Test
-	public void add(){
+	public void agregoCuentaYAumentaElSizeDeLaListaCuentas(){
 		try {
 			this.cuentas = repoCuentas.getAllCuentas();
 			Cuenta nuevaCuenta = new Cuenta(4,"CuentaDePrueba",999, 2010, "EmpresaDePrueba");
+			int tamanioAntesDeAgregar = cuentas.size();
 			repoCuentas.add(nuevaCuenta);
-			Assert.assertEquals(4,cuentas.size());
+			this.cuentas = repoCuentas.getAllCuentas();
+			Assert.assertEquals(tamanioAntesDeAgregar,cuentas.size() - 1);
+			repoCuentas.delete(nuevaCuenta);
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -53,13 +57,34 @@ public class TestDAOJsonCuentas {
 	
 	}
 	@Test
-	public void delete(){
+	public void deleteoCuentaYDisminuyeElSizeDeLaListaCuentas(){
 		try {
 			this.cuentas = repoCuentas.getAllCuentas();
-			Cuenta eliminarCuenta = new Cuenta(0,"EITsDA",100, 2010, "facebook");
-			repoCuentas.delete(eliminarCuenta);
-			Assert.assertEquals(2,cuentas.size());
+			Cuenta cuentaABorrar = cuentas.get(2);
+			int tamanioCuentaAntesDeBorrar = cuentas.size();
+			repoCuentas.delete(cuentaABorrar);
+			this.cuentas = repoCuentas.getAllCuentas();
+			int tamanioCuentaDespuesDeBorrar = cuentas.size();
+			Assert.assertEquals(tamanioCuentaDespuesDeBorrar +1,tamanioCuentaAntesDeBorrar);
+			repoCuentas.add(cuentaABorrar);
 			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	
+	}
+	@Test
+	public void cambioElValorDeUnaCuentaPor13(){
+		try {
+			this.cuentas = repoCuentas.getAllCuentas();
+			Cuenta cuentaAModificar= cuentas.get(2);
+			int valorAntesDeModificar = cuentas.get(2).getValorCuenta();
+			cuentaAModificar.setValorCuenta(13);
+			repoCuentas.update(cuentaAModificar);
+			Assert.assertEquals(13,cuentas.get(2).getValorCuenta());
+			cuentaAModificar.setValorCuenta(valorAntesDeModificar);
+			repoCuentas.update(cuentaAModificar);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

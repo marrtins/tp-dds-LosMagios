@@ -44,14 +44,16 @@ public class DAOJsonEmpresa implements DAOEmpresa {
 
 	public void delete(Empresa empresa) throws IOException{
 		ArrayList<Empresa> empresas = this.getAllEmpresas();
-		
+
 		for(int i=0; i<empresas.size(); i++){
 			if(empresas.get(i).getId()==empresa.getId()){
 				empresas.remove(empresas.get(i));
+				i = empresas.size();
 			}
 		}
-		String empresaSerializada = myGson.toJson(empresa);
+		String empresaSerializada = myGson.toJson(empresas);
 		this.writeNewJson(empresaSerializada);
+
 	}
 
 	public ArrayList<Empresa> getAllEmpresas() throws IOException{

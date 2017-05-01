@@ -18,7 +18,7 @@ public class RepositorioDePeriodos {
 		this.daoPeriodo.add(periodo);
 	}
 	
-	public void delete(Periodo periodo){
+	public void delete(Periodo periodo) throws IOException{
 		this.daoPeriodo.delete(periodo);
 	}
 	
@@ -26,7 +26,7 @@ public class RepositorioDePeriodos {
 		return this.daoPeriodo.getAllPeriodos();
 	}
 	
-	public void update(Periodo periodo){
+	public void update(Periodo periodo) throws IOException{
 		this.daoPeriodo.update(periodo);
 	}
 	

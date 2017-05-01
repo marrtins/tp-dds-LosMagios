@@ -11,6 +11,7 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import clases.Cuenta;
+import clases.Empresa;
 import clases.Periodo;
 
 public class DAOJsonPeriodo implements DAOPeriodo {
@@ -52,11 +53,24 @@ public class DAOJsonPeriodo implements DAOPeriodo {
 	}
 	
 	public void add(Periodo periodo) throws IOException{
-		String periodoSerializado = myGson.toJson(periodo);
-		this.writeJson(periodoSerializado);
+		/*String periodoSerializado = myGson.toJson(periodo);
+		this.writeJson(periodoSerializado);*/
+		ArrayList<Periodo> periodos= this.getAllPeriodos();
+		periodos.add(periodo);
+		String periodosSerializados = myGson.toJson(periodos);
+		this.writeNewJson(periodosSerializados);
 	}
 	
-	public void delete(Periodo periodo){
+	public void delete(Periodo periodo) throws IOException{
+		ArrayList<Periodo> periodos = this.getAllPeriodos();
+		
+		for(int i=0; i<periodos.size(); i++){
+			if(periodos.get(i).getAnio()==periodo.getAnio()){
+				periodos.remove(periodos.get(i));
+			}
+		}
+		String periodoSerializado = myGson.toJson(periodos);
+		this.writeNewJson(periodoSerializado);
 
 	}
 	
@@ -70,6 +84,7 @@ public class DAOJsonPeriodo implements DAOPeriodo {
 	
 	
 	public void update(Cuenta cuenta){
+		
 
 	}
 	
@@ -88,10 +103,24 @@ public class DAOJsonPeriodo implements DAOPeriodo {
 		this.bufferToWrite.append(periodoSerialized);
 		this.bufferToWrite.close();
 	}
+	
+	private void writeNewJson(String periodoSerialized) throws IOException{
+		this.bufferToWrite = new BufferedWriter(new FileWriter(this.filePath, false));
+		this.bufferToWrite.write(periodoSerialized);
+		this.bufferToWrite.close();
+	}
+
+	
 	@Override
-	public void update(Periodo periodo) {
-		// TODO Auto-generated method stub
-		
+	public void update(Periodo periodo) throws IOException {
+		ArrayList<Periodo> periodos= this.getAllPeriodos();
+		for(int i=0; i<periodos.size(); i++){
+			if(periodos.get(i).getAnio()==periodo.getAnio()){
+				periodos.set(i, periodo);
+			}
+		}
+		String periodoSerializado = myGson.toJson(periodos);
+		this.writeNewJson(periodoSerializado);
 	}
 
 	

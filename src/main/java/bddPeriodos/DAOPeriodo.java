@@ -8,8 +8,8 @@ import clases.Periodo;
 public interface DAOPeriodo {
 	
 	public void add(Periodo periodo) throws IOException;
-	public void delete(Periodo periodo);
+	public void delete(Periodo periodo) throws IOException;
 	public ArrayList<Periodo> getAllPeriodos() throws IOException;
-	public void update(Periodo periodo); 
+	public void update(Periodo periodo) throws IOException; 
 
 }

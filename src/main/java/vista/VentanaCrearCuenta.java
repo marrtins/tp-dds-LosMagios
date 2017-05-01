@@ -44,8 +44,8 @@ public class VentanaCrearCuenta extends JFrame {
 	private JTextField txtNombre;
 	private JTextField txtValor;
 	private JTextField txtPeriodo;
-	private ArrayList<Cuenta> cuentas;
-	private RepositorioDeCuentas repoCuentas;
+	//private ArrayList<Cuenta> cuentas;
+	//private RepositorioDeCuentas repoCuentas;
 	private JTextField txtEmpresa;
 	 
 	/* Launch the application.
@@ -121,24 +121,34 @@ public class VentanaCrearCuenta extends JFrame {
 		JButton btnCrearCuenta = new JButton("Crear cuenta");
 		btnCrearCuenta.addActionListener(new ActionListener() {
 			private RepositorioDeCuentas repoCuentas;
-
+			private ArrayList<Cuenta> cuentas;
 			public void actionPerformed(ActionEvent arg0) {
 				DAOJsonCuenta dao = new DAOJsonCuenta();
 				dao.setFilePath("C:\\Users\\martin\\Git\\3-LosMagios\\bd\\cuentas.json");
-				this.repoCuentas = new RepositorioDeCuentas(dao);
-				try {
-					cuentas = repoCuentas.getAllCuentas();
+				repoCuentas = new RepositorioDeCuentas(dao);
+				
+					try {
+						cuentas = repoCuentas.getAllCuentas();
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
 					String nombre = txtNombre.getText();
 					int id = cuentas.size();
-					int valor = Integer.getInteger(txtValor.getText());
-					int periodo = Integer.getInteger(txtPeriodo.getText());
+					int valor = Integer.parseInt(txtValor.getText());
+					int periodo = Integer.parseInt(txtPeriodo.getText());
 					String empresa =txtEmpresa.getText();
+					
+					//Cuenta nuevaCuenta = new Cuenta(1,"asd",10,20,"f");
 					Cuenta nuevaCuenta = new Cuenta(id, nombre, valor,periodo, empresa);
-					repoCuentas.add(nuevaCuenta);
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+					try {
+						repoCuentas.add(nuevaCuenta);
+						txtNombre.setText("asdasd");
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				
 				
 			}
 
@@ -181,7 +191,7 @@ public class VentanaCrearCuenta extends JFrame {
 		
 		
 	}
-	public ArrayList<Cuenta> cargarCuentas() throws IOException{
+	/*public ArrayList<Cuenta> cargarCuentas() throws IOException{
 		this.cargarRepositorioDeCuentas();
 		cuentas = repoCuentas.getAllCuentas();
 		return cuentas;
@@ -190,6 +200,6 @@ public class VentanaCrearCuenta extends JFrame {
 		DAOJsonCuenta dao = new DAOJsonCuenta();
 		dao.setFilePath("C:\\Users\\martin\\Git\\3-LosMagios\\bd\\cuentas.json");
 		this.repoCuentas = new RepositorioDeCuentas(dao);
-	}
+	}*/
 	
 }

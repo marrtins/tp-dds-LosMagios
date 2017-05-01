@@ -68,21 +68,40 @@ public class VentanaPrincipal extends JFrame {
 		txtpnSssss.setBounds(52, 0, 335, 37);
 		contentPane.add(txtpnSssss);
 		
+		final VentanaCuenta ventCuenta = new VentanaCuenta(); // declaramos el objeto VentanaCuenta que será del tipo VentanaCuenta
+		
 		JButton btnCargarCuentaEmpresa = new JButton("Cuenta");
 		btnCargarCuentaEmpresa.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				VentanaCuenta frameVentanaCuenta = new VentanaCuenta();
-				frameVentanaCuenta.setVisible(true);
+				VentanaCuenta ventCuenta = new VentanaCuenta();
+				ventCuenta.setVisible(true);
+				dispose();
 			}
 		});
 		btnCargarCuentaEmpresa.setBounds(23, 82, 180, 40);
 		contentPane.add(btnCargarCuentaEmpresa);
 		
+		final VentanaIndicador ventIndicador = new VentanaIndicador();
+		
 		JButton btnIndicador = new JButton("Indicador");
+		btnIndicador.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				ventIndicador.setVisible(true);
+				dispose();
+			}
+		});
 		btnIndicador.setBounds(213, 82, 180, 40);
 		contentPane.add(btnIndicador);
 		
+		
 		JButton btnMetodologa = new JButton("Metodolog\u00EDa");
+		btnMetodologa.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaMetodologia ventMetodologia = new VentanaMetodologia();
+				ventMetodologia.setVisible(true);
+				dispose();
+			}
+		});
 		btnMetodologa.setBounds(23, 143, 180, 40);
 		contentPane.add(btnMetodologa);
 		
@@ -101,6 +120,15 @@ public class VentanaPrincipal extends JFrame {
 		});
 		btnVerDatosDe.setBounds(128, 202, 180, 37);
 		contentPane.add(btnVerDatosDe);
+		
+		JButton btnSalir = new JButton("Salir");
+		btnSalir.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+			}
+		});
+		btnSalir.setBounds(345, 227, 89, 23);
+		contentPane.add(btnSalir);
 	}
 	private static void addPopup(Component component, final JPopupMenu popup) {
 		component.addMouseListener(new MouseAdapter() {

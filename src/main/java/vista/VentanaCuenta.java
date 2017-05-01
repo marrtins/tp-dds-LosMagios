@@ -8,7 +8,6 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
-import java.io.IOException;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextField;
 import java.awt.Color;
@@ -25,7 +24,6 @@ public class VentanaCuenta extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					
 					VentanaCuenta frame = new VentanaCuenta();
 					frame.setVisible(true);
 				} catch (Exception e) {
@@ -46,18 +44,13 @@ public class VentanaCuenta extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		
 		JButton btnCrearCuenta = new JButton("Crear Cuenta");
 		btnCrearCuenta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				VentanaCrearCuenta ventanaCrearCuenta;
-				try {
-					ventanaCrearCuenta = new VentanaCrearCuenta();
-					ventanaCrearCuenta.setVisible(true);
-				} catch (IOException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				
+				VentanaCrearCuenta ventCrearCuenta = new VentanaCrearCuenta();
+				ventCrearCuenta.setVisible(true);
+				dispose();
 			}
 		});
 		btnCrearCuenta.setBounds(46, 74, 149, 46);
@@ -66,16 +59,9 @@ public class VentanaCuenta extends JFrame {
 		JButton btnConsultarCuenta = new JButton("Consultar valor de Cuentas");
 		btnConsultarCuenta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				VentanaConsultarValorDeCuenta nueva;
-				try {
-					nueva = new VentanaConsultarValorDeCuenta();
-					nueva.setVisible(true);
-				} catch (Exception e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				
-				//frame.setVisible(false);
+				VentanaConsultarValorDeCuenta ventConsultValorCuenta = new VentanaConsultarValorDeCuenta();
+				ventConsultValorCuenta.setVisible(true);
+				dispose();
 			}
 		});
 		btnConsultarCuenta.setBounds(205, 74, 166, 46);
@@ -92,5 +78,17 @@ public class VentanaCuenta extends JFrame {
 		JButton btnFiltrar = new JButton("Filtrar valores de Cuentas");
 		btnFiltrar.setBounds(118, 144, 183, 46);
 		contentPane.add(btnFiltrar);
+		
+		
+		JButton btnAtras = new JButton("Atras");
+		btnAtras.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaPrincipal ventPrincipal = new VentanaPrincipal();
+				ventPrincipal.setVisible(true);
+				dispose();
+			}
+		});
+		btnAtras.setBounds(335, 227, 89, 23);
+		contentPane.add(btnAtras);
 	}
 }

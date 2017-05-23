@@ -124,7 +124,7 @@ public class VentanaCrearCuenta extends JFrame {
 			private ArrayList<Cuenta> cuentas;
 			public void actionPerformed(ActionEvent arg0) {
 				DAOJsonCuenta dao = new DAOJsonCuenta();
-				dao.setFilePath("C:\\Users\\martin\\Git\\3-LosMagios\\bd\\cuentas.json");
+				dao.setFilePath("C:\\Home\\workspace\\3-LosMagios\\bd\\cuentas.json");
 				repoCuentas = new RepositorioDeCuentas(dao);
 				
 					try {

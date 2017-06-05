@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import clases.Periodo;
+import modelo.Periodo;
 
 import javax.swing.JSpinner;
 import javax.swing.JTextField;

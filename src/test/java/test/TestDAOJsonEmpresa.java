@@ -8,9 +8,8 @@ import org.junit.Test;
 
 import bddEmpresa.DAOJsonEmpresa;
 import bddEmpresa.RepositorioDeEmpresas;
-import clases.Cuenta;
-import clases.Empresa;
-import clases.Empresa;
+import modelo.Cuenta;
+import modelo.Empresa;
 
 public class TestDAOJsonEmpresa {
 	private ArrayList<Empresa> empresas;

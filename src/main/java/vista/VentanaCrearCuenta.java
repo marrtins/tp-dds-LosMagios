@@ -10,9 +10,9 @@ import javax.swing.border.EmptyBorder;
 import bddCuentas.DAOCuenta;
 import bddCuentas.DAOJsonCuenta;
 import bddCuentas.RepositorioDeCuentas;
-import clases.Cuenta;
-import clases.Empresa;
-import clases.Periodo;
+import modelo.Cuenta;
+import modelo.Empresa;
+import modelo.Periodo;
 
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;

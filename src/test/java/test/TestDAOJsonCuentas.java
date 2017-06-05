@@ -11,8 +11,8 @@ import org.junit.Test;
 
 import bddCuentas.DAOJsonCuenta;
 import bddCuentas.RepositorioDeCuentas;
-import clases.Cuenta;
-import clases.Empresa;
+import modelo.Cuenta;
+import modelo.Empresa;
 
 
 public class TestDAOJsonCuentas {

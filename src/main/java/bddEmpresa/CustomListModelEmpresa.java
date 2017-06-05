@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import javax.swing.AbstractListModel;
 
 import bddEmpresa.RepositorioDeEmpresas;
-import clases.Cuenta;
-import clases.Empresa;
+import modelo.Cuenta;
+import modelo.Empresa;
 
 
 

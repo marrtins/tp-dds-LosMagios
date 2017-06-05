@@ -11,8 +11,8 @@ import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 
-import clases.Cuenta;
-import clases.Empresa;
+import modelo.Cuenta;
+import modelo.Empresa;
 
 //import Domain.Empleado;
 

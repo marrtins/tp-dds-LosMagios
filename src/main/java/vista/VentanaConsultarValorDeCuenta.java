@@ -16,9 +16,9 @@ import bddEmpresa.DAOJsonEmpresa;
 import bddEmpresa.RepositorioDeEmpresas;
 import bddPeriodos.DAOJsonPeriodo;
 import bddPeriodos.RepositorioDePeriodos;
-import clases.Cuenta;
-import clases.Empresa;
-import clases.Periodo;
+import modelo.Cuenta;
+import modelo.Empresa;
+import modelo.Periodo;
 
 import javax.swing.JTextPane;
 import javax.swing.JList;

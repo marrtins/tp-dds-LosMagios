@@ -10,7 +10,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import bddPeriodos.RepositorioDePeriodos;
-import clases.Periodo;
+import modelo.Periodo;
 import bddPeriodos.DAOJsonPeriodo;
 
 import static org.junit.Assert.*;

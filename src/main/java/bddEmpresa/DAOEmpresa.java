@@ -2,7 +2,7 @@ package bddEmpresa;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import clases.Empresa;
+import modelo.Empresa;
 
 
 public interface DAOEmpresa {

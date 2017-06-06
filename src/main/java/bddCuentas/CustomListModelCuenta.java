@@ -1,4 +1,4 @@
-package bddEmpresa;
+package bddCuentas;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,38 +11,38 @@ import clases.Empresa;
 
 
 
-public class CustomListModelEmpresa extends AbstractListModel {
+public class CustomListModelCuenta extends AbstractListModel {
 
+	private ArrayList<Cuenta> cuentas = new ArrayList<>();
 	
-	private ArrayList<Empresa> empresas = new ArrayList<>();
+	//private ArrayList <Periodo> periodos = new ArrayList<>();
 	
 	
 	
 	
 	@Override
     public int getSize() {
-        return empresas.size();
+        return cuentas.size();
         
 	}
  
     @Override
     public Object getElementAt(int index) {
-    	Empresa unaEmpresa = empresas.get(index);
-        return unaEmpresa.getNombre();
+    	Cuenta unaCuenta = cuentas.get(index);
+        Object algo = unaCuenta.getNombreCuenta()+"  "+unaCuenta.getEmpresaAsociada()+"   "+unaCuenta.getPeriodoDeCuenta();
+    	return algo;
     }
     
-   
-    public void setEmpresas(ArrayList<Empresa> unaLista){
-    	empresas = unaLista;
+    public void setCuentas(ArrayList<Cuenta> unaLista){
+    	cuentas = unaLista;
     }
     
-    public ArrayList<Empresa> getEmpresas(){
-    	return empresas;
+    
+    public ArrayList<Cuenta> getCuentas(){
+    	return cuentas;
     }
     
-  
-    
-    /*public void addCuenta(Cuenta unaCuenta){
+    public void addCuenta(Cuenta unaCuenta){
     	cuentas.add(unaCuenta);
         this.fireIntervalAdded(this, getSize(), getSize()+1);
     }
@@ -52,7 +52,7 @@ public class CustomListModelEmpresa extends AbstractListModel {
     }
     public Cuenta getCuenta(int index){
         return cuentas.get(index);
-    }*/
+    }
 	
     
 

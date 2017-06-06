@@ -1,4 +1,4 @@
-package bddEmpresa;
+package bddPeriodos;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -8,39 +8,37 @@ import javax.swing.AbstractListModel;
 import bddEmpresa.RepositorioDeEmpresas;
 import clases.Cuenta;
 import clases.Empresa;
+import clases.Periodo;
 
 
 
-public class CustomListModelEmpresa extends AbstractListModel {
+public class CustomListModelPeriodo extends AbstractListModel {
 
 	
-	private ArrayList<Empresa> empresas = new ArrayList<>();
+	private ArrayList <Periodo> periodos = new ArrayList<>();
 	
 	
 	
 	
 	@Override
     public int getSize() {
-        return empresas.size();
+        return periodos.size();
         
 	}
  
     @Override
     public Object getElementAt(int index) {
-    	Empresa unaEmpresa = empresas.get(index);
-        return unaEmpresa.getNombre();
+    	Periodo unPeriodo = periodos.get(index);
+        return unPeriodo.getAnio();
     }
     
-   
-    public void setEmpresas(ArrayList<Empresa> unaLista){
-    	empresas = unaLista;
+    public void setPeriodos(ArrayList<Periodo> unaLista){
+    	periodos = unaLista;
     }
-    
-    public ArrayList<Empresa> getEmpresas(){
-    	return empresas;
+           
+    public ArrayList<Periodo> getPeriodos(){
+    	return periodos;
     }
-    
-  
     
     /*public void addCuenta(Cuenta unaCuenta){
     	cuentas.add(unaCuenta);

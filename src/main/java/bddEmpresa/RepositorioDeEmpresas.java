@@ -1,8 +1,7 @@
 package bddEmpresa;
 import java.io.IOException;
 import java.util.ArrayList;
-
-import modelo.Empresa;
+import clases.Empresa;
 
 
 public class RepositorioDeEmpresas {

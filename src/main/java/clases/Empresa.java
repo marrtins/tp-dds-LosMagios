@@ -1,14 +1,13 @@
-package modelo;
+package clases;
 
 import java.io.FileReader;
 import java.util.ArrayList;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonParser;
-
-import modelo.Periodo;
-
 import java.io.Serializable;
+
+import clases.Periodo;
 
 public class Empresa implements Serializable {
 

@@ -1,4 +1,4 @@
-package modelo;
+package clases;
 
 import java.awt.List;
 import java.io.IOException;

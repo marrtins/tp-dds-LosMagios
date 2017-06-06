@@ -1,4 +1,4 @@
-package modelo;
+package clases;
 
 public abstract class Dato {
 	

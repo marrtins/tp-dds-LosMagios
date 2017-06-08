@@ -3,11 +3,13 @@ package vista;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
+import parser.Parser;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import clases.Periodo;
+import modelo.Periodo;
 
 import javax.swing.JSpinner;
 import javax.swing.JTextField;
@@ -17,6 +19,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.JTextPane;
 import java.awt.Color;
 import java.awt.Font;
+import javax.swing.JLabel;
 
 public class VentanaCrearPeriodo extends JFrame {
 
@@ -24,6 +27,7 @@ public class VentanaCrearPeriodo extends JFrame {
 	private JTextField txtAnio;
 	private JButton btnAtras;
 	private JTextPane txtpnCrearPerodo;
+	private JLabel lblRes;
 
 	/**
 	 * Launch the application.
@@ -59,15 +63,18 @@ public class VentanaCrearPeriodo extends JFrame {
 		contentPane.add(txtAnio);
 		txtAnio.setColumns(10);
 		
+		lblRes = new JLabel("lblres");
+		lblRes.setBounds(186, 171, 46, 14);
+		contentPane.add(lblRes);
+		
 		JButton btnCrearPeriodo = new JButton("Crear ");
 		btnCrearPeriodo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				int anio = Integer.parseInt(txtAnio.getText());
-				Periodo nuevoPeriodo = new Periodo(anio);
-				VentanaCrearCuenta ventanaCrearCuenta = new VentanaCrearCuenta();
-				ventanaCrearCuenta.setVisible(true);
-				//ventanaCrearCuenta.agregarPeriodo(nuevoPeriodo);
-				//this.cerrarVentana();
+				Parser pr = new Parser();
+				
+				Double res = pr.eval(txtAnio.getText());
+				String res2 = String.valueOf(res);
+				lblRes.setText(res2);	
 			}
 		});
 		btnCrearPeriodo.setBounds(220, 122, 86, 20);
@@ -89,5 +96,7 @@ public class VentanaCrearPeriodo extends JFrame {
 		txtpnCrearPerodo.setForeground(Color.WHITE);
 		txtpnCrearPerodo.setBounds(164, 0, 89, 28);
 		contentPane.add(txtpnCrearPerodo);
+		
+		
 	}
 }

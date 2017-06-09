@@ -36,6 +36,7 @@ public class Cuenta extends Dato implements Serializable {
 		this.valorCuenta = _valor;
 	}
 	
+	
 		
 	
 }

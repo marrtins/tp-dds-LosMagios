@@ -12,7 +12,7 @@ import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 
 import modelo.Cuenta;
-import modelo.Empresa;
+import modelo.Indicador;
 import modelo.Indicador;
 
 

@@ -5,8 +5,7 @@ import java.util.ArrayList;
 public class Indicador extends Dato {
 	
 	private String nombreIndicador;
-	static ArrayList<Cuenta> cuentas = new ArrayList<Cuenta>();
-	private Calculo calculoIndicador;
+	private String calculoIndicador;
 	
 	
 	public String getNombreIndicador() {
@@ -15,18 +14,14 @@ public class Indicador extends Dato {
 	public void setNombreIndicador(String nombreIndicador) {
 		this.nombreIndicador = nombreIndicador;
 	}
-	public static ArrayList<Cuenta> getCuentas() {
-		return cuentas;
-	}
-	public static void setCuentas(ArrayList<Cuenta> cuentas) {
-		Indicador.cuentas = cuentas;
-	}
-	public Calculo getCalculoIndicador() {
+	
+	public String getCalculoIndicador() {
 		return calculoIndicador;
 	}
-	public void setCalculoIndicador(Calculo calculoIndicador) {
+	public void setCalculoIndicador(String calculoIndicador) {
 		this.calculoIndicador = calculoIndicador;
 	}
+	
 	
 	
 

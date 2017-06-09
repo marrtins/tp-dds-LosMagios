@@ -13,7 +13,7 @@ import modelo.Cuenta;
 import modelo.Empresa;
 import modelo.Indicador;
 import parser.Parser;
-import parser.ParserFormula;
+import parser.AnalizadorLexico;
 import persistence.DAOJsonEmpresa;
 import persistence.DataCollector;
 import persistence.RepositorioDeEmpresas;
@@ -140,13 +140,13 @@ public class VentanaIndicador extends JDialog {
 		btnOk.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				Parser parser  = new Parser();
+				/*Parser parser  = new Parser();
 				String formula_s = editorPane.getText();
-				ParserFormula parserFormula = new ParserFormula();
-				formula_s = parserFormula.parseF(formula_s);
+				AnalizadorLexico analizadorLexico = new AnalizadorLexico();
+				formula_s = analizadorLexico.analizar(formula_s);
 				Double formula_d = parser.eval(formula_s);
 				label.setText(String.valueOf(formula_d));
-				
+				*/
 			}
 		});
 		btnOk.setBounds(463, 387, 89, 23);

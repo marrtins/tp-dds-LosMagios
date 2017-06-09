@@ -40,7 +40,7 @@ public class Periodo {
 
 	public Cuenta getCuenta(String nombreCuenta){
 		for(int i=0;i<cuentas.size();i++){
-			if(cuentas.get(i).getNombreCuenta() == nombreCuenta){
+			if(cuentas.get(i).getNombreCuenta().equals(nombreCuenta)){
 				return cuentas.get(i);
 			}
 			
@@ -54,12 +54,9 @@ public class Periodo {
 		this.setCuentas(cuentas);
 	}
 
-/*	public void agreg2arCuenta(Cuenta cuenta) {
-		if (!existeCuenta(cuenta))
-			cuentas.add(cuenta);
-		else
-			this.buscarCuenta(cuenta).setValor(cuenta.getValor());
-	}*/
+	public boolean contieneCuenta(String nombreCuenta){
+		return cuentas.stream().anyMatch(unaCuenta -> unaCuenta.getNombreCuenta().equals(nombreCuenta));
+	}
 	
 	
 	

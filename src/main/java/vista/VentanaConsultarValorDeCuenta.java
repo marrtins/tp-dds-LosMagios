@@ -47,7 +47,7 @@ public class VentanaConsultarValorDeCuenta extends JFrame {
 	private Periodo periodoSeleccionado;
 	DefaultMutableTreeNode abuelo;
 	DefaultTreeModel modelo;
-	int contadorGlobal = 0;
+	
 	CustomListModelEmpresa list_modelEmpresa = new CustomListModelEmpresa();
 	/**
 	 * Launch the application.

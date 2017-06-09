@@ -9,6 +9,7 @@ import org.junit.Test;
 import modelo.Cuenta;
 import modelo.Empresa;
 import persistence.DAOJsonEmpresa;
+import persistence.DataCollector;
 import persistence.RepositorioDeEmpresas;
 
 public class TestDAOJsonEmpresa {
@@ -20,40 +21,21 @@ public class TestDAOJsonEmpresa {
 		DAOJsonEmpresa dao = new DAOJsonEmpresa();
 		dao.setFilePath("C:\\Users\\martin\\Git\\3-LosMagios\\bd\\empresas.json");
 		this.repoEmpresas = new RepositorioDeEmpresas(dao);
+		DataCollector persistence  =new DataCollector();
+		empresas = persistence.cargarEmpresas();
 	}
 	
 	@Test
 	public void leoEmpresasYNombresSonCorrectos(){
-		try {
-			this.empresas = repoEmpresas.getAllEmpresas();
-			Assert.assertEquals("Apple", empresas.get(0).getNombre());
-			Assert.assertEquals("Google", empresas.get(1).getNombre());
-			Assert.assertEquals("facebook", empresas.get(2).getNombre());
-			
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		Assert.assertEquals("apple", empresas.get(0).getNombreEmpresa());
+		
 	}
 	
-	/*@Test
+	@Test
 	public void agregoUnaEmpresaYAumentaElTamanioDeLaLIsta(){
-		try {
-			this.empresas = repoEmpresas.getAllEmpresas();
-			Empresa nuevaEmpresa = new Empresa(3,"facebook");
-			int tamanioAntesDeAgregar = empresas.size();
-			repoEmpresas.add(nuevaEmpresa);
-			int tamanioDespuesDeAgregar = empresas.size();
-			this.empresas = repoEmpresas.getAllEmpresas();
-			Assert.assertEquals(tamanioAntesDeAgregar,empresas.size() - 1);
-			repoEmpresas.delete(nuevaEmpresa);
-			
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	
-	}*/
+		
+		
+	}
 	@Test
 	public void borroUnaEmpresaYDisminuyeElTamnioDeLaLista(){
 		try {

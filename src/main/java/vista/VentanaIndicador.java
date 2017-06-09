@@ -11,10 +11,11 @@ import javax.swing.border.EmptyBorder;
 import model.CustomListModelCuentas;
 import modelo.Cuenta;
 import modelo.Empresa;
+import modelo.Indicador;
 import parser.Parser;
 import parser.ParserFormula;
-import persistence.CustomListModelEmpresa;
 import persistence.DAOJsonEmpresa;
+import persistence.DataCollector;
 import persistence.RepositorioDeEmpresas;
 
 import javax.swing.JLabel;
@@ -38,7 +39,7 @@ public class VentanaIndicador extends JDialog {
 	private JTextField textField;
 	private ArrayList<Empresa> empresas = new ArrayList<>();
 	private ArrayList<Cuenta> cuentas = new ArrayList<>();
-	
+	private ArrayList<Indicador> indicadores = new ArrayList<>();
 	private RepositorioDeEmpresas repoEmpresas;	
 	private DAOJsonEmpresa dao;
 	
@@ -62,19 +63,9 @@ public class VentanaIndicador extends JDialog {
 	public VentanaIndicador() {
 		
 		
-		dao = new DAOJsonEmpresa();
-		//TODO: Cambiar esto
-		dao.setFilePath("C:\\Users\\martin\\Git\\3-LosMagios\\bd\\empresas.json");
-		this.repoEmpresas = new RepositorioDeEmpresas(dao);
-		try {
-			empresas = repoEmpresas.getAllEmpresas();
-		} catch (IOException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();;
-		}
 		
-		CustomListModelCuentas controlCuentas  = new CustomListModelCuentas();
-		
+		DataCollector persistence = new DataCollector();
+		indicadores = persistence.cargarIndicadores();
 		
 		
 		
@@ -127,40 +118,41 @@ public class VentanaIndicador extends JDialog {
 		JEditorPane editorPane = new JEditorPane();
 		editorPane.setBounds(10, 348, 414, 115);
 		contentPanel.add(editorPane);
-		
+
 		JList list = new JList();
 		list.setBounds(10, 155, 145, 149);
 		contentPanel.add(list);
-		
+
 		JLabel lblIndicadores = new JLabel("Indicadores");
 		lblIndicadores.setFont(new Font("Calibri", Font.BOLD, 14));
 		lblIndicadores.setBounds(243, 126, 159, 14);
 		contentPanel.add(lblIndicadores);
-		
+
 		JLabel lblEscribaAquEl = new JLabel("Escriba aqu\u00ED el indicador a crear:");
 		lblEscribaAquEl.setBounds(10, 323, 246, 14);
 		contentPanel.add(lblEscribaAquEl);
-		
+
 		JLabel label = new JLabel("1");
 		label.setBounds(423, 226, 46, 14);
 		contentPanel.add(label);
-		
+
 		JButton btnOk = new JButton("OK");
 		btnOk.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-			
-			Parser parser  = new Parser();
-			String formula_s = editorPane.getText();
-			ParserFormula parserFormula = new ParserFormula();
-			formula_s = parserFormula.parseF(formula_s);
-			Double formula_d = parser.eval(formula_s);
-			label.setText(String.valueOf(formula_d));
+
+				Parser parser  = new Parser();
+				String formula_s = editorPane.getText();
+				ParserFormula parserFormula = new ParserFormula();
+				formula_s = parserFormula.parseF(formula_s);
+				Double formula_d = parser.eval(formula_s);
+				label.setText(String.valueOf(formula_d));
+				
 			}
 		});
 		btnOk.setBounds(463, 387, 89, 23);
 		contentPanel.add(btnOk);
-		
-		
+
+
 		{
 			JPanel buttonPane = new JPanel();
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));

@@ -6,12 +6,20 @@ import java.util.ArrayList;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.border.EmptyBorder;
+import javax.swing.event.TreeSelectionEvent;
+import javax.swing.event.TreeSelectionListener;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
+import javax.swing.tree.TreeNode;
 
 import modelo.Cuenta;
 import modelo.Empresa;
+import modelo.Periodo;
 import persistence.CustomListModelEmpresa;
 import persistence.DAOJsonEmpresa;
+import persistence.DataCollector;
 import persistence.RepositorioDeEmpresas;
 
 import javax.swing.JTextPane;
@@ -25,13 +33,21 @@ import javax.swing.JComboBox;
 import javax.swing.ListSelectionModel;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.JTree;
+import javax.swing.border.BevelBorder;
 
 public class VentanaConsultarValorDeCuenta extends JFrame {
 
 	private JPanel contentPane;
 	private ArrayList<Cuenta> cuentas = new ArrayList<>();
 	private ArrayList<Empresa> empresas = new ArrayList<>();
+	private ArrayList< Periodo>periodos = new ArrayList<>();
 	private RepositorioDeEmpresas repoEmpresas;	
+	private Empresa empresaSeleccionada;
+	private Periodo periodoSeleccionado;
+	DefaultMutableTreeNode abuelo;
+	DefaultTreeModel modelo;
+	int contadorGlobal = 0;
 	CustomListModelEmpresa list_modelEmpresa = new CustomListModelEmpresa();
 	/**
 	 * Launch the application.
@@ -53,20 +69,11 @@ public class VentanaConsultarValorDeCuenta extends JFrame {
 	 * Create the frame.
 	 */
 	public VentanaConsultarValorDeCuenta() {
+				
+			
 		
-		
-		DAOJsonEmpresa dao = new DAOJsonEmpresa();
-		dao.setFilePath("C:\\Users\\martin\\Git\\3-LosMagios\\bd\\empresas.json");
-		this.repoEmpresas = new RepositorioDeEmpresas(dao);
-		try {
-			empresas = repoEmpresas.getAllEmpresas();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		
-		
+		DataCollector persistence = new DataCollector();
+		empresas = persistence.cargarEmpresas();
 		
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -76,58 +83,44 @@ public class VentanaConsultarValorDeCuenta extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JComboBox cboCuentas = new JComboBox();
-		cboCuentas.setBounds(177, 37, 160, 20);
-		contentPane.add(cboCuentas);
-		
-		JList lstEmpresas = new JList();
-		lstEmpresas.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent arg0) {
-				cboCuentas.removeAllItems();
-				int indice = lstEmpresas.getSelectedIndex();
-				Empresa empresaSeleccionada = empresas.get(indice);
-				cuentas = empresaSeleccionada.getCuentas();
-				for(int i =0;i<cuentas.size();i++){
-					cboCuentas.addItem(cuentas.get(i).getNombreCuenta() + cuentas.get(i).getPeriodoDeCuenta());
-				}
-				
-				
-			}
-		});
-		lstEmpresas.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-		lstEmpresas.setBounds(36, 39, 116, 180);
-		contentPane.add(lstEmpresas);
-		list_modelEmpresa.setEmpresas(empresas);
-		lstEmpresas.setModel(list_modelEmpresa);;
 		
 		
-		JLabel lblNombre = new JLabel("");
-		lblNombre.setBounds(291, 174, 242, 14);
-		contentPane.add(lblNombre);
+		
+		DefaultMutableTreeNode abuelo = new DefaultMutableTreeNode("Períodos");
+		DefaultTreeModel modelo = new DefaultTreeModel(abuelo);
+	
+		
+	
+
+		JLabel lblEmpresas = new JLabel("Empresas");
+		lblEmpresas.setBounds(36, 24, 116, 14);
+		contentPane.add(lblEmpresas);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setViewportBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		scrollPane.setToolTipText("");
+		scrollPane.setBounds(188, 39, 384, 180);
+		contentPane.add(scrollPane);
+		
+		
+		JTree tree = new JTree(modelo);
+		scrollPane.setViewportView(tree);
+		
 		
 		JLabel lblPeriodo = new JLabel("");
-		lblPeriodo.setBounds(291, 199, 281, 14);
+		lblPeriodo.setBounds(392, 199, 180, 14);
 		contentPane.add(lblPeriodo);
+			
+		scrollPane.getVerticalScrollBar();
+		list_modelEmpresa.setEmpresas(empresas);;
 		
 		JLabel lblValor = new JLabel("");
-		lblValor.setBounds(291, 224, 303, 14);
+		lblValor.setBounds(393, 169, 180, 14);
 		contentPane.add(lblValor);
 		
-		JButton btnNewButton = new JButton("Ver resultados");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				int indice  = cboCuentas.getSelectedIndex();
-				Cuenta cuentaSeleccionada = cuentas.get(indice);
-				
-				lblNombre.setText("Nombre: " +cuentaSeleccionada.getNombreCuenta());
-				
-				lblPeriodo.setText("Periodo: "+Integer.toString(cuentaSeleccionada.getPeriodoDeCuenta()));
-				lblValor.setText("Valor: "+Integer.toString(cuentaSeleccionada.getValorCuenta()));
-			}
-		});
-		btnNewButton.setBounds(416, 79, 116, 23);
-		contentPane.add(btnNewButton);
+		JLabel lblNombre = new JLabel("");
+		lblNombre.setBounds(393, 130, 46, 14);
+		contentPane.add(lblNombre);
 		
 		JTextPane txtpnConsultarValorDe = new JTextPane();
 		txtpnConsultarValorDe.setFont(new Font("Calibri", Font.BOLD, 14));
@@ -148,8 +141,73 @@ public class VentanaConsultarValorDeCuenta extends JFrame {
 		btnAtras.setBounds(488, 241, 116, 23);
 		contentPane.add(btnAtras);
 		
+		JScrollPane scrollPane_1 = new JScrollPane();
+		scrollPane_1.setBounds(36, 39, 116, 180);
+		contentPane.add(scrollPane_1);
+		
+		
+		
+		JList lstEmpresas = new JList();
+		scrollPane_1.setViewportView(lstEmpresas);
+		lstEmpresas.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				int indice = lstEmpresas.getSelectedIndex();
+				Empresa empresaSeleccionada = empresas.get(indice);
+				limpiarArbol();
+				periodos = empresaSeleccionada.getPeriodos();
+				periodos.forEach(unPeriodo->this.agregarDataAlArbol(unPeriodo));
+				
+							
+				
+				
+			}
+
+			private void limpiarArbol() {
+				DefaultMutableTreeNode root = (DefaultMutableTreeNode) modelo.getRoot();
+		        root.removeAllChildren();
+		        modelo.reload();
+		       
+				
+			}
+
+			private void agregarDataAlArbol(Periodo unPeriodo) {
+				
+				DefaultMutableTreeNode padre2 = new DefaultMutableTreeNode(Integer.toString(unPeriodo.getAnio()));
+				modelo.insertNodeInto(padre2,abuelo,0);
+				cuentas = unPeriodo.getCuentas();
+				cuentas.forEach(unaCuenta->modelo.insertNodeInto(new DefaultMutableTreeNode(unaCuenta.getNombreCuenta() + " Valor: "+unaCuenta.getValorCuenta()),padre2,padre2.getChildCount()));
+				
+				
+			}
+
+			private void agregarAlArbol(String string, String nombreCuenta) {
+			
+			
+			}
+		});
+		
+		lstEmpresas.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+		lstEmpresas.setModel(list_modelEmpresa);
+		
+		
+		
+		
+		
+		 
+		
+		
 	
 		
+		
+	}
+	public void agregarPeriodoAlArbol(Periodo unPeriodo){
+		
+		DefaultMutableTreeNode padre2 = new DefaultMutableTreeNode(Integer.toString(unPeriodo.getAnio()));
+		modelo.insertNodeInto(padre2,abuelo,0);
+		
+		
+	
 		
 	}
 }

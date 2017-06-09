@@ -11,6 +11,7 @@ import modelo.Cuenta;
 import modelo.Empresa;
 import modelo.Periodo;
 import persistence.DAOJsonEmpresa;
+import persistence.DataCollector;
 import persistence.RepositorioDeEmpresas;
 
 import javax.swing.JComboBox;
@@ -71,18 +72,17 @@ public class VentanaCrearCuenta extends JFrame {
 	 */
 	public VentanaCrearCuenta() {
 		
-		//Agrego todas las empresas de la base de datos:
-		dao = new DAOJsonEmpresa();
-		//TODO: Cambiar esto
+		DataCollector persistence = new DataCollector();
+		empresas = persistence.cargarEmpresas();
+		DAOJsonEmpresa dao = new DAOJsonEmpresa();
 		dao.setFilePath("C:\\Users\\martin\\Git\\3-LosMagios\\bd\\empresas.json");
 		this.repoEmpresas = new RepositorioDeEmpresas(dao);
-		try {
-			empresas = repoEmpresas.getAllEmpresas();
-		} catch (IOException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();;
+		
+		
+		
+		for(Empresa unaEmpresa:empresas){
+			unaEmpresa.agregarPeriodos(unaEmpresa.getPeriodos());
 		}
-
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 500, 300);
 		contentPane = new JPanel();
@@ -126,10 +126,8 @@ public class VentanaCrearCuenta extends JFrame {
 		cboEmpresa.addItem("Empresa...");
 		
 		//agrego todas las empresas:
-		for(int i=0;i<empresas.size();i++){
-			String nombreEmpresa = empresas.get(i).getNombreEmpresa();
-			cboEmpresa.addItem(nombreEmpresa);
-		}
+		empresas.forEach(unaEmpresa->cboEmpresa.addItem(unaEmpresa.getNombreEmpresa()));
+		
 		
 		
 		
@@ -171,92 +169,19 @@ public class VentanaCrearCuenta extends JFrame {
 				}
 				else {
 
-					int indiceSeleccionado = cboEmpresa.getSelectedIndex();
-					
-					try {
-						empresas =repoEmpresas.getAllEmpresas();
-					} catch (IOException e2) {
-						// TODO Auto-generated catch block
-						e2.printStackTrace();
-					}
+					int indiceSeleccionado = cboEmpresa.getSelectedIndex();			
 					Empresa empresaSeleccionada = empresas.get(indiceSeleccionado - 1);
 					Cuenta nuevaCuenta = new Cuenta();
-
-					//TODO:Cambiar
-					int tamanioCuentas = 0;
-					for(int i=0;i<empresas.size();i++){
-						tamanioCuentas = empresas.get(i).getCuentas().size() + tamanioCuentas;
-					}
-
-					int nuevoId= tamanioCuentas+1;
 					String nuevoNombre = txtNombre.getText();
+					int unAnio = Integer.parseInt(txtPeriodo.getText());
+					Periodo unPeriodo = empresaSeleccionada.getPeriodoOrCreate(unAnio);
 					int nuevoValor = Integer.parseInt(txtValor.getText());
-					int nuevoPeriodo = Integer.parseInt(txtPeriodo.getText());
-					nuevaCuenta.setear(nuevoId, nuevoNombre, nuevoValor, nuevoPeriodo);
-					//nuevaCuenta.setEmpresaAsociada(empresaSeleccionada);
-					//nuevaCuenta.setear(100, "!cuetna", 200, 1);
-					empresaSeleccionada.agregarCuenta(nuevaCuenta);
-
-					try {
-
-						repoEmpresas.update(empresaSeleccionada);
-					} catch (IOException e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
-					}
-
-				}
+					nuevaCuenta.setear(nuevoNombre, nuevoValor);
+					empresaSeleccionada.agregarCuentaEnPeriodo(nuevaCuenta, unPeriodo);
+					persistence.updateEmpresa(empresaSeleccionada);
 				
-				/*
-				if(cboEmpresa.getSelectedItem() == ("Otra Empresa...")){
-					String nombreEmpresa = JOptionPane.showInputDialog("Escribe nombre de la empresa");
-					cboEmpresa.addItem(nombreEmpresa);
-					int nuevoId = empresas.size() + 1;
-					int ultimoItem = cboEmpresa.getItemCount() - 1;
-					//cboEmpresa.remove(ultimoItem);
-					Empresa nuevaEmpresa = new Empresa(nuevoId, nombreEmpresa);
-					cboEmpresa.addItem(nombreEmpresa);
-					//TODO:CAMBIAR
-					cboEmpresa.addItem("Otra Empresa...");
-					JOptionPane.showMessageDialog(null, "Empresa agregada correctamente");
-					
 				}
-				else {
-					Cuenta nuevaCuenta = new Cuenta();
-					Empresa empresaAsociada = empresas.get(cboEmpresa.getSelectedIndex()); 
-					nuevaCuenta.setEmpresaAsociada(empresaAsociada);
-					//Cant de cuentas de cada empresa (cant total de cuentas)
-					//TODO REEMPLAZAR FOR
-					int tam=0;
-					for(int i = 0;i<empresas.size();i++){
-						Empresa empresa =empresas.get(i);
-						tam = tam +  empresa.getCuentas().size();
-					}
 					
-					int nuevoId = tam + 1;
-					nuevaCuenta.setIdCuenta(nuevoId);
-					nuevaCuenta.setNombreCuenta(txtNombre.getText());
-					nuevaCuenta.setPeriodoDeCuenta(Integer.parseInt(txtPeriodo.getText()));
-					nuevaCuenta.setValorCuenta(Integer.parseInt(txtValor.getText()));
-					empresaAsociada.agregarCuenta(nuevaCuenta);
-					try {
-						repoEmpresas.update(empresaAsociada);
-					} catch (IOException e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
-					}
-					 
-				}
-*/
-							
-				/*nuevaCuenta.setEmpresaAsociada(empresaAsociada);
-				nuevaCuenta.setIdCuenta(10);
-				nuevaCuenta.setNombreCuenta(txtNombreCuenta.getText());
-				nuevaCuenta.setPeriodoDeCuenta(2010);
-				int nuevoValor = txtValor.getText().toString();
-				nuevaCuenta.setValorCuenta();
-				*/
-				
 			}
 		});
 		btnCrear.setBounds(310, 117, 89, 23);
@@ -267,24 +192,13 @@ public class VentanaCrearCuenta extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				String nombreEmpresa = JOptionPane.showInputDialog("Escribe nombre de la empresa");
 				cboEmpresa.addItem(nombreEmpresa);
-				int nuevoId = empresas.size() + 1;
-				Empresa nuevaEmpresa = new Empresa(nuevoId, nombreEmpresa);
-				JOptionPane.showMessageDialog(null, "Empresa agregada correctamente");
-				try {
-					repoEmpresas.add(nuevaEmpresa);
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			
+				Empresa nuevaEmpresa = new Empresa(nombreEmpresa);
+				persistence.agregarEmpresa(nuevaEmpresa);
 			}
 		});
 		btnOtraEmpresa.setBounds(165, 159, 108, 23);
 		contentPane.add(btnOtraEmpresa);
 
-		
-		
-		
 		
 		
 		

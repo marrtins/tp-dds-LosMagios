@@ -9,10 +9,9 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import bddCuentas.DAOJsonCuenta;
-import bddCuentas.RepositorioDeCuentas;
 import modelo.Cuenta;
 import modelo.Empresa;
+import persistence.RepositorioDeCuentas;
 
 
 public class TestDAOJsonCuentas {

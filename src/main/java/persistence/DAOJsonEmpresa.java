@@ -19,7 +19,7 @@ import modelo.Empresa;
 
 public class DAOJsonEmpresa implements DAOEmpresa {
 
-	private String filePath;
+	private String filePath = "C:\\Users\\martin\\Git\\3-LosMagios\\bd\\empresas.json";
 	private Gson myGson;
 	private BufferedReader bufferToReader;
 	private BufferedWriter bufferToWrite;
@@ -46,10 +46,10 @@ public class DAOJsonEmpresa implements DAOEmpresa {
 		ArrayList<Empresa> empresas = this.getAllEmpresas();
 
 		for(int i=0; i<empresas.size(); i++){
-			if(empresas.get(i).getId()==empresa.getId()){
+			/*if(empresas.get(i).getId()==empresa.getId()){
 				empresas.remove(empresas.get(i));
 				i = empresas.size();
-			}
+			}*/
 		}
 		String empresaSerializada = myGson.toJson(empresas);
 		this.writeNewJson(empresaSerializada);
@@ -67,7 +67,9 @@ public class DAOJsonEmpresa implements DAOEmpresa {
 		ArrayList<Empresa> empresas = this.getAllEmpresas();
 		String empresaSerializada = myGson.toJson(empresa);
 		for(int i=0; i<empresas.size(); i++){
-			if(empresas.get(i).getId()==empresa.getId()){
+			String n1 = empresas.get(i).getNombreEmpresa();
+			String n2 = empresa.getNombreEmpresa();
+			if(n1.equals(n2)){
 				empresas.set(i, empresa);
 				
 			}

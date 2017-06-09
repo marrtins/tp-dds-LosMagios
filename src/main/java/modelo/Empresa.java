@@ -2,6 +2,7 @@ package modelo;
 
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.Optional;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonParser;
@@ -12,24 +13,18 @@ import java.io.Serializable;
 
 public class Empresa implements Serializable {
 
-	private int idEmpresa;
+	
 	private String nombreEmpresa;
-	private ArrayList<Cuenta> cuentas = new ArrayList<Cuenta>();
+	private ArrayList<Periodo> periodos = new ArrayList<Periodo>();
 	
-	public Empresa(int _id,String _nombre) {
+	public Empresa(String _nombre) {
 		super();
-		this.idEmpresa = _id;
 		this.nombreEmpresa = _nombre;
-		this.cuentas = cuentas;
+		this.periodos = periodos;
+		
 	}
 	
-	public int getId() {
-		return idEmpresa;
-	}
-
-	public void setId(int id) {
-		this.idEmpresa = id;
-	}
+	
 
 	public String getNombreEmpresa() {
 		return nombreEmpresa;
@@ -39,20 +34,56 @@ public class Empresa implements Serializable {
 		this.nombreEmpresa = nombre;
 	}
 
-	public ArrayList<Cuenta> getCuentas() {
-		return cuentas;
+	public ArrayList<Periodo> getPeriodos() {
+		return periodos;
 	}
 
-	public void setCuentas(ArrayList<Cuenta> cuentas) {
-		this.cuentas = cuentas;
+	public void setPeriodos(ArrayList<Periodo> periodos) {
+		this.periodos = periodos;
 	}
+	
+	public ArrayList<Cuenta> getCuentasDePeriodo(Periodo unPeriodo){
+		
+		if(!(this.periodos.contains(unPeriodo))) {
+			this.agregarPeriodo(unPeriodo);
+		}
+		return unPeriodo.getCuentas();
+	}
+	
+	public void agregarCuentaEnPeriodo(Cuenta unaCuenta, Periodo unPeriodo){
+		
+			unPeriodo.agregarCuenta(unaCuenta);
+		
+	}
+	
+	public void agregarPeriodos(ArrayList<Periodo> periodos){
+		for(Periodo unPeriodo:periodos){
+			unPeriodo.agregarCuentas(unPeriodo.getCuentas());
+		}
+		
+	}
+	
+	public boolean tienePeriodo(int unAnio){
+		return periodos.stream().anyMatch(periodo-> periodo.getAnio() == (new Periodo(unAnio)).getAnio());
+	}
+	public void agregarPeriodo(Periodo unPeriodo){
+		periodos.add(unPeriodo);
+		unPeriodo.setCuentas(new ArrayList<Cuenta>());
+	}
+	public Cuenta getCuentaDePeriodo(Periodo unPeriodo,String nombreCuenta){
+		return unPeriodo.getCuenta(nombreCuenta);
+	}
+	public Periodo getPeriodoOrCreate(int unAnio){
+		
+		if(!this.tienePeriodo(unAnio)) this.agregarPeriodo(new Periodo(unAnio));
+		
+		return periodos.stream().filter(unPeriodo->unPeriodo.getAnio() == unAnio).findFirst().orElse(null);
+	
+	}
+	
+	
 
-	public void agregarCuenta(Cuenta nuevaCuenta){
-		this.cuentas.add(nuevaCuenta);
-	}
-	public Cuenta getCuenta(int indice){
-		return cuentas.get(indice);
-	}
+	
 	
 
 }

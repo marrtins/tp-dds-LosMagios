@@ -5,18 +5,26 @@ import java.util.ArrayList;
 
 import modelo.Empresa;
 import persistence.DAOJsonEmpresa;
+import persistence.DataCollector;
 import persistence.RepositorioDeEmpresas;
 
 public class ParserFormula {
 	private ArrayList<Empresa> empresas = new ArrayList<>();
+	ArrayList<Indicador> indicadores = new ArrayList<>();
 	private RepositorioDeEmpresas repoEmpresas;	
 	private DAOJsonEmpresa dao;
 
 	
 	
 	public String parseF(String formula){
-		 int init = 0;
-		 int end = 0;
+		 
+		DataCollector persistence = new DataCollector();
+		empresas = persistence.cargarEmpresas();
+		indicadores = persistence.cargarIndicadores();
+		
+		
+			int init = 0;
+		 int end = formula.length();
 		 String cte = "0";
 		 String anterior = formula;
 		 String siguiente  ="";
@@ -41,7 +49,7 @@ public class ParserFormula {
 			 }
 		 }
 
-		 return "2";
+		 return formula;
 		 
 
 	}	

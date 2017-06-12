@@ -65,7 +65,7 @@ public class DataCollector {
 		}
 	}
 	
-	public void borrarEmpres(Empresa unaEmpresa){
+	public void borrarEmpresa(Empresa unaEmpresa){
 		try {
 			repoEmpresas.delete(unaEmpresa.getNombreEmpresa());
 		} catch (IOException e) {

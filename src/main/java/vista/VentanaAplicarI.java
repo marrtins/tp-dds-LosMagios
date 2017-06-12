@@ -1,7 +1,9 @@
 package vista;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.EventQueue;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
@@ -14,6 +16,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JPanel;
+import javax.swing.JTextPane;
 import javax.swing.ListSelectionModel;
 import javax.swing.border.EmptyBorder;
 
@@ -59,7 +62,7 @@ public class VentanaAplicarI extends JFrame {
 	public VentanaAplicarI() {
 		
 		
-DataCollector persistence = new DataCollector();
+		DataCollector persistence = new DataCollector();
 		
 		empresas = persistence.cargarEmpresas();
 		indicadores = persistence.cargarIndicadores();
@@ -73,15 +76,15 @@ DataCollector persistence = new DataCollector();
 		
 		
 		JComboBox cboPeriodo = new JComboBox();
-		cboPeriodo.setBounds(199, 26, 158, 20);
+		cboPeriodo.setBounds(199, 45, 211, 20);
 		contentPane.add(cboPeriodo);
 				
 		JComboBox cboIndicador = new JComboBox();
-		cboIndicador.setBounds(199, 69, 158, 20);
+		cboIndicador.setBounds(199, 94, 211, 20);
 		contentPane.add(cboIndicador);
 	
-		JLabel lblValor = new JLabel("New label");
-		lblValor.setBounds(240, 148, 46, 14);
+		JLabel lblValor = new JLabel("Resultado");
+		lblValor.setBounds(292, 204, 46, 14);
 		contentPane.add(lblValor);
 		
 		indicadores.forEach(ind -> cboIndicador.addItem(ind.getNombreIndicador()));
@@ -98,14 +101,8 @@ DataCollector persistence = new DataCollector();
 				lblValor.setText(String.valueOf(resultadoCalculo));
 			}
 		});
-		btnCalcular.setBounds(240, 100, 89, 23);
+		btnCalcular.setBounds(266, 155, 97, 38);
 		contentPane.add(btnCalcular);
-		
-	
-		
-		
-		
-		
 		
 		JList lstEmpresas = new JList();
 		lstEmpresas.addMouseListener(new MouseAdapter() {
@@ -115,22 +112,33 @@ DataCollector persistence = new DataCollector();
 			cboPeriodo.removeAllItems();
 			periodos = empresaSeleccionada.getPeriodos();
 			periodos.forEach(per->cboPeriodo.addItem(per.getAnio()));
-			
-			
-			
-			
-			
 			}
 		});
-		lstEmpresas.setBounds(36, 11, 151, 198);
+		
+		lstEmpresas.setBounds(10, 45, 177, 209);
 		contentPane.add(lstEmpresas);
 		list_modelEmpresa.setEmpresas(empresas);;
 		lstEmpresas.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		lstEmpresas.setModel(list_modelEmpresa);
 		
+		JButton btnAtrs = new JButton("Atr\u00E1s");
+		btnAtrs.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaIndicador ventIndicador = new VentanaIndicador();
+				ventIndicador.setVisible(true);
+				dispose();
+			}
+		});
+		btnAtrs.setBounds(331, 242, 89, 23);
+		contentPane.add(btnAtrs);
 		
-		
-		
+		JTextPane txtpnAplicarIndicadores = new JTextPane();
+		txtpnAplicarIndicadores.setFont(new Font("Calibri", Font.BOLD, 14));
+		txtpnAplicarIndicadores.setText("Aplicar Indicadores");
+		txtpnAplicarIndicadores.setBackground(Color.BLUE);
+		txtpnAplicarIndicadores.setForeground(new Color(255, 255, 255));
+		txtpnAplicarIndicadores.setBounds(149, 0, 119, 30);
+		contentPane.add(txtpnAplicarIndicadores);
+	
 	}
-
 }

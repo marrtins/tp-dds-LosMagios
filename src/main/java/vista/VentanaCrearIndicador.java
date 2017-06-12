@@ -74,7 +74,7 @@ public class VentanaCrearIndicador extends JDialog {
 		}
 		
 		txtNombreIndicador = new JTextField();
-		txtNombreIndicador.setBounds(279, 50, 145, 20);
+		txtNombreIndicador.setBounds(311, 50, 234, 20);
 		contentPanel.add(txtNombreIndicador);
 		txtNombreIndicador.setColumns(10);
 		
@@ -83,11 +83,11 @@ public class VentanaCrearIndicador extends JDialog {
 		txtpnCargarIndicador.setText("Crear Indicador");
 		txtpnCargarIndicador.setForeground(Color.WHITE);
 		txtpnCargarIndicador.setBackground(Color.BLUE);
-		txtpnCargarIndicador.setBounds(152, 0, 104, 30);
+		txtpnCargarIndicador.setBounds(222, 0, 97, 30);
 		contentPanel.add(txtpnCargarIndicador);
 		
 		JEditorPane editorPane = new JEditorPane();
-		editorPane.setBounds(10, 155, 414, 115);
+		editorPane.setBounds(10, 155, 535, 115);
 		contentPanel.add(editorPane);
 
 		JLabel lblEscribaAquEl = new JLabel("Escriba aqu\u00ED el indicador a crear (ingrese cuentas e indicadores entre llaves \"{ }\"):");

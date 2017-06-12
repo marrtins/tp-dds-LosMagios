@@ -20,7 +20,7 @@ public class DataCollector {
 	
 	
 	
-	public ArrayList<Empresa> cargarEmpresas(){
+	public ArrayList<Empresa> cargarEmpresas() throws IOException{
 		DAOJsonEmpresa dao = new DAOJsonEmpresa();
 		dao.setFilePath(rutaEmpresas);
 		this.repoEmpresas = new RepositorioDeEmpresas(dao);
@@ -46,14 +46,14 @@ public class DataCollector {
 
 	
 
-	public void updateEmpresa(Empresa unaEmpresa){
+	public void updateEmpresa(Empresa unaEmpresa) throws IOException{
 		try {
 			repoEmpresas.update(unaEmpresa);
 		} catch (ErrorEscrituraDatos e) {
 			throw e;
 		}
 	}
-	public void agregarEmpresa(Empresa unaEmpresa){
+	public void agregarEmpresa(Empresa unaEmpresa) throws IOException{
 		empresas = this.cargarEmpresas();
 		try {
 			repoEmpresas.add(unaEmpresa);
@@ -62,7 +62,7 @@ public class DataCollector {
 		}
 	}
 	
-	public void borrarEmpresa(Empresa unaEmpresa){
+	public void borrarEmpresa(Empresa unaEmpresa) throws IOException{
 		try {
 			repoEmpresas.delete(unaEmpresa.getNombreEmpresa());
 		} catch (ErrorBorrarDatos e) {
@@ -70,7 +70,7 @@ public class DataCollector {
 		}
 	}
 	
-	public ArrayList<Indicador>cargarIndicadores(){
+	public ArrayList<Indicador>cargarIndicadores() throws IOException{
 		DAOJsonIndicador daoI = new DAOJsonIndicador();
 		daoI.setFilePath(rutaIndicadores);
 		this.repoIndicadores = new RepositorioDeIndicadores(daoI);
@@ -83,7 +83,7 @@ public class DataCollector {
 	
 	return indicadores;
 	}
-	public void agregarIndicador(Indicador unIndicador){
+	public void agregarIndicador(Indicador unIndicador) throws IOException{
 		indicadores = this.cargarIndicadores();
 		try {
 			repoIndicadores.add(unIndicador);

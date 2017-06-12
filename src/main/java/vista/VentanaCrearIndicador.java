@@ -91,7 +91,7 @@ public class VentanaCrearIndicador extends JDialog {
 		contentPanel.add(editorPane);
 
 		JLabel lblEscribaAquEl = new JLabel("Escriba aqu\u00ED el indicador a crear (ingrese cuentas e indicadores entre llaves \"{ }\"):");
-		lblEscribaAquEl.setBounds(10, 130, 393, 14);
+		lblEscribaAquEl.setBounds(10, 130, 535, 14);
 		contentPanel.add(lblEscribaAquEl);
 
 
@@ -103,8 +103,8 @@ public class VentanaCrearIndicador extends JDialog {
 				JButton cancelButton = new JButton("Atr\u00E1s");
 				cancelButton.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						VentanaPrincipal ventPrincipal = new VentanaPrincipal();
-						ventPrincipal.setVisible(true);
+						VentanaIndicador ventanaIndicador = new VentanaIndicador();
+						ventanaIndicador.setVisible(true);
 						dispose();
 					}
 				});

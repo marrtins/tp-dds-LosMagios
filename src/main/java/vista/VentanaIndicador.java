@@ -75,7 +75,7 @@ public class VentanaIndicador extends JFrame {
 		JButton btnNewButton = new JButton("Aplicar Indicadores");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				VentanaAplicarI ventAplicar = new VentanaAplicarI();
+				VentanaAplicarIndicador ventAplicar = new VentanaAplicarIndicador();
 				ventAplicar.setVisible(true);
 				dispose();
 			}

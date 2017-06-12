@@ -36,7 +36,7 @@ public class TestDAOJsonEmpresa {
 		empresas  = persistence.cargarEmpresas();
 		int tamanioDespues = empresas.size();
 		Assert.assertEquals(tamanioAntes + 1, tamanioDespues );
-		persistence.borrarEmpres(nuevaE);
+		persistence.borrarEmpresa(nuevaE);
 		
 	}
 	

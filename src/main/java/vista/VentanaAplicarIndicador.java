@@ -28,7 +28,7 @@ import parser.Parser;
 import persistence.CustomListModelEmpresa;
 import persistence.DataCollector;
 
-public class VentanaAplicarI extends JFrame {
+public class VentanaAplicarIndicador extends JFrame {
 
 	private JPanel contentPane;
 	CustomListModelEmpresa list_modelEmpresa = new CustomListModelEmpresa();
@@ -46,7 +46,7 @@ public class VentanaAplicarI extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					VentanaAplicarI frame = new VentanaAplicarI();
+					VentanaAplicarIndicador frame = new VentanaAplicarIndicador();
 					frame.setVisible(true);
 					
 				} catch (Exception e) {
@@ -59,7 +59,7 @@ public class VentanaAplicarI extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public VentanaAplicarI() {
+	public VentanaAplicarIndicador() {
 		
 		
 		DataCollector persistence = new DataCollector();
@@ -83,8 +83,8 @@ public class VentanaAplicarI extends JFrame {
 		cboIndicador.setBounds(199, 94, 211, 20);
 		contentPane.add(cboIndicador);
 	
-		JLabel lblValor = new JLabel("Resultado");
-		lblValor.setBounds(292, 204, 46, 14);
+		JLabel lblValor = new JLabel("Resultado: ");
+		lblValor.setBounds(199, 204, 164, 14);
 		contentPane.add(lblValor);
 		
 		indicadores.forEach(ind -> cboIndicador.addItem(ind.getNombreIndicador()));
@@ -98,10 +98,10 @@ public class VentanaAplicarI extends JFrame {
 				AnalizadorLexico analizadorLexico = new AnalizadorLexico();
 				String formulaString = analizadorLexico.analizar(indicadorSeleccionado.getCalculoIndicador(),empresaSeleccionada,periodoSeleccionado);
 				Double resultadoCalculo = parser.eval(formulaString);
-				lblValor.setText(String.valueOf(resultadoCalculo));
+				lblValor.setText("Resultado" + String.valueOf(resultadoCalculo));
 			}
 		});
-		btnCalcular.setBounds(266, 155, 97, 38);
+		btnCalcular.setBounds(253, 125, 97, 38);
 		contentPane.add(btnCalcular);
 		
 		JList lstEmpresas = new JList();

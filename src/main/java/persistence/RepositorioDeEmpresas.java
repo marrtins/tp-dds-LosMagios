@@ -17,8 +17,8 @@ public class RepositorioDeEmpresas {
 		this.daoEmpresa.add(empresa);
 	}
 
-	public void delete(Empresa empresa) throws IOException{
-		this.daoEmpresa.delete(empresa);
+	public void delete(String nombreEmpresa) throws IOException{
+		this.daoEmpresa.delete(nombreEmpresa);
 	}
 
 	public ArrayList<Empresa> getAllEmpresas() throws IOException{

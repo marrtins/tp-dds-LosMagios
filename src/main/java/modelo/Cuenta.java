@@ -1,21 +1,16 @@
 package modelo;
 
-import java.awt.List;
-import java.io.IOException;
-import java.io.Serializable;
-import java.util.ArrayList;
-
-import org.junit.experimental.theories.Theories;
 
 
 
-public class Cuenta extends Dato implements Serializable {
+
+
+public class Cuenta  {
 	
 	private String nombreCuenta;
 	private int valorCuenta;
 	
-	//private Object periodoDeCuenta;
-	//private Object empresaAsociada;
+	
 	
 	
 	public String getNombreCuenta() {

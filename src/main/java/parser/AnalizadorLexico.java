@@ -7,18 +7,15 @@ import modelo.Cuenta;
 import modelo.Empresa;
 import modelo.Indicador;
 import modelo.Periodo;
-import persistence.DAOJsonEmpresa;
+
 import persistence.DataCollector;
-import persistence.RepositorioDeEmpresas;
 
 public class AnalizadorLexico {
 	private ArrayList<Empresa> empresas = new ArrayList<>();
 	ArrayList<Indicador> indicadores = new ArrayList<>();
-	private RepositorioDeEmpresas repoEmpresas;	
-	private DAOJsonEmpresa dao;
+	
 	private Empresa empresaAplicada;
 	private Periodo periodoAplicado;
-	private ArrayList<Cuenta> cuentas;
 	
 	
 	public String analizar(String formula,Empresa empresa,Periodo periodo){
@@ -30,39 +27,39 @@ public class AnalizadorLexico {
 		periodoAplicado=periodo;
 		
 		
-			int init = 0;
-		 int end = formula.length();
-		 String cte = "0";
-		 String anterior = formula;
-		 String siguiente  ="";
-		 for(int i=0;i<formula.length();i++){
-			 char cadena[] = formula.toCharArray();
-			 String cName;
-			 if(cadena[i] =='{'){
-				 init = i;
+		int init = 0;
+		int end = formula.length();
+		String cte = "0";
+		String anterior = formula;
+		String siguiente  ="";
+		for(int i=0;i<formula.length();i++){
+			char cadena[] = formula.toCharArray();
+			String cName;
+			if(cadena[i] =='{'){
+				init = i;
 				while(cadena[i]!='}'){
 					i++;
-			}
-			end = i;
-			cName=formula.substring(init+1,end);
-			cte = getcNameValue(cName);
-			anterior = formula.substring(0,init);
-			siguiente = formula.substring(end+1,formula.length());
-			formula=anterior.concat(cte);
-			
-			formula=formula.concat(siguiente);
-			i=0;
-			 
-			 }
-		 }
+				}
+				end = i;
+				cName=formula.substring(init+1,end);
+				cte = getcNameValue(cName);
+				anterior = formula.substring(0,init);
+				siguiente = formula.substring(end+1,formula.length());
+				formula=anterior.concat(cte);
 
-		 return formula;
-		 
+				formula=formula.concat(siguiente);
+				i=0;
+
+			}
+		}
+
+		return formula;
+
 
 	}	
-	
+
 	private String getcNameValue(String cons){
-		
+
 		if(esUnaCuenta(cons)){
 			Cuenta cuenta = periodoAplicado.getCuenta(cons);
 			return Integer.toString(cuenta.getValorCuenta());
@@ -78,15 +75,15 @@ public class AnalizadorLexico {
 		}
 		//TODO:EXCEPCION!!
 		return "-1";
-		
-		
-	
-		
+
+
+
+
 	}
 
 	private boolean esUnIndicador(String cons) {
 		return indicadores.stream().anyMatch(unIndicador -> unIndicador.getNombreIndicador().equals(cons));
-		
+
 	}
 
 	private boolean esUnaCuenta(String cons) {

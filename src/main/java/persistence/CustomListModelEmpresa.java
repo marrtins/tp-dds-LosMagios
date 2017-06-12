@@ -1,12 +1,10 @@
 package persistence;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 import javax.swing.AbstractListModel;
 
 import modelo.Empresa;
-import persistence.RepositorioDeEmpresas;
 
 
 

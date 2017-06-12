@@ -76,6 +76,15 @@ public class DataCollector {
 	
 	return indicadores;
 	}
+	public void agregarIndicador(Indicador unIndicador){
+		indicadores = this.cargarIndicadores();
+		try {
+			repoIndicadores.add(unIndicador);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	
 	
 	

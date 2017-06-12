@@ -1,17 +1,15 @@
 package persistence;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
 import com.google.gson.Gson;
-import com.google.gson.JsonSyntaxException;
+
 import com.google.gson.reflect.TypeToken;
 
-import modelo.Cuenta;
 import modelo.Empresa;
 
 //import Domain.Empleado;
@@ -34,23 +32,16 @@ public class DAOJsonEmpresa implements DAOEmpresa {
 	}
 
 	public void add(Empresa empresa) throws IOException{
-		/*String empresaSerializada = myGson.toJson(empresa);
-		this.writeJson(empresaSerializada);*/
+		
 		ArrayList<Empresa> empresas = this.getAllEmpresas();
 		empresas.add(empresa);
 		String empresasSerializadas = myGson.toJson(empresas);
 		this.writeNewJson(empresasSerializadas);
 	}
 
-	public void delete(Empresa empresa) throws IOException{
+	public void delete(String nombreEmpresa) throws IOException{
 		ArrayList<Empresa> empresas = this.getAllEmpresas();
-
-		for(int i=0; i<empresas.size(); i++){
-			/*if(empresas.get(i).getId()==empresa.getId()){
-				empresas.remove(empresas.get(i));
-				i = empresas.size();
-			}*/
-		}
+		empresas.removeIf(unaEmpresa->unaEmpresa.getNombreEmpresa().equals(nombreEmpresa));
 		String empresaSerializada = myGson.toJson(empresas);
 		this.writeNewJson(empresaSerializada);
 
@@ -65,7 +56,6 @@ public class DAOJsonEmpresa implements DAOEmpresa {
 
 	public void update(Empresa empresa) throws IOException{
 		ArrayList<Empresa> empresas = this.getAllEmpresas();
-		String empresaSerializada = myGson.toJson(empresa);
 		for(int i=0; i<empresas.size(); i++){
 			String n1 = empresas.get(i).getNombreEmpresa();
 			String n2 = empresa.getNombreEmpresa();

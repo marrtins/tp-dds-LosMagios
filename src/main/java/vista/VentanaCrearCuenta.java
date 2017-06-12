@@ -47,10 +47,19 @@ public class VentanaCrearCuenta extends JFrame {
 	private JTextField txtValor;
 	private JTextField txtPeriodo;
 	private ArrayList<Empresa> empresas = new ArrayList<>();
-	private RepositorioDeEmpresas repoEmpresas;	
-	private DAOJsonEmpresa dao;
+	private String ruta;
 	
 	 
+	public String getRuta() {
+		return ruta;
+	}
+
+
+	public void setRuta(String ruta) {
+		this.ruta = ruta;
+	}
+
+
 	/* Launch the application.
 	 */
 	public static void main(String[] args) {
@@ -73,10 +82,7 @@ public class VentanaCrearCuenta extends JFrame {
 	public VentanaCrearCuenta() {
 		
 		DataCollector persistence = new DataCollector();
-		empresas = persistence.cargarEmpresas();
-		DAOJsonEmpresa dao = new DAOJsonEmpresa();
-		dao.setFilePath("C:\\Users\\martin\\Git\\3-LosMagios\\bd\\empresas.json");
-		this.repoEmpresas = new RepositorioDeEmpresas(dao);
+		empresas=persistence.cargarEmpresas();
 		
 		
 		
@@ -167,7 +173,11 @@ public class VentanaCrearCuenta extends JFrame {
 				if(cboEmpresa.getSelectedItem() == ("Empresa...")){
 					JOptionPane.showMessageDialog(null, "Seleccione una empresa");
 				}
-				else {
+				if(txtPeriodo.getText().isEmpty() || txtNombre.getText().isEmpty() || txtValor.getText().isEmpty()){
+						JOptionPane.showMessageDialog(null, "Rellene todos los campos.");
+				}
+				else
+				{
 
 					int indiceSeleccionado = cboEmpresa.getSelectedIndex();			
 					Empresa empresaSeleccionada = empresas.get(indiceSeleccionado - 1);
@@ -176,7 +186,7 @@ public class VentanaCrearCuenta extends JFrame {
 					int unAnio = Integer.parseInt(txtPeriodo.getText());
 					Periodo unPeriodo = empresaSeleccionada.getPeriodoOrCreate(unAnio);
 					int nuevoValor = Integer.parseInt(txtValor.getText());
-					nuevaCuenta.setear(nuevoNombre, nuevoValor);
+					nuevaCuenta.setear(nuevoNombre.toUpperCase(), nuevoValor);
 					empresaSeleccionada.agregarCuentaEnPeriodo(nuevaCuenta, unPeriodo);
 					persistence.updateEmpresa(empresaSeleccionada);
 				
@@ -191,8 +201,8 @@ public class VentanaCrearCuenta extends JFrame {
 		btnOtraEmpresa.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				String nombreEmpresa = JOptionPane.showInputDialog("Escribe nombre de la empresa");
-				cboEmpresa.addItem(nombreEmpresa);
-				Empresa nuevaEmpresa = new Empresa(nombreEmpresa);
+				cboEmpresa.addItem(nombreEmpresa.toUpperCase());
+				Empresa nuevaEmpresa = new Empresa(nombreEmpresa.toUpperCase());
 				persistence.agregarEmpresa(nuevaEmpresa);
 			}
 		});

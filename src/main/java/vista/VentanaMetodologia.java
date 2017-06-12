@@ -27,7 +27,7 @@ public class VentanaMetodologia extends JDialog {
 	 */
 	public static void main(String[] args) {
 		try {
-			VentanaIndicador dialog = new VentanaIndicador();
+			VentanaCrearIndicador dialog = new VentanaCrearIndicador();
 			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 			dialog.setVisible(true);
 		} catch (Exception e) {

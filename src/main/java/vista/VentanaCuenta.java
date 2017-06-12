@@ -12,12 +12,21 @@ import java.awt.event.ActionEvent;
 import javax.swing.JTextField;
 import java.awt.Color;
 import java.awt.Font;
+import javax.swing.JLabel;
 
 public class VentanaCuenta extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField txtPorFavorSeleccione;
+	public String getRuta() {
+		return ruta;
+	}
 
+	public void setRuta(String ruta) {
+		this.ruta = ruta;
+	}
+
+	private String ruta;
 	/**
 	 * Launch the application.
 	 */
@@ -51,6 +60,7 @@ public class VentanaCuenta extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				VentanaCrearCuenta ventCrearCuenta = new VentanaCrearCuenta();
 				ventCrearCuenta.setVisible(true);
+				
 				dispose();
 			}
 		});
@@ -62,6 +72,7 @@ public class VentanaCuenta extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				VentanaConsultarValorDeCuenta ventConsultValorCuenta = new VentanaConsultarValorDeCuenta();
 				ventConsultValorCuenta.setVisible(true);
+				
 				dispose();
 			}
 		});

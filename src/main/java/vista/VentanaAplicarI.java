@@ -1,14 +1,22 @@
 package vista;
 
+import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
-import javax.swing.JFrame;
-import javax.swing.JComboBox;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JPanel;
+import javax.swing.ListSelectionModel;
+import javax.swing.border.EmptyBorder;
 
-import modelo.Cuenta;
 import modelo.Empresa;
 import modelo.Indicador;
 import modelo.Periodo;
@@ -16,25 +24,18 @@ import parser.AnalizadorLexico;
 import parser.Parser;
 import persistence.CustomListModelEmpresa;
 import persistence.DataCollector;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import javax.swing.JTextPane;
-import javax.swing.ListSelectionModel;
-import javax.swing.JList;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
-public class VentanaAplicarIndicador {
-	private ArrayList<Indicador> indicadores;
-	private ArrayList<Empresa> empresas;
-	private ArrayList<Periodo> periodos;
-	private ArrayList<Cuenta> cuentas;
-	private JFrame frame;
+public class VentanaAplicarI extends JFrame {
+
+	private JPanel contentPane;
 	CustomListModelEmpresa list_modelEmpresa = new CustomListModelEmpresa();
 	Empresa empresaSeleccionada ;
 	Periodo periodoSeleccionado;
 	Indicador indicadorSeleccionado;
-
+	private ArrayList<Indicador> indicadores;
+	private ArrayList<Empresa> empresas;
+	private ArrayList<Periodo> periodos;
+	
 	/**
 	 * Launch the application.
 	 */
@@ -42,8 +43,9 @@ public class VentanaAplicarIndicador {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					VentanaAplicarIndicador window = new VentanaAplicarIndicador();
-					window.frame.setVisible(true);
+					VentanaAplicarI frame = new VentanaAplicarI();
+					frame.setVisible(true);
+					
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -52,39 +54,35 @@ public class VentanaAplicarIndicador {
 	}
 
 	/**
-	 * Create the application.
+	 * Create the frame.
 	 */
-	public VentanaAplicarIndicador() {
-		initialize();
-	}
-
-	/**
-	 * Initialize the contents of the frame.
-	 */
-	private void initialize() {
-		DataCollector persistence = new DataCollector();
+	public VentanaAplicarI() {
+		
+		
+DataCollector persistence = new DataCollector();
 		
 		empresas = persistence.cargarEmpresas();
 		indicadores = persistence.cargarIndicadores();
 		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 436, 303);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
 		
-		
-		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
 		
 		JComboBox cboPeriodo = new JComboBox();
-		cboPeriodo.setBounds(199, 49, 151, 20);
-		frame.getContentPane().add(cboPeriodo);
+		cboPeriodo.setBounds(199, 26, 158, 20);
+		contentPane.add(cboPeriodo);
 				
 		JComboBox cboIndicador = new JComboBox();
-		cboIndicador.setBounds(199, 113, 130, 20);
-		frame.getContentPane().add(cboIndicador);
+		cboIndicador.setBounds(199, 69, 158, 20);
+		contentPane.add(cboIndicador);
 	
 		JLabel lblValor = new JLabel("New label");
-		lblValor.setBounds(283, 164, 46, 14);
-		frame.getContentPane().add(lblValor);
+		lblValor.setBounds(240, 148, 46, 14);
+		contentPane.add(lblValor);
 		
 		indicadores.forEach(ind -> cboIndicador.addItem(ind.getNombreIndicador()));
 		
@@ -100,8 +98,8 @@ public class VentanaAplicarIndicador {
 				lblValor.setText(String.valueOf(resultadoCalculo));
 			}
 		});
-		btnCalcular.setBounds(224, 80, 89, 23);
-		frame.getContentPane().add(btnCalcular);
+		btnCalcular.setBounds(240, 100, 89, 23);
+		contentPane.add(btnCalcular);
 		
 	
 		
@@ -124,8 +122,8 @@ public class VentanaAplicarIndicador {
 			
 			}
 		});
-		lstEmpresas.setBounds(45, 51, 108, 138);
-		frame.getContentPane().add(lstEmpresas);
+		lstEmpresas.setBounds(36, 11, 151, 198);
+		contentPane.add(lstEmpresas);
 		list_modelEmpresa.setEmpresas(empresas);;
 		lstEmpresas.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		lstEmpresas.setModel(list_modelEmpresa);
@@ -133,7 +131,6 @@ public class VentanaAplicarIndicador {
 		
 		
 		
-		
-		
 	}
+
 }

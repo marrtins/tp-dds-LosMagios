@@ -1,6 +1,5 @@
 package parser;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 import modelo.Cuenta;

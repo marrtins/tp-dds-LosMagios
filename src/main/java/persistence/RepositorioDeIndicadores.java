@@ -17,8 +17,8 @@ public class RepositorioDeIndicadores {
 		this.daoIndicador.add(indicador);
 	}
 
-	public void delete(Indicador indicador) throws IOException{
-		this.daoIndicador.delete(indicador);
+	public void delete(String nombre) throws IOException{
+		this.daoIndicador.delete(nombre);
 	}
 
 	public ArrayList<Indicador> getAllIndicadores() throws IOException{

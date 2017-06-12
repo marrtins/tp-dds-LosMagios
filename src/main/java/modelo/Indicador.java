@@ -1,8 +1,7 @@
 package modelo;
 
-import java.util.ArrayList;
 
-public class Indicador extends Dato {
+public class Indicador {
 	
 	private String nombreIndicador;
 	private String calculoIndicador;

@@ -9,21 +9,19 @@ import modelo.Indicador;
 
 public class DataCollector {
 	
-	private String ruta = "C:\\Users\\martin\\Git\\3-LosMagios\\bd\\empresas.json";
-	private String rutaIn = "C:\\Users\\martin\\Git\\3-LosMagios\\bd\\indicadores.json";
+	private String rutaEmpresas="C:\\Users\\martin\\Git\\3-LosMagios\\bd\\empresas.json";
+	private String rutaIndicadores="C:\\Users\\martin\\Git\\3-LosMagios\\bd\\indicadores.json";
 	private RepositorioDeEmpresas repoEmpresas;	
 	private RepositorioDeIndicadores repoIndicadores;
 	ArrayList<Empresa> empresas = null;
 	ArrayList<Cuenta> cuentas = null;
 	ArrayList<Indicador> indicadores = null;
 	
-	public void setRuta(String unaRuta){
-		this.ruta = unaRuta;
-	}
+	
 	
 	public ArrayList<Empresa> cargarEmpresas(){
 		DAOJsonEmpresa dao = new DAOJsonEmpresa();
-		dao.setFilePath(ruta);
+		dao.setFilePath(rutaEmpresas);
 		this.repoEmpresas = new RepositorioDeEmpresas(dao);
 		
 		try {
@@ -41,6 +39,12 @@ public class DataCollector {
 		return empresas;
 		
 	}
+	
+
+	public String getRutaIndicadores() {
+		return rutaIndicadores;
+	}
+
 	
 
 	public void updateEmpresa(Empresa unaEmpresa){
@@ -61,9 +65,18 @@ public class DataCollector {
 		}
 	}
 	
+	public void borrarEmpres(Empresa unaEmpresa){
+		try {
+			repoEmpresas.delete(unaEmpresa.getNombreEmpresa());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 	public ArrayList<Indicador>cargarIndicadores(){
 		DAOJsonIndicador daoI = new DAOJsonIndicador();
-		daoI.setFilePath(rutaIn);
+		daoI.setFilePath(rutaIndicadores);
 		this.repoIndicadores = new RepositorioDeIndicadores(daoI);
 		
 		try {

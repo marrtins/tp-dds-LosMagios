@@ -47,7 +47,14 @@ public class VentanaConsultarValorDeCuenta extends JFrame {
 	private Periodo periodoSeleccionado;
 	DefaultMutableTreeNode abuelo;
 	DefaultTreeModel modelo;
-	
+	private String ruta;
+	public String getRuta() {
+		return ruta;
+	}
+
+	public void setRuta(String ruta) {
+		this.ruta = ruta;
+	}
 	CustomListModelEmpresa list_modelEmpresa = new CustomListModelEmpresa();
 	/**
 	 * Launch the application.
@@ -73,6 +80,7 @@ public class VentanaConsultarValorDeCuenta extends JFrame {
 			
 		
 		DataCollector persistence = new DataCollector();
+		
 		empresas = persistence.cargarEmpresas();
 		
 		

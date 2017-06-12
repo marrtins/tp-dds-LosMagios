@@ -40,15 +40,9 @@ public class DAOJsonIndicador implements DAOIndicador {
 		this.writeNewJson(indicadoresSerializados);
 	}
 
-	public void delete(Indicador indicador) throws IOException{
+	public void delete(String nombreIndicador) throws IOException{
 		ArrayList<Indicador> indicadores = this.getAllIndicadores();
-
-		for(int i=0; i<indicadores.size(); i++){
-			/*if(empresas.get(i).getId()==empresa.getId()){
-				empresas.remove(empresas.get(i));
-				i = empresas.size();
-			}*/
-		}
+		indicadores.removeIf(unIndicador->unIndicador.getNombreIndicador().equals(nombreIndicador));				
 		String indicadorSerializado = myGson.toJson(indicadores);
 		this.writeNewJson(indicadorSerializado);
 
@@ -63,7 +57,6 @@ public class DAOJsonIndicador implements DAOIndicador {
 
 	public void update(Indicador indicador) throws IOException{
 		ArrayList<Indicador> indicadores = this.getAllIndicadores();
-		String indicadorSerializado = myGson.toJson(indicador);
 		for(int i=0; i<indicadores.size(); i++){
 			String n1 = indicadores.get(i).getNombreIndicador();
 			String n2 = indicador.getNombreIndicador();

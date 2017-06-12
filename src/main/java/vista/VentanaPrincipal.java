@@ -26,6 +26,7 @@ import javax.swing.JPopupMenu;
 import java.awt.Component;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.JLabel;
 
 public class VentanaPrincipal extends JFrame {
 
@@ -52,7 +53,7 @@ public class VentanaPrincipal extends JFrame {
 	 */
 	public VentanaPrincipal() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 450, 321);
 		contentPane = new JPanel();
 		contentPane.setForeground(Color.WHITE);
 		contentPane.setBorder(null);
@@ -68,8 +69,6 @@ public class VentanaPrincipal extends JFrame {
 		txtpnSssss.setBounds(52, 0, 335, 37);
 		contentPane.add(txtpnSssss);
 		
-		final VentanaCuenta ventCuenta = new VentanaCuenta(); // declaramos el objeto VentanaCuenta que será del tipo VentanaCuenta
-		
 		JButton btnCargarCuentaEmpresa = new JButton("Cuenta");
 		btnCargarCuentaEmpresa.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -81,7 +80,7 @@ public class VentanaPrincipal extends JFrame {
 		btnCargarCuentaEmpresa.setBounds(23, 82, 180, 40);
 		contentPane.add(btnCargarCuentaEmpresa);
 		
-		final VentanaIndicador ventIndicador = new VentanaIndicador();
+		VentanaIndicador ventIndicador = new VentanaIndicador();
 		
 		JButton btnIndicador = new JButton("Indicador");
 		btnIndicador.addActionListener(new ActionListener() {
@@ -118,7 +117,7 @@ public class VentanaPrincipal extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnVerDatosDe.setBounds(123, 197, 180, 37);
+		btnVerDatosDe.setBounds(125, 194, 180, 37);
 		contentPane.add(btnVerDatosDe);
 		
 		JButton btnSalir = new JButton("Salir");
@@ -127,7 +126,7 @@ public class VentanaPrincipal extends JFrame {
 				dispose();
 			}
 		});
-		btnSalir.setBounds(345, 239, 89, 23);
+		btnSalir.setBounds(335, 258, 89, 23);
 		contentPane.add(btnSalir);
 	}
 	private static void addPopup(Component component, final JPopupMenu popup) {

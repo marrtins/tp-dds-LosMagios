@@ -2,6 +2,8 @@ package parser;
 
 import java.util.ArrayList;
 
+import excepciones.*;
+import java.io.IOException;
 import modelo.Cuenta;
 import modelo.Empresa;
 import modelo.Indicador;
@@ -17,7 +19,7 @@ public class AnalizadorLexico {
 	private Periodo periodoAplicado;
 	
 	
-	public String analizar(String formula,Empresa empresa,Periodo periodo){
+	public String analizar(String formula,Empresa empresa,Periodo periodo) throws IOException{
 		 
 		DataCollector persistence = new DataCollector();
 		empresas = persistence.cargarEmpresas();
@@ -41,7 +43,11 @@ public class AnalizadorLexico {
 				}
 				end = i;
 				cName=formula.substring(init+1,end);
-				cte = getcNameValue(cName);
+				try {
+					cte = getcNameValue(cName);
+				} catch (ErrorLexico e) {
+					throw e;
+				}
 				anterior = formula.substring(0,init);
 				siguiente = formula.substring(end+1,formula.length());
 				formula=anterior.concat(cte);
@@ -57,7 +63,7 @@ public class AnalizadorLexico {
 
 	}	
 
-	private String getcNameValue(String cons){
+	private String getcNameValue(String cons) throws IOException{
 
 		if(esUnaCuenta(cons)){
 			Cuenta cuenta = periodoAplicado.getCuenta(cons);
@@ -72,7 +78,6 @@ public class AnalizadorLexico {
 			}
 			return this.analizar(formula,empresaAplicada,periodoAplicado);
 		}
-		//TODO:EXCEPCION!!
 		return "-1";
 
 

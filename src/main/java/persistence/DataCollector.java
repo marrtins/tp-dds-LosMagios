@@ -1,5 +1,6 @@
 package persistence;
 
+import excepciones.*;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -26,10 +27,8 @@ public class DataCollector {
 		
 		try {
 			empresas = repoEmpresas.getAllEmpresas();
-		} catch (IOException e) {
-			// TODO crear EXCEPCIONES!
-			
-			e.printStackTrace();
+		} catch (ErrorCargaDatos e) {
+			throw e;
 		}
 		
 		for(Empresa unaEmpresa:empresas){
@@ -50,27 +49,24 @@ public class DataCollector {
 	public void updateEmpresa(Empresa unaEmpresa){
 		try {
 			repoEmpresas.update(unaEmpresa);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		} catch (ErrorEscrituraDatos e) {
+			throw e;
 		}
 	}
 	public void agregarEmpresa(Empresa unaEmpresa){
 		empresas = this.cargarEmpresas();
 		try {
 			repoEmpresas.add(unaEmpresa);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		} catch (ErrorEscrituraDatos e) {
+			throw e;
 		}
 	}
 	
 	public void borrarEmpresa(Empresa unaEmpresa){
 		try {
 			repoEmpresas.delete(unaEmpresa.getNombreEmpresa());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		} catch (ErrorBorrarDatos e) {
+			throw e;
 		}
 	}
 	
@@ -81,10 +77,8 @@ public class DataCollector {
 		
 		try {
 			indicadores = repoIndicadores.getAllIndicadores();
-		} catch (IOException e) {
-			// TODO crear EXCEPCIONES!
-			
-			e.printStackTrace();
+		} catch (ErrorCargaDatos e) {
+			throw e;
 		}
 	
 	return indicadores;
@@ -93,9 +87,8 @@ public class DataCollector {
 		indicadores = this.cargarIndicadores();
 		try {
 			repoIndicadores.add(unIndicador);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		} catch (ErrorEscrituraDatos e) {
+			throw e;
 		}
 	}
 	

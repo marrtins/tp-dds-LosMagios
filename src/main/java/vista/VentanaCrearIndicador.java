@@ -125,6 +125,7 @@ public class VentanaCrearIndicador extends JDialog {
 							if(txtNombreIndicador.getText().isEmpty() || editorPane.getText().isEmpty()){
 								JOptionPane.showMessageDialog(null, "Rellene todos los campos");
 							}
+							else 
 								if(!persistence.crearIndicador(nombreIndicador, formula)){
 									JOptionPane.showMessageDialog(null, "Ingresó una fórmula invalida");
 								}

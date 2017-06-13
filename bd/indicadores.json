@@ -1,1 +1,13 @@
-[{"nombreIndicador":"ASD","calculoIndicador":"3.1*{FDS}/{EBITDA}"},{"nombreIndicador":"INDICADOR2","calculoIndicador":"{ASD}/3+{PBI}"},{"nombreIndicador":"INDICADOR3","calculoIndicador":"{INDICADOR2}*3"},{"nombreIndicador":"HOLA","calculoIndicador":"2+2+{ASD}"},{"nombreIndicador":"PRUEBA 2","calculoIndicador":"{FDS}*3"}]
+[{
+	"nombreIndicador": "ASD",
+	"calculoIndicador": "3.1*{FDS}/{EBITDA}"
+},
+{
+	"nombreIndicador": "INDICADOR2",
+	"calculoIndicador": "{ASD}/3+{PBI}"
+},
+{
+	"nombreIndicador": "INDICADOR3",
+	"calculoIndicador": "{INDICADOR2}*3"
+}
+]

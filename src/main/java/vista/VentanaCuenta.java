@@ -64,7 +64,7 @@ public class VentanaCuenta extends JFrame {
 				dispose();
 			}
 		});
-		btnCrearCuenta.setBounds(46, 74, 149, 46);
+		btnCrearCuenta.setBounds(51, 94, 149, 46);
 		contentPane.add(btnCrearCuenta);
 		
 		JButton btnConsultarCuenta = new JButton("Consultar Valor de Cuenta");
@@ -76,7 +76,7 @@ public class VentanaCuenta extends JFrame {
 				dispose();
 			}
 		});
-		btnConsultarCuenta.setBounds(205, 74, 166, 46);
+		btnConsultarCuenta.setBounds(210, 94, 166, 46);
 		contentPane.add(btnConsultarCuenta);
 		
 		txtPorFavorSeleccione = new JTextField();
@@ -87,10 +87,6 @@ public class VentanaCuenta extends JFrame {
 		txtPorFavorSeleccione.setBounds(0, 0, 200, 29);
 		contentPane.add(txtPorFavorSeleccione);
 		txtPorFavorSeleccione.setColumns(10);
-		
-		JButton btnFiltrar = new JButton("Filtrar Valores de Cuentas");
-		btnFiltrar.setBounds(118, 144, 183, 46);
-		contentPane.add(btnFiltrar);
 		
 		
 		JButton btnAtras = new JButton("Atr\u00E1s");

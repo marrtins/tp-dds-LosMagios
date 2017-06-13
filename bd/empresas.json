@@ -1,1 +1,76 @@
-[{"nombreEmpresa":"APPLE","periodos":[{"anio":2016,"cuentas":[{"nombreCuenta":"EBITDA","valorCuenta":2004564},{"nombreCuenta":"FDS","valorCuenta":465456},{"nombreCuenta":"PBI","valorCuenta":798789}]},{"anio":2017,"cuentas":[{"nombreCuenta":"EBITDA","valorCuenta":44897},{"nombreCuenta":"FDS","valorCuenta":9987},{"nombreCuenta":"PBI","valorCuenta":33215}]},{"anio":2014,"cuentas":[{"nombreCuenta":"fkl","valorCuenta":20005}]}]},{"nombreEmpresa":"PEPSI","periodos":[{"anio":2016,"cuentas":[{"nombreCuenta":"EBITDA","valorCuenta":154},{"nombreCuenta":"FDS","valorCuenta":256},{"nombreCuenta":"PBI","valorCuenta":889}]},{"anio":2017,"cuentas":[{"nombreCuenta":"EBITDA","valorCuenta":4457},{"nombreCuenta":"FDS","valorCuenta":669},{"nombreCuenta":"PBI","valorCuenta":998}]}]}]
+[{
+	"nombreEmpresa": "APPLE",
+	"periodos": [{
+		"anio": 2016,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 200
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 300
+		},
+		{
+			"nombreCuenta": "PBI",
+			"valorCuenta": 400
+		},
+		{
+			"nombreCuenta": "prueba",
+			"valorCuenta": 200
+		},
+		{
+			"nombreCuenta": "prueba",
+			"valorCuenta": 200
+		},
+		{
+			"nombreCuenta": "prueba",
+			"valorCuenta": 200
+		}]
+	},
+	{
+		"anio": 2017,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 500
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 600
+		},
+		{
+			"nombreCuenta": "PBI",
+			"valorCuenta": 7000
+		}]
+	},
+	{
+		"anio": 2014,
+		"cuentas": [{
+			"nombreCuenta": "fkl",
+			"valorCuenta": 20005
+		}]
+	},
+	{
+		"anio": 2015,
+		"cuentas": [{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 200
+		}]
+	}]
+},
+{
+	"nombreEmpresa": "GOOGLE",
+	"periodos": [{
+		"anio": 2016,
+		"cuentas": [{
+			"nombreCuenta": "PRUEBA",
+			"valorCuenta": 200
+		}]
+	},
+	{
+		"anio": 2017,
+		"cuentas": [{
+			"nombreCuenta": "PRUEBA",
+			"valorCuenta": 300
+		}]
+	}]
+}]

@@ -48,7 +48,15 @@ public class Empresa implements Serializable {
 	
 	public void agregarCuentaEnPeriodo(Cuenta unaCuenta, Periodo unPeriodo){
 		
-			unPeriodo.agregarCuenta(unaCuenta);
+			if(!unPeriodo.contieneCuenta(unaCuenta.getNombreCuenta())){
+				unPeriodo.agregarCuenta(unaCuenta);
+			}
+			else{
+				unPeriodo.modificarCuenta(unaCuenta.getNombreCuenta(), unaCuenta.getValorCuenta());
+			}
+			
+			
+			
 		
 	}
 	

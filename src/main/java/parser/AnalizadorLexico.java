@@ -78,7 +78,10 @@ public class AnalizadorLexico {
 			}
 			return this.analizar(formula,empresaAplicada,periodoAplicado);
 		}
-		return "-1";
+		else {
+			Exception e = new Exception();
+			throw new ErrorConstantesEnIndicador(e);
+		}
 
 
 

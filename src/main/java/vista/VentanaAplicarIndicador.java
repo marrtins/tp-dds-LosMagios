@@ -8,6 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import javax.swing.JButton;
@@ -64,8 +65,18 @@ public class VentanaAplicarIndicador extends JFrame {
 		
 		DataCollector persistence = new DataCollector();
 		
-		empresas = persistence.cargarEmpresas();
-		indicadores = persistence.cargarIndicadores();
+		try {
+			empresas = persistence.cargarEmpresas();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		try {
+			indicadores = persistence.cargarIndicadores();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 436, 303);
@@ -92,13 +103,13 @@ public class VentanaAplicarIndicador extends JFrame {
 		JButton btnCalcular = new JButton("Calcular");
 		btnCalcular.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				lblValor.setText("Resultado: ");
 				indicadorSeleccionado = indicadores.get(cboIndicador.getSelectedIndex());
 				periodoSeleccionado = periodos.get(cboPeriodo.getSelectedIndex());
-				Parser parser = new Parser();
-				AnalizadorLexico analizadorLexico = new AnalizadorLexico();
-				String formulaString = analizadorLexico.analizar(indicadorSeleccionado.getCalculoIndicador(),empresaSeleccionada,periodoSeleccionado);
-				Double resultadoCalculo = parser.eval(formulaString);
-				lblValor.setText("Resultado" + String.valueOf(resultadoCalculo));
+				String resultado = String.valueOf(indicadorSeleccionado.aplicarIndicadorA(empresaSeleccionada, periodoSeleccionado));
+				lblValor.setText(("Resultado: " +resultado ));
+				
+				
 			}
 		});
 		btnCalcular.setBounds(253, 125, 97, 38);

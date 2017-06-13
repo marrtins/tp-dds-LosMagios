@@ -20,6 +20,7 @@ import javax.swing.JTextField;
 import javax.swing.JTextPane;
 import java.awt.Color;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 import javax.swing.JEditorPane;
@@ -54,14 +55,19 @@ public class VentanaCrearIndicador extends JDialog {
 		
 		
 		DataCollector persistence = new DataCollector();
-		indicadores = persistence.cargarIndicadores();
+		try {
+			indicadores = persistence.cargarIndicadores();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		
 		
 		
 		
 		
 		
-		setBounds(100, 100, 571, 446);
+		setBounds(100, 100, 571, 362);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
@@ -74,7 +80,7 @@ public class VentanaCrearIndicador extends JDialog {
 		}
 		
 		txtNombreIndicador = new JTextField();
-		txtNombreIndicador.setBounds(311, 50, 234, 20);
+		txtNombreIndicador.setBounds(243, 50, 234, 20);
 		contentPanel.add(txtNombreIndicador);
 		txtNombreIndicador.setColumns(10);
 		
@@ -90,7 +96,7 @@ public class VentanaCrearIndicador extends JDialog {
 		editorPane.setBounds(10, 155, 535, 115);
 		contentPanel.add(editorPane);
 
-		JLabel lblEscribaAquEl = new JLabel("Escriba aqu\u00ED el indicador a crear (ingrese cuentas e indicadores entre llaves \"{ }\"):");
+		JLabel lblEscribaAquEl = new JLabel("Escriba aqu\u00ED el indicador a crear (ingrese cuentas e indicadores entre llaves \"{ }\" y en may\u00FAsculas):");
 		lblEscribaAquEl.setBounds(10, 130, 535, 14);
 		contentPanel.add(lblEscribaAquEl);
 
@@ -113,20 +119,17 @@ public class VentanaCrearIndicador extends JDialog {
 						buttonPane.add(btnOk);
 						btnOk.addActionListener(new ActionListener() {
 							public void actionPerformed(ActionEvent e) {
-								AnalizadorSintactico sintax = new AnalizadorSintactico();
+								
 								String formula = editorPane.getText();
 								String nombreIndicador = txtNombreIndicador.getText();
 							if(txtNombreIndicador.getText().isEmpty() || editorPane.getText().isEmpty()){
 								JOptionPane.showMessageDialog(null, "Rellene todos los campos");
 							}
-								if(sintax.indicadorValido(formula)){
-									Indicador indicador = new Indicador();
-									indicador.setNombreIndicador(nombreIndicador.toUpperCase());
-									indicador.setCalculoIndicador(formula.toUpperCase());
-									persistence.agregarIndicador(indicador);
+								if(!persistence.crearIndicador(nombreIndicador, formula)){
+									JOptionPane.showMessageDialog(null, "Ingresó una fórmula invalida");
 								}
 								else{
-									JOptionPane.showMessageDialog(null, "Ingresó una fórmula invalida");
+									JOptionPane.showMessageDialog(null, "Indicador creado");
 								}
 								
 							}

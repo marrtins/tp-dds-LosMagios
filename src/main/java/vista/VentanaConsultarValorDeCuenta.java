@@ -81,7 +81,12 @@ public class VentanaConsultarValorDeCuenta extends JFrame {
 		
 		DataCollector persistence = new DataCollector();
 		
-		empresas = persistence.cargarEmpresas();
+		try {
+			empresas = persistence.cargarEmpresas();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

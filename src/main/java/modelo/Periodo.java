@@ -57,6 +57,16 @@ public class Periodo {
 		return cuentas.stream().anyMatch(unaCuenta -> unaCuenta.getNombreCuenta().equals(nombreCuenta));
 	}
 	
+	public void modificarCuenta(String nombreCuenta,int nuevoValor){
+		
+		this.getCuenta(nombreCuenta).setValorCuenta(nuevoValor);
+		
+		
+	}
+	public void eliminarCuenta(String nombreCuenta){
+		cuentas.remove(this.getCuenta(nombreCuenta));
+	}
+	
 	
 	
 	

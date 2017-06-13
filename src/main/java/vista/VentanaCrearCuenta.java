@@ -82,13 +82,15 @@ public class VentanaCrearCuenta extends JFrame {
 	public VentanaCrearCuenta() {
 		
 		DataCollector persistence = new DataCollector();
-		empresas=persistence.cargarEmpresas();
-		
-		
-		
-		for(Empresa unaEmpresa:empresas){
-			unaEmpresa.agregarPeriodos(unaEmpresa.getPeriodos());
+		try {
+			empresas=persistence.cargarEmpresas();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
 		}
+		
+			
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 500, 300);
 		contentPane = new JPanel();
@@ -178,7 +180,6 @@ public class VentanaCrearCuenta extends JFrame {
 				}
 				else
 				{
-
 					int indiceSeleccionado = cboEmpresa.getSelectedIndex();			
 					Empresa empresaSeleccionada = empresas.get(indiceSeleccionado - 1);
 					Cuenta nuevaCuenta = new Cuenta();
@@ -188,7 +189,12 @@ public class VentanaCrearCuenta extends JFrame {
 					int nuevoValor = Integer.parseInt(txtValor.getText());
 					nuevaCuenta.setear(nuevoNombre.toUpperCase(), nuevoValor);
 					empresaSeleccionada.agregarCuentaEnPeriodo(nuevaCuenta, unPeriodo);
-					persistence.updateEmpresa(empresaSeleccionada);
+					try {
+						persistence.updateEmpresa(empresaSeleccionada);
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
 				
 				}
 					
@@ -203,7 +209,12 @@ public class VentanaCrearCuenta extends JFrame {
 				String nombreEmpresa = JOptionPane.showInputDialog("Escribe nombre de la empresa");
 				cboEmpresa.addItem(nombreEmpresa.toUpperCase());
 				Empresa nuevaEmpresa = new Empresa(nombreEmpresa.toUpperCase());
-				persistence.agregarEmpresa(nuevaEmpresa);
+				try {
+					persistence.agregarEmpresa(nuevaEmpresa);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 		});
 		btnOtraEmpresa.setBounds(165, 159, 108, 23);

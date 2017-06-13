@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import modelo.Cuenta;
 import modelo.Empresa;
 import modelo.Indicador;
+import parser.AnalizadorSintactico;
 
 public class DataCollector {
 	
@@ -89,6 +90,41 @@ public class DataCollector {
 			repoIndicadores.add(unIndicador);
 		} catch (ErrorEscrituraDatos e) {
 			throw e;
+		}
+	}
+	public void borrarIndicador(Indicador unIndicador){
+		try {
+			repoIndicadores.delete(unIndicador.getNombreIndicador());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	
+	public Boolean crearIndicador(String nombre, String formula){
+		AnalizadorSintactico sintax = new AnalizadorSintactico();
+		if(sintax.indicadorValido(formula)){
+			Indicador indicador = new Indicador();
+			indicador.setNombreIndicador(nombre.toUpperCase());
+			indicador.setCalculoIndicador(formula.toUpperCase());
+			try {
+				this.agregarIndicador(indicador);
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			return true;
+		}
+		else{
+			Exception e = new Exception();
+			try {
+				throw new ErrorLexico(e);
+			} catch (ErrorLexico e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			return false;
 		}
 	}
 	

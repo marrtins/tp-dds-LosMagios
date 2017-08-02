@@ -11,7 +11,6 @@ import javax.swing.border.EmptyBorder;
 
 import modelo.Indicador;
 
-import parser.AnalizadorSintactico;
 import persistence.DataCollector;
 
 import javax.swing.JLabel;

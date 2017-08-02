@@ -1,4 +1,4 @@
-package parser;
+package analizadorIndicadores;
 
 import java.util.ArrayList;
 

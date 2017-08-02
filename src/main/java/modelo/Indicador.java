@@ -4,10 +4,10 @@ import java.io.IOException;
 
 import javax.swing.JOptionPane;
 
+import analizadorIndicadores.AnalizadorLexico;
+import analizadorIndicadores.AnalizadorSintactico;
+import analizadorIndicadores.Parser;
 import excepciones.ErrorConstantesEnIndicador;
-import parser.AnalizadorLexico;
-import parser.AnalizadorSintactico;
-import parser.Parser;
 import persistence.DataCollector;
 
 public class Indicador {

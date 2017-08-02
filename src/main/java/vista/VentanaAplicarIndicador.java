@@ -21,11 +21,11 @@ import javax.swing.JTextPane;
 import javax.swing.ListSelectionModel;
 import javax.swing.border.EmptyBorder;
 
+import analizadorIndicadores.AnalizadorLexico;
+import analizadorIndicadores.Parser;
 import modelo.Empresa;
 import modelo.Indicador;
 import modelo.Periodo;
-import parser.AnalizadorLexico;
-import parser.Parser;
 import persistence.CustomListModelEmpresa;
 import persistence.DataCollector;
 

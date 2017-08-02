@@ -8,15 +8,15 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
+import analizadorIndicadores.AnalizadorLexico;
+import analizadorIndicadores.AnalizadorSintactico;
+import analizadorIndicadores.Parser;
 import excepciones.ErrorConstantesEnIndicador;
 import excepciones.ErrorLexico;
 import junit.framework.Assert;
 import modelo.Empresa;
 import modelo.Indicador;
 import modelo.Periodo;
-import parser.AnalizadorLexico;
-import parser.AnalizadorSintactico;
-import parser.Parser;
 import persistence.DataCollector;
 
 public class TestIndicadores {

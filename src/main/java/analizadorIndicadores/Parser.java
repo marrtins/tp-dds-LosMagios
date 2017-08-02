@@ -1,4 +1,4 @@
-package parser;
+package analizadorIndicadores;
 
 public class Parser {
 	

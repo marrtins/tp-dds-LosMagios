@@ -1,6 +1,6 @@
-package parser;
+package analizadorIndicadores;
 
-import excepciones.ErrorConstantesEnIndicador;
+
 import excepciones.ErrorLexico;
 
 public class AnalizadorSintactico {

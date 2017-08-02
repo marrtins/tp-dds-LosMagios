@@ -4,10 +4,10 @@ import excepciones.*;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import analizadorIndicadores.AnalizadorSintactico;
 import modelo.Cuenta;
 import modelo.Empresa;
 import modelo.Indicador;
-import parser.AnalizadorSintactico;
 
 public class DataCollector {
 	

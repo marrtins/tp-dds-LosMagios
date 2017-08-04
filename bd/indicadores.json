@@ -1,13 +1,20 @@
 [{
-	"nombreIndicador": "ASD",
-	"calculoIndicador": "3.1*{FDS}/{EBITDA}"
+	"nombreIndicador": "ROE",
+	"calculoIndicador": "{NetIncome}/{CapitalTotal}"
 },
 {
-	"nombreIndicador": "INDICADOR2",
-	"calculoIndicador": "{ASD}/3+{PBI}"
+	"nombreIndicador": "DebtEqRatio",
+	"calculoIndicador": "{PasivoTotal}/{PatrimonioNeto}"
 },
 {
-	"nombreIndicador": "INDICADOR3",
-	"calculoIndicador": "{INDICADOR2}*3"
-}
-]
+	"nombreIndicador": "ProfitMargin",
+	"calculoIndicador": "{NetIncome}/{VentasNetas}"
+},
+{
+	"nombreIndicador": "NetIncome",
+	"calculoIndicador": "{IngresoNetoOD}+{IngresoNetoCC}"
+},
+{
+	"nombreIndicador": "HOLA",
+	"calculoIndicador": "1+1+{CapitalTotal}"
+}]

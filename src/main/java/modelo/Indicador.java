@@ -32,7 +32,6 @@ public class Indicador {
 	
 	public  Double aplicarIndicadorA(Empresa unaEmpresa, Periodo unPeriodo){
 		
-		Parser parser = new Parser();
 		AnalizadorLexico analizadorLexico = new AnalizadorLexico();
 		AnalizadorSintactico sintax = new AnalizadorSintactico();
 		if(sintax.indicadorValido(this.getCalculoIndicador())){

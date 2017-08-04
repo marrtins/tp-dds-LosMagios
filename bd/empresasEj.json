@@ -1,0 +1,90 @@
+[{
+	"nombreEmpresa": "APPLE",
+	"periodos": [{
+		"anio": 2016,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 200
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 300
+		},
+		{
+			"nombreCuenta": "PBI",
+			"valorCuenta": 400
+		},
+		{
+			"nombreCuenta": "prueba",
+			"valorCuenta": 200
+		},
+		{
+			"nombreCuenta": "prueba",
+			"valorCuenta": 200
+		},
+		{
+			"nombreCuenta": "prueba",
+			"valorCuenta": 200
+		}]
+	},
+	{
+		"anio": 2017,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 500
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 600
+		},
+		{
+			"nombreCuenta": "PBI",
+			"valorCuenta": 7000
+		}]
+	}]
+},
+{
+	"nombreEmpresa": "FACEBOOK",
+	"periodos": [{
+		"anio": 2016,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 200
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 300
+		},
+		{
+			"nombreCuenta": "PBI",
+			"valorCuenta": 400
+		},
+		{
+			"nombreCuenta": "prueba",
+			"valorCuenta": 200
+		},
+		{
+			"nombreCuenta": "prueba",
+			"valorCuenta": 200
+		},
+		{
+			"nombreCuenta": "prueba",
+			"valorCuenta": 200
+		}]
+	},
+	{
+		"anio": 2017,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 500
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 600
+		},
+		{
+			"nombreCuenta": "PBI",
+			"valorCuenta": 7000
+		}]
+	}]
+}]

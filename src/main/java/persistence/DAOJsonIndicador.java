@@ -5,7 +5,9 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
@@ -13,8 +15,9 @@ import com.google.gson.reflect.TypeToken;
 
 import modelo.Cuenta;
 import modelo.Indicador;
-import modelo.Indicador;
+import modelo.Metodologia;
 
+import java.util.function.Predicate;
 
 
 public class DAOJsonIndicador implements DAOIndicador {
@@ -23,6 +26,7 @@ public class DAOJsonIndicador implements DAOIndicador {
 	private Gson myGson;
 	private BufferedReader bufferToReader;
 	private BufferedWriter bufferToWrite;
+	//private Predicate<String> filtroIndicadores;
 	
 	public void setFilePath(String filePath) {
 		this.filePathIndicador = filePath;
@@ -49,11 +53,33 @@ public class DAOJsonIndicador implements DAOIndicador {
 	}
 
 	public ArrayList<Indicador> getAllIndicadores() throws IOException{
+		/*Predicate<Indicador> filtroIndicadores;
+		if(opcion=="indicadores"){
+			filtroIndicadores = unIndicador-> unIndicador.getNombreIndicador().charAt(0) == '#';
+		}
+		else{
+			filtroIndicadores = unIndicador-> unIndicador.getNombreIndicador().charAt(0) != '#';
+		}*/
+		
+		
+		
 		FileReader reader = new	FileReader(this.filePathIndicador);
 		this.bufferToReader = new BufferedReader(reader);
 		ArrayList<Indicador> indicadores = this.myGson.fromJson(getJson(), new TypeToken<ArrayList<Indicador>>(){}.getType());
+		//indicadores.removeIf(filtroIndicadores);
 		return indicadores;
 	}
+	
+	public ArrayList<Metodologia> getAllMetodologias() throws IOException {
+		FileReader reader = new	FileReader(this.filePathIndicador);
+		this.bufferToReader = new BufferedReader(reader);
+		ArrayList<Metodologia> metodologias = this.myGson.fromJson(getJson(), new TypeToken<ArrayList<Metodologia>>(){}.getType());
+		//indicadores.removeIf(filtroIndicadores);
+		return metodologias;
+	}
+	
+	
+	
 
 	public void update(Indicador indicador) throws IOException{
 		ArrayList<Indicador> indicadores = this.getAllIndicadores();

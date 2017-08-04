@@ -1,5 +1,7 @@
 package analizadorIndicadores;
 
+import excepciones.ErrorLexico;
+
 public class Parser {
 	
 	public static double eval(final String str) {
@@ -81,6 +83,8 @@ public class Parser {
 	        }
 	    }.parse();
 	}
+	
+	
 	
 
 }

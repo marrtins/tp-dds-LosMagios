@@ -1,0 +1,20 @@
+[{
+	"nombreMetodologia": "WarrenBuffet",
+	"condiciones": [
+	{
+		"formatoCondicion": "#Consistent#{ROE}"
+	},
+	{
+		"formatoCondicion": "#Lowest#{DebtEqRatio}"
+	},
+	{
+		"formatoCondicion": "#Highest#{ProfitMargin}"
+	},
+	{
+		"formatoCondicion": "#Crescent#{ProfitMargin}"
+	},
+	{
+		"formatoCondicion": "#Antique>10#"
+	}]
+},
+]

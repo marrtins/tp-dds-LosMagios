@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import modelo.Indicador;
+import modelo.Metodologia;
 
 
 public class RepositorioDeIndicadores {
@@ -24,6 +25,10 @@ public class RepositorioDeIndicadores {
 	public ArrayList<Indicador> getAllIndicadores() throws IOException{
 		return this.daoIndicador.getAllIndicadores();
 	}
+	public ArrayList<Metodologia> getAllMetodologias() throws IOException{
+		return this.daoIndicador.getAllMetodologias();
+	}
+	
 	
 	public void update(Indicador indicador) throws IOException{
 		this.daoIndicador.update(indicador);

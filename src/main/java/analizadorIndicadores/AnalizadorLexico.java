@@ -12,7 +12,6 @@ import modelo.Periodo;
 import persistence.DataCollector;
 
 public class AnalizadorLexico {
-	private ArrayList<Empresa> empresas = new ArrayList<>();
 	ArrayList<Indicador> indicadores = new ArrayList<>();
 	
 	private Empresa empresaAplicada;
@@ -22,7 +21,6 @@ public class AnalizadorLexico {
 	public String analizar(String formula,Empresa empresa,Periodo periodo) throws IOException{
 		 
 		DataCollector persistence = new DataCollector();
-		empresas = persistence.cargarEmpresas();
 		indicadores = persistence.cargarIndicadores();
 		empresaAplicada = empresa;
 		periodoAplicado=periodo;
@@ -37,12 +35,9 @@ public class AnalizadorLexico {
 			char cadena[] = formula.toCharArray();
 			String cName;
 			if(cadena[i] =='{'){
-				init = i;
-				while(cadena[i]!='}'){
-					i++;
-				}
-				end = i;
-				cName=formula.substring(init+1,end);
+				cName=getIndicatorS(formula,i);
+				while(cadena[i]!='}') i++;
+				end =i;
 				try {
 					cte = getcNameValue(cName);
 				} catch (ErrorLexico e) {
@@ -62,7 +57,17 @@ public class AnalizadorLexico {
 
 
 	}	
-
+	public String getIndicatorS(String formula, int pos){
+		int init,end;
+		char cadena[]=formula.toCharArray();
+		init = pos;
+		
+		while(cadena[pos]!='}'){
+			pos++;
+		}
+		end = pos;
+		return formula.substring(init+1,end);		
+	}
 	private String getcNameValue(String cons) throws IOException{
 
 		if(esUnaCuenta(cons)){
@@ -90,10 +95,58 @@ public class AnalizadorLexico {
 
 	private boolean esUnIndicador(String cons) {
 		return indicadores.stream().anyMatch(unIndicador -> unIndicador.getNombreIndicador().equals(cons));
-
 	}
-
 	private boolean esUnaCuenta(String cons) {
 		return periodoAplicado.contieneCuenta(cons);
 	}
+
+	public String getMethS(String formula){
+		int init,end;
+		int pos=0;
+		
+		String metKey="";
+		String off="";
+		char cadena[]=formula.toCharArray();
+			if(cadena[pos]=='#'){
+				pos++;
+				init=pos;
+			while(cadena[pos]!='#'){
+				pos++;
+			}
+			end=pos;
+			pos++;
+			metKey=formula.substring(init,end);
+			}
+		
+			if(metKey.contains("Antique")){
+				return metKey;	
+			}
+			
+		off=getIndicatorS(formula, pos);
+		
+		if(isAnalysis(metKey)){
+			return off+" --> "+metKey;
+		}
+		else{
+			return "NOEEEEEEEXISTE";
+		}
+		
+		//return 
+		
+	}
+	
+	private Boolean isAnalysis(String key){
+		return key.contains("Consistent")||key.contains("Lowest")||key.contains("Highest")||key.contains("Crescent")||key.contains("Decrescent")||key.contains("Than");
+	}
+	
+	
+	private String years(String key){
+		return key.substring(7, key.length());
+	}
+
+
+
+
+
+
 }

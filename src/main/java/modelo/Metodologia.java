@@ -7,27 +7,38 @@ import java.util.ArrayList;
 public class Metodologia {
 
 	private String nombreMetodologia;
-	static ArrayList<Condicion> condiciones = new ArrayList<Condicion>();
-	static ArrayList<Indicador> indicadores = new ArrayList<Indicador>();
+	private ArrayList<Condicion> condiciones = new ArrayList<Condicion>();
+	String descripcion;
 	
+	public Metodologia(String nombreMetodologia,ArrayList< Condicion> condiciones) {
+		super();
+		this.nombreMetodologia = nombreMetodologia;
+		this.condiciones=condiciones;
+	}
 	public String getNombreMetodologia() {
 		return nombreMetodologia;
 	}
 	public void setNombreMetodologia(String nombreMetodologia) {
 		this.nombreMetodologia = nombreMetodologia;
 	}
-	public static ArrayList<Condicion> getCondiciones() {
+	public  ArrayList<Condicion> getCondiciones() {
 		return condiciones;
 	}
-	public static void setCondiciones(ArrayList<Condicion> condiciones) {
-		Metodologia.condiciones = condiciones;
+	public  void setCondiciones(ArrayList<Condicion> condicionesSet) {
+		condiciones = condicionesSet;
 	}
-	public static ArrayList<Indicador> getIndicadores() {
-		return indicadores;
+	public  void agregarNuevaCondicion(String nuevaFormula){
+		Condicion nuevaCondicion = new Condicion(nuevaFormula);
+		condiciones.add(nuevaCondicion);	
 	}
-	public static void setIndicadores(ArrayList<Indicador> indicadores) {
-		Metodologia.indicadores = indicadores;
+	public String getDescripcion(){
+		descripcion="";		
+		condiciones.forEach((unaMetodologia)->{
+			descripcion+= unaMetodologia.condicionFormateada()+'\n';
+			});
+		return descripcion;
 	}
+	
 	
 	
 	

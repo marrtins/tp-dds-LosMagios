@@ -8,16 +8,21 @@ import analizadorIndicadores.AnalizadorSintactico;
 import modelo.Cuenta;
 import modelo.Empresa;
 import modelo.Indicador;
+import modelo.Metodologia;
+
+
 
 public class DataCollector {
 	
 	private String rutaEmpresas="C:\\Users\\martin\\Git\\3-LosMagios\\bd\\empresas.json";
 	private String rutaIndicadores="C:\\Users\\martin\\Git\\3-LosMagios\\bd\\indicadores.json";
+	private String rutaMetodologias="C:\\Users\\martin\\Git\\3-LosMagios\\bd\\metodologias.json";
 	private RepositorioDeEmpresas repoEmpresas;	
 	private RepositorioDeIndicadores repoIndicadores;
 	ArrayList<Empresa> empresas = null;
 	ArrayList<Cuenta> cuentas = null;
 	ArrayList<Indicador> indicadores = null;
+	ArrayList<Metodologia> metodologias = null;
 	
 	
 	
@@ -81,9 +86,30 @@ public class DataCollector {
 		} catch (ErrorCargaDatos e) {
 			throw e;
 		}
+		
+		
 	
 	return indicadores;
 	}
+	public ArrayList<Metodologia>cargarMetodologias() throws IOException{
+		DAOJsonIndicador daoI = new DAOJsonIndicador();
+		daoI.setFilePath(rutaMetodologias);
+		this.repoIndicadores = new RepositorioDeIndicadores(daoI);
+		
+		try {
+			metodologias = repoIndicadores.getAllMetodologias();
+		} catch (ErrorCargaDatos e) {
+			throw e;
+		}
+		
+		
+		
+	return metodologias;
+	}
+	
+	
+	
+	
 	public void agregarIndicador(Indicador unIndicador) throws IOException{
 		indicadores = this.cargarIndicadores();
 		try {

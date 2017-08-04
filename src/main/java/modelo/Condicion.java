@@ -1,11 +1,29 @@
 package modelo;
 
-import analizadorIndicadores.AnalizadorLexico;
+import java.io.IOException;
+import java.util.ArrayList;
 
-public class Condicion {
+import analizadorIndicadores.AnalizadorLexico;
+import analizadorIndicadores.Parser;
+import persistence.DataCollector;
+
+public class Condicion{
 	
 	public String formatoCondicion;
+	public TipoCondicion tipoCondicion;
+	DataCollector persistence = new DataCollector();
+	public Condicion getTipoCondicion() {
+		return tipoCondicion;
+	}
+	public void setTipoCondicion() {
+		Parser type = new Parser();
+		
+		
+		tipoCondicion = type.setter(formatoCondicion);
+	}
+	
 
+		
 	public String getFormatoCondicion() {
 		return formatoCondicion;
 	}
@@ -24,6 +42,16 @@ public class Condicion {
 		
 		
 	}
+	
+	public Indicador getIndicador(String nombreIndicador) throws IOException{
+		return persistence.getIndicador(nombreIndicador);
+	}
+	
+	public ArrayList<Empresa> aplicar(ArrayList<Empresa> empresas) throws IOException{
+		return tipoCondicion.aplicar(empresas);
+	}
+	
+	
 	
 	
 

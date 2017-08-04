@@ -34,6 +34,10 @@ import java.awt.GridBagConstraints;
 import javax.swing.JToggleButton;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JTextField;
 
 public class VentanaAplicarMetodologia extends JFrame {
 
@@ -125,6 +129,31 @@ public class VentanaAplicarMetodologia extends JFrame {
 		JLabel lblEmpresasAAnalizar = new JLabel("Empresas a analizar");
 		lblEmpresasAAnalizar.setBounds(31, 260, 267, 14);
 		contentPane.add(lblEmpresasAAnalizar);
+		
+		JTextPane txtResultado = new JTextPane();
+		txtResultado.setBounds(462, 191, 119, 134);
+		contentPane.add(txtResultado);
+		
+		
+		JButton btnAplicar = new JButton("Aplicar");
+		btnAplicar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				Metodologia metSelecc = metodologias.get(cboMetodologia.getSelectedIndex());
+				try {
+					ArrayList<Empresa> empresas2=metSelecc.aplicarA(empresas);
+					
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				txtResultado.setText(empresas.get(0).getNombreEmpresa());
+				
+			}
+		});
+		btnAplicar.setBounds(395, 133, 89, 23);
+		contentPane.add(btnAplicar);
+		
 			
 		
 		for(int i=0;i<empresas.size();i++){

@@ -14,6 +14,8 @@ import javax.swing.JTextPane;
 import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class VentanaMetodologia extends JDialog {
 
@@ -83,6 +85,18 @@ public class VentanaMetodologia extends JDialog {
 		txtpnCargarMetodologia.setBackground(Color.BLUE);
 		txtpnCargarMetodologia.setBounds(152, 0, 123, 30);
 		contentPanel.add(txtpnCargarMetodologia);
+		
+		JButton btnAplicar = new JButton("Aplicar Metodolog\u00EDa");
+		btnAplicar.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				VentanaAplicarMetodologia ventanaAplicar = new VentanaAplicarMetodologia();
+				ventanaAplicar.setVisible(true);
+				dispose();
+			}
+		});
+		btnAplicar.setBounds(104, 181, 228, 23);
+		contentPanel.add(btnAplicar);
 		{
 			JPanel buttonPane = new JPanel();
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));

@@ -17,4 +17,8 @@
 {
 	"nombreIndicador": "HOLA",
 	"calculoIndicador": "1+1+{CapitalTotal}"
+},
+{
+	"nombreIndicador":"asd",
+	"calculoIndicador":"2*{noexisto}"
 }]

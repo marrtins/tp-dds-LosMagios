@@ -2,6 +2,8 @@ package modelo;
 
 
 
+import java.awt.List;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Metodologia {
@@ -25,7 +27,7 @@ public class Metodologia {
 		return condiciones;
 	}
 	public  void setCondiciones(ArrayList<Condicion> condicionesSet) {
-		condiciones = condicionesSet;
+		condiciones.forEach(unaCondicion -> unaCondicion.setTipoCondicion());
 	}
 	public  void agregarNuevaCondicion(String nuevaFormula){
 		Condicion nuevaCondicion = new Condicion(nuevaFormula);
@@ -38,6 +40,15 @@ public class Metodologia {
 			});
 		return descripcion;
 	}
+	public ArrayList<Empresa>  aplicarA(ArrayList<Empresa> empresas) throws IOException{
+		
+		empresas=condiciones.get(0).aplicar(empresas);
+		return empresas;
+		
+		
+	}
+	
+	
 	
 	
 	

@@ -30,6 +30,12 @@ public class Indicador {
 		this.calculoIndicador = calculoIndicador;
 	}
 	
+	public Boolean puedeAplicarA(Empresa unaEmpresa,Periodo unPeriodo){
+		AnalizadorSintactico sintax = new AnalizadorSintactico();
+		return sintax.indicadorValido(this.getCalculoIndicador());
+	}
+	
+	
 	public  Double aplicarIndicadorA(Empresa unaEmpresa, Periodo unPeriodo){
 		
 		AnalizadorLexico analizadorLexico = new AnalizadorLexico();

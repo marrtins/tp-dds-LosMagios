@@ -17,4 +17,11 @@
 		"formatoCondicion": "#Antique>10#"
 	}]
 },
+{
+	"nombreMetodologia": "W2",
+	"condiciones": [
+	{
+		"formatoCondicion": "#Antique>10#"
+	}]
+}
 ]

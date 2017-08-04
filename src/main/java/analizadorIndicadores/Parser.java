@@ -1,6 +1,8 @@
 package analizadorIndicadores;
 
 import excepciones.ErrorLexico;
+import modelo.TipoCondicion;
+import modelo.TiposCondicion.CondicionConsistencia;
 
 public class Parser {
 	
@@ -84,6 +86,20 @@ public class Parser {
 	    }.parse();
 	}
 	
+	
+	public CondicionConsistencia setter(String formatoCondicion){
+		
+		if(formatoCondicion.contains("#Consistent")){
+			CondicionConsistencia tipo = new CondicionConsistencia(formatoCondicion);
+			return tipo;
+		}
+		if(formatoCondicion.contains("#Lowest")){
+			CondicionConsistencia tipo = new CondicionConsistencia(formatoCondicion);
+			return tipo;
+		}
+		return null;
+		
+	}
 	
 	
 

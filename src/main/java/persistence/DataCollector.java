@@ -49,7 +49,11 @@ public class DataCollector {
 	public String getRutaIndicadores() {
 		return rutaIndicadores;
 	}
-
+	
+	public Indicador getIndicador(String nombreIndicador) throws IOException{
+		indicadores = this.cargarIndicadores();
+		return indicadores.stream().filter(unIndicador->unIndicador.getNombreIndicador().equals(nombreIndicador)).findFirst().orElse(null);
+	}
 	
 
 	public void updateEmpresa(Empresa unaEmpresa) throws IOException{
@@ -102,6 +106,9 @@ public class DataCollector {
 			throw e;
 		}
 		
+		for(Metodologia unaMetodologia:metodologias){
+			unaMetodologia.setCondiciones(unaMetodologia.getCondiciones());
+		}
 		
 		
 	return metodologias;

@@ -1,7 +1,7 @@
 package modelo;
 
 import java.util.ArrayList;
-
+import java.util.Calendar;
 
 import modelo.Periodo;
 
@@ -33,6 +33,7 @@ public class Empresa implements Serializable {
 	public ArrayList<Periodo> getPeriodos() {
 		return periodos;
 	}
+	
 
 	public void setPeriodos(ArrayList<Periodo> periodos) {
 		this.periodos = periodos;
@@ -86,7 +87,60 @@ public class Empresa implements Serializable {
 	}
 	
 	
+	public Boolean indicadorConsistenteEnAnios(Indicador unIndicador, int anios){
+		int lastYear = Calendar.getInstance().get(Calendar.YEAR) - 1;
+		int firstYear = lastYear - anios;
+		int i;
+		Double valor1,valor2;
+		
+	
+		if(!tieneIndicadorEnUltimosAnios(unIndicador, anios)) return false;
+		
+		for(i=firstYear;i<lastYear;i++){
+			
+			valor1=unIndicador.aplicarIndicadorA(this,this.getPeriodoOrCreate(i));
+			valor2=unIndicador.aplicarIndicadorA(this,this.getPeriodoOrCreate(i+1));
+			if(this.getDelta(valor1,valor2)>10) return false;
+		}
+		
+		return true;
+		
+	}
+	
+	
+	
+	public Boolean tieneIndicadorEnUltimosAnios(Indicador unIndicador, int anios){
+		int lastYear = Calendar.getInstance().get(Calendar.YEAR) - 1;
+		int firstYear = lastYear-anios;
+		int i;
+		for(i=firstYear;i<=lastYear;i++){
+			if(!this.tienePeriodo(i)) return false;
+			Periodo periodoTemp = this.getPeriodoOrCreate(i);
+			if(!unIndicador.puedeAplicarA(this,periodoTemp)) return false;
+		}
+		return true;
+	}
+	
+	
+	
+	
+	
 
+	public Float getDelta(Double v1,Double v2){
+		Double dif =Math.abs(v2-v1);
+		return (float) ((dif/v1)*100);
+		
+	}
+	
+	public Boolean antiguedadMayorA(int anios){
+		int lastYear = Calendar.getInstance().get(Calendar.YEAR) - 1;
+		int firstYear = lastYear-anios;
+		int i;
+		for(i=firstYear;i<=lastYear;i++){
+			if(!this.tienePeriodo(i)) return false;
+		}
+		return true;
+	}
 	
 	
 

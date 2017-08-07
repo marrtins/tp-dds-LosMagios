@@ -1,27 +1,45 @@
 [{
 	"nombreMetodologia": "WarrenBuffet",
-	"condiciones": [
-	{
-		"formatoCondicion": "#Consistent#{ROE}"
+	"cTaxativas": [{
+		"nombreCondicion": "ROE Consistente en los ultimos 10 años",
+		"operadorString": "consistence",
+		"indicadorString": "ROE",
+		"anios": 10
 	},
 	{
-		"formatoCondicion": "#Lowest#{DebtEqRatio}"
+		"nombreCondicion": "Profit Margin creciente en los ultimos 5 años",
+		"operadorString": "crescent",
+		"indicadorString": "ProfitMargin",
+		"anios": 5
+	}],
+	"cNoTaxativas": [{
+		"nombreCondicion": "Debt Equity Ratio mas bajo posible en los ultimos 5 anios. peso=10",
+		"operadorString": "lowest",
+		"anios": 5,
+		"indicadorString": "DebtEquityRatio",
+		"peso": 10
 	},
 	{
-		"formatoCondicion": "#Highest#{ProfitMargin}"
-	},
-	{
-		"formatoCondicion": "#Crescent#{ProfitMargin}"
-	},
-	{
-		"formatoCondicion": "#Antique>10#"
+		"nombreCondicion": "Profit Margin mas alto posible en los ultimos 5 anios. peso=15",
+		"operadorString": "highest",
+		"anios": 5,
+		"indicadorString": "ProfitMargin",
+		"peso": 15
+	}],
+	"cCombinadas":[{
+		"nombreCondicion":"Antiguedad mayor a 10 y lo mas alta posible",
+		"cTaxativas":[{
+			"nombreCondicion":"Antiguedad mayor a 10",
+			"operadorString":"antique",
+			"indicadorString":"null",
+			"anios":10
+		}],
+		"cNoTaxativas":[{
+			"nombreCondicion":"antiguedad lo mas alta posible",
+			"operadorString":"antique",
+			"indicadorString":"null",
+			"anios":5,
+			"peso":13
+		}]
 	}]
-},
-{
-	"nombreMetodologia": "W2",
-	"condiciones": [
-	{
-		"formatoCondicion": "#Antique>10#"
-	}]
-}
-]
+}]

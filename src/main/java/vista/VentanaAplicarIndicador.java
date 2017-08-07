@@ -25,6 +25,7 @@ import analizadorIndicadores.AnalizadorLexico;
 import analizadorIndicadores.Parser;
 import modelo.Empresa;
 import modelo.Indicador;
+import modelo.Metodologia;
 import modelo.Periodo;
 import persistence.CustomListModelEmpresa;
 import persistence.DataCollector;
@@ -39,6 +40,7 @@ public class VentanaAplicarIndicador extends JFrame {
 	private ArrayList<Indicador> indicadores;
 	private ArrayList<Empresa> empresas;
 	private ArrayList<Periodo> periodos;
+	private ArrayList<Metodologia> metodologias;
 	
 	/**
 	 * Launch the application.
@@ -67,6 +69,7 @@ public class VentanaAplicarIndicador extends JFrame {
 		
 		try {
 			empresas = persistence.cargarEmpresas();
+			metodologias=persistence.cargarMetodologias();
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();

@@ -53,16 +53,7 @@ public class DAOJsonIndicador implements DAOIndicador {
 	}
 
 	public ArrayList<Indicador> getAllIndicadores() throws IOException{
-		/*Predicate<Indicador> filtroIndicadores;
-		if(opcion=="indicadores"){
-			filtroIndicadores = unIndicador-> unIndicador.getNombreIndicador().charAt(0) == '#';
-		}
-		else{
-			filtroIndicadores = unIndicador-> unIndicador.getNombreIndicador().charAt(0) != '#';
-		}*/
-		
-		
-		
+						
 		FileReader reader = new	FileReader(this.filePathIndicador);
 		this.bufferToReader = new BufferedReader(reader);
 		ArrayList<Indicador> indicadores = this.myGson.fromJson(getJson(), new TypeToken<ArrayList<Indicador>>(){}.getType());
@@ -74,7 +65,6 @@ public class DAOJsonIndicador implements DAOIndicador {
 		FileReader reader = new	FileReader(this.filePathIndicador);
 		this.bufferToReader = new BufferedReader(reader);
 		ArrayList<Metodologia> metodologias = this.myGson.fromJson(getJson(), new TypeToken<ArrayList<Metodologia>>(){}.getType());
-		//indicadores.removeIf(filtroIndicadores);
 		return metodologias;
 	}
 	

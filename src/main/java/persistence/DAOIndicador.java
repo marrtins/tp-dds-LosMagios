@@ -12,7 +12,6 @@ public interface DAOIndicador {
 	public void delete(String nombreIndicador) throws IOException;
 	public ArrayList<Indicador> getAllIndicadores() throws IOException;
 	public ArrayList<Metodologia> getAllMetodologias() throws IOException;
-
 	public void update(Indicador indicador) throws IOException;
 	
 

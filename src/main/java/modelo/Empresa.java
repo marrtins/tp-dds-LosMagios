@@ -16,12 +16,8 @@ public class Empresa implements Serializable {
 	public Empresa(String _nombre) {
 		super();
 		this.nombreEmpresa = _nombre;
-		this.periodos = periodos;
 		
 	}
-	
-	
-
 	public String getNombreEmpresa() {
 		return nombreEmpresa;
 	}
@@ -79,33 +75,15 @@ public class Empresa implements Serializable {
 		return unPeriodo.getCuenta(nombreCuenta);
 	}
 	public Periodo getPeriodoOrCreate(int unAnio){
-		
 		if(!this.tienePeriodo(unAnio)) this.agregarPeriodo(new Periodo(unAnio));
-		
+		return this.getPeriodo(unAnio);
+	
+	}
+	
+	public Periodo getPeriodo(int unAnio){
 		return periodos.stream().filter(unPeriodo->unPeriodo.getAnio() == unAnio).findFirst().orElse(null);
-	
 	}
 	
-	
-	public Boolean indicadorConsistenteEnAnios(Indicador unIndicador, int anios){
-		int lastYear = Calendar.getInstance().get(Calendar.YEAR) - 1;
-		int firstYear = lastYear - anios;
-		int i;
-		Double valor1,valor2;
-		
-	
-		if(!tieneIndicadorEnUltimosAnios(unIndicador, anios)) return false;
-		
-		for(i=firstYear;i<lastYear;i++){
-			
-			valor1=unIndicador.aplicarIndicadorA(this,this.getPeriodoOrCreate(i));
-			valor2=unIndicador.aplicarIndicadorA(this,this.getPeriodoOrCreate(i+1));
-			if(this.getDelta(valor1,valor2)>10) return false;
-		}
-		
-		return true;
-		
-	}
 	
 	
 	
@@ -123,14 +101,19 @@ public class Empresa implements Serializable {
 	
 	
 	
-	
-	
-
-	public Float getDelta(Double v1,Double v2){
-		Double dif =Math.abs(v2-v1);
-		return (float) ((dif/v1)*100);
+	public int getAntiguedad(){
+		int thisYear=Calendar.getInstance().get(Calendar.YEAR);
+		int primerPeriodo=thisYear;
+		int i;
+		for(Periodo unPeriodo:periodos){
+			if(unPeriodo.getAnio() < primerPeriodo) primerPeriodo=unPeriodo.getAnio();
+		}
+		
+		return thisYear-primerPeriodo;
 		
 	}
+
+	
 	
 	public Boolean antiguedadMayorA(int anios){
 		int lastYear = Calendar.getInstance().get(Calendar.YEAR) - 1;
@@ -141,6 +124,48 @@ public class Empresa implements Serializable {
 		}
 		return true;
 	}
+	
+	public Boolean indicadorCrecienteEn(Indicador unIndicador, int anios){
+		int lastYear = Calendar.getInstance().get(Calendar.YEAR) - 1;
+		int firstYear = lastYear-anios;
+		int i;
+		if(!this.tieneIndicadorEnUltimosAnios(unIndicador, anios)) return false;
+		for(i=firstYear;i<lastYear;i++){
+			Periodo periodoAnterior = this.getPeriodoOrCreate(i);
+			Periodo periodoSiguiente = this.getPeriodoOrCreate(i+1);
+			if(unIndicador.aplicarIndicadorA(this,periodoAnterior)>unIndicador.aplicarIndicadorA(this,periodoSiguiente))return false;
+		}
+		return true;
+	}
+
+
+
+	public Double getValorIndicadorEn(int anio,Indicador unIndicador) {
+
+		Periodo unPeriodo=this.getPeriodoOrCreate(anio);
+		return unIndicador.aplicarIndicadorA(this,unPeriodo);
+		
+		
+	}
+	
+	
+	public ArrayList<Double> getValoresIndicadorEn(Indicador unIndicador, int anios){ 
+		int lastYear = Calendar.getInstance().get(Calendar.YEAR) - 1;
+		int firstYear = lastYear-anios;
+		int i;
+		ArrayList<Double> valoresIndicador = new ArrayList<Double>();
+		for(i=firstYear;i<=lastYear;i++){
+			valoresIndicador.add(this.getValorIndicadorEn(i,unIndicador));
+		}
+		return valoresIndicador;
+	}
+	
+	
+	
+	
+	
+	
+	
 	
 	
 

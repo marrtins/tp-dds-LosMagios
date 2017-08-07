@@ -9,6 +9,7 @@ import modelo.Cuenta;
 import modelo.Empresa;
 import modelo.Indicador;
 import modelo.Metodologia;
+import modelo.TiposCondicion.CondicionTaxativa;
 
 
 
@@ -95,6 +96,7 @@ public class DataCollector {
 	
 	return indicadores;
 	}
+	
 	public ArrayList<Metodologia>cargarMetodologias() throws IOException{
 		DAOJsonIndicador daoI = new DAOJsonIndicador();
 		daoI.setFilePath(rutaMetodologias);
@@ -106,13 +108,13 @@ public class DataCollector {
 			throw e;
 		}
 		
-		for(Metodologia unaMetodologia:metodologias){
-			unaMetodologia.setCondiciones(unaMetodologia.getCondiciones());
+	/*	for(Metodologia unaMetodologia:metodologias){
+			unaMetodologia.cargarMetodologia();
 		}
-		
-		
+*/
 	return metodologias;
 	}
+	
 	
 	
 	

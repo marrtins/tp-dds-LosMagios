@@ -87,6 +87,10 @@ public class VentanaMetodologia extends JDialog {
 		contentPanel.add(txtpnCargarMetodologia);
 		
 		JButton btnAplicar = new JButton("Aplicar Metodolog\u00EDa");
+		btnAplicar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btnAplicar.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {

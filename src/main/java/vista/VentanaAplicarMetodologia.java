@@ -76,7 +76,7 @@ public class VentanaAplicarMetodologia extends JFrame {
 		try {
 			empresas = persistence.cargarEmpresas();
 			indicadores = persistence.cargarIndicadores();
-			metodologias = persistence.cargarMetodologias();
+			metodologias=persistence.cargarMetodologias();
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -108,9 +108,8 @@ public class VentanaAplicarMetodologia extends JFrame {
 			public void mouseClicked(MouseEvent arg0) {
 				int indice = cboMetodologia.getSelectedIndex();
 				Metodologia metSelec = metodologias.get(indice);
-				String descripcionMetodologia = metSelec.getDescripcion();
+				
 				txtDescripcion.setText(" ");
-				txtDescripcion.setText(descripcionMetodologia);
 				
 				
 			}
@@ -118,7 +117,6 @@ public class VentanaAplicarMetodologia extends JFrame {
 		cboMetodologia.setBounds(31, 34, 198, 30);
 		contentPane.add(cboMetodologia);
 		
-		metodologias.forEach(met -> cboMetodologia.addItem(met.getNombreMetodologia()));
 		
 		
 		
@@ -138,15 +136,6 @@ public class VentanaAplicarMetodologia extends JFrame {
 		JButton btnAplicar = new JButton("Aplicar");
 		btnAplicar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				Metodologia metSelecc = metodologias.get(cboMetodologia.getSelectedIndex());
-				try {
-					ArrayList<Empresa> empresas2=metSelecc.aplicarA(empresas);
-					
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				
 				txtResultado.setText(empresas.get(0).getNombreEmpresa());
 				
 			}

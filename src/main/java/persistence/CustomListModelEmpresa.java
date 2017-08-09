@@ -31,6 +31,8 @@ public class CustomListModelEmpresa extends AbstractListModel {
     	empresas = unaLista;
     }
     
+    
+    
     public ArrayList<Empresa> getEmpresas(){
     	return empresas;
     }

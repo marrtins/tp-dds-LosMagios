@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
+import javax.swing.text.html.HTMLDocument.Iterator;
+
 import excepciones.ErrorCargaDatos;
 import modelo.TiposCondicion.CondicionNoTaxativa;
 import modelo.TiposCondicion.CondicionTaxativa;
@@ -18,9 +20,85 @@ public class Metodologia {
 	ArrayList<CondicionNoTaxativa> cNoTaxativas;
 	LinkedList<Empresa> listaOrdenada=new LinkedList<>();
 	
+	String descripcionMetodologia;
 	
 	
+	public String getNombreMetodologia() {
+		return nombreMetodologia;
+	}
 	
+	public String getDescripcionCondicionTaxativas(){
+		
+		String descripcion = "";
+		for( CondicionTaxativa s : cTaxativas ){
+		  descripcion+="#"+s.getNombreCondicion()+"\n\n";
+		}
+		
+		return descripcion;
+		
+	}
+	
+	
+public String getDescripcionCondicionNoTaxativas(){
+		
+		String descripcion = "";
+		for( CondicionNoTaxativa s : cNoTaxativas ){
+		  descripcion+="#"+s.getNombreCondicion()+"\n\n";
+		}
+		
+		return descripcion;
+		
+	}
+	
+	
+
+	
+
+
+	public void setNombreMetodologia(String nombreMetodologia) {
+		this.nombreMetodologia = nombreMetodologia;
+	}
+
+
+
+	public ArrayList<CondicionTaxativa> getcTaxativas() {
+		return cTaxativas;
+	}
+	
+	
+
+
+
+	public void setcTaxativas(ArrayList<CondicionTaxativa> cTaxativas) {
+		this.cTaxativas = cTaxativas;
+	}
+
+
+
+	public ArrayList<CondicionNoTaxativa> getcNoTaxativas() {
+		return cNoTaxativas;
+	}
+
+
+
+	public void setcNoTaxativas(ArrayList<CondicionNoTaxativa> cNoTaxativas) {
+		this.cNoTaxativas = cNoTaxativas;
+	}
+
+
+
+	public LinkedList<Empresa> getListaOrdenada() {
+		return listaOrdenada;
+	}
+
+
+
+	public void setListaOrdenada(LinkedList<Empresa> listaOrdenada) {
+		this.listaOrdenada = listaOrdenada;
+	}
+
+
+
 	public LinkedList<Empresa> aplicarMetodologia(ArrayList<Empresa> empresas){
 		//A cada una de las empresas le aplico las condiciones TAXATIVAS, si no las pasa, las dejo de analizar (no las agrego a la lista link)
 		//empresas.removeIf(unaEmpresa -> !this.cumpleCondicionesTaxativas(unaEmpresa));

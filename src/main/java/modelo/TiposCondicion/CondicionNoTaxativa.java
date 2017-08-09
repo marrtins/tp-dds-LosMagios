@@ -15,6 +15,66 @@ public class CondicionNoTaxativa implements TipoCondicion {
 
 	
 	
+	public String getNombreCondicion() {
+		return nombreCondicion;
+	}
+
+
+	public void setNombreCondicion(String nombreCondicion) {
+		this.nombreCondicion = nombreCondicion;
+	}
+
+
+	public String getOperadorString() {
+		return operadorString;
+	}
+
+
+	public void setOperadorString(String operadorString) {
+		this.operadorString = operadorString;
+	}
+
+
+	public int getAnios() {
+		return anios;
+	}
+
+
+	public void setAnios(int anios) {
+		this.anios = anios;
+	}
+
+
+	public int getPeso() {
+		return peso;
+	}
+
+
+	public void setPeso(int peso) {
+		this.peso = peso;
+	}
+
+
+	public String getIndicadorString() {
+		return indicadorString;
+	}
+
+
+	public void setIndicadorString(String indicadorString) {
+		this.indicadorString = indicadorString;
+	}
+
+
+	public OperadorNoTaxativo getOperador() {
+		return operador;
+	}
+
+
+	public void setOperador(OperadorNoTaxativo operador) {
+		this.operador = operador;
+	}
+
+
 	String nombreCondicion;
 	String operadorString;
 	int anios;

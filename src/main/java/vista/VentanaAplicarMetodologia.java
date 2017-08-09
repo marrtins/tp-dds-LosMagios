@@ -14,17 +14,23 @@ import java.awt.Scrollbar;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.Vector;
 import java.util.function.Function;
 
 import javax.swing.JScrollPane;
 import java.awt.GridLayout;
+import java.awt.List;
 import java.awt.FlowLayout;
 import javax.swing.border.TitledBorder;
+import javax.swing.event.ListDataEvent;
 
 import modelo.Empresa;
 import modelo.Indicador;
 import modelo.Metodologia;
 import modelo.Periodo;
+import modelo.TiposCondicion.CondicionNoTaxativa;
+import modelo.TiposCondicion.CondicionTaxativa;
+import persistence.CustomListModelEmpresa;
 import persistence.DataCollector;
 
 import javax.swing.UIManager;
@@ -33,17 +39,32 @@ import javax.swing.ScrollPaneConstants;
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import javax.swing.JToggleButton;
+import javax.swing.ListModel;
+import javax.swing.ListSelectionModel;
+
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+
+import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextField;
+import javax.swing.JList;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
+import javax.swing.JTextArea;
+import java.awt.event.ItemListener;
+import java.awt.event.ItemEvent;
+import javax.swing.JTable;
+import javax.swing.event.ChangeListener;
+import javax.swing.event.ChangeEvent;
 
 public class VentanaAplicarMetodologia extends JFrame {
 
 	private JPanel contentPane;
-	
+	DefaultListModel lstResModel = new DefaultListModel();
+	ArrayList<Empresa> empresasAAnalizar =null;
 	private ArrayList<Indicador> indicadores;
 	private ArrayList<Empresa> empresas;
 	private ArrayList<Periodo> periodos;
@@ -76,6 +97,7 @@ public class VentanaAplicarMetodologia extends JFrame {
 
 		try {
 			empresas = persistence.cargarEmpresas();
+			empresasAAnalizar=empresas;
 			indicadores = persistence.cargarIndicadores();
 			metodologias=persistence.cargarMetodologias();
 		} catch (IOException e1) {
@@ -95,29 +117,55 @@ public class VentanaAplicarMetodologia extends JFrame {
 		contentPane.setLayout(null);
 		
 		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(31, 84, 147, 165);
+		contentPane.add(scrollPane);
 		
-		JTextPane txtDescripcion = new JTextPane();
-		txtDescripcion.setText("Seleccione una metodolog\u00EDa");
-		txtDescripcion.setBounds(28, 75, 201, 167);
-		contentPane.add(txtDescripcion);
-		txtDescripcion.setEditable(false);
+		JTextPane txtNT = new JTextPane();
+		txtNT.setEditable(false);
+		scrollPane.setViewportView(txtNT);
+		JScrollPane scrollPane_1 = new JScrollPane();
+		scrollPane_1.setBounds(211, 84, 147, 165);
+		contentPane.add(scrollPane_1);
+		
+		JTextPane txtT = new JTextPane();
+		txtT.setEditable(false);
+		scrollPane_1.setViewportView(txtT);
 		
 		
+		
+
 		JComboBox cboMetodologia = new JComboBox();
-		cboMetodologia.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent arg0) {
-				int indice = cboMetodologia.getSelectedIndex();
-				Metodologia metSelec = metodologias.get(indice);
+		cboMetodologia.addItemListener(new ItemListener() {
+			public void itemStateChanged(ItemEvent arg0) {
+				Metodologia metodologiaSeleccionada = metodologias.get(cboMetodologia.getSelectedIndex());
 				
-				txtDescripcion.setText(" ");
-				
-				
+
+				txtT.setText("Condiciones Taxativas:\n\n" + metodologiaSeleccionada.getDescripcionCondicionTaxativas());
+				txtNT.setText("Condiciones No Taxativas:\n\n" + metodologiaSeleccionada.getDescripcionCondicionNoTaxativas());
 			}
 		});
+
+
+		
+		
 		cboMetodologia.setBounds(31, 34, 198, 30);
 		contentPane.add(cboMetodologia);
 		
+		metodologias.forEach(met -> cboMetodologia.addItem(met.getNombreMetodologia()));
+		
+		
+		
+		JScrollPane scrollPane_2 = new JScrollPane();
+		scrollPane_2.setBounds(442, 84, 167, 174);
+		contentPane.add(scrollPane_2);
+		
+		
+		JList lstRes = new JList<>(lstResModel);
+		scrollPane_2.setViewportView(lstRes);
+		lstRes.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
+		lstRes.setLayoutOrientation(JList.VERTICAL);
+		lstRes.setVisibleRowCount(-1);
 		
 		
 		
@@ -129,36 +177,60 @@ public class VentanaAplicarMetodologia extends JFrame {
 		lblEmpresasAAnalizar.setBounds(31, 260, 267, 14);
 		contentPane.add(lblEmpresasAAnalizar);
 		
-		JTextPane txtResultado = new JTextPane();
-		txtResultado.setBounds(462, 191, 119, 134);
-		contentPane.add(txtResultado);
+		
+
 		
 		
 		JButton btnAplicar = new JButton("Aplicar");
 		btnAplicar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+
 				
-				Metodologia metodologiaAAplicar = metodologias.get(0);
+				int i=0;
+
+				lstResModel.removeAllElements();
 				
-				LinkedList<Empresa> listaOrdenada= metodologiaAAplicar.aplicarMetodologia(empresas);
+				Metodologia metodologiaAAplicar = metodologias.get(cboMetodologia.getSelectedIndex());
 				
-				txtResultado.setText(listaOrdenada.get(0).getNombreEmpresa());
-				txtResultado.setText(listaOrdenada.get(1).getNombreEmpresa());
-				txtResultado.setText(listaOrdenada.get(2).getNombreEmpresa());
 				
+				
+				
+				
+				LinkedList<Empresa> listaOrdenada= metodologiaAAplicar.aplicarMetodologia(empresasAAnalizar);
+							
+				listaOrdenada.forEach(unaEmpresa->{
+					lstResModel.addElement(unaEmpresa.getNombreEmpresa());	
+				});
+				listaOrdenada.clear();
+								
 			}
+
+			
 		});
-		btnAplicar.setBounds(395, 133, 89, 23);
+		btnAplicar.setBounds(471, 38, 89, 23);
 		contentPane.add(btnAplicar);
 		
+		
+		
+		empresas.forEach(unaEmpresa->{
+			JCheckBox chk = new JCheckBox(unaEmpresa.getNombreEmpresa());
+			chk.setSelected(true);
+			panel.add(chk);	
+			chk.addMouseListener(new MouseAdapter() {
+				@Override
+				public void mousePressed(MouseEvent e) {
+					if(!chk.isSelected()){
+						empresasAAnalizar.add(unaEmpresa);
+						
+					}
+					else{
+						empresasAAnalizar.remove(unaEmpresa);
+					}
+				}
+			});
+		});
 			
 		
-		for(int i=0;i<empresas.size();i++){
-			JCheckBox chk = new JCheckBox(empresas.get(i).getNombreEmpresa());
-			chk.setSelected(true);
-			panel.add(chk);
-			
-		}
 		
 	}
 }

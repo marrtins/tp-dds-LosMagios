@@ -43,18 +43,18 @@
 {
 	"nombreMetodologia": "MetodologiaInventada",
 	"cTaxativas": [{
-		"nombreCondicion": "ROE mayor a 100 en los ultimos 10 años",
-		"valorComparacion": 100,
+		"nombreCondicion": "ROE mayor a 10 en los ultimos 2 años",
+		"valorComparacion": 10,
 		"operadorString": "higherThan",
 		"indicadorString": "ROE",
-		"anios": 4
+		"anios": 2
 	},
 	{
-		"nombreCondicion": "ProfitMargin menor que 50 en los ultimos 5 años",
+		"nombreCondicion": "ProfitMargin menor que 50000 en los ultimos 2 años",
 		"operadorString": "lowerThan",
-		"valorComparacion":50 ,
+		"valorComparacion":50000 ,
 		"indicadorString": "ProfitMargin",
-		"anios": 4
+		"anios": 2
 	}
 	],
 	"cNoTaxativas": []

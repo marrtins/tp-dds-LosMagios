@@ -1,6 +1,7 @@
 package analizadorIndicadores;
 
 
+import excepciones.ErrorConstantesEnIndicador;
 import excepciones.ErrorLexico;
 
 public class AnalizadorSintactico {
@@ -22,64 +23,41 @@ public class AnalizadorSintactico {
 					}
 				}			
 			}
-			else {if(!this.caracterValido(cadena[i])){
-				Exception e = new Exception();
-				try {
-					throw new ErrorLexico(e);
-				} catch (ErrorLexico e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
+			else{
+				if(!this.caracterValido(cadena[i])){
+					Exception e = new Exception();
+					try {
+						throw new ErrorLexico(e);
+					} catch (ErrorLexico e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+					return false;
 				}
-				return false;
-			}
-			if(cadena[i]=='}'){
-				if(i==0) return false;
-				if(i+1 == formula.length()) return true;
-				if(!this.esUnOperador(cadena[i+1])) return false;
-			}
-			if(this.esDigito(cadena[i])){
-				if(i+1 == formula.length()) return true;
-				if(cadena[i+1]=='(' || cadena[i+1]=='{') return false;
-			}
-			if(this.esUnOperador(cadena[i])){
-				if(i==0) return false;
-				if(i+1 == formula.length()) return false;
-				if(cadena[i+1]==')' || cadena[i+1]=='.' || this.esUnOperador(cadena[i+1])) return false;
-			}
-			if(cadena[i]=='('){
-				if(i+1==formula.length())return false;
-				if(!this.esDigito(cadena[i+1]) && cadena[i+1]!='{') return false;
-			}
-			if(cadena[i]==')'){
-				if(i==0) return false;
-				if(i+1 == formula.length()) return true;
-				if(!this.esUnOperador(cadena[i+1])) return false;
-			}
-			if(this.esPunto(cadena[i])){
-				if(i+1==formula.length())return false;
-				if(i==0) return false;
-				if(!this.esDigito(cadena[i+1]))return false;
-			}
+			
+			else{ 
+				if(!Character.isDigit(cadena[i])){
+					if(i +1 == formula.length() && cadena[i] ==')') return true;
+					if(i == 0 && cadena[i] != '(' )return false;
+					if(!Character.isDigit(cadena[i+1]) && cadena[i+1]!='{') return false;
+					
+				}
 				
-			}	
+			}
+			
+		}
+	
+		
+		
 	}
 		return true;
 }
 	
 	public Boolean caracterValido(char caracter){
 		
-		return (this.esDigito(caracter)||this.esUnOperador(caracter)||this.esParentesis(caracter)||this.esPunto(caracter));
+		return (Character.isDigit(caracter)||this.esUnOperador(caracter));
 	}
 	public Boolean esUnOperador(char caracter){
-		return (caracter == '/'||caracter == '*'||caracter == '+'||caracter == '-');
-	}
-	public Boolean esParentesis(char caracter){
-		return (caracter == '(' || caracter ==')');
-	}
-	public Boolean esPunto(char caracter){
-		return (caracter =='.');
-	}
-	public Boolean esDigito(char caracter){
-		return (Character.isDigit(caracter));
+		return (caracter == '/'||caracter == '*'||caracter == '+'||caracter == '-'||caracter=='('||caracter==')'||caracter =='.');
 	}
 }

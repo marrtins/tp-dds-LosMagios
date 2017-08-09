@@ -89,7 +89,7 @@ public class Empresa implements Serializable {
 	
 	public Boolean tieneIndicadorEnUltimosAnios(Indicador unIndicador, int anios){
 		int lastYear = Calendar.getInstance().get(Calendar.YEAR) - 1;
-		int firstYear = lastYear-anios;
+		int firstYear = 1+lastYear-anios;
 		int i;
 		for(i=firstYear;i<=lastYear;i++){
 			if(!this.tienePeriodo(i)) return false;
@@ -116,10 +116,10 @@ public class Empresa implements Serializable {
 	
 	
 	public Boolean antiguedadMayorA(int anios){
-		int lastYear = Calendar.getInstance().get(Calendar.YEAR) - 1;
+		int lastYear = Calendar.getInstance().get(Calendar.YEAR);
 		int firstYear = lastYear-anios;
 		int i;
-		for(i=firstYear;i<=lastYear;i++){
+		for(i=firstYear;i<lastYear;i++){
 			if(!this.tienePeriodo(i)) return false;
 		}
 		return true;
@@ -151,7 +151,7 @@ public class Empresa implements Serializable {
 	
 	public ArrayList<Double> getValoresIndicadorEn(Indicador unIndicador, int anios){ 
 		int lastYear = Calendar.getInstance().get(Calendar.YEAR) - 1;
-		int firstYear = lastYear-anios;
+		int firstYear = 1+lastYear-anios;
 		int i;
 		ArrayList<Double> valoresIndicador = new ArrayList<Double>();
 		for(i=firstYear;i<=lastYear;i++){

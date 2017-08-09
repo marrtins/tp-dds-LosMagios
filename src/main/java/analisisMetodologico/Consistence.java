@@ -9,7 +9,7 @@ import modelo.Indicador;
 public class Consistence extends OperadorTaxativo {
 
 	@Override
-	public Boolean analizarEmpresaTaxativa(Empresa unaEmpresa, Indicador unIndicador, int anios) {
+	public Boolean analizarEmpresaTaxativamente(Empresa unaEmpresa, Indicador unIndicador, int anios,Double valorComparacion) {
 		
 		if(!unaEmpresa.tieneIndicadorEnUltimosAnios(unIndicador, anios))return false;
 		

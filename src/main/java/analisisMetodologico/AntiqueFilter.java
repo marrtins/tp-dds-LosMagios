@@ -10,9 +10,11 @@ public class AntiqueFilter extends OperadorTaxativo{
 	String nombreOperador;
 
 	@Override
-	public Boolean analizarEmpresaTaxativa(Empresa unaEmpresa, Indicador unIndicador, int anios) {
+	public Boolean analizarEmpresaTaxativamente(Empresa unaEmpresa, Indicador unIndicador, int anios,Double valorComparacion) {
 		
 		
 		return unaEmpresa.antiguedadMayorA(anios);
 	}
+
+	
 }

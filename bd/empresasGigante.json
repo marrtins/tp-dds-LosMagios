@@ -1,0 +1,4745 @@
+[{
+	"nombreEmpresa": "APPLE",
+	"periodos": [{
+		"anio": 1995,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 85617
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 45494
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 80479
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 81860
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 92049
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 27779
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 40170
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 79141
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 35000
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 59857
+		}]
+	},
+	{
+		"anio": 1996,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 52966
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 66599
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 42830
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 56206
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 95701
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 92458
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 67214
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 74557
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 22744
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 64627
+		}]
+	},
+	{
+		"anio": 1997,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 11467
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 31860
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 22350
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 82376
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 24101
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 46085
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 21681
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 19792
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 99904
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 29643
+		}]
+	},
+	{
+		"anio": 1998,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 56164
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 85520
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 65138
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 36643
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 67380
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 57186
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 54422
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 97550
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 36326
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 79422
+		}]
+	},
+	{
+		"anio": 1999,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 57407
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 79293
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 46020
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 90238
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 35498
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 41721
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 82696
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 92713
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 16278
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 95440
+		}]
+	},
+	{
+		"anio": 2000,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 57340
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 17745
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 27299
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 69691
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 90121
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 41400
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 15775
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 11802
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 51193
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 15678
+		}]
+	},
+	{
+		"anio": 2001,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 31445
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 97358
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 91199
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 86583
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 34000
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 58578
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 43769
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 78423
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 56128
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 70095
+		}]
+	},
+	{
+		"anio": 2002,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 57845
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 13535
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 49387
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 93866
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 93773
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 74886
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 35586
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 76468
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 67598
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 41864
+		}]
+	},
+	{
+		"anio": 2003,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 71908
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 24937
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 49609
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 89207
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 84628
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 39730
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 30607
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 90404
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 41532
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 71800
+		}]
+	},
+	{
+		"anio": 2004,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 96083
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 62978
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 69158
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 87281
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 49560
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 93158
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 45859
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 83329
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 71580
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 91988
+		}]
+	},
+	{
+		"anio": 2005,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 53424
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 29424
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 95523
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 92812
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 23289
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 89296
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 67697
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 48876
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 65764
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 35295
+		}]
+	},
+	{
+		"anio": 2006,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 80740
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 37671
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 50233
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 30349
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 26878
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 34861
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 60080
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 47485
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 25264
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 91613
+		}]
+	},
+	{
+		"anio": 2007,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 19285
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 21346
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 54590
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 78443
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 98628
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 94151
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 71600
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 44487
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 77480
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 43180
+		}]
+	},
+	{
+		"anio": 2008,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 36474
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 30903
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 62604
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 31997
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 23715
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 75894
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 21292
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 81413
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 24769
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 77057
+		}]
+	},
+	{
+		"anio": 2009,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 16707
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 95510
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 14727
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 56941
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 25859
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 31605
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 81802
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 75939
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 69091
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 97067
+		}]
+	},
+	{
+		"anio": 2010,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 67551
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 78376
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 18413
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 22141
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 56819
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 17040
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 16291
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 28419
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 51528
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 83771
+		}]
+	},
+	{
+		"anio": 2011,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 61599
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 78003
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 14674
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 24202
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 100000
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 28389
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 90096
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 21292
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 99802
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 14865
+		}]
+	},
+	{
+		"anio": 2012,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 88349
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 16509
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 10374
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 93077
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 63450
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 26233
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 24681
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 45252
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 92173
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 83773
+		}]
+	},
+	{
+		"anio": 2013,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 42318
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 59724
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 62149
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 50732
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 71865
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 18967
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 57773
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 78157
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 37386
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 99301
+		}]
+	},
+	{
+		"anio": 2014,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 61927
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 88986
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 77303
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 66602
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 13187
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 77303
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 84992
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 93284
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 88595
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 84794
+		}]
+	},
+	{
+		"anio": 2015,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 98150
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 76943
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 91303
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 98524
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 70019
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 54753
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 24757
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 84701
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 90006
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 16929
+		}]
+	},
+	{
+		"anio": 2016,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 68474
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 32324
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 66653
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 30622
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 73056
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 38518
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 39590
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 30828
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 16674
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 66977
+		}]
+	}]
+},
+{
+	"nombreEmpresa": "FACEBOOK",
+	"periodos": [{
+		"anio": 1995,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 85617
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 45494
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 80479
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 81860
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 92049
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 27779
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 40170
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 79141
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 35000
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 59857
+		}]
+	},
+	{
+		"anio": 1996,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 52966
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 66599
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 42830
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 56206
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 95701
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 92458
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 67214
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 74557
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 22744
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 64627
+		}]
+	},
+	{
+		"anio": 1997,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 11467
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 31860
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 22350
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 82376
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 24101
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 46085
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 21681
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 19792
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 99904
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 29643
+		}]
+	},
+	{
+		"anio": 1998,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 56164
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 85520
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 65138
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 36643
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 67380
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 57186
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 54422
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 97550
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 36326
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 79422
+		}]
+	},
+	{
+		"anio": 1999,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 57407
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 79293
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 46020
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 90238
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 35498
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 41721
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 82696
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 92713
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 16278
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 95440
+		}]
+	},
+	{
+		"anio": 2000,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 57340
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 17745
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 27299
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 69691
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 90121
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 41400
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 15775
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 11802
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 51193
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 15678
+		}]
+	},
+	{
+		"anio": 2001,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 31445
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 97358
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 91199
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 86583
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 34000
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 58578
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 43769
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 78423
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 56128
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 70095
+		}]
+	},
+	{
+		"anio": 2002,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 57845
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 13535
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 49387
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 93866
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 93773
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 74886
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 35586
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 76468
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 67598
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 41864
+		}]
+	},
+	{
+		"anio": 2003,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 71908
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 24937
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 49609
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 89207
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 84628
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 39730
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 30607
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 90404
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 41532
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 71800
+		}]
+	},
+	{
+		"anio": 2004,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 96083
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 62978
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 69158
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 87281
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 49560
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 93158
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 45859
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 83329
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 71580
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 91988
+		}]
+	},
+	{
+		"anio": 2005,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 53424
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 29424
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 95523
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 92812
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 23289
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 89296
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 67697
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 48876
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 65764
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 35295
+		}]
+	},
+	{
+		"anio": 2006,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 80740
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 37671
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 50233
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 30349
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 26878
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 34861
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 60080
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 47485
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 25264
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 91613
+		}]
+	},
+	{
+		"anio": 2007,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 19285
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 21346
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 54590
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 78443
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 98628
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 94151
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 71600
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 44487
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 77480
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 43180
+		}]
+	},
+	{
+		"anio": 2008,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 36474
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 30903
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 62604
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 31997
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 23715
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 75894
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 21292
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 81413
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 24769
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 77057
+		}]
+	},
+	{
+		"anio": 2009,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 16707
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 95510
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 14727
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 56941
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 25859
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 31605
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 81802
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 75939
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 69091
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 97067
+		}]
+	},
+	{
+		"anio": 2010,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 67551
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 78376
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 18413
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 22141
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 56819
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 17040
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 16291
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 28419
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 51528
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 83771
+		}]
+	},
+	{
+		"anio": 2011,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 61599
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 78003
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 14674
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 24202
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 100000
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 28389
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 90096
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 21292
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 99802
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 14865
+		}]
+	},
+	{
+		"anio": 2012,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 88349
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 16509
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 10374
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 93077
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 63450
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 26233
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 24681
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 45252
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 92173
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 83773
+		}]
+	},
+	{
+		"anio": 2013,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 42318
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 59724
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 62149
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 50732
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 71865
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 18967
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 57773
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 78157
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 37386
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 99301
+		}]
+	},
+	{
+		"anio": 2014,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 61927
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 88986
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 77303
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 66602
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 13187
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 77303
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 84992
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 93284
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 88595
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 84794
+		}]
+	},
+	{
+		"anio": 2015,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 98150
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 76943
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 91303
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 98524
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 70019
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 54753
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 24757
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 84701
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 90006
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 16929
+		}]
+	},
+	{
+		"anio": 2016,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 68474
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 32324
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 66653
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 30622
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 73056
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 38518
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 39590
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 30828
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 16674
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 66977
+		}]
+	}]
+},
+{
+	"nombreEmpresa": "SAMSUNG",
+	"periodos": [{
+		"anio": 1995,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 85617
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 45494
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 80479
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 81860
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 92049
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 27779
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 40170
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 79141
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 35000
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 59857
+		}]
+	},
+	{
+		"anio": 1996,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 52966
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 66599
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 42830
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 56206
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 95701
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 92458
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 67214
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 74557
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 22744
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 64627
+		}]
+	},
+	{
+		"anio": 1997,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 11467
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 31860
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 22350
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 82376
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 24101
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 46085
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 21681
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 19792
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 99904
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 29643
+		}]
+	},
+	{
+		"anio": 1998,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 56164
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 85520
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 65138
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 36643
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 67380
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 57186
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 54422
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 97550
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 36326
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 79422
+		}]
+	},
+	{
+		"anio": 1999,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 57407
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 79293
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 46020
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 90238
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 35498
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 41721
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 82696
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 92713
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 16278
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 95440
+		}]
+	},
+	{
+		"anio": 2000,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 57340
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 17745
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 27299
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 69691
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 90121
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 41400
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 15775
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 11802
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 51193
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 15678
+		}]
+	},
+	{
+		"anio": 2001,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 31445
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 97358
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 91199
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 86583
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 34000
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 58578
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 43769
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 78423
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 56128
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 70095
+		}]
+	},
+	{
+		"anio": 2002,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 57845
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 13535
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 49387
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 93866
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 93773
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 74886
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 35586
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 76468
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 67598
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 41864
+		}]
+	},
+	{
+		"anio": 2003,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 71908
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 24937
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 49609
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 89207
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 84628
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 39730
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 30607
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 90404
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 41532
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 71800
+		}]
+	},
+	{
+		"anio": 2004,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 96083
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 62978
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 69158
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 87281
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 49560
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 93158
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 45859
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 83329
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 71580
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 91988
+		}]
+	},
+	{
+		"anio": 2005,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 53424
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 29424
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 95523
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 92812
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 23289
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 89296
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 67697
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 48876
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 65764
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 35295
+		}]
+	},
+	{
+		"anio": 2006,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 80740
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 37671
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 50233
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 30349
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 26878
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 34861
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 60080
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 47485
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 25264
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 91613
+		}]
+	},
+	{
+		"anio": 2007,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 19285
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 21346
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 54590
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 78443
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 98628
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 94151
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 71600
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 44487
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 77480
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 43180
+		}]
+	},
+	{
+		"anio": 2008,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 36474
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 30903
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 62604
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 31997
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 23715
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 75894
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 21292
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 81413
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 24769
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 77057
+		}]
+	},
+	{
+		"anio": 2009,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 16707
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 95510
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 14727
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 56941
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 25859
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 31605
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 81802
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 75939
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 69091
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 97067
+		}]
+	},
+	{
+		"anio": 2010,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 67551
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 78376
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 18413
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 22141
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 56819
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 17040
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 16291
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 28419
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 51528
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 83771
+		}]
+	},
+	{
+		"anio": 2011,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 61599
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 78003
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 14674
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 24202
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 100000
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 28389
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 90096
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 21292
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 99802
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 14865
+		}]
+	},
+	{
+		"anio": 2012,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 88349
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 16509
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 10374
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 93077
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 63450
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 26233
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 24681
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 45252
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 92173
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 83773
+		}]
+	},
+	{
+		"anio": 2013,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 42318
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 59724
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 62149
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 50732
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 71865
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 18967
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 57773
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 78157
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 37386
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 99301
+		}]
+	},
+	{
+		"anio": 2014,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 61927
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 88986
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 77303
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 66602
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 13187
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 77303
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 84992
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 93284
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 88595
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 84794
+		}]
+	},
+	{
+		"anio": 2015,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 98150
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 76943
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 91303
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 98524
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 70019
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 54753
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 24757
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 84701
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 90006
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 16929
+		}]
+	},
+	{
+		"anio": 2016,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 68474
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 32324
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 66653
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 30622
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 73056
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 38518
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 39590
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 30828
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 16674
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 66977
+		}]
+	}]
+},
+{
+	"nombreEmpresa": "SONY",
+	"periodos": [{
+		"anio": 1995,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 85617
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 45494
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 80479
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 81860
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 92049
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 27779
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 40170
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 79141
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 35000
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 59857
+		}]
+	},
+	{
+		"anio": 1996,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 52966
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 66599
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 42830
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 56206
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 95701
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 92458
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 67214
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 74557
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 22744
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 64627
+		}]
+	},
+	{
+		"anio": 1997,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 11467
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 31860
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 22350
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 82376
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 24101
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 46085
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 21681
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 19792
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 99904
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 29643
+		}]
+	},
+	{
+		"anio": 1998,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 56164
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 85520
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 65138
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 36643
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 67380
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 57186
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 54422
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 97550
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 36326
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 79422
+		}]
+	},
+	{
+		"anio": 1999,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 57407
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 79293
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 46020
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 90238
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 35498
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 41721
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 82696
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 92713
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 16278
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 95440
+		}]
+	},
+	{
+		"anio": 2000,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 57340
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 17745
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 27299
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 69691
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 90121
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 41400
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 15775
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 11802
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 51193
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 15678
+		}]
+	},
+	{
+		"anio": 2001,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 31445
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 97358
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 91199
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 86583
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 34000
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 58578
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 43769
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 78423
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 56128
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 70095
+		}]
+	},
+	{
+		"anio": 2002,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 57845
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 13535
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 49387
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 93866
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 93773
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 74886
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 35586
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 76468
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 67598
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 41864
+		}]
+	},
+	{
+		"anio": 2003,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 71908
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 24937
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 49609
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 89207
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 84628
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 39730
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 30607
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 90404
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 41532
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 71800
+		}]
+	},
+	{
+		"anio": 2004,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 96083
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 62978
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 69158
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 87281
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 49560
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 93158
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 45859
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 83329
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 71580
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 91988
+		}]
+	},
+	{
+		"anio": 2005,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 53424
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 29424
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 95523
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 92812
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 23289
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 89296
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 67697
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 48876
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 65764
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 35295
+		}]
+	},
+	{
+		"anio": 2006,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 80740
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 37671
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 50233
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 30349
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 26878
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 34861
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 60080
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 47485
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 25264
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 91613
+		}]
+	},
+	{
+		"anio": 2007,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 19285
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 21346
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 54590
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 78443
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 98628
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 94151
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 71600
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 44487
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 77480
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 43180
+		}]
+	},
+	{
+		"anio": 2008,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 36474
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 30903
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 62604
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 31997
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 23715
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 75894
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 21292
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 81413
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 24769
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 77057
+		}]
+	},
+	{
+		"anio": 2009,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 16707
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 95510
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 14727
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 56941
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 25859
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 31605
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 81802
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 75939
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 69091
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 97067
+		}]
+	},
+	{
+		"anio": 2010,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 67551
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 78376
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 18413
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 22141
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 56819
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 17040
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 16291
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 28419
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 51528
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 83771
+		}]
+	},
+	{
+		"anio": 2011,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 61599
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 78003
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 14674
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 24202
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 100000
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 28389
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 90096
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 21292
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 99802
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 14865
+		}]
+	},
+	{
+		"anio": 2012,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 88349
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 16509
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 10374
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 93077
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 63450
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 26233
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 24681
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 45252
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 92173
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 83773
+		}]
+	},
+	{
+		"anio": 2013,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 42318
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 59724
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 62149
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 50732
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 71865
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 18967
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 57773
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 78157
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 37386
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 99301
+		}]
+	},
+	{
+		"anio": 2014,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 61927
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 88986
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 77303
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 66602
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 13187
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 77303
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 84992
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 93284
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 88595
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 84794
+		}]
+	},
+	{
+		"anio": 2015,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 98150
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 76943
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 91303
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 98524
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 70019
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 54753
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 24757
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 84701
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 90006
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 16929
+		}]
+	},
+	{
+		"anio": 2016,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 68474
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 32324
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 66653
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 30622
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 73056
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 38518
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 39590
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 30828
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 16674
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 66977
+		}]
+	}]
+},
+{
+	"nombreEmpresa": "PRUEBA",
+	"periodos": [{
+		"anio": 1995,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 85617
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 45494
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 80479
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 81860
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 92049
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 27779
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 40170
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 1000
+		}]
+	},
+	{
+		"anio": 1996,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 79141
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 35000
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 59857
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 52966
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 66599
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 42830
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 56206
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 1000
+		}]
+	},
+	{
+		"anio": 1997,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 95701
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 92458
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 67214
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 74557
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 22744
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 64627
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 11467
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 1000
+		}]
+	},
+	{
+		"anio": 1998,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 31860
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 22350
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 82376
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 24101
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 46085
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 21681
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 19792
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 1000
+		}]
+	},
+	{
+		"anio": 1999,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 99904
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 29643
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 56164
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 85520
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 65138
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 36643
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 67380
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 1000
+		}]
+	},
+	{
+		"anio": 2000,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 57186
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 54422
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 97550
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 36326
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 79422
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 57407
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 79293
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 1000
+		}]
+	},
+	{
+		"anio": 2001,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 46020
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 90238
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 35498
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 41721
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 82696
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 92713
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 16278
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 1000
+		}]
+	},
+	{
+		"anio": 2002,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 95440
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 57340
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 17745
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 27299
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 69691
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 90121
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 41400
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 1000
+		}]
+	},
+	{
+		"anio": 2003,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 15775
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 11802
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 51193
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 15678
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 31445
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 97358
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 91199
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 1000
+		}]
+	},
+	{
+		"anio": 2004,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 86583
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 34000
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 58578
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 43769
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 78423
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 56128
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 70095
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 1000
+		}]
+	},
+	{
+		"anio": 2005,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 57845
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 13535
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 49387
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 93866
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 93773
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 74886
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 35586
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 1000
+		}]
+	},
+	{
+		"anio": 2006,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 76468
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 67598
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 41864
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 71908
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 24937
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 49609
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 89207
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 1000
+		}]
+	},
+	{
+		"anio": 2007,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 84628
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 39730
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 30607
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 90404
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 41532
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 71800
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 96083
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 1000
+		}]
+	},
+	{
+		"anio": 2008,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 62978
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 69158
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 87281
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 49560
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 93158
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 45859
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 83329
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 1000
+		}]
+	},
+	{
+		"anio": 2009,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 71580
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 91988
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 53424
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 29424
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 95523
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 92812
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 23289
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 1000
+		}]
+	},
+	{
+		"anio": 2010,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 89296
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 67697
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 48876
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 65764
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 35295
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 80740
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 37671
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 1000
+		}]
+	},
+	{
+		"anio": 2011,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 50233
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 30349
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 26878
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 34861
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 60080
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 47485
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 25264
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 1000
+		}]
+	},
+	{
+		"anio": 2012,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 91613
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 19285
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 21346
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 54590
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 78443
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 98628
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 94151
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 1000
+		}]
+	},
+	{
+		"anio": 2013,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 71600
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 44487
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 77480
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 43180
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 36474
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 30903
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 62604
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 1000
+		}]
+	},
+	{
+		"anio": 2014,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 31997
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 23715
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 75894
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 21292
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 81413
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 24769
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 77057
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 1000
+		}]
+	},
+	{
+		"anio": 2015,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 16707
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 95510
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 14727
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 56941
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 25859
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 31605
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 81802
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 1000
+		}]
+	},
+	{
+		"anio": 2016,
+		"cuentas": [{
+			"nombreCuenta": "EBITDA",
+			"valorCuenta": 75939
+		},
+		{
+			"nombreCuenta": "FDS",
+			"valorCuenta": 69091
+		},
+		{
+			"nombreCuenta": "FreeCashFlow",
+			"valorCuenta": 97067
+		},
+		{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 1000
+		},
+		{
+			"nombreCuenta": "Dividendos",
+			"valorCuenta": 67551
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 78376
+		},
+		{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 18413
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 22141
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 1000
+		}]
+	}]
+}]

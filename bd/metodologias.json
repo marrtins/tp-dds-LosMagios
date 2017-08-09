@@ -1,45 +1,61 @@
 [{
 	"nombreMetodologia": "WarrenBuffet",
 	"cTaxativas": [{
-		"nombreCondicion": "ROE Consistente en los ultimos 10 años",
+		"nombreCondicion": "ROE Consistente en los ultimos 2 años",
 		"operadorString": "consistence",
 		"indicadorString": "ROE",
-		"anios": 10
+		"anios": 4
 	},
 	{
-		"nombreCondicion": "Profit Margin creciente en los ultimos 5 años",
+		"nombreCondicion": "Profit Margin creciente en los ultimos 2 años",
 		"operadorString": "crescent",
 		"indicadorString": "ProfitMargin",
-		"anios": 5
+		"anios": 4
+	},
+	{
+		"nombreCondicion": "Antiguedad mayor a 3",
+		"operadorString": "antique",
+		"indicadorString": "null",
+		"anios":3
+		
 	}],
 	"cNoTaxativas": [{
-		"nombreCondicion": "Debt Equity Ratio mas bajo posible en los ultimos 5 anios. peso=10",
+		"nombreCondicion": "Debt Equity Ratio mas bajo posible en los ultimos 2 anios. peso=10",
 		"operadorString": "lowest",
-		"anios": 5,
-		"indicadorString": "DebtEquityRatio",
+		"anios": 4,
+		"indicadorString": "DebtEqRatio",
 		"peso": 10
 	},
 	{
-		"nombreCondicion": "Profit Margin mas alto posible en los ultimos 5 anios. peso=15",
+		"nombreCondicion": "Profit Margin mas alto posible en los ultimos 2 anios. peso=15",
 		"operadorString": "highest",
-		"anios": 5,
+		"anios": 4,
 		"indicadorString": "ProfitMargin",
 		"peso": 15
-	}],
-	"cCombinadas":[{
-		"nombreCondicion":"Antiguedad mayor a 10 y lo mas alta posible",
-		"cTaxativas":[{
-			"nombreCondicion":"Antiguedad mayor a 10",
-			"operadorString":"antique",
-			"indicadorString":"null",
-			"anios":10
-		}],
-		"cNoTaxativas":[{
-			"nombreCondicion":"antiguedad lo mas alta posible",
-			"operadorString":"antique",
-			"indicadorString":"null",
-			"anios":5,
-			"peso":13
-		}]
+	},
+	{
+		"nombreCondicion": "antiguedad lo mas alta posible",
+		"operadorString": "antique",
+		"indicadorString": "null",
+		"peso": 13
 	}]
+},
+{
+	"nombreMetodologia": "MetodologiaInventada",
+	"cTaxativas": [{
+		"nombreCondicion": "ROE mayor a 100 en los ultimos 10 años",
+		"valorComparacion": 100,
+		"operadorString": "higherThan",
+		"indicadorString": "ROE",
+		"anios": 4
+	},
+	{
+		"nombreCondicion": "ProfitMargin menor que 50 en los ultimos 5 años",
+		"operadorString": "lowerThan",
+		"valorComparacion":50 ,
+		"indicadorString": "ProfitMargin",
+		"anios": 4
+	}
+	],
+	"cNoTaxativas": []
 }]

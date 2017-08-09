@@ -6,7 +6,7 @@ import modelo.Cuenta;
 
 public class Periodo {
 	private int anio;
-	private ArrayList<Cuenta> cuentas;
+	private ArrayList<Cuenta> cuentas=new ArrayList<>();
 
 	public Periodo(int unAnio) {
 		anio = unAnio;

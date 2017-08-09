@@ -13,6 +13,7 @@ import javax.swing.JCheckBox;
 import java.awt.Scrollbar;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.function.Function;
 
 import javax.swing.JScrollPane;
@@ -136,7 +137,14 @@ public class VentanaAplicarMetodologia extends JFrame {
 		JButton btnAplicar = new JButton("Aplicar");
 		btnAplicar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				txtResultado.setText(empresas.get(0).getNombreEmpresa());
+				
+				Metodologia metodologiaAAplicar = metodologias.get(0);
+				
+				LinkedList<Empresa> listaOrdenada= metodologiaAAplicar.aplicarMetodologia(empresas);
+				
+				txtResultado.setText(listaOrdenada.get(0).getNombreEmpresa());
+				txtResultado.setText(listaOrdenada.get(1).getNombreEmpresa());
+				txtResultado.setText(listaOrdenada.get(2).getNombreEmpresa());
 				
 			}
 		});

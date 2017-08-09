@@ -86,11 +86,7 @@ public class DataCollector {
 		daoI.setFilePath(rutaIndicadores);
 		this.repoIndicadores = new RepositorioDeIndicadores(daoI);
 		
-		try {
-			indicadores = repoIndicadores.getAllIndicadores();
-		} catch (ErrorCargaDatos e) {
-			throw e;
-		}
+		indicadores = repoIndicadores.getAllIndicadores();
 		
 		
 	

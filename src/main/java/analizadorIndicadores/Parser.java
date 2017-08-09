@@ -1,17 +1,9 @@
 package analizadorIndicadores;
 
-import analisisMetodologico.AntiqueFilter;
-import analisisMetodologico.AntiqueSort;
-import analisisMetodologico.Consistence;
-import analisisMetodologico.Crescent;
-import analisisMetodologico.Highest;
-import analisisMetodologico.Lowest;
-import analisisMetodologico.OperadorNoTaxativo;
-import analisisMetodologico.OperadorTaxativo;
-import excepciones.ErrorLexico;
+
 
 public class Parser {
-	AnalizadorLexico analyse = new AnalizadorLexico();
+	
 	public static double eval(final String str) {
 	    return new Object() {
 	        int pos = -1, ch;
@@ -90,38 +82,6 @@ public class Parser {
 	            return x;
 	        }
 	    }.parse();
-	}
-	
-	
-	public OperadorTaxativo getOperadorT(String nombre){
-		
-		OperadorTaxativo operadorReturn = null;
-		
-		if(nombre.equals("consistence")){
-			operadorReturn= new Consistence();
-		}
-		else if(nombre.equals("crescent")){
-			operadorReturn=new Crescent();
-		}else if(nombre.equals("antique")){
-			operadorReturn=new AntiqueFilter();
-		}
-		return operadorReturn;	
-			
-	}
-public OperadorNoTaxativo getOperadorNT(String nombre){
-		
-		OperadorNoTaxativo operadorReturn = null;
-		
-		if(nombre.equals("highest")){
-			operadorReturn= new Highest();
-		}
-		else if(nombre.equals("lowest")){
-			operadorReturn=new Lowest();
-		}else if(nombre.equals("antique")){
-			operadorReturn=new AntiqueSort();
-		}
-		return operadorReturn;	
-			
 	}
 	
 

@@ -5,8 +5,15 @@ import java.util.ArrayList;
 import modelo.Empresa;
 import modelo.Indicador;
 
-public class Crescent extends OperadorTaxativo{
-
+public class LowerThan extends OperadorTaxativo{
+	
+	Double valorComparacion;
+	
+	public void setValorComparacion(Double valor){
+		valorComparacion=valor;
+	}
+	
+	
 	@Override
 	public Boolean analizarEmpresaTaxativamente(Empresa unaEmpresa, Indicador unIndicador, int anios,Double valorComparacion) {
 
@@ -14,17 +21,7 @@ public class Crescent extends OperadorTaxativo{
 
 		ArrayList<Double> valoresIndicador = unaEmpresa.getValoresIndicadorEn( unIndicador, anios);
 		
-		return esCreciente(valoresIndicador);
-		
-
-	}
-	
-	public Boolean esCreciente(ArrayList<Double> valores){	
-		int i;
-		for(i=0;i<valores.size()-1;i++){
-			if(valores.get(i)<valores.get(i+1)) return false;
-		}
-		return true;
+		return sumatoria(valoresIndicador) < valorComparacion;
 	}
 
 }

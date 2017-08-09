@@ -3,7 +3,7 @@ package modelo.TiposCondicion;
 import java.io.IOException;
 
 import analisisMetodologico.OperadorTaxativo;
-import analizadorIndicadores.Parser;
+import analisisMetodologico.OperadoresFactory;
 import modelo.Empresa;
 import modelo.Indicador;
 import modelo.TipoCondicion;
@@ -17,6 +17,7 @@ public class CondicionTaxativa implements TipoCondicion  {
 	String operadorString;
 	int anios;
 	String indicadorString;
+	Double valorComparacion;
 	
 	OperadorTaxativo operador;
 	Indicador indicador;
@@ -51,12 +52,13 @@ public class CondicionTaxativa implements TipoCondicion  {
 	public Boolean empresaCalifica(Empresa unaEmpresa) throws IOException{
 		
 		DataCollector persistence=new DataCollector();
-		Parser eval = new Parser();
+		OperadoresFactory creador = new OperadoresFactory();
+		
 		indicador= persistence.getIndicador(indicadorString);
+		operador=creador.crearOperadorTaxativo(operadorString);
 		
-		operador=eval.getOperadorT(operadorString);
 		
-		return operador.analizarEmpresaTaxativa(unaEmpresa,indicador,anios);
+		return operador.analizarEmpresaTaxativamente(unaEmpresa,indicador,anios,valorComparacion);
 		
 		
 	}

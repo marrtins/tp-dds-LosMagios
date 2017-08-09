@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import analisisMetodologico.OperadorNoTaxativo;
+import analisisMetodologico.OperadoresFactory;
 import analizadorIndicadores.Parser;
 import modelo.Empresa;
 import modelo.Indicador;
@@ -23,13 +24,19 @@ public class CondicionNoTaxativa implements TipoCondicion {
 	OperadorNoTaxativo operador;
 	
 	
-	public int aplicarCondicion(Empresa empresa1, Empresa empresa2) throws IOException{
+	public int aplicarCondicion(Empresa empresa1, Empresa empresa2){
 		
 		DataCollector persistence=new DataCollector();
-		Parser eval = new Parser();
-		Indicador unIndicador = persistence.getIndicador(indicadorString);
+		OperadoresFactory creador=new OperadoresFactory();
+		Indicador unIndicador = null;
+		try {
+			unIndicador = persistence.getIndicador(indicadorString);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
-		operador=eval.getOperadorNT(operadorString);
+		operador=creador.crearOperadorNoTaxativo(operadorString);
 		
 		
 		return operador.aplicarPesos(empresa1, empresa2,unIndicador, anios,peso);

@@ -12,7 +12,6 @@ import modelo.Periodo;
 import persistence.DataCollector;
 
 public class AnalizadorLexico {
-	private ArrayList<Empresa> empresas = new ArrayList<>();
 	ArrayList<Indicador> indicadores = new ArrayList<>();
 	
 	private Empresa empresaAplicada;
@@ -22,7 +21,6 @@ public class AnalizadorLexico {
 	public String analizar(String formula,Empresa empresa,Periodo periodo) throws IOException{
 		 
 		DataCollector persistence = new DataCollector();
-		empresas = persistence.cargarEmpresas();
 		indicadores = persistence.cargarIndicadores();
 		empresaAplicada = empresa;
 		periodoAplicado=periodo;

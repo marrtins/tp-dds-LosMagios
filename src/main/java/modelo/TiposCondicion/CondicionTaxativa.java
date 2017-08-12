@@ -13,6 +13,20 @@ public class CondicionTaxativa implements TipoCondicion  {
 
 	
 	
+	
+
+
+	public CondicionTaxativa(String nombreCondicion, String operadorString, int anios, String indicadorString,
+			Double valorComparacion) {
+		super();
+		this.nombreCondicion = nombreCondicion;
+		this.operadorString = operadorString;
+		this.anios = anios;
+		this.indicadorString = indicadorString;
+		this.valorComparacion = valorComparacion;
+	}
+
+
 	String nombreCondicion;
 	String operadorString;
 	int anios;

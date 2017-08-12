@@ -146,6 +146,8 @@ DataCollector persistence = new DataCollector();
 						if(i==0 || i==1){
 							txtVC.setText("asd");
 							txtVC.setEditable(false);
+						}else{
+							txtVC.setEditable(true);
 						}
 					}
 				}

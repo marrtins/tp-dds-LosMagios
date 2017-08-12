@@ -30,6 +30,17 @@ public class CondicionNoTaxativa implements TipoCondicion {
 	}
 
 
+	public CondicionNoTaxativa(String nombreCondicion, String operadorString, int anios, int peso,
+			String indicadorString) {
+		super();
+		this.nombreCondicion = nombreCondicion;
+		this.operadorString = operadorString;
+		this.anios = anios;
+		this.peso = peso;
+		this.indicadorString = indicadorString;
+	}
+
+
 	public void setOperadorString(String operadorString) {
 		this.operadorString = operadorString;
 	}
@@ -80,7 +91,7 @@ public class CondicionNoTaxativa implements TipoCondicion {
 	int anios;
 	int peso;
 	String indicadorString;
-	
+	Indicador unIndicador = null;
 	OperadorNoTaxativo operador;
 	
 	
@@ -88,7 +99,7 @@ public class CondicionNoTaxativa implements TipoCondicion {
 		
 		DataCollector persistence=new DataCollector();
 		OperadoresFactory creador=new OperadoresFactory();
-		Indicador unIndicador = null;
+		
 		try {
 			unIndicador = persistence.getIndicador(indicadorString);
 		} catch (IOException e) {

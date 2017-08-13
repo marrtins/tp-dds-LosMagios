@@ -15,10 +15,10 @@
 	"calculoIndicador": "({IngresoNetoOD}+{IngresoNetoCC})"
 },
 {
-	"nombreIndicador": "HOLA",
+	"nombreIndicador": "IPrueba",
 	"calculoIndicador": "(1+1+{CapitalTotal}"
 },
 {
-	"nombreIndicador":"asd",
+	"nombreIndicador":"IErroneo",
 	"calculoIndicador":"(2*{noexisto})"
 }]

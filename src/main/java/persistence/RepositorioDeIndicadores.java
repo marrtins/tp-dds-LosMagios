@@ -17,6 +17,9 @@ public class RepositorioDeIndicadores {
 	public void add(Indicador indicador) throws IOException{
 		this.daoIndicador.add(indicador);
 	}
+	public void addMetodologia(Metodologia unaM) throws IOException{
+		this.daoIndicador.addMetodologia(unaM);
+	}
 
 	public void delete(String nombre) throws IOException{
 		this.daoIndicador.delete(nombre);

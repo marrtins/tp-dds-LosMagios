@@ -3,59 +3,90 @@
 	"cTaxativas": [{
 		"nombreCondicion": "ROE Consistente en los ultimos 2 años",
 		"operadorString": "consistence",
-		"indicadorString": "ROE",
-		"anios": 4
+		"anios": 4,
+		"indicadorString": "ROE"
 	},
 	{
 		"nombreCondicion": "Profit Margin creciente en los ultimos 2 años",
 		"operadorString": "crescent",
-		"indicadorString": "ProfitMargin",
-		"anios": 4
+		"anios": 4,
+		"indicadorString": "ProfitMargin"
 	},
 	{
 		"nombreCondicion": "Antiguedad mayor a 3",
 		"operadorString": "antique",
-		"indicadorString": "null",
-		"anios":3
-		
+		"anios": 3,
+		"indicadorString": "null"
 	}],
 	"cNoTaxativas": [{
-		"nombreCondicion": "Debt Equity Ratio mas bajo posible en los ultimos 2 anios. peso=10",
+		"nombreCondicion": "Debt Equity Ratio mas bajo posible en los ultimos 2 anios. peso\u003d10",
 		"operadorString": "lowest",
 		"anios": 4,
-		"indicadorString": "DebtEqRatio",
-		"peso": 10
+		"peso": 10,
+		"indicadorString": "DebtEqRatio"
 	},
 	{
-		"nombreCondicion": "Profit Margin mas alto posible en los ultimos 2 anios. peso=15",
+		"nombreCondicion": "Profit Margin mas alto posible en los ultimos 2 anios. peso\u003d15",
 		"operadorString": "highest",
 		"anios": 4,
-		"indicadorString": "ProfitMargin",
-		"peso": 15
+		"peso": 15,
+		"indicadorString": "ProfitMargin"
 	},
 	{
 		"nombreCondicion": "antiguedad lo mas alta posible",
 		"operadorString": "antique",
-		"indicadorString": "null",
-		"peso": 13
-	}]
+		"anios": 0,
+		"peso": 13,
+		"indicadorString": "null"
+	}],
+	"listaOrdenada": []
 },
 {
 	"nombreMetodologia": "MetodologiaInventada",
 	"cTaxativas": [{
 		"nombreCondicion": "ROE mayor a 10 en los ultimos 2 años",
-		"valorComparacion": 10,
 		"operadorString": "higherThan",
+		"anios": 2,
 		"indicadorString": "ROE",
-		"anios": 2
+		"valorComparacion": 100.0
 	},
 	{
 		"nombreCondicion": "ProfitMargin menor que 50000 en los ultimos 2 años",
 		"operadorString": "lowerThan",
-		"valorComparacion":50000 ,
+		"anios": 2,
 		"indicadorString": "ProfitMargin",
-		"anios": 2
-	}
-	],
-	"cNoTaxativas": []
+		"valorComparacion": 50000000.0
+	}],
+	"cNoTaxativas": [],
+	"listaOrdenada": []
+},
+{
+	"nombreMetodologia": "asd",
+	"cTaxativas": [{
+		"nombreCondicion": "ROE Creciente en 12 a�os",
+		"operadorString": "crescent",
+		"anios": 12,
+		"indicadorString": "ROE",
+		"valorComparacion": 0.0
+	}],
+	"cNoTaxativas": [{
+		"nombreCondicion": "ROE Mas Bajo en 5 a�os. Peso\u003d45",
+		"operadorString": "lowest",
+		"anios": 5,
+		"peso": 45,
+		"indicadorString": "ROE"
+	}],
+	"listaOrdenada": []
+},
+{
+	"nombreMetodologia": "a",
+	"cTaxativas": [{
+		"nombreCondicion": "ROE Creciente en 10 a�os",
+		"operadorString": "crescent",
+		"anios": 10,
+		"indicadorString": "ROE",
+		"valorComparacion": 0.0
+	}],
+	"cNoTaxativas": [],
+	"listaOrdenada": []
 }]

@@ -1,5 +1,5 @@
 [{
-	"nombreEmpresa": "APPLE (Cumple Taxativas)",
+	"nombreEmpresa": "CocaCola (Cumple Taxativas)",
 	"periodos": [{
 		"anio": 2016,
 		"cuentas": [{
@@ -77,7 +77,7 @@
 	]
 },
 {
-	"nombreEmpresa": "APPLE cumple solo roe",
+	"nombreEmpresa": "Facebook cumple solo roe",
 	"periodos": [{
 		"anio": 2016,
 		"cuentas": [{
@@ -160,7 +160,7 @@
 	]
 },
 {
-	"nombreEmpresa": "APPLE no cumple ninguna",
+	"nombreEmpresa": "Sony no cumple ninguna",
 	"periodos": [{
 		"anio": 2016,
 		"cuentas": [{

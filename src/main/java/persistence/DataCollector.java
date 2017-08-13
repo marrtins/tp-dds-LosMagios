@@ -9,6 +9,7 @@ import modelo.Cuenta;
 import modelo.Empresa;
 import modelo.Indicador;
 import modelo.Metodologia;
+import modelo.TiposCondicion.CondicionNoTaxativa;
 import modelo.TiposCondicion.CondicionTaxativa;
 
 
@@ -111,9 +112,20 @@ public class DataCollector {
 	return metodologias;
 	}
 	
+	public Boolean sePuedeCrearMetodologia(String nombreMet,ArrayList<CondicionTaxativa> cTax,ArrayList<CondicionNoTaxativa> cNTax){
+		if(nombreMet.isEmpty())return false;
+		return true;
+	}
 	
-	
-	
+	public void agregarMetodologia(Metodologia unaMetodologia) throws IOException{
+		metodologias=this.cargarMetodologias();
+		try {
+			repoIndicadores.addMetodologia(unaMetodologia);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	
 	public void agregarIndicador(Indicador unIndicador) throws IOException{
 		indicadores = this.cargarIndicadores();
@@ -157,6 +169,20 @@ public class DataCollector {
 			}
 			return false;
 		}
+	}
+	
+	public void crearMetodologia(String nombreMet,ArrayList<CondicionTaxativa> cTax,ArrayList<CondicionNoTaxativa> cNTax){
+		Metodologia nuevaMet = new Metodologia();
+		nuevaMet.setNombreMetodologia(nombreMet);
+		nuevaMet.setcTaxativas(cTax);
+		nuevaMet.setcNoTaxativas(cNTax);
+		try {
+			this.agregarMetodologia(nuevaMet);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 	
 	

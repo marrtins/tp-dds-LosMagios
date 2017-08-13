@@ -9,6 +9,7 @@ import modelo.Metodologia;
 public interface DAOIndicador {
 
 	public void add(Indicador indicador) throws IOException;
+	public void addMetodologia(Metodologia unaM) throws IOException;
 	public void delete(String nombreIndicador) throws IOException;
 	public ArrayList<Indicador> getAllIndicadores() throws IOException;
 	public ArrayList<Metodologia> getAllMetodologias() throws IOException;

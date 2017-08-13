@@ -43,6 +43,12 @@ public class DAOJsonIndicador implements DAOIndicador {
 		String indicadoresSerializados = myGson.toJson(indicadores);
 		this.writeNewJson(indicadoresSerializados);
 	}
+	public void addMetodologia(Metodologia unaMet) throws IOException{
+		ArrayList<Metodologia> metodologias = this.getAllMetodologias();
+		metodologias.add(unaMet);
+		String metSerializados = myGson.toJson(metodologias);
+		this.writeNewJson(metSerializados);
+	}
 
 	public void delete(String nombreIndicador) throws IOException{
 		ArrayList<Indicador> indicadores = this.getAllIndicadores();

@@ -21,7 +21,7 @@ public class LowerThan extends OperadorTaxativo{
 
 		ArrayList<Double> valoresIndicador = unaEmpresa.getValoresIndicadorEn( unIndicador, anios);
 		
-		return sumatoria(valoresIndicador) < valorComparacion;
+		return (sumatoria(valoresIndicador)/anios) < valorComparacion;
 	}
 
 }

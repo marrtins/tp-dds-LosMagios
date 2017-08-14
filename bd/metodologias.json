@@ -55,38 +55,41 @@
 		"operadorString": "lowerThan",
 		"anios": 2,
 		"indicadorString": "ProfitMargin",
-		"valorComparacion": 50000000.0
+		"valorComparacion": 500000.0
 	}],
 	"cNoTaxativas": [],
 	"listaOrdenada": []
 },
+
 {
-	"nombreMetodologia": "asd",
+	"nombreMetodologia": "MetPrueba",
 	"cTaxativas": [{
-		"nombreCondicion": "ROE Creciente en 12 a�os",
+		"nombreCondicion": "ROE Creciente en 2 anios",
 		"operadorString": "crescent",
-		"anios": 12,
+		"anios": 2,
 		"indicadorString": "ROE",
 		"valorComparacion": 0.0
+	},
+	{
+		"nombreCondicion": "DebtEqRatio Mayor que 9 en 2 anios",
+		"operadorString": "higherThan",
+		"anios": 2,
+		"indicadorString": "DebtEqRatio",
+		"valorComparacion": 9.0
 	}],
 	"cNoTaxativas": [{
-		"nombreCondicion": "ROE Mas Bajo en 5 a�os. Peso\u003d45",
-		"operadorString": "lowest",
-		"anios": 5,
-		"peso": 45,
-		"indicadorString": "ROE"
+		"nombreCondicion": "Antiguedad mas alta posible. Peso\u003d15",
+		"operadorString": "antique",
+		"anios": 0,
+		"peso": 15,
+		"indicadorString": "No aplica"
+	},
+	{
+		"nombreCondicion": "DebtEqRatio Mas Alto en 2 anios. Peso\u003d14",
+		"operadorString": "highest",
+		"anios": 2,
+		"peso": 14,
+		"indicadorString": "DebtEqRatio"
 	}],
-	"listaOrdenada": []
-},
-{
-	"nombreMetodologia": "a",
-	"cTaxativas": [{
-		"nombreCondicion": "ROE Creciente en 10 a�os",
-		"operadorString": "crescent",
-		"anios": 10,
-		"indicadorString": "ROE",
-		"valorComparacion": 0.0
-	}],
-	"cNoTaxativas": [],
 	"listaOrdenada": []
 }]

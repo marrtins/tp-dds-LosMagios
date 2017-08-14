@@ -1,10 +1,10 @@
 [{
-	"nombreEmpresa": "CocaCola (Cumple Taxativas)",
+	"nombreEmpresa": "CocaCola",
 	"periodos": [{
 		"anio": 2016,
 		"cuentas": [{
 			"nombreCuenta": "IngresoNetoOD",
-			"valorCuenta": 1000
+			"valorCuenta": 100000
 		},
 		{
 			"nombreCuenta": "IngresoNetoCC",
@@ -16,6 +16,9 @@
 		},
 		{
 			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 2000
+		},{
+			"nombreCuenta": "PatrimonioNeto",
 			"valorCuenta": 200
 		},
 		{
@@ -28,11 +31,14 @@
 	"anio": 2015,
 		"cuentas": [{
 			"nombreCuenta": "IngresoNetoOD",
-			"valorCuenta": 1000
+			"valorCuenta": 10000
 		},
 		{
 			"nombreCuenta": "IngresoNetoCC",
 			"valorCuenta": 1000
+		},{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 200
 		},
 		{
 			"nombreCuenta": "CapitalTotal",
@@ -40,7 +46,7 @@
 		},
 		{
 			"nombreCuenta": "PasivoTotal",
-			"valorCuenta": 200
+			"valorCuenta": 2000
 		},
 		{
 			"nombreCuenta": "VentasNetas",
@@ -53,6 +59,9 @@
 		"cuentas": [{
 			"nombreCuenta": "IngresoNetoOD",
 			"valorCuenta": 1000
+		},{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 200
 		},
 		{
 			"nombreCuenta": "IngresoNetoCC",
@@ -64,7 +73,7 @@
 		},
 		{
 			"nombreCuenta": "PasivoTotal",
-			"valorCuenta": 200
+			"valorCuenta": 2000
 		},
 		{
 			"nombreCuenta": "VentasNetas",
@@ -77,18 +86,21 @@
 	]
 },
 {
-	"nombreEmpresa": "Facebook cumple solo roe",
+	"nombreEmpresa": "Facebook",
 	"periodos": [{
 		"anio": 2016,
 		"cuentas": [{
 			"nombreCuenta": "IngresoNetoOD",
-			"valorCuenta": 1000
+			"valorCuenta": 10000
 
 		},
 		{
 			"nombreCuenta": "IngresoNetoCC",
 			"valorCuenta": 1000
 
+		},{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 200
 		},
 		{
 			"nombreCuenta": "CapitalTotal",
@@ -96,7 +108,7 @@
 		},
 		{
 			"nombreCuenta": "PasivoTotal",
-			"valorCuenta": 200
+			"valorCuenta": 2000
 		},
 		{
 			"nombreCuenta": "VentasNetas",
@@ -108,6 +120,9 @@
 	"anio": 2015,
 		"cuentas": [{
 			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 2000
+		},{
+			"nombreCuenta": "PatrimonioNeto",
 			"valorCuenta": 200
 		},
 		{
@@ -121,7 +136,7 @@
 		},
 		{
 			"nombreCuenta": "PasivoTotal",
-			"valorCuenta": 200
+			"valorCuenta": 2000
 		},
 		{
 			"nombreCuenta": "VentasNetas",
@@ -133,8 +148,11 @@
 	"anio": 2014,
 		"cuentas": [{
 			"nombreCuenta": "IngresoNetoOD",
-			"valorCuenta": 1000
+			"valorCuenta": 100
 
+		},{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 200
 		},
 		{
 			"nombreCuenta": "IngresoNetoCC",
@@ -147,7 +165,35 @@
 		},
 		{
 			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 2000
+		},
+		{
+			"nombreCuenta": "VentasNetas",
 			"valorCuenta": 200
+		}
+		]
+	},{
+	"anio": 2013,
+		"cuentas": [{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 100
+
+		},{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 200
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 1000
+
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 22
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 2000
 		},
 		{
 			"nombreCuenta": "VentasNetas",
@@ -157,14 +203,18 @@
 	}
 	
 	
+	
 	]
 },
 {
-	"nombreEmpresa": "Sony no cumple ninguna",
+	"nombreEmpresa": "Sony",
 	"periodos": [{
 		"anio": 2016,
 		"cuentas": [{
 			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 2000
+		},{
+			"nombreCuenta": "PatrimonioNeto",
 			"valorCuenta": 200
 		},
 		{
@@ -177,7 +227,7 @@
 		},
 		{
 			"nombreCuenta": "PasivoTotal",
-			"valorCuenta": 200
+			"valorCuenta": 2000
 		},
 		{
 			"nombreCuenta": "VentasNetas",
@@ -189,6 +239,9 @@
 	"anio": 2015,
 		"cuentas": [{
 			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 1900
+		},{
+			"nombreCuenta": "PatrimonioNeto",
 			"valorCuenta": 200
 		},
 		{
@@ -214,6 +267,9 @@
 		"cuentas": [{
 			"nombreCuenta": "IngresoNetoOD",
 			"valorCuenta": 200
+		},{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 200
 		},
 		{
 			"nombreCuenta": "IngresoNetoCC",
@@ -225,7 +281,7 @@
 		},
 		{
 			"nombreCuenta": "PasivoTotal",
-			"valorCuenta": 200
+			"valorCuenta": 2000
 		},
 		{
 			"nombreCuenta": "VentasNetas",
@@ -233,6 +289,154 @@
 		}
 		]
 	}
+	
+	
+	]
+},{
+	"nombreEmpresa": "Samsung",
+	"periodos": [{
+		"anio": 2016,
+		"cuentas": [{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 10000
+
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 1000
+
+		},{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 200
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 20
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 2000
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 200
+		}
+		]
+	},
+	{
+	"anio": 2015,
+		"cuentas": [{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 2000
+		},{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 200
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 1000
+
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 21
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 2000
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 200
+		}
+		]
+	},
+	{
+	"anio": 2014,
+		"cuentas": [{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 100
+
+		},{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 200
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 1000
+
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 22
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 2000
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 200
+		}
+		]
+	},{
+	"anio": 2013,
+		"cuentas": [{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 100
+
+		},{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 200
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 1000
+
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 22
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 2000
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 200
+		}
+		]
+	},{
+	"anio": 2012,
+		"cuentas": [{
+			"nombreCuenta": "IngresoNetoOD",
+			"valorCuenta": 100
+
+		},{
+			"nombreCuenta": "PatrimonioNeto",
+			"valorCuenta": 200
+		},
+		{
+			"nombreCuenta": "IngresoNetoCC",
+			"valorCuenta": 1000
+
+		},
+		{
+			"nombreCuenta": "CapitalTotal",
+			"valorCuenta": 22
+		},
+		{
+			"nombreCuenta": "PasivoTotal",
+			"valorCuenta": 2000
+		},
+		{
+			"nombreCuenta": "VentasNetas",
+			"valorCuenta": 200
+		}
+		]
+	}
+	
 	
 	
 	]

@@ -158,8 +158,9 @@ public class VentanaAplicarMetodologia extends JFrame {
 		
 		
 		JScrollPane scrollPane_2 = new JScrollPane();
-		scrollPane_2.setBounds(442, 84, 167, 165);
+		scrollPane_2.setBounds(420, 84, 189, 165);
 		contentPane.add(scrollPane_2);
+		
 		
 		
 		JList lstRes = new JList<>(lstResModel);
@@ -167,7 +168,7 @@ public class VentanaAplicarMetodologia extends JFrame {
 		lstRes.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
 		lstRes.setLayoutOrientation(JList.VERTICAL);
 		lstRes.setVisibleRowCount(-1);
-		
+		scrollPane_2.setViewportView(lstRes);
 		
 		
 		JPanel panel = new JPanel();
@@ -202,6 +203,9 @@ public class VentanaAplicarMetodologia extends JFrame {
 				listaOrdenada.forEach(unaEmpresa->{
 					lstResModel.addElement(unaEmpresa.getNombreEmpresa());	
 				});
+				if(listaOrdenada.size()==0){
+					lstResModel.addElement("Ninguna empresa cumple con las condiciones estipuladas");
+				}
 				listaOrdenada.clear();
 								
 			}

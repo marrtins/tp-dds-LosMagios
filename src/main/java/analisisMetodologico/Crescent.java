@@ -22,7 +22,7 @@ public class Crescent extends OperadorTaxativo{
 	public Boolean esCreciente(ArrayList<Double> valores){	
 		int i;
 		for(i=0;i<valores.size()-1;i++){
-			if(valores.get(i)<valores.get(i+1)) return false;
+			if(valores.get(i)>valores.get(i+1)) return false;
 		}
 		return true;
 	}

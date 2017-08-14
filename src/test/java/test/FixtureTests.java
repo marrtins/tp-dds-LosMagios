@@ -159,7 +159,7 @@ public class FixtureTests {
 		
 		int i;
 		int j=0;
-		for(i=firstYear;i>=lastYear;i--){
+		for(i=lastYear;i<=firstYear;i++){
 			Periodo periodoTemp = new Periodo(i);
 			unaEmpresa.agregarPeriodo(periodoTemp);
 			this.agregarCuentasEnPeriodo(periodoTemp, valoresCuentas[j]);

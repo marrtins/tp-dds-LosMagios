@@ -31,6 +31,9 @@ import java.io.IOException;
 import java.nio.channels.NetworkChannel;
 import java.util.ArrayList;
 import java.awt.event.ActionEvent;
+import javax.swing.JTextPane;
+import java.awt.Color;
+import java.awt.Font;
 
 public class VentanaCrearMetodologia extends JFrame {
 
@@ -76,7 +79,7 @@ public class VentanaCrearMetodologia extends JFrame {
 		contentPane.setLayout(null);
 
 		txtNombre = new JTextField();
-		txtNombre.setBounds(157, 11, 135, 28);
+		txtNombre.setBounds(240, 42, 127, 28);
 		contentPane.add(txtNombre);
 		txtNombre.setColumns(10);
 		DataCollector persistence= new DataCollector();
@@ -89,20 +92,20 @@ public class VentanaCrearMetodologia extends JFrame {
 		}
 		
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(31, 50, 166, 219);
+		scrollPane.setBounds(30, 80, 135, 190);
 		contentPane.add(scrollPane);
 
 		JList lstT = new JList(lstTModel);
 		scrollPane.setViewportView(lstT);
 
 		JScrollPane scrollPane_1 = new JScrollPane();
-		scrollPane_1.setBounds(240, 50, 166, 219);
+		scrollPane_1.setBounds(240, 81, 127, 188);
 		contentPane.add(scrollPane_1);
 
 		JList lstNT = new JList(lstNTModel);
 		scrollPane_1.setViewportView(lstNT);
 
-		JButton btnTaxativas = new JButton("Agregar Condicion Taxativa");
+		JButton btnTaxativas = new JButton("Agregar Condici\u00F3n Taxativa");
 		btnTaxativas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 
@@ -194,10 +197,10 @@ public class VentanaCrearMetodologia extends JFrame {
 
 				//FFF
 			});
-		btnTaxativas.setBounds(31, 280, 166, 49);
+		btnTaxativas.setBounds(31, 280, 134, 49);
 		contentPane.add(btnTaxativas);
 
-		JButton btnNoTaxativa = new JButton("Agrega Condicion no taxativa");
+		JButton btnNoTaxativa = new JButton("Agrega Condici\u00F3n No Taxativa");
 		btnNoTaxativa.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JTextField xField = new JTextField(5);
@@ -282,10 +285,10 @@ public class VentanaCrearMetodologia extends JFrame {
 			});
 				
 		
-		btnNoTaxativa.setBounds(240, 280, 166, 49);
+		btnNoTaxativa.setBounds(240, 280, 127, 49);
 		contentPane.add(btnNoTaxativa);
 
-		JButton btnC = new JButton("Crear Metodologia");
+		JButton btnC = new JButton("Crear Metodología");
 		btnC.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				String nombreMet = txtNombre.getText();
@@ -299,16 +302,17 @@ public class VentanaCrearMetodologia extends JFrame {
 			}
 			
 		});
-		btnC.setBounds(445, 149, 141, 59);
+		btnC.setBounds(421, 152, 141, 59);
 		contentPane.add(btnC);
 
 		
 
-		JLabel lblNewLabel = new JLabel("Nombre Metodologia");
-		lblNewLabel.setBounds(41, 18, 106, 14);
+		JLabel lblNewLabel = new JLabel("Nombre Metodolog\u00EDa:");
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 12));
+		lblNewLabel.setBounds(30, 49, 135, 14);
 		contentPane.add(lblNewLabel);
 
-		JButton btnNewButton = new JButton("Borrar Condicion Seleccionada");
+		JButton btnNewButton = new JButton("Borrar Condici\u00F3n Seleccionada");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if(lstT.getSelectedIndex()>0){
@@ -317,10 +321,10 @@ public class VentanaCrearMetodologia extends JFrame {
 				}
 				}
 		});
-		btnNewButton.setBounds(31, 341, 166, 23);
+		btnNewButton.setBounds(31, 341, 134, 23);
 		contentPane.add(btnNewButton);
 
-		JButton btnNewButton_1 = new JButton("Borrar Condicion Seleccionada");
+		JButton btnNewButton_1 = new JButton("Borrar Condici\u00F3n Seleccionada");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(lstNT.getSelectedIndex()>0){
@@ -329,10 +333,28 @@ public class VentanaCrearMetodologia extends JFrame {
 				}
 			}
 		});
-		btnNewButton_1.setBounds(240, 340, 166, 23);
+		btnNewButton_1.setBounds(240, 340, 127, 23);
 		contentPane.add(btnNewButton_1);
+		
+		JTextPane txtpnCrearMetodologa = new JTextPane();
+		txtpnCrearMetodologa.setFont(new Font("Calibri", Font.BOLD, 14));
+		txtpnCrearMetodologa.setText("Crear Metodolog\u00EDa");
+		txtpnCrearMetodologa.setBackground(Color.BLUE);
+		txtpnCrearMetodologa.setForeground(Color.WHITE);
+		txtpnCrearMetodologa.setBounds(248, 0, 119, 30);
+		contentPane.add(txtpnCrearMetodologa);
+		
+		JButton btnAtrs = new JButton("Atr\u00E1s");
+		btnAtrs.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaMetodologia ventMetodologia = new VentanaMetodologia();
+					ventMetodologia.setVisible(true);
+					dispose();
+			}
+		});
+		btnAtrs.setBounds(516, 355, 89, 23);
+		contentPane.add(btnAtrs);
 		}
-
 	}
 
 

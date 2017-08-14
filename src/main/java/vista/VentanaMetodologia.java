@@ -1,128 +1,88 @@
 package vista;
 
 import java.awt.BorderLayout;
-import java.awt.FlowLayout;
+import java.awt.EventQueue;
 
-import javax.swing.JButton;
-import javax.swing.JDialog;
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JLabel;
-import java.awt.Font;
-import javax.swing.JTextField;
-import javax.swing.JTextPane;
-import java.awt.Color;
+import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import javax.swing.JTextPane;
+import java.awt.Color;
+import java.awt.Font;
 
-public class VentanaMetodologia extends JDialog {
+public class VentanaMetodologia extends JFrame {
 
-	private final JPanel contentPanel = new JPanel();
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
+	private JPanel contentPane;
 
 	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		try {
-			VentanaCrearIndicador dialog = new VentanaCrearIndicador();
-			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-			dialog.setVisible(true);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					VentanaMetodologia frame = new VentanaMetodologia();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
 	}
 
 	/**
-	 * Create the dialog.
+	 * Create the frame.
 	 */
 	public VentanaMetodologia() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
-		getContentPane().setLayout(new BorderLayout());
-		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
-		getContentPane().add(contentPanel, BorderLayout.CENTER);
-		contentPanel.setLayout(null);
-		{
-			JLabel lblNewLabel = new JLabel("Nombre de la Metodologia:");
-			lblNewLabel.setFont(new Font("Calibri", Font.BOLD, 14));
-			lblNewLabel.setBounds(10, 53, 223, 14);
-			contentPanel.add(lblNewLabel);
-		}
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
 		
-		textField = new JTextField();
-		textField.setBounds(279, 50, 145, 20);
-		contentPanel.add(textField);
-		textField.setColumns(10);
-		
-		JLabel lblIngreseCuentasA = new JLabel("Nombre Empresa Asociada:");
-		lblIngreseCuentasA.setFont(new Font("Calibri", Font.BOLD, 14));
-		lblIngreseCuentasA.setBounds(10, 101, 183, 14);
-		contentPanel.add(lblIngreseCuentasA);
-		
-		textField_1 = new JTextField();
-		textField_1.setBounds(279, 98, 145, 20);
-		contentPanel.add(textField_1);
-		textField_1.setColumns(10);
-		
-		JLabel lblCuentasVinculadas = new JLabel("Cuentas Vinculadas:");
-		lblCuentasVinculadas.setFont(new Font("Calibri", Font.BOLD, 14));
-		lblCuentasVinculadas.setBounds(10, 154, 134, 14);
-		contentPanel.add(lblCuentasVinculadas);
-		
-		textField_2 = new JTextField();
-		textField_2.setBounds(279, 148, 145, 20);
-		contentPanel.add(textField_2);
-		textField_2.setColumns(10);
-		
-		JTextPane txtpnCargarMetodologia = new JTextPane();
-		txtpnCargarMetodologia.setFont(new Font("Calibri", Font.BOLD, 14));
-		txtpnCargarMetodologia.setText("Cargar Metodolog\u00EDa");
-		txtpnCargarMetodologia.setForeground(Color.WHITE);
-		txtpnCargarMetodologia.setBackground(Color.BLUE);
-		txtpnCargarMetodologia.setBounds(152, 0, 123, 30);
-		contentPanel.add(txtpnCargarMetodologia);
-		
-		JButton btnAplicar = new JButton("Aplicar Metodolog\u00EDa");
-		btnAplicar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		btnAplicar.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent arg0) {
-				VentanaAplicarMetodologia ventanaAplicar = new VentanaAplicarMetodologia();
-				ventanaAplicar.setVisible(true);
+		JButton btnNewButton = new JButton("Crear Metodolog\u00EDa");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaCrearMetodologia ventCrearMetodologia = new VentanaCrearMetodologia();
+				ventCrearMetodologia.setVisible(true);
 				dispose();
 			}
 		});
-		btnAplicar.setBounds(104, 181, 228, 23);
-		contentPanel.add(btnAplicar);
-		{
-			JPanel buttonPane = new JPanel();
-			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
-			getContentPane().add(buttonPane, BorderLayout.SOUTH);
-			{
-				JButton okButton = new JButton("Aceptar");
-				okButton.setActionCommand("OK");
-				buttonPane.add(okButton);
-				getRootPane().setDefaultButton(okButton);
+		btnNewButton.setBounds(40, 80, 154, 62);
+		contentPane.add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("Aplicar Metodología");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaAplicarMetodologia ventAplicarMetodologia = new VentanaAplicarMetodologia();
+				ventAplicarMetodologia.setVisible(true);
+				dispose();
 			}
-			{
-				JButton cancelButton = new JButton("Atr\u00E1s");
-				cancelButton.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-						VentanaPrincipal ventPrincipal = new VentanaPrincipal();
-						ventPrincipal.setVisible(true);
-						dispose();
-					}
-				});
-				cancelButton.setActionCommand("Cancel");
-				buttonPane.add(cancelButton);
+		});
+		btnNewButton_1.setBounds(250, 80, 154, 62);
+		contentPane.add(btnNewButton_1);
+		
+		JTextPane txtpnMetodologa = new JTextPane();
+		txtpnMetodologa.setFont(new Font("Calibri", Font.BOLD, 14));
+		txtpnMetodologa.setText("Metodolog\u00EDa");
+		txtpnMetodologa.setBackground(Color.BLUE);
+		txtpnMetodologa.setForeground(Color.WHITE);
+		txtpnMetodologa.setBounds(172, 0, 82, 29);
+		contentPane.add(txtpnMetodologa);
+		
+		JButton btnNewButton_2 = new JButton("Atrás");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaPrincipal ventPpal = new VentanaPrincipal();
+				ventPpal.setVisible(true);
+				dispose();
 			}
-		}
+		});
+		btnNewButton_2.setBounds(345, 239, 89, 23);
+		contentPane.add(btnNewButton_2);
 	}
 }

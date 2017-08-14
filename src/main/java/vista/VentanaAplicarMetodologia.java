@@ -59,6 +59,7 @@ import java.awt.event.ItemEvent;
 import javax.swing.JTable;
 import javax.swing.event.ChangeListener;
 import javax.swing.event.ChangeEvent;
+import java.awt.Font;
 
 public class VentanaAplicarMetodologia extends JFrame {
 
@@ -157,7 +158,7 @@ public class VentanaAplicarMetodologia extends JFrame {
 		
 		
 		JScrollPane scrollPane_2 = new JScrollPane();
-		scrollPane_2.setBounds(442, 84, 167, 174);
+		scrollPane_2.setBounds(442, 84, 167, 165);
 		contentPane.add(scrollPane_2);
 		
 		
@@ -207,8 +208,27 @@ public class VentanaAplicarMetodologia extends JFrame {
 
 			
 		});
-		btnAplicar.setBounds(471, 38, 89, 23);
+		btnAplicar.setBounds(483, 38, 89, 23);
 		contentPane.add(btnAplicar);
+		
+		JTextPane txtpnAplicarMetodologa = new JTextPane();
+		txtpnAplicarMetodologa.setText("Aplicar Metodolog\u00EDa");
+		txtpnAplicarMetodologa.setForeground(Color.WHITE);
+		txtpnAplicarMetodologa.setFont(new Font("Calibri", Font.BOLD, 14));
+		txtpnAplicarMetodologa.setBackground(Color.BLUE);
+		txtpnAplicarMetodologa.setBounds(248, 0, 125, 30);
+		contentPane.add(txtpnAplicarMetodologa);
+		
+		JButton btnAtrs = new JButton("Atr\u00E1s");
+		btnAtrs.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaMetodologia ventMetod = new VentanaMetodologia();
+				ventMetod.setVisible(true);
+				dispose();
+			}
+		});
+		btnAtrs.setBounds(530, 393, 89, 23);
+		contentPane.add(btnAtrs);
 		
 		
 		

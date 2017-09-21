@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import javax.swing.AbstractListModel;
 
-import modelo.Empresa;
+import entities.Empresa;
 
 
 

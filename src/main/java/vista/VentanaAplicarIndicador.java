@@ -23,10 +23,10 @@ import javax.swing.border.EmptyBorder;
 
 import analizadorIndicadores.AnalizadorLexico;
 import analizadorIndicadores.Parser;
-import modelo.Empresa;
-import modelo.Indicador;
-import modelo.Metodologia;
-import modelo.Periodo;
+import entities.Empresa;
+import entities.Indicador;
+import entities.Metodologia;
+import entities.Periodo;
 import persistence.CustomListModelEmpresa;
 import persistence.DataCollector;
 

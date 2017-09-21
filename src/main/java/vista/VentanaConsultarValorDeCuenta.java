@@ -14,13 +14,13 @@ import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.TreeNode;
 
-import modelo.Cuenta;
-import modelo.Empresa;
-import modelo.Periodo;
+import entities.Cuenta;
+import entities.Empresa;
+import entities.Periodo;
+import model.RepositorioDeEmpresas;
 import persistence.CustomListModelEmpresa;
 import persistence.DAOJsonEmpresa;
 import persistence.DataCollector;
-import persistence.RepositorioDeEmpresas;
 
 import javax.swing.JTextPane;
 import javax.swing.JButton;

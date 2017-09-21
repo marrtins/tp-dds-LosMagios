@@ -11,12 +11,12 @@ import org.junit.rules.ExpectedException;
 import analizadorIndicadores.AnalizadorLexico;
 import analizadorIndicadores.AnalizadorSintactico;
 import analizadorIndicadores.Parser;
+import entities.Empresa;
+import entities.Indicador;
+import entities.Periodo;
 import excepciones.ErrorConstantesEnIndicador;
 import excepciones.ErrorLexico;
 import junit.framework.Assert;
-import modelo.Empresa;
-import modelo.Indicador;
-import modelo.Periodo;
 import persistence.DataCollector;
 
 public class TestIndicadores {

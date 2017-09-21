@@ -7,12 +7,12 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import entities.Indicador;
+import entities.Metodologia;
+import entities.TiposCondicion.CondicionNoTaxativa;
+import entities.TiposCondicion.CondicionTaxativa;
 import erroresVista.NuevaCNTCheck;
 import erroresVista.NuevaCTCheck;
-import modelo.Indicador;
-import modelo.Metodologia;
-import modelo.TiposCondicion.CondicionNoTaxativa;
-import modelo.TiposCondicion.CondicionTaxativa;
 import persistence.DataCollector;
 
 import javax.swing.JTextField;

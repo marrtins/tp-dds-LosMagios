@@ -1,9 +1,9 @@
-package modelo;
+package entities;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 
-import modelo.Periodo;
+import entities.Periodo;
 
 import java.io.Serializable;
 

@@ -1,4 +1,4 @@
-package modelo;
+package entities;
 
 
 
@@ -8,9 +8,9 @@ import java.util.LinkedList;
 
 import javax.swing.text.html.HTMLDocument.Iterator;
 
+import entities.TiposCondicion.CondicionNoTaxativa;
+import entities.TiposCondicion.CondicionTaxativa;
 import excepciones.ErrorCargaDatos;
-import modelo.TiposCondicion.CondicionNoTaxativa;
-import modelo.TiposCondicion.CondicionTaxativa;
 
 public class Metodologia {
 

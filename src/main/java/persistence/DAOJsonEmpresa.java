@@ -10,7 +10,7 @@ import com.google.gson.Gson;
 
 import com.google.gson.reflect.TypeToken;
 
-import modelo.Empresa;
+import entities.Empresa;
 
 //import Domain.Empleado;
 

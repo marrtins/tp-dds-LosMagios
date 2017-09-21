@@ -1,4 +1,4 @@
-package modelo.TiposCondicion;
+package entities.TiposCondicion;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -6,9 +6,9 @@ import java.util.ArrayList;
 import analisisMetodologico.OperadorNoTaxativo;
 import analisisMetodologico.OperadoresFactory;
 import analizadorIndicadores.Parser;
-import modelo.Empresa;
-import modelo.Indicador;
-import modelo.TipoCondicion;
+import entities.Empresa;
+import entities.Indicador;
+import entities.TipoCondicion;
 import persistence.DataCollector;
 
 public class CondicionNoTaxativa implements TipoCondicion {

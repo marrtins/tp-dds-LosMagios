@@ -1,8 +1,8 @@
-package modelo;
+package entities;
 
 import java.util.ArrayList;
 
-import modelo.Cuenta;
+import entities.Cuenta;
 
 public class Periodo {
 	private int anio;

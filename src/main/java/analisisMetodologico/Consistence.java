@@ -3,8 +3,8 @@ package analisisMetodologico;
 
 import java.util.ArrayList;
 
-import modelo.Empresa;
-import modelo.Indicador;
+import entities.Empresa;
+import entities.Indicador;
 
 public class Consistence extends OperadorTaxativo {
 

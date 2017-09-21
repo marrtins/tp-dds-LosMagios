@@ -1,7 +1,7 @@
 package analisisMetodologico;
 
-import modelo.Empresa;
-import modelo.Indicador;
+import entities.Empresa;
+import entities.Indicador;
 
 public class AntiqueSort extends OperadorNoTaxativo{
 

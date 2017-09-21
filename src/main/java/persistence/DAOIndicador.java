@@ -2,8 +2,8 @@ package persistence;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import modelo.Indicador;
-import modelo.Metodologia;
+import entities.Indicador;
+import entities.Metodologia;
 
 
 public interface DAOIndicador {

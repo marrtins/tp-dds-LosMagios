@@ -1,8 +1,9 @@
-package persistence;
+package model;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import modelo.Empresa;
+import entities.Empresa;
+import persistence.DAOEmpresa;
 
 
 public class RepositorioDeEmpresas {

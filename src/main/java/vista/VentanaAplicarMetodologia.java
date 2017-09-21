@@ -24,12 +24,12 @@ import java.awt.FlowLayout;
 import javax.swing.border.TitledBorder;
 import javax.swing.event.ListDataEvent;
 
-import modelo.Empresa;
-import modelo.Indicador;
-import modelo.Metodologia;
-import modelo.Periodo;
-import modelo.TiposCondicion.CondicionNoTaxativa;
-import modelo.TiposCondicion.CondicionTaxativa;
+import entities.Empresa;
+import entities.Indicador;
+import entities.Metodologia;
+import entities.Periodo;
+import entities.TiposCondicion.CondicionNoTaxativa;
+import entities.TiposCondicion.CondicionTaxativa;
 import persistence.CustomListModelEmpresa;
 import persistence.DataCollector;
 

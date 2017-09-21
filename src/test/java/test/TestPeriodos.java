@@ -9,9 +9,9 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import modelo.Cuenta;
-import modelo.Empresa;
-import modelo.Periodo;
+import entities.Cuenta;
+import entities.Empresa;
+import entities.Periodo;
 import persistence.DataCollector;
 
 

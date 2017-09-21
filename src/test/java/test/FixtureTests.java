@@ -6,9 +6,9 @@ import java.util.Calendar;
 
 import org.junit.internal.ArrayComparisonFailure;
 
-import modelo.Cuenta;
-import modelo.Empresa;
-import modelo.Periodo;
+import entities.Cuenta;
+import entities.Empresa;
+import entities.Periodo;
 
 public class FixtureTests {
 	

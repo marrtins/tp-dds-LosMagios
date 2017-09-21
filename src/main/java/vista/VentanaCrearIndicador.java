@@ -8,9 +8,7 @@ import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-
-import modelo.Indicador;
-
+import entities.Indicador;
 import persistence.DataCollector;
 
 import javax.swing.JLabel;

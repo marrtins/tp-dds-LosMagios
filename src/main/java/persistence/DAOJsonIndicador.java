@@ -13,9 +13,9 @@ import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 
-import modelo.Cuenta;
-import modelo.Indicador;
-import modelo.Metodologia;
+import entities.Cuenta;
+import entities.Indicador;
+import entities.Metodologia;
 
 import java.util.function.Predicate;
 

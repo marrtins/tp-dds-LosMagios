@@ -7,9 +7,9 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import modelo.Empresa;
-import modelo.Indicador;
-import modelo.Periodo;
+import entities.Empresa;
+import entities.Indicador;
+import entities.Periodo;
 
 import javax.swing.JButton;
 import java.awt.event.ActionListener;

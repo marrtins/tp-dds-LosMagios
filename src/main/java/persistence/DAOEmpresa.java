@@ -2,8 +2,7 @@ package persistence;
 import java.io.IOException;
 import java.util.ArrayList;
 
-
-import modelo.Empresa;
+import entities.Empresa;
 
 
 public interface DAOEmpresa {

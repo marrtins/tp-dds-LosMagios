@@ -1,16 +1,19 @@
 package persistence;
 
 import excepciones.*;
+import model.RepositorioDeEmpresas;
+import model.RepositorioDeIndicadores;
+
 import java.io.IOException;
 import java.util.ArrayList;
 
 import analizadorIndicadores.AnalizadorSintactico;
-import modelo.Cuenta;
-import modelo.Empresa;
-import modelo.Indicador;
-import modelo.Metodologia;
-import modelo.TiposCondicion.CondicionNoTaxativa;
-import modelo.TiposCondicion.CondicionTaxativa;
+import entities.Cuenta;
+import entities.Empresa;
+import entities.Indicador;
+import entities.Metodologia;
+import entities.TiposCondicion.CondicionNoTaxativa;
+import entities.TiposCondicion.CondicionTaxativa;
 
 
 

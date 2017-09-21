@@ -2,12 +2,12 @@ package analizadorIndicadores;
 
 import java.util.ArrayList;
 
+import entities.Cuenta;
+import entities.Empresa;
+import entities.Indicador;
+import entities.Periodo;
 import excepciones.*;
 import java.io.IOException;
-import modelo.Cuenta;
-import modelo.Empresa;
-import modelo.Indicador;
-import modelo.Periodo;
 
 import persistence.DataCollector;
 

@@ -7,12 +7,12 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import modelo.Cuenta;
-import modelo.Empresa;
-import modelo.Periodo;
+import entities.Cuenta;
+import entities.Empresa;
+import entities.Periodo;
+import model.RepositorioDeEmpresas;
 import persistence.DAOJsonEmpresa;
 import persistence.DataCollector;
-import persistence.RepositorioDeEmpresas;
 
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;

@@ -7,14 +7,14 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import modelo.Cuenta;
-import modelo.Empresa;
-import modelo.Indicador;
-import modelo.Metodologia;
+import entities.Cuenta;
+import entities.Empresa;
+import entities.Indicador;
+import entities.Metodologia;
+import model.RepositorioDeEmpresas;
+import model.RepositorioDeIndicadores;
 import persistence.DAOJsonEmpresa;
 import persistence.DataCollector;
-import persistence.RepositorioDeEmpresas;
-import persistence.RepositorioDeIndicadores;
 
 public class TestMetodologias {
 	private ArrayList<Indicador> indicadores;

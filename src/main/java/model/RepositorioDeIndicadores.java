@@ -1,9 +1,10 @@
-package persistence;
+package model;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import modelo.Indicador;
-import modelo.Metodologia;
+import entities.Indicador;
+import entities.Metodologia;
+import persistence.DAOIndicador;
 
 
 public class RepositorioDeIndicadores {

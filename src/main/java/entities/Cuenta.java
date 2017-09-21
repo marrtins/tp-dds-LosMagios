@@ -1,9 +1,4 @@
-package modelo;
-
-
-
-
-
+package entities;
 
 public class Cuenta  {
 	

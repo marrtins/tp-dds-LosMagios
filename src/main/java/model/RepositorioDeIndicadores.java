@@ -4,16 +4,30 @@ import java.util.ArrayList;
 
 import entities.Indicador;
 import entities.Metodologia;
+import persistence.DAOEmpresa;
 import persistence.DAOIndicador;
 
 
 public class RepositorioDeIndicadores {
 
 	private DAOIndicador daoIndicador;
+	private static RepositorioDeIndicadores instance = null;
+	
 
 	public RepositorioDeIndicadores(DAOIndicador dao){
 		this.daoIndicador = dao;
 	}
+
+	
+	public RepositorioDeIndicadores getInstance(DAOIndicador dao){
+		if(instance==null){
+			instance = new RepositorioDeIndicadores(dao);
+		}
+		return instance;
+	}
+	
+
+
 
 	public void add(Indicador indicador) throws IOException{
 		this.daoIndicador.add(indicador);

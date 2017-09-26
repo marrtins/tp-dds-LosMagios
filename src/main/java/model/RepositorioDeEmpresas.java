@@ -9,10 +9,19 @@ import persistence.DAOEmpresa;
 public class RepositorioDeEmpresas {
 
 	private DAOEmpresa daoEmpresa;
-
+	private RepositorioDeEmpresas instance = null;
+	
 	public RepositorioDeEmpresas(DAOEmpresa dao){
 		this.daoEmpresa = dao;
 	}
+	
+	public RepositorioDeEmpresas getInstance(DAOEmpresa dao){
+		if(instance==null){
+			instance = new RepositorioDeEmpresas(dao);
+		}
+		return instance;
+	}
+	
 
 	public void add(Empresa empresa) throws IOException{
 		this.daoEmpresa.add(empresa);

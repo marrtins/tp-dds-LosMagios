@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>¿Donde invierto?</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<script type="text/javascript", src="./eventos.js"></script>
+</head>
+<body>
+
+<div id="ventanaInicio">
+	
+	<h1> Bienvenido a "Donde invierto"</h1>
+<button value="cuenta" onclick="mostrarVentana('ventanaCuentas')"> Cuenta</button>
+<button value="indicador" onclick="mostrarVentana('ventanaIndicadores')"> Indicador</button>
+<button value="metodologia" onclick="mostrarVentana('ventanaMetodologias')"> Metodologia</button>
+<button value="visualizarGrafico" onclick="mostrarVentana('ventanaGrafico')"> Visualizar grafico</button>
+<button value="verDatosEmpresas" onclick="mostrarVentana('ventanaDatosEmpresas')"> Ver datos de empresas </button>
+</div>
+
+<div id="ventanaCuentas", style="display: none">
+		<h1> Por favor seleccione una opcion</h1>
+	<button value="crearCuenta"> Crear cuenta</button>
+	<button value="consultarCuenta"> Consultar valor de cuenta</button>
+	<button value="atras" onclick="volverAlInicio('ventanaCuentas')"> Atras</button>
+
+</div>
+
+
+<div id="ventanaIndicadores", style="display: none">
+	<h1> Indicador</h1>
+	<button value="crearIndicador"> Crear indicador</button>
+	<button value="aplicarIndicador"> Aplicar indicadores</button>
+	<button value="atras" onclick="volverAlInicio('ventanaIndicadores')"> Atras</button>
+
+</div>
+
+<div id="ventanaMetodologias", style="display: none">
+	<h1> Metodologia</h1>
+	<button value="crearMetodologia"> Crear metodologia</button>
+	<button value="aplicarMetodologia"> Aplicar metodologia</button>
+	<button value="atras" onclick="volverAlInicio('ventanaMetodologias')"> Atras</button>
+</div>
+
+<div id="ventanaGrafico", style="display: none">
+	<h3> GRAFICO</h3>
+	<button value="atras" onclick="volverAlInicio('ventanaGrafico')"> Atras</button>
+</div>
+
+<div id="ventanaDatosEmpresas", style="display: none">
+	<h3> DATOS</h3>
+	<button value="atras" onclick="volverAlInicio('ventanaDatosEmpresas')"> Atras</button>
+</div>
+
+</body>
+</html>

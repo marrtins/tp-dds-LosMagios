@@ -1,3 +1,18 @@
-h1{
+.display-3, .lead, .botonIngreso{
 	text-align: center;
+
 }
+.display-3{
+	color: blue;
+	font-weight: 700;
+	
+}
+
+.lead{
+	font-weight: 200;
+}
+#ventanaBase{
+	background-image: url(../images/invierto.jpg)
+
+}
+

@@ -20,17 +20,16 @@ public class Router {
 	
 	Spark.get("/", inicioController::arranque, engine);
 	Spark.post("/inicio", inicioController::inicio,engine);
-<<<<<<< HEAD
-	
-	
-	
-	
-=======
 	Spark.post("/inicio/cuenta", inicioController::cuentas,engine);
 	Spark.post("/inicio/metodologia", inicioController::metodologias,engine);
 	Spark.post("/inicio/indicador", inicioController::indicadores,engine);
 	Spark.post("/inicio/grafico", inicioController::grafico,engine);
 	Spark.post("/inicio/empresa", inicioController::empresas,engine);
->>>>>>> 8f32d99d7c9b90c3087362a3736cc85e02b2c719
+	Spark.post("/inicio/cuenta/crearCuenta", inicioController::crearCuenta,engine);
+	Spark.post("/inicio/cuenta/consultarCuenta", inicioController::consultarCuenta,engine);
+	Spark.post("/inicio/cuenta/crearMetodologia", inicioController::crearMetodologia,engine);
+	Spark.post("/inicio/cuenta/aplicarMetodologia", inicioController::aplicarMetodologia,engine);
+	Spark.post("/inicio/cuenta/crearIndicador", inicioController::crearIndicador,engine);
+	Spark.post("/inicio/cuenta/aplicarIndicadores", inicioController::aplicarIndicadores,engine);
 }
 }

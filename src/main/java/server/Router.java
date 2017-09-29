@@ -1,6 +1,7 @@
 package server;
 
 
+import controllers.InicioController;
 import spark.Spark;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 import spark.utils.BooleanHelper;
@@ -13,7 +14,10 @@ public class Router {
 				.withDefaultHelpers()
 				.withHelper("isTrue", BooleanHelper.isTrue)
 				.build();
-	}
+	
+	
+	InicioController inicioController = new InicioController();
+	
+	Spark.get("/", inicioController::arranque, engine);
 }
-
-
+}

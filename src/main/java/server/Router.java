@@ -19,5 +19,6 @@ public class Router {
 	InicioController inicioController = new InicioController();
 	
 	Spark.get("/", inicioController::arranque, engine);
+	Spark.post("/inicio", inicioController::inicio,engine);
 }
 }

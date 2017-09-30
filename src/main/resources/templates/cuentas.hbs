@@ -11,7 +11,19 @@
 	<button value="crearCuenta"> Crear cuenta > </button>
 	<button value="consultarCuenta"> Consultar valor de cuenta > </button>
 	<button value="atras"> Atrás > </button>
-
+	<div class="container">
+		<h3>Seleccione una empresa</h3>
+	<div class="form-group">
+	<form role="form" action="/inicio/cuenta/consultarCuenta" method="POST">
+		<select name="nombreEmpresa" class="custom-select">
+			<option value="-1">Seleccionar</option>
+			{{#each empresas}}
+			<option value= {{nombreEmpresa}}> {{nombreEmpresa}}</option>
+			{{/each}}
+		</select>
+		<button  type="submit" class="btn btn-primary">Ver Cuentas</button>
+	</form>
+	</div>
 </div>
 </body>
 </html>

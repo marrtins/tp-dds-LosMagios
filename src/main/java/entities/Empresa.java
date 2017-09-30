@@ -35,6 +35,20 @@ public class Empresa implements Serializable {
 		this.periodos = periodos;
 	}
 	
+	public ArrayList<Cuenta> getAllCuentas(){
+		
+		ArrayList<Cuenta> cuentas=new ArrayList<>();
+		int i=0;
+		for(i=0;i<periodos.size();i++){
+			ArrayList<Cuenta> aux=this.getCuentasDePeriodo(periodos.get(i));
+			aux.forEach(unaCuenta->cuentas.add(unaCuenta));
+
+		}
+		
+		return cuentas;
+	}
+	
+	
 	public ArrayList<Cuenta> getCuentasDePeriodo(Periodo unPeriodo){
 		
 		if(!(this.periodos.contains(unPeriodo))) {

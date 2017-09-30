@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 
 import entities.Cuenta;
 import entities.Empresa;
+import entities.Periodo;
 import entities.Usuario;
 import persistence.DataCollector;
 
@@ -57,12 +58,30 @@ public void boot(){
 	public void addCuenta(Cuenta cuenta){
 		this.cuentas.add(cuenta);
 	}
+	
 	public void addEmpresa(Empresa emp){
 		this.empresas.add(emp);
+	}
+	public ArrayList<Cuenta> getCuentasDeEmpresa(Empresa empresa){
+		
+		
+		return empresa.getAllCuentas();
+		
 	}
 	
 	public List<Empresa> getAll(){
 		return this.empresas;
+	}
+	public Empresa getEmpresa(String nombreEmpresa){
+		int i=0;
+		for(i=0; i<empresas.size(); i++){
+			String n1 = empresas.get(i).getNombreEmpresa();
+			String n2 = nombreEmpresa;
+			if(n1.equals(n2)){
+				return empresas.get(i);
+			}
+		}
+		return empresas.get(i);
 	}
 	
 	public Cuenta get(String nombreCuenta){

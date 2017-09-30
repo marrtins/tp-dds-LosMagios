@@ -1,8 +1,13 @@
 package controllers;
 
+import java.awt.List;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-
+import java.lang.Integer;
+import entities.Cuenta;
+import entities.Empresa;
+import entities.Periodo;
 import model.CuentaModel;
 import model.RepositorioDeEmpresas;
 import model.UsuarioModel;
@@ -14,15 +19,15 @@ public class VentanasController {
 	private Map<String, Object> model=new HashMap<>();
 	
 	public ModelAndView arranque(Request req, Response res){
-		UsuarioModel modelUsuario =UsuarioModel.getInstance();
-		model.put("usuarios", modelUsuario.getAll());
+//		UsuarioModel modelUsuario =UsuarioModel.getInstance();
+//		model.put("usuarios", modelUsuario.getAll());
 		return new ModelAndView(model, "base.hbs");
 	}
 
 
 	public ModelAndView inicio(Request req, Response res){
-		UsuarioModel modelUsuario =UsuarioModel.getInstance();
-		model.put("usuarios", modelUsuario.getAll());
+//		UsuarioModel modelUsuario =UsuarioModel.getInstance();
+//		model.put("usuarios", modelUsuario.getAll());
 		return new ModelAndView(model,"inicio.hbs");
 	}
 
@@ -30,13 +35,25 @@ public class VentanasController {
 	public ModelAndView cuentas(Request req, Response res){
 		CuentaModel modelCuentas=CuentaModel.getInstance();
 		String empresaBuscada = req.queryParams("nombreEmpresa");
+		ArrayList<Periodo> periodos = new ArrayList<>();		
+				
+		
 		model.put("empresas",modelCuentas.getAll());
+		model.put("periodos",periodos);
 		return new ModelAndView(model,"cuentas.hbs");
 	}
 	public ModelAndView consultarCuenta(Request req, Response res){
 		CuentaModel modelCuentas=CuentaModel.getInstance();
-		String empresaBuscada = req.queryParams("nombreEmpresa");
-		model.put("empresas",modelCuentas.getAll());
+		String nombreEmpresa = req.queryParams("empresaSeleccionada");
+		
+		Empresa empresaSeleccionada = modelCuentas.getEmpresa(nombreEmpresa);
+		
+		ArrayList<Cuenta>cuentasDeEmpresa=new ArrayList<>();
+		cuentasDeEmpresa=modelCuentas.getCuentasDeEmpresa(empresaSeleccionada);
+		model.put("empresa",empresaSeleccionada);
+		model.put("cuentas",cuentasDeEmpresa);
+		
+		
 		return new ModelAndView(model,"consultarCuenta.hbs");
 	}
 	
@@ -61,13 +78,7 @@ public class VentanasController {
 		return new ModelAndView(model,"crearCuenta.hbs");
 		
 	}
-	
-	public ModelAndView consultarCuenta(Request req, Response res){
-		return new ModelAndView(model,"consultarCuenta.hbs");
 		
-	}
-
-	
 	public ModelAndView crearMetodologia(Request req, Response res){
 		return new ModelAndView(model,"crearMetodologia.hbs");
 		

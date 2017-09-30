@@ -25,6 +25,7 @@ public class VentanasController {
 		model.put("usuarios", modelUsuario.getAll());
 		return new ModelAndView(model,"inicio.hbs");
 	}
+
 	
 	public ModelAndView cuentas(Request req, Response res){
 		CuentaModel modelCuentas=CuentaModel.getInstance();
@@ -55,4 +56,35 @@ public class VentanasController {
 		return new ModelAndView(model,"empresas.hbs");
 		
 	}
+	
+	public ModelAndView crearCuenta(Request req, Response res){
+		return new ModelAndView(model,"crearCuenta.hbs");
+		
+	}
+	
+	public ModelAndView consultarCuenta(Request req, Response res){
+		return new ModelAndView(model,"consultarCuenta.hbs");
+		
+	}
+
+	
+	public ModelAndView crearMetodologia(Request req, Response res){
+		return new ModelAndView(model,"crearMetodologia.hbs");
+		
+	}
+	
+	public ModelAndView aplicarMetodologia(Request req, Response res){
+		return new ModelAndView(model,"aplicarMetodologia.hbs");
+		
+	}
+	public ModelAndView aplicarIndicadores(Request req, Response res){
+		return new ModelAndView(model,"aplicarIndicadores.hbs");
+		
+	}
+	
+	public ModelAndView crearIndicador(Request req, Response res){
+		return new ModelAndView(model,"crearIndicador.hbs");
+		
+	}
+	
 }

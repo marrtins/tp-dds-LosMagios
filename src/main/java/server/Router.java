@@ -15,6 +15,7 @@ public class Router {
 				.withHelper("isTrue", BooleanHelper.isTrue)
 				.build();
 	
+	Spark.staticFiles.location("/public");
 	
 	VentanasController inicioController = new VentanasController();
 	

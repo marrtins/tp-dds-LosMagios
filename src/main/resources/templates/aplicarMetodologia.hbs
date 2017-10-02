@@ -1,33 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Aplicar Metodologia</title>
+	<title>Aplicar Metodología</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 	<link rel="stylesheet"  href="../../../css/style.css">
 </head>
 <body>
-<h1> APLICAR METODOLOGIA</h1>
+<div id="aplicarMetodologia">
+<h1 id="encabezados" div class="p-3 mb-2 bg-dark text-white"> APLICAR METODOLOGIA </h1>
 
-
-
-<<<<<<< HEAD
 <div class="form-group">
 	<form role="form" action="/inicio/metodologia/resultadoMetodologia" method="POST">
 				
 		<select name="metodologiaSeleccionada" class="custom-select">
-			<option value="-1">Seleccionar Metodología</option>
+			<option value="-1">Seleccionar Metodologia</option>
 			{{#each metodologias}}
 			<option value= {{nombreMetodologia}}> {{nombreMetodologia}}</option>
 			{{/each}}
 		</select>
-		
-		
-		
 		<button  type="submit" class="btn btn-primary">Ver Resultado</button>
 	</form>
 	</div>
-<button> Atras</button>
-=======
 <input type="text" name="T" style="width: 700px; height: 150px">
 
 <input type="text" name="Res" style="width: 700px; height: 150px">
@@ -35,7 +28,10 @@
 <h3>Empresas a analizar <input type="text" name="empresas" style="width: 700px; height: 150px"></h3>
 
 <button type="button" class="btn btn-outline-primary"> Aplicar</button>
-<button type="button" class="btn btn-outline-secondary"> Atras</button>
->>>>>>> 13176ab1e08afbdfe9380cb5be430490d01106ab
+<br>
+	<form role="form" action="/inicio/metodologia" method="POST">
+	<button type="submit" class="btn btn-danger"> << Atras </button>
+	</form>
+</div>
 </body>
 </html>

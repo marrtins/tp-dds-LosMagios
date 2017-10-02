@@ -1,22 +1,21 @@
-h1{
+h1 {
 	text-align: center;
 	font-weight: bold;	
 }
 
-
-
-.display-3, .lead, .botonIngreso{
+.display-3, .lead, .botonIngreso, #botonEntrada, #botonCuenta,#botonIndicador,#botonMetodologia,#encabezados{
 	text-align: center;
+	font-weight: bold;
 
 }
 .display-3{
 	color: blue;
-	font-weight: 700;
+	font-weight: 500;
 	
 }
 
 .lead{
-	font-weight: 200;
+	font-weight: bold;
 }
 #ventanaBase{
 	background-image: url(../images/invierto.jpg)
@@ -26,5 +25,4 @@ h1{
 #ventanaInicio{
 	background-image: url(../../images/invierto.jpg)
 }
-
 

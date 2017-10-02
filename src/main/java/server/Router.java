@@ -29,7 +29,7 @@ public class Router {
 	Spark.post("/inicio/empresa", inicioController::empresas,engine);
 
 	Spark.post("/inicio/indicador/indicadorCreado", inicioController::indicadorCreado,engine);
-	Spark.post("/inicio/cuenta/consultarCuenta", inicioController::consultarCuenta,engine);
+	Spark.post("/inicio/cuenta/crearCuenta", inicioController::crearCuenta,engine);
 	Spark.post("/inicio/cuenta/crearMetodologia", inicioController::crearMetodologia,engine);
 	Spark.post("/inicio/cuenta/aplicarMetodologia", inicioController::aplicarMetodologia,engine);
 	Spark.post("/inicio/metodologia/metodologiaCreada", inicioController::metodologiaCreada,engine);

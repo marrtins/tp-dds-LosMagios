@@ -7,17 +7,23 @@
 </head>
 <body>
 <div id="ventanaIndicadores">
-	<h1> Indicador</h1>
+	<h1 div class="p-3 mb-2 bg-warning text-dark"> Indicador </h1>
+	<h2> <b> Por favor seleccione una opción: </b></h2>
 
 	<form role="form" action="/inicio/cuenta/crearIndicador" method="POST">
-	<button value="crearIndicador" type="button" class="btn btn-outline-primary"> Crear indicador</button>
+	<button id="botonIndicador"  type="submit" class="btn btn-outline-primary"> Crear indicador > </button>
 	</form>
-
+<br>
 	<form role="form" action="/inicio/cuenta/aplicarIndicadores" method="POST">
-	<button value="aplicarIndicadores" type="button" class="btn btn-outline-primary"> Aplicar indicadores</button>
+	<button id="botonIndicador"  type="submit" class="btn btn-outline-primary"> Aplicar indicadores > </button>
 	</form>
 
-	<button value="atras" type="button" class="btn btn-outline-secondary"> Atrás </button>
+	<br>
+	<form role="form" action="/inicio" method="POST">
+	<button type="submit" class="btn btn-danger"> << Atrás </button>
+	</form>
+
+	<img src="/images/indicador.jpg" class="imagenIndicador" style="width:300px;height:150px;" align="right">	
 
 </div>
 </body>

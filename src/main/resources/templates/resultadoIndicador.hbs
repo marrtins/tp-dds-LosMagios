@@ -7,13 +7,19 @@
 </head>
 <body>
 	
+<div id="resultadoIndicador">
+	<h1 id="encabezados" div class="p-3 mb-2 bg-dark text-white"> RESULTADO INDICADOR </h1>
+
 		<h2>Empresa {{empresa.nombreEmpresa}}</h2>
 		<h2>Periodo {{periodo}}</h2>
 		<h2>Indicador {{indicador.nombreIndicador}}</h2>
 		<h2>Resultado {{resultado}}</h2>
 		
 		
-		<button class="btn btn-primary" type="submit"> Atras</button>
+			<br>
+	<form role="form" action="/inicio/indicador" method="POST">
+	<button type="submit" class="btn btn-danger"> << Atrás </button>
+	</form>
 </div>
 </body>
 </html>

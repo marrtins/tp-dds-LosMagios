@@ -6,7 +6,8 @@
 	<link rel="stylesheet"  href="css/style.css">
 </head>
 <body>
-<h1>APLICAR INDICADORES</h1>
+<div id="aplicarIndicadores">
+<h1 id="encabezados" div class="p-3 mb-2 bg-dark text-white"> APLICAR INDICADORES </h1>
 
 
 <div class="form-group">
@@ -26,7 +27,7 @@
 		</select>
 		
 		<select name="periodoSeleccionado" class="custom-select">
-			<option value="-1">Seleccionar periodo</option>
+			<option value="-1">Seleccionar Período</option>
 			<option value="2016">2016</option>
 			<option value="2015">2015</option>
 			<option value="2014">2014</option>
@@ -40,6 +41,10 @@
 	</form>
 	</div>
 
+<form role="form" action="/inicio/indicador" method="POST">
+	<button type="submit" class="btn btn-danger"> << Atrás </button>
+	</form>
+</div>
 
 </body>
 </html>

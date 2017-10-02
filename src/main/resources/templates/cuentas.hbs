@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Cuentas</title>
+	<title>Cuenta</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="../../css/style.css">
 </head>
 <body>
-<div id="ventanaCuentas">
-<<<<<<< HEAD
-		
-	<button value="atras"> Atrás > </button>
-=======
-		<h1> Por favor seleccione una opción</h1>
-		<form role="form" action="/inicio/cuenta/crearCuenta" method="POST">
-	<button value="crearCuenta" type="button" class="btn btn-outline-primary"> Crear cuenta > </button>
-		</form>
+<div id="ventanaCuentas">	
+	<h1 div class="p-3 mb-2 bg-success text-white"> Cuenta </h1>
+	<h2> <b> Por favor seleccione una opción: </b></h2>
 
-		<form role="form" action="/inicio/cuenta/consultarCuenta" method="POST">
-	<button value="consultarCuenta" type="button" class="btn btn-outline-primary"> Consultar valor de cuenta > </button>
+	<form role="form" action="/inicio/cuenta/crearCuenta" method="POST">
+	<button id="botonCuenta" type="submit" class="btn btn-outline-primary"> Crear cuenta > </button>
+	</form>
+	<br>
+	<form role="form" action="/inicio/cuenta/consultarCuenta" method="POST">
+	<button id="botonCuenta" type="submit" class="btn btn-outline-primary"> Consultar valor de cuenta > </button>
 		</form>
-	<button value="atras" type="button" class="btn btn-outline-secondary"> Atrás > </button>
->>>>>>> 13176ab1e08afbdfe9380cb5be430490d01106ab
+		<br>
+		<form role="form" action="/inicio" method="POST">
+	<button type="submit" class="btn btn-danger"> << Atrás </button>
+		</form>
 
 	<div class="container">
 		<h3>Seleccione una empresa</h3>
@@ -36,6 +36,9 @@
 		<button  type="submit" class="btn btn-primary">Ver Cuentas</button>
 	</form>
 	</div>
+
+	<img src="/images/cuenta.jpg" class="imagenCuenta" style="width:300px;height:150px;" align="right">	
+</div>
 </div>
 
 </body>

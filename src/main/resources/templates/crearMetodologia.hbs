@@ -7,12 +7,120 @@
 
 <body>
 <h1>NUEVA METODOLOGIA</h1>
-<h3> Nombre <input type="text" name="nombreMetodologia"> </h3>
-<h3> <button> Agregar condicion taxativa</button> <button>Borrar condicion seleccionada</button><input type="text" name="indicador" style="width: 700px; height: 150px"> </h3>
 
-<h3> <button> Agregar condicion no taxativa</button> <button>Borrar condicion seleccionada</button><input type="text" name="indicador" style="width: 700px; height: 150px"> </h3>
+<div class="form-group">
+	<div>
+	<form role="form" action="/inicio/metodologia/metodologiaCreada" method="POST">
+		<select name="nombreMetodologia" class="custom-select">
+			<h3>Nombre de Metodologia<input value="Nombre Metodologia" type="text" name="nombreMetodologia"></h3>
+		</select>
+		
+		</div>
+		<div>
+		<select name="indicador1" class="custom-select">
+			<option value="-1">Seleccionar Indicador</option>
+			{{#each indicadores}}
+			<option value= {{nombreIndicador}}> {{nombreIndicador}}</option>
+			{{/each}}
+		</select>
+		
+		<select name="condicion1" class="custom-select">
+			<option value="-1">Seleccionar Condicion</option>
+			<option value="higherThan">mayor que</option>
+			<option value="lowerThan">menor que</option>
+		</select>
+								
+		<select name="valor1" class="custom-select">
+			<h3><input value="" type="text" name="valor1"></h3>
+		</select>
+		</div>
+		
+		<div>
+		<select name="indicador2" class="custom-select">
+			<option value="-1">Seleccionar Indicador</option>
+			{{#each indicadores}}
+			<option value= {{nombreIndicador}}> {{nombreIndicador}}</option>
+			{{/each}}
+		</select>
+		<select name="condicion2" class="custom-select">
+			<option value="-1">Seleccionar Condicion</option>
+			<option value="higherThan">mayor que</option>
+			<option value="lowerThan">menor que</option>
+		</select>
+								
+		<select name="valor2" class="custom-select">
+			<h3><input value="" type="text" name="valor1"></h3>
+		</select>
+		</div>
+		<div>
+		
+		<select name="indicador3" class="custom-select">
+			<option value="-1">Seleccionar Indicador</option>
+			{{#each indicadores}}
+			<option value= {{nombreIndicador}}> {{nombreIndicador}}</option>
+			{{/each}}
+		</select>
+		<select name="condicion3" class="custom-select">
+			<option value="-1">Seleccionar Condicion</option>
+			<option value="higherThan">mayor que</option>
+			<option value="lowerThan">menor que</option>
+		</select>
+								
+		<select name="valor3" class="custom-select">
+			<h3><input value="" type="text" name="valor1"></h3>
+		</select>
+		
+		</div>
+		<div>
+		<select name="indicador4" class="custom-select">
+			<option value="-1">Seleccionar Indicador</option>
+			{{#each indicadores}}
+			<option value= {{nombreIndicador}}> {{nombreIndicador}}</option>
+			{{/each}}
+		</select>
+		<select name="condicion4" class="custom-select">
+			<option value="-1">Seleccionar Condicion</option>
+			<option value="highest">mas alto posible</option>
+			<option value="lowest">mas bajo posible</option>
+		</select>
+		</div>
+		<div>
+		<select name="indicador5" class="custom-select">
+			<option value="-1">Seleccionar Indicador</option>
+			{{#each indicadores}}
+			<option value= {{nombreIndicador}}> {{nombreIndicador}}</option>
+			{{/each}}
+		</select>
+		<select name="condicion5" class="custom-select">
+			<option value="-1">Seleccionar Condicion</option>
+			<option value="highest">mas alto posible</option>
+			<option value="lowest">mas bajo posible</option>
+		</select>
+		</div>
+		<div>
+		<select name="indicador6" class="custom-select">
+			<option value="-1">Seleccionar Indicador</option>
+			{{#each indicadores}}
+			<option value= {{nombreIndicador}}> {{nombreIndicador}}</option>
+			{{/each}}
+		</select>
+		<select name="condicion6" class="custom-select">
+			<option value="-1">Seleccionar Condicion</option>
+			<option value="highest">mas alto posible</option>
+			<option value="lowest">mas bajo posible</option>
+		</select>
+		</div>
+		
+		
+		
+		
+		<button  type="submit" class="btn btn-primary">Crear Metodología</button>
+	</form>
 
-<button> Crear metodologia</button>
+
+
+
+
 
 <button class="btn btn-primary" type="submit"> Atras</button>
 </body> 

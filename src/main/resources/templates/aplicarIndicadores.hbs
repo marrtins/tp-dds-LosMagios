@@ -7,22 +7,39 @@
 </head>
 <body>
 <h1>APLICAR INDICADORES</h1>
-<h3>Periodo <select>
-	<option> periodo</option>
-</select>
-</h3>
 
-<h3>Indicador <select>
-	<option> indicador</option>
-</select>
-</h3>
 
-<h3> Empresas <input type="text" name="empresas" style="width: 700px; height: 150px"> </h3>
+<div class="form-group">
+	<form role="form" action="/inicio/indicador/resultadoIndicador" method="POST">
+		<select name="empresaSeleccionada" class="custom-select">
+			<option value="-1">Seleccionar Empresa</option>
+			{{#each empresas}}
+			<option value= {{nombreEmpresa}}> {{nombreEmpresa}}</option>
+			{{/each}}
+		</select>
+		
+		<select name="indicadorSeleccionado" class="custom-select">
+			<option value="-1">Seleccionar Indicador</option>
+			{{#each indicadores}}
+			<option value= {{nombreIndicador}}> {{nombreIndicador}}</option>
+			{{/each}}
+		</select>
+		
+		<select name="periodoSeleccionado" class="custom-select">
+			<option value="-1">Seleccionar periodo</option>
+			<option value="2016">2016</option>
+			<option value="2015">2015</option>
+			<option value="2014">2014</option>
+			<option value="2013">2013</option>
+			<option value="2012">2012</option>
+			
+			
+		</select>
+		
+		<button  type="submit" class="btn btn-primary">Ver Resultado</button>
+	</form>
+	</div>
 
-<h3> Resultado <input type="text" name="resultado"></h3>
 
-<button> Calcular</button>
-
-<button> Atras</button>
 </body>
 </html>

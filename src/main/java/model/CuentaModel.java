@@ -8,6 +8,8 @@ import java.util.stream.Collectors;
 
 import entities.Cuenta;
 import entities.Empresa;
+import entities.Indicador;
+import entities.Metodologia;
 import entities.Periodo;
 import entities.Usuario;
 import persistence.DataCollector;
@@ -17,6 +19,9 @@ public class CuentaModel {
 	
 	private List<Cuenta> cuentas;
 	private ArrayList<Empresa> empresas = new ArrayList<>();
+	private ArrayList<Indicador> indicadores = new ArrayList<>();
+	private ArrayList<Metodologia> metodologias = new ArrayList<>();
+
 	private static CuentaModel instance = null;
 	
 	
@@ -47,6 +52,19 @@ public void boot(){
 		e1.printStackTrace();
 	}
 	
+	try {
+		indicadores=persistence.cargarIndicadores();
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	
+	try {
+		metodologias=persistence.cargarMetodologias();
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
 		
 	//	empresas.forEach(unaEmpresa->this.addEmpresa(unaEmpresa));
 				
@@ -70,7 +88,24 @@ public void boot(){
 	}
 	
 	public List<Empresa> getAll(){
+		this.boot();
 		return this.empresas;
+	}
+	public ArrayList<Empresa> getArrayEmpresas(){
+		this.boot();
+		return this.empresas;
+	}
+	
+	public List<Indicador> getAllIndicadores(){
+		this.boot();
+		return this.indicadores;
+	}
+	
+	public List<Metodologia> getAllMetodologias(){
+		
+		
+		this.boot();
+		return this.metodologias;
 	}
 	public Empresa getEmpresa(String nombreEmpresa){
 		int i=0;
@@ -82,6 +117,35 @@ public void boot(){
 			}
 		}
 		return empresas.get(i);
+	}
+	public Indicador getIndicador(String nombre){
+		int i=0;
+		for(i=0; i<indicadores.size(); i++){
+			String n1 = indicadores.get(i).getNombreIndicador();
+			String n2 = nombre;
+			if(n1.equals(n2)){
+				return indicadores.get(i);
+			}
+		}
+		return indicadores.get(i);
+	}
+	
+	public Metodologia getMetodologia(String nombre){
+		int i=0;
+		for(i=0; i<metodologias.size(); i++){
+			String n1 = metodologias.get(i).getNombreMetodologia();
+			String n2 = nombre;
+			if(n1.equals(n2)){
+				return metodologias.get(i);
+			}
+		}
+		return metodologias.get(i);
+	}
+	
+	public Periodo getPeriodoDe(Empresa empresa,String anio){
+		
+		
+		return empresa.getPeriodoOrCreate(Integer.valueOf(anio));
 	}
 	
 	public Cuenta get(String nombreCuenta){

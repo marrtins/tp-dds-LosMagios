@@ -8,20 +8,23 @@
 <body>
 <h1> APLICAR METODOLOGIA</h1>
 
-<h3>Metodologia <select>
-	<option> Metodologia1</option>
-	<option>Metodologia2</option>
-</select></h3>
 
-<input type="text" name="NT" style="width: 700px; height: 150px">
 
-<input type="text" name="T" style="width: 700px; height: 150px">
-
-<input type="text" name="Res" style="width: 700px; height: 150px">
-
-<h3>Empresas a analizar <input type="text" name="empresas" style="width: 700px; height: 150px"></h3>
-
-<button> Aplicar</button>
+<div class="form-group">
+	<form role="form" action="/inicio/metodologia/resultadoMetodologia" method="POST">
+				
+		<select name="metodologiaSeleccionada" class="custom-select">
+			<option value="-1">Seleccionar Metodología</option>
+			{{#each metodologias}}
+			<option value= {{nombreMetodologia}}> {{nombreMetodologia}}</option>
+			{{/each}}
+		</select>
+		
+		
+		
+		<button  type="submit" class="btn btn-primary">Ver Resultado</button>
+	</form>
+	</div>
 <button> Atras</button>
 </body>
 </html>

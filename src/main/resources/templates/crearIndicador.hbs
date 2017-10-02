@@ -10,18 +10,18 @@
 <h1 id="encabezados" div class="p-3 mb-2 bg-dark text-white"> NUEVO INDICADOR </h1>
  <h2> Escriba aquí el indicador a crear (Recuerde ingresar cuentas e indicadores entre llaves \"{ }\" y en mayúsculas)</h2>
  <div class="form-group">
-	<form role="form" action="/inicio/indicador/indicadorCreado" method="POST">
+	<form role="form" action="/inicio/indicador/{{usuario}}/indicadorCreado" method="POST">
 		<select name="nombreI" class="custom-select">
 			<h3>Nombre del indicador <input value="Nombre Indicador" type="text" name="nombreI"></h3>
 		</select>
 		<select name="valorI" class="custom-select">
 			<h3>Valor del Indicador <input value="Formula Asociada" type="text" name="valorI"></h3>
 		</select>
-		<button  type="submit" class="btn btn-primary">Ver Cuentas</button>
+		<button  type="submit" class="btn btn-primary">Crear Indicador</button>
 	</form>
  
 <br>
-	<form role="form" action="/inicio/indicador" method="POST">
+	<form role="form" action="/inicio/indicador/{{usuario}}" method="POST">
 	<button type="submit" class="btn btn-danger"> << Atrás </button>
 	</form>
 </div>

@@ -8,25 +8,12 @@
 <body>
 <div id="ventanaCuentas">	
 	<h1 div class="p-3 mb-2 bg-success text-white"> Cuenta </h1>
-	<h2> <b> Por favor seleccione una opción: </b></h2>
-
-	<form role="form" action="/inicio/cuenta/crearCuenta" method="POST">
-	<button id="botonCuenta" type="submit" class="btn btn-outline-primary"> Crear cuenta > </button>
-	</form>
-	<br>
-	<form role="form" action="/inicio/cuenta/consultarCuenta" method="POST">
-	<button id="botonCuenta" type="submit" class="btn btn-outline-primary"> Consultar valor de cuenta > </button>
-		</form>
-		<br>
-		<form role="form" action="/inicio" method="POST">
-	<button type="submit" class="btn btn-danger"> << Atrás </button>
-		</form>
-
+	
 	<div class="container">
 		<h3>Seleccione una empresa</h3>
 		
 	<div class="form-group">
-	<form role="form" action="/inicio/cuenta/consultarCuenta" method="POST">
+	<form role="form" action="/inicio/cuenta/{{usuario}}/consultarCuenta" method="POST">
 		<select name="empresaSeleccionada" class="custom-select">
 			<option value="-1">Seleccionar</option>
 			{{#each empresas}}
@@ -40,6 +27,9 @@
 	<img src="/images/cuenta.jpg" class="imagenCuenta" style="width:300px;height:150px;" align="right">	
 </div>
 </div>
+	<form role="form" action="/inicio/{{usuario}}" method="POST">
+	<button type="submit" class="btn btn-danger"> << Atrás </button>
+	</form>
 
 </body>
 </html>

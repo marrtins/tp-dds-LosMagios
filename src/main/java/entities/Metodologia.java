@@ -19,10 +19,19 @@ public class Metodologia {
 	ArrayList<CondicionTaxativa> cTaxativas;
 	ArrayList<CondicionNoTaxativa> cNoTaxativas;
 	LinkedList<Empresa> listaOrdenada=new LinkedList<>();
+	public String usuario;
 	
 	String descripcionMetodologia;
 	
 	
+	public String getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
+	}
+
 	public String getNombreMetodologia() {
 		return nombreMetodologia;
 	}

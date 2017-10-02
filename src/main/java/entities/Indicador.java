@@ -10,9 +10,18 @@ import excepciones.ErrorConstantesEnIndicador;
 
 public class Indicador {
 	
+	public String getUsuario() {
+		return usuario;
+	}
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
+	}
+
+
 	private String nombreIndicador;
 	private String calculoIndicador;
 	public String formulaString;
+	public String usuario;
 	
 	public String getNombreIndicador() {
 		return nombreIndicador;

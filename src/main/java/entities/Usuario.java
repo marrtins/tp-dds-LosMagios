@@ -2,28 +2,28 @@ package entities;
 
 public class Usuario {
 
-	String nombre;
-	int pass;
+	String nombreUsuario;
+	String pass;
 	
-	public Usuario(String nombre,int pass) {
+	public Usuario(String nombre,String pass) {
 		super();
-		this.nombre=nombre;
+		this.nombreUsuario=nombre;
 		this.pass=pass;
 	}
 
 	public String getNombre() {
-		return nombre;
+		return nombreUsuario;
 	}
 
 	public void setNombre(String nombre) {
-		this.nombre = nombre;
+		this.nombreUsuario = nombre;
 	}
 
-	public int getPass() {
+	public String getPass() {
 		return pass;
 	}
 
-	public void setPass(int pass) {
+	public void setPass(String pass) {
 		this.pass = pass;
 	}
 	

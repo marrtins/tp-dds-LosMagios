@@ -16,6 +16,7 @@ import com.google.gson.reflect.TypeToken;
 import entities.Cuenta;
 import entities.Indicador;
 import entities.Metodologia;
+import entities.Usuario;
 
 import java.util.function.Predicate;
 
@@ -72,6 +73,13 @@ public class DAOJsonIndicador implements DAOIndicador {
 		this.bufferToReader = new BufferedReader(reader);
 		ArrayList<Metodologia> metodologias = this.myGson.fromJson(getJson(), new TypeToken<ArrayList<Metodologia>>(){}.getType());
 		return metodologias;
+	}
+	
+	public ArrayList<Usuario> getAllUsuarios() throws IOException {
+		FileReader reader = new	FileReader(this.filePathIndicador);
+		this.bufferToReader = new BufferedReader(reader);
+		ArrayList<Usuario> usuarios = this.myGson.fromJson(getJson(), new TypeToken<ArrayList<Usuario>>(){}.getType());
+		return usuarios;
 	}
 	
 	

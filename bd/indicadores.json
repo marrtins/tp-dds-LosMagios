@@ -1,1 +1,22 @@
-[{"nombreIndicador":"ROE","calculoIndicador":"({NetIncome}/{CapitalTotal})"},{"nombreIndicador":"DebtEqRatio","calculoIndicador":"({PasivoTotal}/{PatrimonioNeto})"},{"nombreIndicador":"ProfitMargin","calculoIndicador":"({NetIncome}/{VentasNetas})"},{"nombreIndicador":"NetIncome","calculoIndicador":"({IngresoNetoOD}+{IngresoNetoCC})"},{"nombreIndicador":"IPrueba","calculoIndicador":"(1+1+{CapitalTotal}"},{"nombreIndicador":"IErroneo","calculoIndicador":"(2*{noexisto})"},{"nombreIndicador":"JUAN","calculoIndicador":"1+1"},{"nombreIndicador":"JUAN","calculoIndicador":"1+1"},{"nombreIndicador":"JUAN","calculoIndicador":""},{"nombreIndicador":"ASD","calculoIndicador":"1+1"}]
+[
+  {
+    "nombreIndicador": "ROE",
+    "calculoIndicador": "({NetIncome}/{CapitalTotal})",
+    "usuario": "juan"
+  },
+  {
+    "nombreIndicador": "DebtEqRatio",
+    "calculoIndicador": "({PasivoTotal}/{PatrimonioNeto})",
+    "usuario": "juan"
+  },
+  {
+    "nombreIndicador": "ProfitMargin",
+    "calculoIndicador": "({NetIncome}/{VentasNetas})",
+    "usuario": "juan"
+  },
+  {
+    "nombreIndicador": "NetIncome",
+    "calculoIndicador": "({IngresoNetoOD}+{IngresoNetoCC})",
+    "usuario": "pedro"
+  }
+]

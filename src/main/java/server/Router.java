@@ -20,23 +20,28 @@ public class Router {
 	VentanasController inicioController = new VentanasController();
 	
 	Spark.get("/", inicioController::arranque, engine);
+	Spark.get("/relog", inicioController::arranque, engine);
+	
 	Spark.post("/inicio", inicioController::inicio,engine);
-	Spark.post("/inicio/cuenta", inicioController::cuentas,engine);
-	Spark.post("/inicio/cuenta/consultarCuenta", inicioController::consultarCuenta, engine);
-	Spark.post("/inicio/metodologia", inicioController::metodologias,engine);
-	Spark.post("/inicio/indicador", inicioController::indicadores,engine);
-	Spark.post("/inicio/grafico", inicioController::grafico,engine);
-	Spark.post("/inicio/empresa", inicioController::empresas,engine);
+	Spark.post("/inicio/:nombreUsuario", inicioController::inicioLog,engine);
+	
+	Spark.post("/inicio/cuenta/:nombreUsuario", inicioController::cuentas,engine);
+	Spark.post("/inicio/cuenta/:nombreUsuario/consultarCuenta", inicioController::consultarCuenta, engine);
+	
+	
+	Spark.post("/inicio/indicador/:nombreUsuario", inicioController::indicadores,engine);
+	Spark.post("/inicio/indicador/:nombreUsuario/indicadorCreado", inicioController::indicadorCreado,engine);
+	Spark.post("/inicio/indicador/:nombreUsuario/crearIndicador", inicioController::crearIndicador,engine);
+	Spark.post("/inicio/indicador/:nombreUsuario/resultadoIndicador", inicioController::resultadoIndicador,engine);
+	Spark.post("/inicio/indicador/:nombreUsuario/aplicarIndicadores", inicioController::aplicarIndicadores,engine);
 
-	Spark.post("/inicio/indicador/indicadorCreado", inicioController::indicadorCreado,engine);
-	Spark.post("/inicio/cuenta/crearCuenta", inicioController::crearCuenta,engine);
-	Spark.post("/inicio/cuenta/crearMetodologia", inicioController::crearMetodologia,engine);
-	Spark.post("/inicio/cuenta/aplicarMetodologia", inicioController::aplicarMetodologia,engine);
-	Spark.post("/inicio/metodologia/metodologiaCreada", inicioController::metodologiaCreada,engine);
-	Spark.post("/inicio/metodologia/resultadoMetodologia", inicioController::resultadoMetodologia,engine);
-	Spark.post("/inicio/cuenta/crearIndicador", inicioController::crearIndicador,engine);
-	Spark.post("/inicio/indicador/resultadoIndicador", inicioController::resultadoIndicador,engine);
-	Spark.post("/inicio/cuenta/aplicarIndicadores", inicioController::aplicarIndicadores,engine);
 
+	
+	Spark.post("/inicio/metodologia/:nombreUsuario", inicioController::metodologias,engine);
+	Spark.post("/inicio/metodologia/:nombreUsuario/crearMetodologia", inicioController::crearMetodologia,engine);
+	Spark.post("/inicio/metodologia/:nombreUsuario/aplicarMetodologia", inicioController::aplicarMetodologia,engine);
+	Spark.post("/inicio/metodologia/:nombreUsuario/metodologiaCreada", inicioController::metodologiaCreada,engine);
+	Spark.post("/inicio/metodologia/:nombreUsuario/resultadoMetodologia", inicioController::resultadoMetodologia,engine);
+	
 }
 }

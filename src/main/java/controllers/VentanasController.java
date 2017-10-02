@@ -11,6 +11,7 @@ import entities.Empresa;
 import entities.Indicador;
 import entities.Metodologia;
 import entities.Periodo;
+import entities.Usuario;
 import entities.TiposCondicion.CondicionNoTaxativa;
 import entities.TiposCondicion.CondicionTaxativa;
 import model.CuentaModel;
@@ -27,13 +28,37 @@ public class VentanasController {
 	public ModelAndView arranque(Request req, Response res){
 //		UsuarioModel modelUsuario =UsuarioModel.getInstance();
 //		model.put("usuarios", modelUsuario.getAll());
+		model.clear();
 		return new ModelAndView(model, "base.hbs");
 	}
 
 
 	public ModelAndView inicio(Request req, Response res){
-//		UsuarioModel modelUsuario =UsuarioModel.getInstance();
+		CuentaModel modelCuentas=CuentaModel.getInstance();
 //		model.put("usuarios", modelUsuario.getAll());
+		String pass=req.queryParams("pass");
+		
+		String nombreUsuario = req.queryParams("usuario");
+				
+		Usuario usuario = modelCuentas.getUsuario(nombreUsuario,pass);
+		if(usuario.getNombre().equals("null")){
+			return new ModelAndView(model,"logFail.hbs");
+
+		}
+		
+		model.put("usuario",usuario.getNombre());
+		return new ModelAndView(model,"inicio.hbs");
+	}
+	
+	
+	
+	public ModelAndView inicioLog(Request req, Response res){
+		CuentaModel modelCuentas=CuentaModel.getInstance();
+//		
+		
+		String nombreUsuario = req.params(":nombreUsuario");
+
+		model.put("usuario",nombreUsuario);
 		return new ModelAndView(model,"inicio.hbs");
 	}
 
@@ -70,7 +95,9 @@ public class VentanasController {
 		String nombreIndicador = req.queryParams("nombreI");
 		String valorIndicador = req.queryParams("valorI");
 		DataCollector persistence= new DataCollector();
-		persistence.crearIndicador(nombreIndicador, valorIndicador);
+		String nombreUsuario = req.params(":nombreUsuario");
+
+		persistence.crearIndicador(nombreIndicador, valorIndicador,nombreUsuario);
 		
 		return new ModelAndView(model,"indicadorCreado.hbs");
 	}
@@ -135,15 +162,17 @@ public class VentanasController {
 		}
 		
 		
-		
+		String nombreUsuario = req.params(":nombreUsuario");
+
 		DataCollector persistence= new DataCollector();
-		persistence.crearMetodologia(nombreMetodologia, taxativas, noTaxativas);
+		persistence.crearMetodologia(nombreMetodologia, taxativas, noTaxativas,nombreUsuario);
 		
 		
 		return new ModelAndView(model,"metodologiaCreada.hbs");
 	}
 	
 	public ModelAndView metodologias(Request req, Response res){
+		
 		return new ModelAndView(model,"metodologias.hbs");
 	}
 	
@@ -163,7 +192,9 @@ public class VentanasController {
 		
 	public ModelAndView crearMetodologia(Request req, Response res){
 		CuentaModel modelCuentas=CuentaModel.getInstance();
-		model.put("indicadores", modelCuentas.getAllIndicadores());
+		String nombreUsuario = req.params(":nombreUsuario");
+
+		model.put("indicadores", modelCuentas.getAllIndicadores(nombreUsuario));
 
 		
 		return new ModelAndView(model,"crearMetodologia.hbs");
@@ -173,8 +204,10 @@ public class VentanasController {
 	public ModelAndView aplicarMetodologia(Request req, Response res){
 		
 		CuentaModel modelCuentas=CuentaModel.getInstance();
-		model.put("metodologias", modelCuentas.getAllMetodologias());
+		String nombreUsuario = req.params(":nombreUsuario");
 
+		model.put("metodologias", modelCuentas.getAllMetodologias(nombreUsuario));
+		
 		
 		return new ModelAndView(model,"aplicarMetodologia.hbs");
 		
@@ -183,8 +216,9 @@ public class VentanasController {
 		
 		CuentaModel modelCuentas=CuentaModel.getInstance();
 		
-		
-		model.put("indicadores", modelCuentas.getAllIndicadores());
+		String nombreUsuario = req.params(":nombreUsuario");
+
+		model.put("indicadores", modelCuentas.getAllIndicadores(nombreUsuario));
 		model.put("empresas",modelCuentas.getAll());
 		return new ModelAndView(model,"aplicarIndicadores.hbs");
 		

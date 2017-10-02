@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import entities.Indicador;
 import entities.Metodologia;
+import entities.Usuario;
 import persistence.DAOEmpresa;
 import persistence.DAOIndicador;
 
@@ -45,6 +46,9 @@ public class RepositorioDeIndicadores {
 	}
 	public ArrayList<Metodologia> getAllMetodologias() throws IOException{
 		return this.daoIndicador.getAllMetodologias();
+	}
+	public ArrayList<Usuario> getAllUsuarios() throws IOException{
+		return this.daoIndicador.getAllUsuarios();
 	}
 	
 	

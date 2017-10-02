@@ -10,7 +10,7 @@
 <h1 id="encabezados" div class="p-3 mb-2 bg-dark text-white"> APLICAR METODOLOGIA </h1>
 
 <div class="form-group">
-	<form role="form" action="/inicio/metodologia/resultadoMetodologia" method="POST">
+	<form role="form" action="/inicio/metodologia/{{usuario}}/resultadoMetodologia" method="POST">
 				
 		<select name="metodologiaSeleccionada" class="custom-select">
 			<option value="-1">Seleccionar Metodologia</option>
@@ -21,15 +21,12 @@
 		<button  type="submit" class="btn btn-primary">Ver Resultado</button>
 	</form>
 	</div>
-<input type="text" name="T" style="width: 700px; height: 150px">
 
-<input type="text" name="Res" style="width: 700px; height: 150px">
 
-<h3>Empresas a analizar <input type="text" name="empresas" style="width: 700px; height: 150px"></h3>
 
-<button type="button" class="btn btn-outline-primary"> Aplicar</button>
+
 <br>
-	<form role="form" action="/inicio/metodologia" method="POST">
+	<form role="form" action="/inicio/metodologia/{{usuario}}" method="POST">
 	<button type="submit" class="btn btn-danger"> << Atras </button>
 	</form>
 </div>

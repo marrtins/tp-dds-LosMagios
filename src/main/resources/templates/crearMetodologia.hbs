@@ -11,7 +11,7 @@
 
 <div class="form-group">
 	<div>
-	<form role="form" action="/inicio/metodologia/metodologiaCreada" method="POST">
+	<form role="form" action="/inicio/metodologia/{{usuario}}/metodologiaCreada" method="POST">
 		<select name="nombreMetodologia" class="custom-select">
 			<h3>Nombre de Metodologia<input value="Nombre Metodologia" type="text" name="nombreMetodologia"></h3>
 		</select>
@@ -118,8 +118,8 @@
 </div>
 </div>
 <br>
-	<form role="form" action="/inicio/metodologia" method="POST">
-	<button type="submit" class="btn btn-danger"> << Atrás </button>
+	<form role="form" action="/inicio/metodologia/{{usuario}}" method="POST">
+	<button type="submit" class="btn btn-danger"> << Atras </button>
 	</form>
 </body> 
 </html>

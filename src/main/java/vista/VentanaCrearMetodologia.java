@@ -9,6 +9,7 @@ import javax.swing.border.EmptyBorder;
 
 import entities.Indicador;
 import entities.Metodologia;
+import entities.Usuario;
 import entities.TiposCondicion.CondicionNoTaxativa;
 import entities.TiposCondicion.CondicionTaxativa;
 import erroresVista.NuevaCNTCheck;
@@ -45,6 +46,7 @@ public class VentanaCrearMetodologia extends JFrame {
 	public String[]operadorNT={"highest","lowest","antique"};
 	public int[] necesitaComparar={3,4};
 	public 	ArrayList<Indicador> indicadores;
+	public 	ArrayList<Usuario> usuarios;
 	public ArrayList<CondicionTaxativa> taxativasACrear=new ArrayList<>();
 	public ArrayList<CondicionNoTaxativa> noTaxativasACrear=new ArrayList<>();
 	String indicadorString=null;
@@ -86,6 +88,12 @@ public class VentanaCrearMetodologia extends JFrame {
 
 		try {
 			indicadores = persistence.cargarIndicadores();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		try {
+			usuarios = persistence.cargarUsuarios();
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -293,7 +301,7 @@ public class VentanaCrearMetodologia extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				String nombreMet = txtNombre.getText();
 				if(persistence.sePuedeCrearMetodologia(nombreMet,taxativasACrear,noTaxativasACrear)){
-					persistence.crearMetodologia(nombreMet,taxativasACrear,noTaxativasACrear);
+					persistence.crearMetodologia(nombreMet,taxativasACrear,noTaxativasACrear,"asd");
 				}else{
 					JOptionPane.showMessageDialog(null, "Revise los datos");
 				}

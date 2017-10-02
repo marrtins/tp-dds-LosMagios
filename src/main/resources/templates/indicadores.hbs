@@ -10,16 +10,16 @@
 	<h1 div class="p-3 mb-2 bg-warning text-dark"> Indicador </h1>
 	<h2> <b> Por favor seleccione una opción: </b></h2>
 
-	<form role="form" action="/inicio/cuenta/crearIndicador" method="POST">
+	<form role="form" action="/inicio/indicador/{{usuario}}/crearIndicador" method="POST">
 	<button id="botonIndicador"  type="submit" class="btn btn-outline-primary"> Crear indicador > </button>
 	</form>
 <br>
-	<form role="form" action="/inicio/cuenta/aplicarIndicadores" method="POST">
+	<form role="form" action="/inicio/indicador/{{usuario}}/aplicarIndicadores" method="POST">
 	<button id="botonIndicador"  type="submit" class="btn btn-outline-primary"> Aplicar indicadores > </button>
 	</form>
 
 	<br>
-	<form role="form" action="/inicio" method="POST">
+	<form role="form" action="/inicio/{{usuario}}" method="POST">
 	<button type="submit" class="btn btn-danger"> << Atrás </button>
 	</form>
 

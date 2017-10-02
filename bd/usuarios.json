@@ -1,9 +1,9 @@
 [{
 	"nombreUsuario": "juan",
-	"pass":123
+	"pass":"123"
 },
 {
   "nombreUsuario":"pedro",
-  "pass":456
+  "pass":"456"
 }
 ]

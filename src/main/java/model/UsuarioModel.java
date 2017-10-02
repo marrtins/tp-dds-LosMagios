@@ -28,10 +28,6 @@ public class UsuarioModel {
 	
 	public void boot(){
 		
-		Usuario u1 = new Usuario("Juan",123);
-		Usuario u2 = new Usuario("Pablo",1234);
-		Usuario u3 = new Usuario("Pedro",12345);
-		
 //		Producto desodorante = new Producto(66.0,"Desodorante Rexona");
 //		Producto salchichas = new Producto(15.0, "Salchichas");
 //		Producto gaseosa = new Producto(45.5, "Coca 2L");
@@ -68,10 +64,7 @@ public class UsuarioModel {
 //		supermarket3.addVenta(venta3);
 //		supermarket3.addVenta(venta4);
 		
-		this.addUsuario(u1);
-		this.addUsuario(u2);
-		this.addUsuario(u3);
-		
+	
 //		this.addSupermercado(supermarket1);
 //		this.addSupermercado(supermarket2);
 //		this.addSupermercado(supermarket3);

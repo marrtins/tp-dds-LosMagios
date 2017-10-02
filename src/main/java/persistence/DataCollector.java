@@ -3,6 +3,7 @@ package persistence;
 import excepciones.*;
 import model.RepositorioDeEmpresas;
 import model.RepositorioDeIndicadores;
+import model.RepositorioDeUsuarios;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -12,6 +13,7 @@ import entities.Cuenta;
 import entities.Empresa;
 import entities.Indicador;
 import entities.Metodologia;
+import entities.Usuario;
 import entities.TiposCondicion.CondicionNoTaxativa;
 import entities.TiposCondicion.CondicionTaxativa;
 
@@ -21,13 +23,16 @@ public class DataCollector {
 	
 	private String rutaEmpresas="C:\\Users\\martin\\Git\\3-LosMagios\\bd\\empresas.json";
 	private String rutaIndicadores="C:\\Users\\martin\\Git\\3-LosMagios\\bd\\indicadores.json";
+	private String rutaUsuarios="C:\\Users\\martin\\Git\\3-LosMagios\\bd\\usuarios.json";
 	private String rutaMetodologias="C:\\Users\\martin\\Git\\3-LosMagios\\bd\\metodologias.json";
 	private RepositorioDeEmpresas repoEmpresas;	
 	private RepositorioDeIndicadores repoIndicadores;
+	private RepositorioDeUsuarios repoUsuarios;
 	ArrayList<Empresa> empresas = null;
 	ArrayList<Cuenta> cuentas = null;
 	ArrayList<Indicador> indicadores = null;
 	ArrayList<Metodologia> metodologias = null;
+	ArrayList<Usuario> usuarios = null;
 	
 	
 	
@@ -96,6 +101,21 @@ public class DataCollector {
 	
 	return indicadores;
 	}
+	public ArrayList<Usuario>cargarUsuarios() throws IOException{
+		DAOJsonIndicador daoI = new DAOJsonIndicador();
+		daoI.setFilePath(rutaUsuarios);
+		this.repoIndicadores = new RepositorioDeIndicadores(daoI);
+		
+		try {
+			usuarios = repoIndicadores.getAllUsuarios();
+		} catch (ErrorCargaDatos e) {
+			throw e;
+		}
+		
+	
+	return usuarios;
+	}
+	
 	
 	public ArrayList<Metodologia>cargarMetodologias() throws IOException{
 		DAOJsonIndicador daoI = new DAOJsonIndicador();
@@ -148,12 +168,13 @@ public class DataCollector {
 	}
 	
 	
-	public Boolean crearIndicador(String nombre, String formula){
+	public Boolean crearIndicador(String nombre, String formula,String usuario){
 		AnalizadorSintactico sintax = new AnalizadorSintactico();
 		if(sintax.indicadorValido(formula)){
 			Indicador indicador = new Indicador();
 			indicador.setNombreIndicador(nombre.toUpperCase());
 			indicador.setCalculoIndicador(formula.toUpperCase());
+			indicador.setUsuario(usuario);
 			try {
 				this.agregarIndicador(indicador);
 			} catch (IOException e1) {
@@ -174,11 +195,12 @@ public class DataCollector {
 		}
 	}
 	
-	public void crearMetodologia(String nombreMet,ArrayList<CondicionTaxativa> cTax,ArrayList<CondicionNoTaxativa> cNTax){
+	public void crearMetodologia(String nombreMet,ArrayList<CondicionTaxativa> cTax,ArrayList<CondicionNoTaxativa> cNTax,String nombreUsuario){
 		Metodologia nuevaMet = new Metodologia();
 		nuevaMet.setNombreMetodologia(nombreMet);
 		nuevaMet.setcTaxativas(cTax);
 		nuevaMet.setcNoTaxativas(cNTax);
+		nuevaMet.setUsuario(nombreUsuario);
 		try {
 			this.agregarMetodologia(nuevaMet);
 		} catch (IOException e) {

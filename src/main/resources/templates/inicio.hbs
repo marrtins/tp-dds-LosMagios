@@ -8,27 +8,22 @@
 <body>
 
 <div id="ventanaInicio">
-
+		<h2>Usuario {{usuario}} </h2>
+	
 <h1 div class="p-3 mb-2 bg-dark text-white"> ¿DÓNDE INVIERTO? </h1>
-	<form role="form" action="/inicio/cuenta" method="POST">
+	<form role="form" action="/inicio/cuenta/{{usuario}}" method="POST">
 <button id="botonEntrada" type="submit" class="btn btn-success">Cuenta > </button>
 	</form>
 	<br>
-	<form role="form" action="/inicio/indicador" method="POST">
+	<form role="form" action="/inicio/indicador/{{usuario}}" method="POST">
 <button id="botonEntrada" type="submit" class="btn btn-warning">Indicador > </button>
 	</form>
 	<br>
-	<form role="form" action="/inicio/metodologia" method="POST">
+	<form role="form" action="/inicio/metodologia/{{usuario}}" method="POST">
 <button id="botonEntrada" type="submit" class="btn btn-danger" value="metodologia"> Metodología > </button>
 	</form>
 	<br>
-	<form role="form" action="/inicio/grafico" method="POST">
-<button id="botonEntrada" type="submit" class="btn btn-info" value="visualizarGrafico"> Visualizar Gráfico > </button>
-	</form>
-	<br>
-	<form role="form" action="/inicio/empresa" method="POST">
-<button id="botonEntrada" type="submit" class="btn btn-info" value="verDatosEmpresas"> Ver Datos De Empresas > </button>
-	</form>
+
 
 </div>
 

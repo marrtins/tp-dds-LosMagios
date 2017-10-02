@@ -21,6 +21,7 @@ public class CuentaModel {
 	private ArrayList<Empresa> empresas = new ArrayList<>();
 	private ArrayList<Indicador> indicadores = new ArrayList<>();
 	private ArrayList<Metodologia> metodologias = new ArrayList<>();
+	private ArrayList<Usuario> usuarios = new ArrayList<>();
 
 	private static CuentaModel instance = null;
 	
@@ -65,6 +66,14 @@ public void boot(){
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
+	
+	try {
+		usuarios=persistence.cargarUsuarios();
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	
 		
 	//	empresas.forEach(unaEmpresa->this.addEmpresa(unaEmpresa));
 				
@@ -86,6 +95,17 @@ public void boot(){
 		return empresa.getAllCuentas();
 		
 	}
+	public Usuario getUsuario(String nombre,String pass){
+		int i=0;
+		for(i=0; i<usuarios.size(); i++){
+			String n1 = usuarios.get(i).getNombre();
+			String n2 = nombre;
+			if(n1.equals(n2) && usuarios.get(i).getPass().equals(pass)){
+				return usuarios.get(i);
+			}
+		}
+		return new Usuario("null","0");
+	}
 	
 	public List<Empresa> getAll(){
 		this.boot();
@@ -96,16 +116,36 @@ public void boot(){
 		return this.empresas;
 	}
 	
-	public List<Indicador> getAllIndicadores(){
+	public List<Indicador> getAllIndicadores(String nombreUsuario){
 		this.boot();
-		return this.indicadores;
+		ArrayList<Indicador> ret = new ArrayList<>();
+		
+		int i ;
+		for(i=0;i<indicadores.size();i++){
+			if(indicadores.get(i).getUsuario().equals(nombreUsuario)){
+				ret.add(indicadores.get(i));
+			}
+		}
+		
+		return ret;
 	}
 	
-	public List<Metodologia> getAllMetodologias(){
+	public List<Metodologia> getAllMetodologias(String nombreUsuario){
 		
 		
 		this.boot();
-		return this.metodologias;
+		
+		ArrayList<Metodologia> ret = new ArrayList<>();
+		
+		int i ;
+		for(i=0;i<metodologias.size();i++){
+			if(metodologias.get(i).getUsuario().equals(nombreUsuario)){
+				ret.add(metodologias.get(i));
+			}
+		}
+		
+		return ret;
+		
 	}
 	public Empresa getEmpresa(String nombreEmpresa){
 		int i=0;

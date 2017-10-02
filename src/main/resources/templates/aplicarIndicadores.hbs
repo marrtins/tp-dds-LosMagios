@@ -11,7 +11,7 @@
 
 
 <div class="form-group">
-	<form role="form" action="/inicio/indicador/resultadoIndicador" method="POST">
+	<form role="form" action="/inicio/indicador/{{usuario}}/resultadoIndicador" method="POST">
 		<select name="empresaSeleccionada" class="custom-select">
 			<option value="-1">Seleccionar Empresa</option>
 			{{#each empresas}}
@@ -41,7 +41,7 @@
 	</form>
 	</div>
 
-<form role="form" action="/inicio/indicador" method="POST">
+<form role="form" action="/inicio/indicador/{{usuario}}" method="POST">
 	<button type="submit" class="btn btn-danger"> << Atrás </button>
 	</form>
 </div>

@@ -9,20 +9,21 @@
 <div id="ventanaMetodologias">
 	<h1 div class="p-3 mb-2 bg-danger text-dark"> Metodología </h1>
 	<h2> <b> Por favor seleccione una opción: </b></h2>
-	<form role="form" action="/inicio/cuenta/crearMetodologia" method="POST">
+	<form role="form" action="/inicio/metodologia/{{usuario}}/crearMetodologia" method="POST">
 	<button id="botonMetodologia" type="submit" class="btn btn-outline-primary"> Crear metodología > </button>
 	</form>
 <br>
-	<form role="form" action="/inicio/cuenta/aplicarMetodologia" method="POST">
+	<form role="form" action="/inicio/metodologia/{{usuario}}/aplicarMetodologia" method="POST">
 	<button id="botonMetodologia" type="submit" class="btn btn-outline-primary"> Aplicar metodología > </button>
 	</form>
 
 	<br>
-	<form role="form" action="/inicio" method="POST">
-	<button type="submit" class="btn btn-danger"> << Atrás </button>
-	</form>
+	
 
 	<img src="/images/metodologia.jpg" class="imagenMetodologia" style="width:300px;height:150px;" align="right">	
 </div>
+<form role="form" action="/inicio/{{usuario}}" method="POST">
+	<button type="submit" class="btn btn-danger"> << Atrás </button>
+	</form>
 </body>
 </html>

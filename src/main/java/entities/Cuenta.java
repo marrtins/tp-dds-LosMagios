@@ -1,6 +1,12 @@
 package entities;
 
+import javax.persistence.*;
+
 public class Cuenta  {
+	
+	@Id
+	@GeneratedValue
+	private int idCuenta;
 	
 	private String nombreCuenta;
 	private int valorCuenta;

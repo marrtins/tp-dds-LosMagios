@@ -8,6 +8,8 @@ import analizadorIndicadores.AnalizadorSintactico;
 import analizadorIndicadores.Parser;
 import excepciones.ErrorConstantesEnIndicador;
 
+import javax.persistence.*;
+
 public class Indicador {
 	
 	public String getUsuario() {
@@ -18,6 +20,10 @@ public class Indicador {
 	}
 
 
+	@Id
+	@GeneratedValue
+	private int idIndicador;
+	
 	private String nombreIndicador;
 	private String calculoIndicador;
 	public String formulaString;

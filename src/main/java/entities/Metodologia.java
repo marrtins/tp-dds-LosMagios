@@ -12,13 +12,22 @@ import entities.TiposCondicion.CondicionNoTaxativa;
 import entities.TiposCondicion.CondicionTaxativa;
 import excepciones.ErrorCargaDatos;
 
+import javax.persistence.*;
+
 public class Metodologia {
 
+	@Id
+	@GeneratedValue
+	private int idMetodologia;
+	
 	public String nombreMetodologia;
 	
 	ArrayList<CondicionTaxativa> cTaxativas;
 	ArrayList<CondicionNoTaxativa> cNoTaxativas;
+	
+	@ManyToMany(fetch=FetchType.LAZY, cascade = CascadeType.ALL, mappedBy="metodologias")
 	LinkedList<Empresa> listaOrdenada=new LinkedList<>();
+	
 	public String usuario;
 	
 	String descripcionMetodologia;

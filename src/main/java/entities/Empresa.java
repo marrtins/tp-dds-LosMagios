@@ -7,8 +7,13 @@ import entities.Periodo;
 
 import java.io.Serializable;
 
+import javax.persistence.*;
+
 public class Empresa implements Serializable {
 
+	@Id
+	@GeneratedValue
+	private int idEmpresa;
 	
 	private String nombreEmpresa;
 	private ArrayList<Periodo> periodos = new ArrayList<Periodo>();

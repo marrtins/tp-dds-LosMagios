@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 
 import db.EntityManagerHelper;
 import entities.Empresa;
@@ -21,14 +22,19 @@ public class DAOMySQLEmpresa implements DAOEmpresa {
 
 	@Override
 	public void delete(String nombreEmpresa) throws IOException {
-		
+		Query query = entityManager.createQuery("SELECT e FROM Empresa e WHERE nombreEmpresa='" + nombreEmpresa + "'");
+	    Empresa empresa= (Empresa) query.getSingleResult();
+	    EntityManagerHelper.beginTransaction();
+		entityManager.remove(empresa);
+		entityManager.flush();
+		EntityManagerHelper.commit();
 		
 	}
 
 	@Override
 	public ArrayList<Empresa> getAllEmpresas() throws IOException {
-		
-		return null;
+		Query query = entityManager.createQuery("SELECT e FROM Empresa e");
+		return (ArrayList<Empresa>) query.getResultList();
 	}
 
 	@Override

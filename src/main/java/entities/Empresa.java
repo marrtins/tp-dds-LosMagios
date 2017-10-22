@@ -18,6 +18,10 @@ public class Empresa implements Serializable {
 
 
 	private String nombreEmpresa;
+	
+	@ElementCollection
+	@CollectionTable(name="periodo", joinColumns=@JoinColumn(name="idEmpresa"))
+	@Column(name="periodo")
 	private ArrayList<Periodo> periodos = new ArrayList<Periodo>();
 	
 	public Empresa(String _nombre) {

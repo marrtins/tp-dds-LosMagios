@@ -27,6 +27,8 @@ public class Indicador {
 	private String nombreIndicador;
 	private String calculoIndicador;
 	public String formulaString;
+	
+	@ManyToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
 	public String usuario;
 	
 	public String getNombreIndicador() {

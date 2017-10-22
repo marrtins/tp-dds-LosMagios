@@ -1,7 +1,10 @@
 package entities;
 
+import javax.persistence.*;
+
 public class Usuario {
 
+	@Id
 	String nombreUsuario;
 	String pass;
 	

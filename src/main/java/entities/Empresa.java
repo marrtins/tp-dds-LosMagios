@@ -15,6 +15,8 @@ public class Empresa implements Serializable {
 	@GeneratedValue
 	private int idEmpresa;
 	
+
+
 	private String nombreEmpresa;
 	private ArrayList<Periodo> periodos = new ArrayList<Periodo>();
 	
@@ -23,6 +25,15 @@ public class Empresa implements Serializable {
 		this.nombreEmpresa = _nombre;
 		
 	}
+	
+	public int getIdEmpresa() {
+		return idEmpresa;
+	}
+	
+	public void setIdEmpresa(int idEmpresa) {
+		this.idEmpresa = idEmpresa;
+	}
+	
 	public String getNombreEmpresa() {
 		return nombreEmpresa;
 	}

@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import javax.persistence.EntityManager;
 
 import db.EntityManagerHelper;
+import entities.Empresa;
 import entities.Indicador;
 import entities.Metodologia;
 import entities.Usuario;
@@ -55,7 +56,11 @@ public class DAOMySQLIndicador implements DAOIndicador{
 
 	@Override
 	public void update(Indicador indicador) throws IOException {
-		
+		Indicador upd = entityManager.find(indicador.getClass(), indicador.getIdIndicador());
+		EntityManagerHelper.beginTransaction();
+		entityManager.merge(upd);
+		entityManager.flush();
+		EntityManagerHelper.commit();
 		
 	}
 

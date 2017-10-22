@@ -33,7 +33,11 @@ public class DAOMySQLEmpresa implements DAOEmpresa {
 
 	@Override
 	public void update(Empresa empresa) throws IOException {
-		
+		Empresa upd = entityManager.find(empresa.getClass(), empresa.getIdEmpresa());
+		EntityManagerHelper.beginTransaction();
+		entityManager.merge(upd);
+		entityManager.flush();
+		EntityManagerHelper.commit();
 		
 	}
 

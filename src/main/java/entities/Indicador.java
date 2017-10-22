@@ -36,9 +36,18 @@ public class Indicador {
 		this.nombreIndicador = nombreIndicador;
 	}
 	
+	public int getIdIndicador() {
+		return idIndicador;
+	}
+	
+	public void setIdIndicador(int idIndicador) {
+		this.idIndicador = idIndicador;
+	}
+	
 	public String getCalculoIndicador() {
 		return calculoIndicador;
 	}
+	
 	public void setCalculoIndicador(String calculoIndicador) {
 		this.calculoIndicador = calculoIndicador;
 	}

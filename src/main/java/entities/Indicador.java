@@ -14,12 +14,6 @@ import javax.persistence.*;
 @Table(name ="Indicador")
 public class Indicador {
 	
-	public String getUsuario() {
-		return usuario;
-	}
-	public void setUsuario(String usuario) {
-		this.usuario = usuario;
-	}
 
 
 	@Id
@@ -30,8 +24,10 @@ public class Indicador {
 	private String calculoIndicador;
 	public String formulaString;
 	
-	@ManyToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
-	public String usuario;
+	@ManyToOne(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
+	public Usuario usuario;
+	
+	
 	
 	public String getNombreIndicador() {
 		return nombreIndicador;
@@ -55,7 +51,13 @@ public class Indicador {
 	public void setCalculoIndicador(String calculoIndicador) {
 		this.calculoIndicador = calculoIndicador;
 	}
-	
+	private String nombreUsuario;
+	public String getUsuario() {
+		return nombreUsuario;
+	}
+	public void setUsuario(String nombreUsuario) {
+		this.nombreUsuario = nombreUsuario;
+	}
 	public Boolean puedeAplicarA(Empresa unaEmpresa,Periodo unPeriodo){
 		AnalizadorSintactico sintax = new AnalizadorSintactico();
 		return sintax.indicadorValido(this.getCalculoIndicador());

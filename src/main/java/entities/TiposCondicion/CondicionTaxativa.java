@@ -2,6 +2,8 @@ package entities.TiposCondicion;
 
 import java.io.IOException;
 
+import javax.persistence.*;
+
 import analisisMetodologico.OperadorTaxativo;
 import analisisMetodologico.OperadoresFactory;
 import entities.Empresa;
@@ -9,6 +11,8 @@ import entities.Indicador;
 import entities.TipoCondicion;
 import persistence.DataCollector;
 
+@Entity
+@Table(name ="CondicionTaxativa")
 public class CondicionTaxativa implements TipoCondicion  {
 
 	
@@ -26,6 +30,9 @@ public class CondicionTaxativa implements TipoCondicion  {
 		this.valorComparacion = valorComparacion;
 	}
 
+	@Id
+	@GeneratedValue
+	int id;
 
 	String nombreCondicion;
 	String operadorString;
@@ -33,7 +40,10 @@ public class CondicionTaxativa implements TipoCondicion  {
 	String indicadorString;
 	Double valorComparacion;
 	
+	@Transient
 	OperadorTaxativo operador;
+	
+	@ManyToOne(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
 	Indicador indicador;
 	
 	

@@ -3,6 +3,8 @@ package entities.TiposCondicion;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import javax.persistence.*;
+
 import analisisMetodologico.OperadorNoTaxativo;
 import analisisMetodologico.OperadoresFactory;
 import analizadorIndicadores.Parser;
@@ -11,6 +13,8 @@ import entities.Indicador;
 import entities.TipoCondicion;
 import persistence.DataCollector;
 
+@Entity
+@Table(name ="CondicionNoTaxativa")
 public class CondicionNoTaxativa implements TipoCondicion {
 
 	
@@ -85,13 +89,18 @@ public class CondicionNoTaxativa implements TipoCondicion {
 		this.operador = operador;
 	}
 
+	@Id
+	@GeneratedValue
+	int id;
 
 	String nombreCondicion;
 	String operadorString;
 	int anios;
 	int peso;
 	String indicadorString;
+	@ManyToOne(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
 	Indicador unIndicador = null;
+	@Transient
 	OperadorNoTaxativo operador;
 	
 	

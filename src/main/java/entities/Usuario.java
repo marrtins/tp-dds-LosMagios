@@ -7,9 +7,13 @@ import javax.persistence.*;
 public class Usuario {
 
 	@Id
+	@GeneratedValue
+	int idUsuario;
+	
 	String nombreUsuario;
 	String pass;
 	
+
 	public Usuario(String nombre,String pass) {
 		super();
 		this.nombreUsuario=nombre;

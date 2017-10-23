@@ -13,7 +13,11 @@ public class Cuenta  {
 	private String nombreCuenta;
 	private int valorCuenta;
 	
+	@ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+	private Empresa empresa;
 	
+	@ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+	private Periodo periodo;
 	
 	
 	public String getNombreCuenta() {

@@ -1,12 +1,21 @@
 package entities;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.*;
 
 import entities.Cuenta;
 
+@Entity
+@Table(name ="Periodo")
 public class Periodo {
+	
+	@Id
 	private int anio;
-	private ArrayList<Cuenta> cuentas=new ArrayList<>();
+	
+	@OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+	private List<Cuenta> cuentas = new ArrayList<>();
 
 	public Periodo(int unAnio) {
 		anio = unAnio;
@@ -21,7 +30,7 @@ public class Periodo {
 	}
 
 	public ArrayList<Cuenta> getCuentas() {
-		return cuentas;
+		return (ArrayList<Cuenta>) cuentas;
 	}
 
 	public void setCuentas(ArrayList<Cuenta> cuentas) {

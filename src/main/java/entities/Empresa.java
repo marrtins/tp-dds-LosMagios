@@ -2,6 +2,8 @@ package entities;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.LinkedList;
+import java.util.List;
 
 import entities.Periodo;
 
@@ -9,6 +11,7 @@ import java.io.Serializable;
 
 import javax.persistence.*;
 
+@SuppressWarnings("serial")
 @Entity
 @Table(name ="Empresa")
 public class Empresa implements Serializable {
@@ -21,15 +24,17 @@ public class Empresa implements Serializable {
 
 	private String nombreEmpresa;
 	
-	@ElementCollection
-	@CollectionTable(name="periodo", joinColumns=@JoinColumn(name="idEmpresa"))
-	@Column(name="periodo")
-	private ArrayList<Periodo> periodos = new ArrayList<Periodo>();
+	@ManyToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+	private List<Periodo> periodos = new ArrayList<>();
+	
+	@ManyToMany(fetch=FetchType.LAZY, cascade = CascadeType.ALL)
+	private List<Metodologia> metodologias= new LinkedList<>();;
+	
+
 	
 	public Empresa(String _nombre) {
 		super();
 		this.nombreEmpresa = _nombre;
-		
 	}
 	
 	public int getIdEmpresa() {
@@ -49,7 +54,7 @@ public class Empresa implements Serializable {
 	}
 
 	public ArrayList<Periodo> getPeriodos() {
-		return periodos;
+		return (ArrayList<Periodo>) periodos;
 	}
 	
 

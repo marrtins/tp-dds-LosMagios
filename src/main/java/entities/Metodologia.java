@@ -5,6 +5,7 @@ package entities;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 
 import javax.swing.text.html.HTMLDocument.Iterator;
 
@@ -23,20 +24,22 @@ public class Metodologia {
 	private int idMetodologia;
 	
 	public String nombreMetodologia;
+
 	
-	@ElementCollection
-	@CollectionTable(name="condicionTaxativa", joinColumns=@JoinColumn(name="idMetodologia"))
-	@Column(name="condicionTaxativa")
-	ArrayList<CondicionTaxativa> cTaxativas;
+	@OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
+	List<CondicionTaxativa> cTaxativas;
 	
-	@ElementCollection
-	@CollectionTable(name="condicionNoTaxativa", joinColumns=@JoinColumn(name="idMetodologia"))
-	@Column(name="condicionNoTaxativa")
-	ArrayList<CondicionNoTaxativa> cNoTaxativas;
+	@OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
+	List<CondicionNoTaxativa> cNoTaxativas;
 	
 	@ManyToMany(fetch=FetchType.LAZY, cascade = CascadeType.ALL, mappedBy="metodologias")
-	LinkedList<Empresa> listaOrdenada=new LinkedList<>();
+	List<Empresa> listaOrdenada;
 	
+	public Metodologia() {
+		super();
+		listaOrdenada=new LinkedList<>();
+	}
+
 	public String usuario;
 	
 	String descripcionMetodologia;
@@ -89,7 +92,7 @@ public String getDescripcionCondicionNoTaxativas(){
 
 
 	public ArrayList<CondicionTaxativa> getcTaxativas() {
-		return cTaxativas;
+		return (ArrayList<CondicionTaxativa>) cTaxativas;
 	}
 	
 	
@@ -103,7 +106,7 @@ public String getDescripcionCondicionNoTaxativas(){
 
 
 	public ArrayList<CondicionNoTaxativa> getcNoTaxativas() {
-		return cNoTaxativas;
+		return (ArrayList<CondicionNoTaxativa>) cNoTaxativas;
 	}
 
 
@@ -115,7 +118,7 @@ public String getDescripcionCondicionNoTaxativas(){
 
 
 	public LinkedList<Empresa> getListaOrdenada() {
-		return listaOrdenada;
+		return (LinkedList<Empresa>) listaOrdenada;
 	}
 
 
@@ -141,7 +144,7 @@ public String getDescripcionCondicionNoTaxativas(){
 		//listaOrdenada.addAll(empresas);
 		//Les aplico las comparaciones basadas en las condiciones no taxativas para ordenarlas
 		this.ordenarEmpresas();
-		return listaOrdenada;
+		return (LinkedList<Empresa>) listaOrdenada;
 		
 	}
 	

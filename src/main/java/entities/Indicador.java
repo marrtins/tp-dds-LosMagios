@@ -10,6 +10,8 @@ import excepciones.ErrorConstantesEnIndicador;
 
 import javax.persistence.*;
 
+@Entity
+@Table(name ="Indicador")
 public class Indicador {
 	
 	public String getUsuario() {

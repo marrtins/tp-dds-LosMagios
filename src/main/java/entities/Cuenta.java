@@ -2,6 +2,8 @@ package entities;
 
 import javax.persistence.*;
 
+@Entity
+@Table(name ="Cuenta")
 public class Cuenta  {
 	
 	@Id

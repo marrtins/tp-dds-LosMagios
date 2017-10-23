@@ -14,6 +14,8 @@ import excepciones.ErrorCargaDatos;
 
 import javax.persistence.*;
 
+@Entity
+@Table(name ="Metodologia")
 public class Metodologia {
 
 	@Id
@@ -22,7 +24,14 @@ public class Metodologia {
 	
 	public String nombreMetodologia;
 	
+	@ElementCollection
+	@CollectionTable(name="condicionTaxativa", joinColumns=@JoinColumn(name="idMetodologia"))
+	@Column(name="condicionTaxativa")
 	ArrayList<CondicionTaxativa> cTaxativas;
+	
+	@ElementCollection
+	@CollectionTable(name="condicionNoTaxativa", joinColumns=@JoinColumn(name="idMetodologia"))
+	@Column(name="condicionNoTaxativa")
 	ArrayList<CondicionNoTaxativa> cNoTaxativas;
 	
 	@ManyToMany(fetch=FetchType.LAZY, cascade = CascadeType.ALL, mappedBy="metodologias")

@@ -37,8 +37,9 @@ public class DataCollector {
 	
 	
 	public ArrayList<Empresa> cargarEmpresas() throws IOException{
-		DAOJsonEmpresa dao = new DAOJsonEmpresa();
-		dao.setFilePath(rutaEmpresas);
+		//DAOJsonEmpresa dao = new DAOJsonEmpresa();
+		DAOMySQLEmpresa dao = new DAOMySQLEmpresa();
+		//dao.setFilePath(rutaEmpresas);
 		this.repoEmpresas = new RepositorioDeEmpresas(dao);
 		
 		try {
@@ -91,8 +92,9 @@ public class DataCollector {
 	}
 	
 	public ArrayList<Indicador>cargarIndicadores() throws IOException{
-		DAOJsonIndicador daoI = new DAOJsonIndicador();
-		daoI.setFilePath(rutaIndicadores);
+		//DAOJsonIndicador daoI = new DAOJsonIndicador();
+		DAOMySQLIndicador daoI = new DAOMySQLIndicador();
+		//daoI.setFilePath(rutaIndicadores);
 		this.repoIndicadores = new RepositorioDeIndicadores(daoI);
 		
 		indicadores = repoIndicadores.getAllIndicadores();
@@ -102,8 +104,9 @@ public class DataCollector {
 	return indicadores;
 	}
 	public ArrayList<Usuario>cargarUsuarios() throws IOException{
-		DAOJsonIndicador daoI = new DAOJsonIndicador();
-		daoI.setFilePath(rutaUsuarios);
+		//DAOJsonIndicador daoI = new DAOJsonIndicador();
+		//daoI.setFilePath(rutaUsuarios);
+		DAOMySQLIndicador daoI = new DAOMySQLIndicador();
 		this.repoIndicadores = new RepositorioDeIndicadores(daoI);
 		
 		try {
@@ -118,8 +121,9 @@ public class DataCollector {
 	
 	
 	public ArrayList<Metodologia>cargarMetodologias() throws IOException{
-		DAOJsonIndicador daoI = new DAOJsonIndicador();
-		daoI.setFilePath(rutaMetodologias);
+		//DAOJsonIndicador daoI = new DAOJsonIndicador();
+		//daoI.setFilePath(rutaMetodologias);
+		DAOMySQLIndicador daoI = new DAOMySQLIndicador();
 		this.repoIndicadores = new RepositorioDeIndicadores(daoI);
 		
 		try {

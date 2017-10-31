@@ -6,13 +6,15 @@ import javax.persistence.*;
 @Table(name ="Usuario")
 public class Usuario {
 
-	@Id
-	@GeneratedValue
-	int idUsuario;
 	
+	//@GeneratedValue
+	//int idUsuario;
+	
+	@Id
 	String nombreUsuario;
 	String pass;
 	
+	//AGREGAR METODOLOGIAS E INDICADORES
 
 	public Usuario(String nombre,String pass) {
 		super();

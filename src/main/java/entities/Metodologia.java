@@ -42,6 +42,7 @@ public class Metodologia {
 
 	public String usuario;
 	
+	@Transient
 	String descripcionMetodologia;
 	
 	

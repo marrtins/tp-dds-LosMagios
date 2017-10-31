@@ -21,7 +21,7 @@ import entities.TiposCondicion.CondicionTaxativa;
 
 public class DataCollector {
 	
-	private String rutaEmpresas="C:\\Users\\martin\\Git\\3-LosMagios\\bd\\empresas.json";
+	private String rutaEmpresas="C:\\Home\\workspace\\3-LosMagios\\bd\\empresas.json";
 	private String rutaIndicadores="C:\\Users\\martin\\Git\\3-LosMagios\\bd\\indicadores.json";
 	private String rutaUsuarios="C:\\Users\\martin\\Git\\3-LosMagios\\bd\\usuarios.json";
 	private String rutaMetodologias="C:\\Users\\martin\\Git\\3-LosMagios\\bd\\metodologias.json";
@@ -37,9 +37,9 @@ public class DataCollector {
 	
 	
 	public ArrayList<Empresa> cargarEmpresas() throws IOException{
-		//DAOJsonEmpresa dao = new DAOJsonEmpresa();
-		DAOMySQLEmpresa dao = new DAOMySQLEmpresa();
-		//dao.setFilePath(rutaEmpresas);
+		DAOJsonEmpresa dao = new DAOJsonEmpresa();
+		//DAOMySQLEmpresa dao = new DAOMySQLEmpresa();
+		dao.setFilePath(rutaEmpresas);
 		this.repoEmpresas = new RepositorioDeEmpresas(dao);
 		
 		try {

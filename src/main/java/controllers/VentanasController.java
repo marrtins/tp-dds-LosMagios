@@ -41,10 +41,10 @@ public class VentanasController {
 		String nombreUsuario = req.queryParams("usuario");
 				
 		Usuario usuario = modelCuentas.getUsuario(nombreUsuario,pass);
-		if(usuario.getNombre().equals("null")){
-			return new ModelAndView(model,"logFail.hbs");
+		//if(usuario.getNombre().equals("null")){
+		//	return new ModelAndView(model,"logFail.hbs");
 
-		}
+		//}
 		
 		model.put("usuario",usuario.getNombre());
 		return new ModelAndView(model,"inicio.hbs");

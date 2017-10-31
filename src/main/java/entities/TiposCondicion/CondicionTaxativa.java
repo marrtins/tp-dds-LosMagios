@@ -17,7 +17,7 @@ public class CondicionTaxativa implements TipoCondicion  {
 
 	
 	
-	
+	//CREAR CONSTRUCTOR VACIO, HIBERNATE NO RECONOCE PARAMETROS
 
 
 	public CondicionTaxativa(String nombreCondicion, String operadorString, int anios, String indicadorString,

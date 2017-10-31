@@ -51,6 +51,7 @@ public class DAOMySQLIndicador implements DAOIndicador{
 	@Override
 	public ArrayList<Metodologia> getAllMetodologias() throws IOException {
 		Query query = entityManager.createQuery("SELECT m FROM Metodologia m");
+		//usar find
 		return (ArrayList<Metodologia>) query.getResultList();
 	}
 

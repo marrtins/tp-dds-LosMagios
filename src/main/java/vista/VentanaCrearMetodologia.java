@@ -191,7 +191,12 @@ public class VentanaCrearMetodologia extends JFrame {
 					String nombreCondicion=check.getNombreCondicion(indicadorString,nombreOperadorTax,anios,valorComparar);
 					
 					
-					CondicionTaxativa nuevaCondicion = new CondicionTaxativa(nombreCondicion,operadorTax ,anios, indicadorString,valorComparar);
+					CondicionTaxativa nuevaCondicion = new CondicionTaxativa(/*nombreCondicion,operadorTax ,anios, indicadorString,valorComparar*/);
+					nuevaCondicion.setNombreCondicion(nombreCondicion);
+					nuevaCondicion.setOperadorString(operadorTax);
+					nuevaCondicion.setAnios(anios);
+					nuevaCondicion.setIndicadorString(indicadorString);
+					nuevaCondicion.setValorComparacion(valorComparar);
 					taxativasACrear.add(nuevaCondicion);
 					lstTModel.addElement(nuevaCondicion.getNombreCondicion());
 							
@@ -278,7 +283,12 @@ public class VentanaCrearMetodologia extends JFrame {
 						String nombreCondicion=check.getNombreCondicion(indicadorSeleccionado,nombreOperadorNT,anios,peso);
 
 
-						CondicionNoTaxativa nuevaCondicion = new CondicionNoTaxativa(nombreCondicion,operadorNTax ,anios, peso,indicadorSeleccionado);
+						CondicionNoTaxativa nuevaCondicion = new CondicionNoTaxativa(/*nombreCondicion,operadorNTax ,anios, peso,indicadorSeleccionado*/);
+						nuevaCondicion.setNombreCondicion(nombreCondicion);
+						nuevaCondicion.setOperadorString(operadorNTax);
+						nuevaCondicion.setAnios(anios);
+						nuevaCondicion.setPeso(peso);
+						nuevaCondicion.setIndicadorString(indicadorSeleccionado);
 						noTaxativasACrear.add(nuevaCondicion);
 						lstNTModel.addElement(nuevaCondicion.getNombreCondicion());
 

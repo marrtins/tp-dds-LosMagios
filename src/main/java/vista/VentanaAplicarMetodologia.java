@@ -198,7 +198,7 @@ public class VentanaAplicarMetodologia extends JFrame {
 				
 				
 				
-				LinkedList<Empresa> listaOrdenada= metodologiaAAplicar.aplicarMetodologia(empresasAAnalizar);
+				LinkedList<Empresa> listaOrdenada= (LinkedList<Empresa>) metodologiaAAplicar.aplicarMetodologia(empresasAAnalizar);
 							
 				listaOrdenada.forEach(unaEmpresa->{
 					lstResModel.addElement(unaEmpresa.getNombreEmpresa());	

@@ -38,6 +38,8 @@ public class Metodologia {
 	public Metodologia() {
 		super();
 		listaOrdenada=new LinkedList<>();
+		cTaxativas = new ArrayList<>();
+		cNoTaxativas = new ArrayList<>();
 	}
 
 	public String usuario;
@@ -130,7 +132,7 @@ public String getDescripcionCondicionNoTaxativas(){
 
 
 
-	public LinkedList<Empresa> aplicarMetodologia(ArrayList<Empresa> empresas){
+	public List<Empresa> aplicarMetodologia(ArrayList<Empresa> empresas){
 		//A cada una de las empresas le aplico las condiciones TAXATIVAS, si no las pasa, las dejo de analizar (no las agrego a la lista link)
 		//empresas.removeIf(unaEmpresa -> !this.cumpleCondicionesTaxativas(unaEmpresa));
 		int i;
@@ -145,7 +147,7 @@ public String getDescripcionCondicionNoTaxativas(){
 		//listaOrdenada.addAll(empresas);
 		//Les aplico las comparaciones basadas en las condiciones no taxativas para ordenarlas
 		this.ordenarEmpresas();
-		return (LinkedList<Empresa>) listaOrdenada;
+		return (List<Empresa>) listaOrdenada;
 		
 	}
 	

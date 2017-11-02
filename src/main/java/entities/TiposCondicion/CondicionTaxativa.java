@@ -20,20 +20,21 @@ public class CondicionTaxativa implements TipoCondicion  {
 	//CREAR CONSTRUCTOR VACIO, HIBERNATE NO RECONOCE PARAMETROS
 
 
-	public CondicionTaxativa(String nombreCondicion, String operadorString, int anios, String indicadorString,
-			Double valorComparacion) {
+	public CondicionTaxativa(/*String nombreCondicion, String operadorString, int anios, String indicadorString,
+			Double valorComparacion*/) {
 		super();
-		this.nombreCondicion = nombreCondicion;
-		this.operadorString = operadorString;
-		this.anios = anios;
-		this.indicadorString = indicadorString;
-		this.valorComparacion = valorComparacion;
+//		this.nombreCondicion = nombreCondicion;
+//		this.operadorString = operadorString;
+//		this.anios = anios;
+//		this.indicadorString = indicadorString;
+//		this.valorComparacion = valorComparacion;
 	}
 
 	@Id
 	@GeneratedValue
 	int id;
 
+	
 	String nombreCondicion;
 	String operadorString;
 	int anios;
@@ -45,6 +46,31 @@ public class CondicionTaxativa implements TipoCondicion  {
 	
 	@ManyToOne(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
 	Indicador indicador;
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getOperadorString() {
+		return operadorString;
+	}
+	public void setOperadorString(String operadorString) {
+		this.operadorString = operadorString;
+	}
+	public String getIndicadorString() {
+		return indicadorString;
+	}
+	public void setIndicadorString(String indicadorString) {
+		this.indicadorString = indicadorString;
+	}
+	public Double getValorComparacion() {
+		return valorComparacion;
+	}
+	public void setValorComparacion(Double valorComparacion) {
+		this.valorComparacion = valorComparacion;
+	}
 	
 	
 	public String getNombreCondicion() {

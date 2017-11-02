@@ -17,6 +17,19 @@ import persistence.DataCollector;
 @Table(name ="CondicionNoTaxativa")
 public class CondicionNoTaxativa implements TipoCondicion {
 
+	@Id
+	@GeneratedValue
+	int id;
+	
+	String nombreCondicion;
+	String operadorString;
+	int anios;
+	int peso;
+	String indicadorString;
+	@ManyToOne(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
+	Indicador unIndicador = null;
+	@Transient
+	OperadorNoTaxativo operador;
 	
 	
 	public String getNombreCondicion() {
@@ -34,14 +47,34 @@ public class CondicionNoTaxativa implements TipoCondicion {
 	}
 
 
-	public CondicionNoTaxativa(String nombreCondicion, String operadorString, int anios, int peso,
-			String indicadorString) {
+	public CondicionNoTaxativa(/*String nombreCondicion, String operadorString, int anios, int peso,
+			String indicadorString*/) {
 		super();
-		this.nombreCondicion = nombreCondicion;
+		/*this.nombreCondicion = nombreCondicion;
 		this.operadorString = operadorString;
 		this.anios = anios;
 		this.peso = peso;
-		this.indicadorString = indicadorString;
+		this.indicadorString = indicadorString;*/
+	}
+
+
+	public int getId() {
+		return id;
+	}
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+	public Indicador getUnIndicador() {
+		return unIndicador;
+	}
+
+
+	public void setUnIndicador(Indicador unIndicador) {
+		this.unIndicador = unIndicador;
 	}
 
 
@@ -89,19 +122,6 @@ public class CondicionNoTaxativa implements TipoCondicion {
 		this.operador = operador;
 	}
 
-	@Id
-	@GeneratedValue
-	int id;
-
-	String nombreCondicion;
-	String operadorString;
-	int anios;
-	int peso;
-	String indicadorString;
-	@ManyToOne(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
-	Indicador unIndicador = null;
-	@Transient
-	OperadorNoTaxativo operador;
 	
 	
 	public int aplicarCondicion(Empresa empresa1, Empresa empresa2){

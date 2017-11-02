@@ -1,11 +1,11 @@
 package controllers;
 
-import java.awt.List;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
-import java.lang.Integer;
+
 import entities.Cuenta;
 import entities.Empresa;
 import entities.Indicador;
@@ -15,8 +15,6 @@ import entities.Usuario;
 import entities.TiposCondicion.CondicionNoTaxativa;
 import entities.TiposCondicion.CondicionTaxativa;
 import model.CuentaModel;
-import model.RepositorioDeEmpresas;
-import model.UsuarioModel;
 import persistence.DataCollector;
 import spark.ModelAndView;
 import spark.Request;
@@ -115,7 +113,8 @@ public class VentanasController {
 		
 		if(!indicador1.equals("-1")){
 			Double valor1 = Double.valueOf( req.queryParams("valor1"));
-			CondicionTaxativa ct1 = new CondicionTaxativa(" ", condicion1, 3, indicador1, valor1);
+			CondicionTaxativa ct1 = new CondicionTaxativa(/*" ", condicion1, 3, indicador1, valor1*/);
+			inicializarCondicionTaxativa(ct1, " ", condicion1, 3, indicador1, valor1);
 			taxativas.add(ct1);
 		}
 		
@@ -126,7 +125,9 @@ public class VentanasController {
 		
 		if(!indicador2.equals("-1")){
 			Double valor2 = Double.valueOf( req.queryParams("valor2"));
-			CondicionTaxativa ct2 = new CondicionTaxativa(" ", condicion2, 3, indicador2, valor2);taxativas.add(ct2);
+			CondicionTaxativa ct2 = new CondicionTaxativa(/*" ", condicion2, 3, indicador2, valor2*/);
+			inicializarCondicionTaxativa(ct2, " ", condicion2, 3, indicador2, valor2);
+			taxativas.add(ct2);
 		}
 		
 		String indicador3 = req.queryParams("indicador3");
@@ -135,14 +136,18 @@ public class VentanasController {
 		
 		if(!indicador3.equals("-1")){
 			Double valor3 = Double.valueOf( req.queryParams("valor3"));
-			CondicionTaxativa ct3 = new CondicionTaxativa(" ", condicion3, 3, indicador3, valor3);taxativas.add(ct3);
+			CondicionTaxativa ct3 = new CondicionTaxativa(/*" ", condicion3, 3, indicador3, valor3*/);
+			inicializarCondicionTaxativa(ct3, " ", condicion3, 3, indicador3, valor3);
+			taxativas.add(ct3);
 		}
 		
 		String indicador4 = req.queryParams("indicador4");
 		String condicion4 = req.queryParams("condicion4");
 		
 		if(!indicador4.equals("-1")){
-			CondicionNoTaxativa cnt1= new CondicionNoTaxativa(" ", condicion4, 3, 3, indicador4);noTaxativas.add(cnt1);
+			CondicionNoTaxativa cnt1= new CondicionNoTaxativa(/*" ", condicion4, 3, 3, indicador4*/);
+			inicializarCondicionNoTaxativa(cnt1, " ", condicion4, 3, 3, indicador4);
+			noTaxativas.add(cnt1);
 		}
 		
 		
@@ -150,7 +155,9 @@ public class VentanasController {
 		String condicion5 = req.queryParams("condicion5");
 		
 		if(!indicador5.equals("-1")){
-			CondicionNoTaxativa cnt2= new CondicionNoTaxativa(" ", condicion5, 3, 3, indicador5);noTaxativas.add(cnt2);
+			CondicionNoTaxativa cnt2= new CondicionNoTaxativa(/*" ", condicion5, 3, 3, indicador5*/);
+			inicializarCondicionNoTaxativa(cnt2, " ", condicion5, 3, 3, indicador5);
+			noTaxativas.add(cnt2);
 		}
 		
 		
@@ -158,7 +165,9 @@ public class VentanasController {
 		String condicion6 = req.queryParams("condicion6");
 		
 		if(!indicador6.equals("-1")){
-			CondicionNoTaxativa cnt3= new CondicionNoTaxativa(" ", condicion6, 3, 3, indicador6);noTaxativas.add(cnt3);
+			CondicionNoTaxativa cnt3= new CondicionNoTaxativa(/*" ", condicion6, 3, 3, indicador6*/);
+			inicializarCondicionNoTaxativa(cnt3, " ", condicion6, 3, 3, indicador6);
+			noTaxativas.add(cnt3);
 		}
 		
 		
@@ -256,7 +265,7 @@ public class VentanasController {
 		
 		String metodologiaSeleccionada = req.queryParams("metodologiaSeleccionada");
 		Metodologia metodologia = modelCuentas.getMetodologia(metodologiaSeleccionada);
-		LinkedList<Empresa> resultado=new LinkedList<>();
+		List<Empresa> resultado=new LinkedList<>();
 		
 		
 		
@@ -270,5 +279,22 @@ public class VentanasController {
 		
 		
 		return new ModelAndView(model,"resultadoMetodologia.hbs");
+	}
+	
+	private void inicializarCondicionTaxativa(CondicionTaxativa ct, String nombreCondicion, String operadorString, int anios, String indicadorString,
+			Double valorComparacion){
+		ct.setNombreCondicion(nombreCondicion);
+		ct.setOperadorString(operadorString);
+		ct.setAnios(anios);
+		ct.setIndicadorString(indicadorString);
+		ct.setValorComparacion(valorComparacion);
+	}
+	
+	private void inicializarCondicionNoTaxativa(CondicionNoTaxativa cnt, String nombreCondicion, String operadorString, int anios, int peso,String indicadorString){
+		cnt.setNombreCondicion(nombreCondicion);
+		cnt.setOperadorString(operadorString);
+		cnt.setAnios(anios);
+		cnt.setPeso(peso);
+		cnt.setIndicadorString(indicadorString);
 	}
 }

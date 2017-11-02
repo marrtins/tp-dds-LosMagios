@@ -44,15 +44,31 @@ public class DAOMySQLIndicador implements DAOIndicador{
 
 	@Override
 	public ArrayList<Indicador> getAllIndicadores() throws IOException {
-		Query query = entityManager.createQuery("SELECT i FROM Indicador i");
-		return (ArrayList<Indicador>) query.getResultList();
+		ArrayList<Indicador> indicadores = new ArrayList<Indicador>();
+		Indicador indicador = new Indicador();
+		int i = 1;
+		while((indicador = entityManager.find(indicador.getClass(),i))!=null){
+			indicadores.add(indicador);
+			i++;
+		}
+		return indicadores;
+		//Query query = entityManager.createQuery("SELECT i FROM Indicador i");
+		//return (ArrayList<Indicador>) query.getResultList();
 	}
 
 	@Override
 	public ArrayList<Metodologia> getAllMetodologias() throws IOException {
-		Query query = entityManager.createQuery("SELECT m FROM Metodologia m");
+		ArrayList<Metodologia> metodologias= new ArrayList<Metodologia>();
+		Metodologia metodologia= new Metodologia();
+		int i = 1;
+		while((metodologia = entityManager.find(metodologia.getClass(),i))!=null){
+			metodologias.add(metodologia);
+			i++;
+		}
+		return metodologias;
+		//Query query = entityManager.createQuery("SELECT m FROM Metodologia m");
 		//usar find
-		return (ArrayList<Metodologia>) query.getResultList();
+		//return (ArrayList<Metodologia>) query.getResultList();
 	}
 
 	@Override

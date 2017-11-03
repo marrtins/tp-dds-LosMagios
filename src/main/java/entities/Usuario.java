@@ -16,10 +16,10 @@ public class Usuario {
 	
 	//AGREGAR METODOLOGIAS E INDICADORES
 
-	public Usuario(String nombre,String pass) {
+	public Usuario(/*String nombre,String pass*/) {
 		super();
-		this.nombreUsuario=nombre;
-		this.pass=pass;
+//		this.nombreUsuario=nombre;
+//		this.pass=pass;
 	}
 
 	public String getNombre() {

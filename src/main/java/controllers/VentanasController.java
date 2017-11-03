@@ -15,6 +15,7 @@ import entities.Usuario;
 import entities.TiposCondicion.CondicionNoTaxativa;
 import entities.TiposCondicion.CondicionTaxativa;
 import model.CuentaModel;
+import model.UsuarioModel;
 import persistence.DataCollector;
 import spark.ModelAndView;
 import spark.Request;
@@ -22,10 +23,10 @@ import spark.Response;
 
 public class VentanasController {
 	private Map<String, Object> model=new HashMap<>();
+	UsuarioModel modelUsuario =UsuarioModel.getInstance();
 	
 	public ModelAndView arranque(Request req, Response res){
-//		UsuarioModel modelUsuario =UsuarioModel.getInstance();
-//		model.put("usuarios", modelUsuario.getAll());
+		model.put("usuarios", modelUsuario.getAll());
 		model.clear();
 		return new ModelAndView(model, "base.hbs");
 	}
@@ -33,16 +34,16 @@ public class VentanasController {
 
 	public ModelAndView inicio(Request req, Response res){
 		CuentaModel modelCuentas=CuentaModel.getInstance();
-//		model.put("usuarios", modelUsuario.getAll());
+		model.put("usuarios", modelUsuario.getAll());
 		String pass=req.queryParams("pass");
 		
 		String nombreUsuario = req.queryParams("usuario");
 				
 		Usuario usuario = modelCuentas.getUsuario(nombreUsuario,pass);
-		//if(usuario.getNombre().equals("null")){
-		//	return new ModelAndView(model,"logFail.hbs");
+		if(usuario.getNombre().equals("null")){
+			return new ModelAndView(model,"logFail.hbs");
 
-		//}
+		}
 		
 		model.put("usuario",usuario.getNombre());
 		return new ModelAndView(model,"inicio.hbs");

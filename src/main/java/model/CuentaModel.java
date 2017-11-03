@@ -96,6 +96,7 @@ public void boot(){
 		
 	}
 	public Usuario getUsuario(String nombre,String pass){
+		Usuario usuario = new Usuario();
 		int i=0;
 		for(i=0; i<usuarios.size(); i++){
 			String n1 = usuarios.get(i).getNombre();
@@ -104,7 +105,9 @@ public void boot(){
 				return usuarios.get(i);
 			}
 		}
-		return new Usuario("null","0");
+		usuario.setNombre("null");
+		usuario.setPass("0");
+		return usuario;
 	}
 	
 	public List<Empresa> getAll(){

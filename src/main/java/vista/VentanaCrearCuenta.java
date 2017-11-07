@@ -210,7 +210,7 @@ public class VentanaCrearCuenta extends JFrame {
 				cboEmpresa.addItem(nombreEmpresa.toUpperCase());
 				Empresa nuevaEmpresa = new Empresa(/*nombreEmpresa.toUpperCase()*/);
 				nuevaEmpresa.setNombre(nombreEmpresa.toUpperCase());
-				try {
+				try { 
 					persistence.agregarEmpresa(nuevaEmpresa);
 				} catch (IOException e) {
 					// TODO Auto-generated catch block

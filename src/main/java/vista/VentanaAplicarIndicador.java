@@ -61,7 +61,7 @@ public class VentanaAplicarIndicador extends JFrame {
 	}
 
 	/**
-	 * Create the frame.
+	 * Create the frame. 
 	 */
 	public VentanaAplicarIndicador() {
 		

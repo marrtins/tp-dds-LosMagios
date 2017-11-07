@@ -18,7 +18,7 @@ public class Periodo {
 	@Transient
 	private List<Cuenta> cuentas = new ArrayList<>();
 
-	public Periodo(/*int unAnio*/) {
+	public Periodo(/*int unAnio*/) { 
 //		anio = unAnio;
 	}
 

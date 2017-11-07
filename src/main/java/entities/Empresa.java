@@ -32,7 +32,7 @@ public class Empresa implements Serializable {
 	
 
 	
-	public Empresa(/*String _nombre*/) {
+	public Empresa(/*String _nombre*/) { 
 		super();
 //		this.nombreEmpresa = _nombre;
 	}

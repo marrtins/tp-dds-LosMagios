@@ -36,7 +36,7 @@ public class Metodologia {
 	@Transient //TODO para mi no se persiste esto: una metodologia se aplica sobre empresas, pero para la creacion de una metodologia no se necesita
 	List<Empresa> listaOrdenada;
 	
-	public Metodologia() {
+	public Metodologia() { 
 		super();
 		listaOrdenada=new LinkedList<>();
 		cTaxativas = new ArrayList<>();

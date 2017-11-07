@@ -1,6 +1,7 @@
 package persistence;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.AbstractListModel;
 
@@ -11,7 +12,7 @@ import entities.Empresa;
 public class CustomListModelEmpresa extends AbstractListModel {
 
 	
-	private ArrayList<Empresa> empresas = new ArrayList<>();
+	private List<Empresa> empresas = new ArrayList<>();
 	
 	
 	
@@ -27,13 +28,13 @@ public class CustomListModelEmpresa extends AbstractListModel {
         return unaEmpresa.getNombreEmpresa();
     }
    
-    public void setEmpresas(ArrayList<Empresa> unaLista){
+    public void setEmpresas(List<Empresa> unaLista){
     	empresas = unaLista;
     }
     
     
     
-    public ArrayList<Empresa> getEmpresas(){
+    public List<Empresa> getEmpresas(){
     	return empresas;
     }
     

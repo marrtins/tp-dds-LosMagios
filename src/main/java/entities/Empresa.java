@@ -27,14 +27,14 @@ public class Empresa implements Serializable {
 	@ManyToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
 	private List<Periodo> periodos = new ArrayList<>();
 	
-	@ManyToMany(fetch=FetchType.LAZY, cascade = CascadeType.ALL)
-	private List<Metodologia> metodologias= new LinkedList<>();;
+//	@ManyToMany(fetch=FetchType.LAZY, cascade = CascadeType.ALL)
+//	private List<Metodologia> metodologias= new LinkedList<>();;
 	
 
 	
-	public Empresa(String _nombre) {
+	public Empresa(/*String _nombre*/) {
 		super();
-		this.nombreEmpresa = _nombre;
+//		this.nombreEmpresa = _nombre;
 	}
 	
 	public int getIdEmpresa() {
@@ -53,8 +53,8 @@ public class Empresa implements Serializable {
 		this.nombreEmpresa = nombre;
 	}
 
-	public ArrayList<Periodo> getPeriodos() {
-		return (ArrayList<Periodo>) periodos;
+	public List<Periodo> getPeriodos() {
+		return periodos;
 	}
 	
 
@@ -67,7 +67,7 @@ public class Empresa implements Serializable {
 		ArrayList<Cuenta> cuentas=new ArrayList<>();
 		int i=0;
 		for(i=0;i<periodos.size();i++){
-			ArrayList<Cuenta> aux=this.getCuentasDePeriodo(periodos.get(i));
+			List<Cuenta> aux=this.getCuentasDePeriodo(periodos.get(i));
 			aux.forEach(unaCuenta->cuentas.add(unaCuenta));
 
 		}
@@ -76,7 +76,7 @@ public class Empresa implements Serializable {
 	}
 	
 	
-	public ArrayList<Cuenta> getCuentasDePeriodo(Periodo unPeriodo){
+	public List<Cuenta> getCuentasDePeriodo(Periodo unPeriodo){
 		
 		if(!(this.periodos.contains(unPeriodo))) {
 			this.agregarPeriodo(unPeriodo);
@@ -98,15 +98,17 @@ public class Empresa implements Serializable {
 		
 	}
 	
-	public void agregarPeriodos(ArrayList<Periodo> periodos){
-		for(Periodo unPeriodo:periodos){
+	public void agregarPeriodos(List<Periodo> list){
+		for(Periodo unPeriodo:list){
 			unPeriodo.agregarCuentas(unPeriodo.getCuentas());
 		}
 		
 	}
 	
 	public boolean tienePeriodo(int unAnio){
-		return periodos.stream().anyMatch(periodo-> periodo.getAnio() == (new Periodo(unAnio)).getAnio());
+		Periodo p = new Periodo();
+		p.setAnio(unAnio);
+		return periodos.stream().anyMatch(periodo-> periodo.getAnio() == (p.getAnio()));
 	}
 	public void agregarPeriodo(Periodo unPeriodo){
 		periodos.add(unPeriodo);
@@ -116,7 +118,9 @@ public class Empresa implements Serializable {
 		return unPeriodo.getCuenta(nombreCuenta);
 	}
 	public Periodo getPeriodoOrCreate(int unAnio){
-		if(!this.tienePeriodo(unAnio)) this.agregarPeriodo(new Periodo(unAnio));
+		Periodo p = new Periodo();
+		p.setAnio(unAnio);
+		if(!this.tienePeriodo(unAnio)) this.agregarPeriodo(p);
 		return this.getPeriodo(unAnio);
 	
 	}

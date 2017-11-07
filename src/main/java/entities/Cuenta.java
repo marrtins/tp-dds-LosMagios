@@ -10,6 +10,7 @@ public class Cuenta  {
 	@GeneratedValue
 	private int idCuenta;
 	
+	private String descripcion;
 	private String nombreCuenta;
 	private int valorCuenta;
 	

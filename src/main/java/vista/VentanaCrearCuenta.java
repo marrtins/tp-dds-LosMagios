@@ -208,7 +208,8 @@ public class VentanaCrearCuenta extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				String nombreEmpresa = JOptionPane.showInputDialog("Escribe nombre de la empresa");
 				cboEmpresa.addItem(nombreEmpresa.toUpperCase());
-				Empresa nuevaEmpresa = new Empresa(nombreEmpresa.toUpperCase());
+				Empresa nuevaEmpresa = new Empresa(/*nombreEmpresa.toUpperCase()*/);
+				nuevaEmpresa.setNombre(nombreEmpresa.toUpperCase());
 				try {
 					persistence.agregarEmpresa(nuevaEmpresa);
 				} catch (IOException e) {

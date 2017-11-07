@@ -32,7 +32,8 @@ public class Metodologia {
 	@OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
 	List<CondicionNoTaxativa> cNoTaxativas;
 	
-	@ManyToMany(fetch=FetchType.LAZY, cascade = CascadeType.ALL, mappedBy="metodologias")
+//	@ManyToMany(fetch=FetchType.LAZY, cascade = CascadeType.ALL, mappedBy="metodologias")
+	@Transient //TODO para mi no se persiste esto: una metodologia se aplica sobre empresas, pero para la creacion de una metodologia no se necesita
 	List<Empresa> listaOrdenada;
 	
 	public Metodologia() {
@@ -44,7 +45,6 @@ public class Metodologia {
 
 	public String usuario;
 	
-	@Transient
 	String descripcionMetodologia;
 	
 	
@@ -94,8 +94,8 @@ public String getDescripcionCondicionNoTaxativas(){
 
 
 
-	public ArrayList<CondicionTaxativa> getcTaxativas() {
-		return (ArrayList<CondicionTaxativa>) cTaxativas;
+	public List<CondicionTaxativa> getcTaxativas() {
+		return cTaxativas;
 	}
 	
 	
@@ -108,8 +108,8 @@ public String getDescripcionCondicionNoTaxativas(){
 
 
 
-	public ArrayList<CondicionNoTaxativa> getcNoTaxativas() {
-		return (ArrayList<CondicionNoTaxativa>) cNoTaxativas;
+	public List<CondicionNoTaxativa> getcNoTaxativas() {
+		return cNoTaxativas;
 	}
 
 
@@ -120,19 +120,19 @@ public String getDescripcionCondicionNoTaxativas(){
 
 
 
-	public LinkedList<Empresa> getListaOrdenada() {
-		return (LinkedList<Empresa>) listaOrdenada;
+	public List<Empresa> getListaOrdenada() {
+		return listaOrdenada;
 	}
 
 
 
-	public void setListaOrdenada(LinkedList<Empresa> listaOrdenada) {
+	public void setListaOrdenada(List<Empresa> listaOrdenada) {
 		this.listaOrdenada = listaOrdenada;
 	}
 
 
 
-	public List<Empresa> aplicarMetodologia(ArrayList<Empresa> empresas){
+	public List<Empresa> aplicarMetodologia(List<Empresa> empresas){
 		//A cada una de las empresas le aplico las condiciones TAXATIVAS, si no las pasa, las dejo de analizar (no las agrego a la lista link)
 		//empresas.removeIf(unaEmpresa -> !this.cumpleCondicionesTaxativas(unaEmpresa));
 		int i;

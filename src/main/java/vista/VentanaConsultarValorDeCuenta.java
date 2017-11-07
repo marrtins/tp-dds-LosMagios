@@ -3,6 +3,7 @@ import javax.swing.JList;
 import java.awt.EventQueue;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -39,9 +40,9 @@ import javax.swing.border.BevelBorder;
 public class VentanaConsultarValorDeCuenta extends JFrame {
 
 	private JPanel contentPane;
-	private ArrayList<Cuenta> cuentas = new ArrayList<>();
-	private ArrayList<Empresa> empresas = new ArrayList<>();
-	private ArrayList< Periodo>periodos = new ArrayList<>();
+	private List<Cuenta> cuentas = new ArrayList<>();
+	private List<Empresa> empresas = new ArrayList<>();
+	private List<Periodo> periodos = new ArrayList<>();
 	private RepositorioDeEmpresas repoEmpresas;	
 	private Empresa empresaSeleccionada;
 	private Periodo periodoSeleccionado;

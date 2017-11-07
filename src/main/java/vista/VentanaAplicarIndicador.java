@@ -10,6 +10,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -39,7 +40,7 @@ public class VentanaAplicarIndicador extends JFrame {
 	Indicador indicadorSeleccionado;
 	private ArrayList<Indicador> indicadores;
 	private ArrayList<Empresa> empresas;
-	private ArrayList<Periodo> periodos;
+	private List<Periodo> periodos;
 	private ArrayList<Metodologia> metodologias;
 	
 	/**

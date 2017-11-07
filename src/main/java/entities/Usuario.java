@@ -1,5 +1,8 @@
 package entities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.*;
 
 @Entity
@@ -13,6 +16,12 @@ public class Usuario {
 	@Id
 	String nombreUsuario;
 	String pass;
+	
+//	@OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
+//	private List<Indicador> indicadores = new ArrayList<>();
+//	
+//	@OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
+//	private List<Metodologia> metodologias = new ArrayList<>();
 	
 	//AGREGAR METODOLOGIAS E INDICADORES
 

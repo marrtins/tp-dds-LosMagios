@@ -14,11 +14,12 @@ public class Periodo {
 	@Id
 	private int anio;
 	
-	@OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+//	@OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+	@Transient
 	private List<Cuenta> cuentas = new ArrayList<>();
 
-	public Periodo(int unAnio) {
-		anio = unAnio;
+	public Periodo(/*int unAnio*/) {
+//		anio = unAnio;
 	}
 
 	public int getAnio() {
@@ -29,18 +30,18 @@ public class Periodo {
 		this.anio = anio;
 	}
 
-	public ArrayList<Cuenta> getCuentas() {
-		return (ArrayList<Cuenta>) cuentas;
+	public List<Cuenta> getCuentas() {
+		return cuentas;
 	}
 
-	public void setCuentas(ArrayList<Cuenta> cuentas) {
+	public void setCuentas(List<Cuenta> cuentas) {
 		this.cuentas = cuentas;
 	}
 	
 	public void agregarCuenta(Cuenta unaCuenta){
 		cuentas.add(unaCuenta);
 	}
-	public void setearCuentas(ArrayList<Cuenta>cuentas){
+	public void setearCuentas(List<Cuenta>cuentas){
 		for (int i = 0; i < cuentas.size(); i++) {
 			this.agregarCuenta(cuentas.get(i));
 		}
@@ -58,7 +59,7 @@ public class Periodo {
 }
 	
 	
-	public void agregarCuentas(ArrayList<Cuenta> cuentas) {
+	public void agregarCuentas(List<Cuenta> cuentas) {
 		this.setCuentas(cuentas);
 	}
 

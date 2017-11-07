@@ -3,31 +3,77 @@
 <head>
 	<title>¿Dónde invierto?</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/home.css">
+	<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Istok+Web" rel="stylesheet">
 
 </head>
 <body>
+ <nav class="navbar navbar-dark bg-dark navbar-expand">
+			<ul class="col-8 navbar-nav">
+				<li class="nav-item"><a class="nav-link navbar-brand text-white" href="/" title="">¿Dónde invierto?</a></li>
+			</ul>
+			<ul class="col-4 navbar-nav justify-content-end">
+				<li class="nav-item"><a class="nav-link btn btn-outline-secondary text-white" href="#">Iniciar Sesión</a></li>
+			</ul>
+	</nav>
 
-<div id="ventanaBase">
+<div class="jumbotron">
+  <h1>Bienvenido a ¿Dónde Invierto?</h1>      
+  <p>Su solución en análisis de inversiones financieras</p>
+</div>
+
+<section class="seccion">
+			<div class = "container">
+			<div class="row">
+				<div class="col">
+					<img src="/images/cuenta.jpg" class="imagenCuenta" width="350" height="350" alt="">	
+				</div>
+				<div class="col texto">
+					<h2>Análisis de cuentas</h2>
+					<p>Con esta aplicación, usted podrá visualizar los nombres y los valores asociados a cada una de las cuentas de una empresa determinada</p>
+				</div>
+			</div>
+			</div>
+		</section>
+		<section class="seccion bg-light">
+			<div class="container">
+			<div class="row">
+				<div class="col texto">
+					<h2>Creación y aplicación de indicadores</h2>
+					<p>Podrá crear distintos indicadores para poder analizar las empresas que usted desee</p>
+				</div>
+				<div class="col">
+					<img src="/images/indicador.jpg" class="imagenIndicador" width="350" height="350" alt="">	
+				</div>
+			</div>				
+			</div>
+		</section>
+		<section class="seccion">
+			<div class= "container">
+			<div class="row">
+				<div class="col">
+					<img src="/images/metodologia.jpg" class="imagenMetodologia" width="350" height="350" alt="">	
+				</div>
+				<div class="col texto">
+					<h2>Creación y aplicación de metodologías </h2>
+					<p>Podrá crear distintas metodologías utilizando los indicadores creados previamente y distintas condiciones posibles</p>
+			</div>
+			</div>
+		</section>
 	
-	<div class="encabezado">
-		<form role="form" action="/inicio" method="POST">
-  <h1 class="display-3">Bienvenido a "¿Donde invierto?"</h1>
-  <p class="lead">Su solución en análisis de inversiones financieras</p>
-  <hr class="my-4">
-  
-   <div class="form-group">
-	<form role="form" action="/inicio" method="POST">
-		<select name="usuario" class="custom-select">
-			<h3>Nombre de usuario <input value="" type="text" name="usuario"></h3>
-		</select>
-		<select name="pass" class="custom-select">
-			<h3>Password <input value="" type="password" name="pass"></h3>
-		</select>
-		<button  type="submit" class="btn btn-primary">Ver Cuentas</button>
-	</form>
-  
-  
-</form>
+<div class = "container2">
+	<div class="wrapper">
+		<form role="form" action="/inicio" method="POST">  
+		    <h3 class="form-signin-heading">Ingrese a ¿Dónde Invierto?</h3>
+			  <hr class="colorgraph"><br>
+			  
+			  <input type="text" class="form-control" name="usuario" placeholder="Nombre De Usuario" required="" autofocus="" />
+			  <input type="password" class="form-control" name="pass" placeholder="Contraseña" required=""/>     		  
+			 
+			  <button class="btn btn-lg btn-primary btn-block"  name="Submit" value="Login" type="Submit">Iniciar Sesión</button>  			
+		</form>			
+	</div>
 </div>
-</div>
+
+</body>

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 /*package test;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -84,7 +84,7 @@ public class TestMetodologias {
 	
 
 }*/
-=======
+
 /*package test;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -170,4 +170,4 @@ public class TestMetodologias {
 	
 
 }*/
->>>>>>> 98c32eb728ebd10a9dddf1c95222c7ee29b1bb03
+

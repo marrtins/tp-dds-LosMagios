@@ -45,7 +45,7 @@ public class VentanasController {
 
 		}
 		
-		model.put("usuario",usuario.getNombre());
+		model.put("usuario", nombreUsuario);
 		return new ModelAndView(model,"inicio.hbs");
 	}
 	
@@ -58,7 +58,7 @@ public class VentanasController {
 		String nombreUsuario = req.params(":nombreUsuario");
 
 		model.put("usuario",nombreUsuario);
-		return new ModelAndView(model,"inicio.hbs");
+		return new ModelAndView(model,"inicioUsuario.hbs");
 	}
 
 	

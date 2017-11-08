@@ -3,29 +3,19 @@
 <head>
 	<title>Inicio - Dónde Invierto</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-	<link rel="stylesheet"  href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/homeLog.css">
+	<link href="https://fonts.googleapis.com/css?family=Averia+Serif+Libre" rel="stylesheet">
 </head>
 <body>
 
-<div id="ventanaInicio">
-		<h2>Usuario {{usuario}} </h2>
-	
-<h1 div class="p-3 mb-2 bg-dark text-white"> ¿DÓNDE INVIERTO? </h1>
-	<form role="form" action="/inicio/cuenta/{{usuario}}" method="POST">
-<button id="botonEntrada" type="submit" class="btn btn-success">Cuenta > </button>
+	<div class="fondo">
+		<div class ="relativo">										
+			<h3>¡Bienvenido {{usuario}}!</h3>
+			<form role="form" action="/inicio/{{usuario}}" method="POST">
+			<button id="botonEntrada" type="submit" class="btn btn-success">Ir al Inicio </button>
 	</form>
-	<br>
-	<form role="form" action="/inicio/indicador/{{usuario}}" method="POST">
-<button id="botonEntrada" type="submit" class="btn btn-warning">Indicador > </button>
-	</form>
-	<br>
-	<form role="form" action="/inicio/metodologia/{{usuario}}" method="POST">
-<button id="botonEntrada" type="submit" class="btn btn-danger" value="metodologia"> Metodología > </button>
-	</form>
-	<br>
-
-
-</div>
+		</div>
+	</div>
 
 </body>
 </html>

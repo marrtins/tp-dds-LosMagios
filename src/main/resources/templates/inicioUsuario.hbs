@@ -1,31 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Inicio - Dónde Invierto</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-	<link rel="stylesheet"  href="../css/style.css">
+  <title>Inicio - ¿Dónde Invierto?</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/inicioUsuario.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 <body>
+<div class = "navbar">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">¿Dónde Invierto?</a>
+    </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/"><span class="glyphicon glyphicon-user"></span> Cerrar Sesión</a></li>
+       
+      </ul>
+    </div>
+  </div>
+</nav>
 
-<div id="ventanaInicio">
-		<h2>Usuario {{usuario}} </h2>
-	
-<h1 div class="p-3 mb-2 bg-dark text-white"> ¿DÓNDE INVIERTO? </h1>
-	<form role="form" action="/inicio/cuenta/{{usuario}}" method="POST">
-<button id="botonEntrada" type="submit" class="btn btn-success">Cuenta > </button>
-	</form>
-	<br>
-	<form role="form" action="/inicio/indicador/{{usuario}}" method="POST">
-<button id="botonEntrada" type="submit" class="btn btn-warning">Indicador > </button>
-	</form>
-	<br>
-	<form role="form" action="/inicio/metodologia/{{usuario}}" method="POST">
-<button id="botonEntrada" type="submit" class="btn btn-danger" value="metodologia"> Metodología > </button>
-	</form>
-	<br>
-
-
+<div class="container">   
+<center> 
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading"><form role="form" action="/inicio/{{usuario}}/cuenta" method="POST"><button class="btn btn-primary" title="">CUENTAS</button> </form></div>
+        <div class="panel-body"><img src="https://www.ziclope.net/imagenes/mis-cuentas-claras.png" class="img-responsive" style="background-position:center;width:100%" alt="Image"></div>
+        <div class="panel-footer"><strong>Analice cuentas de empresas que tiene precargadas</strong></div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading"> <form role="form" action="/inicio/{{usuario}}/indicador" method="POST"><button class="btn btn-primary" title="">INDICADORES</button> </form></div>
+        <div class="panel-body"><img src="http://www.sapaf.gob.mx/images/titulos/INDICADORES.png" class="img-responsive" style="background-position: center;width:100%" alt="Image"></div>
+        <div class="panel-footer"><strong>Aplique sus indicadores y cree nuevos para tener más control sobre sus datos</strong></div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading"> <form role="form" action="/inicio/{{usuario}}/metodologia" method="POST"><button class="btn btn-primary" title="">METODOLOGIAS</button> </form></div>
+        <div class="panel-body"><img src="http://salesandoperationsteam.com/images/metodologia_banner.png" class="img-responsive" style="background-position:center;width:100%" alt="Image"></div>
+        <div class="panel-footer"><strong>Cree y aplique metodologías en base a sus indicadores</strong></div>
+      </div>
+    </div>
+  </div>
+</div><br><br>
+</center>
 </div>
-
 </body>
 </html>

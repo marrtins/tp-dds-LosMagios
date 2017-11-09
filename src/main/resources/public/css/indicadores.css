@@ -1,0 +1,44 @@
+/*!
+ * Start Bootstrap - Heroic Features (https://startbootstrap.com/template-overviews/heroic-features)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-heroic-features/blob/master/LICENSE)
+ */
+
+body {
+  padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+    background-color: lightgray;
+  }
+}
+
+#jumbotron{
+	text-align: center;
+	background-image: url("https://epensare.com/wp-content/uploads/2014/02/CursoMIG.jpg");
+}
+
+
+.container button{
+	
+	border-radius: 5px;
+	text-decoration: none;
+	color: white;
+	border: solid 1px green;
+	font-weight: bolder;
+	padding: 12px 35px;
+	background: green;
+	
+}
+
+.container button:hover{
+	border: 2px solid black;
+	background-color: white;
+	color: green;
+}
+
+.card {
+  height: 100%;
+}

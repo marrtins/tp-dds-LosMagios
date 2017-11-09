@@ -1,29 +1,107 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Metodología</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="../../css/style.css">
-</head>
-<body>
-<div id="ventanaMetodologias">
-	<h1 div class="p-3 mb-2 bg-danger text-dark"> Metodología </h1>
-	<h2> <b> Por favor seleccione una opción: </b></h2>
-	<form role="form" action="/inicio/metodologia/{{usuario}}/crearMetodologia" method="POST">
-	<button id="botonMetodologia" type="submit" class="btn btn-outline-primary"> Crear metodología > </button>
-	</form>
-<br>
-	<form role="form" action="/inicio/metodologia/{{usuario}}/aplicarMetodologia" method="POST">
-	<button id="botonMetodologia" type="submit" class="btn btn-outline-primary"> Aplicar metodología > </button>
-	</form>
+<html lang="en">
 
-	<br>
-	
+  <head>
 
-	<img src="/images/metodologia.jpg" class="imagenMetodologia" style="width:300px;height:150px;" align="right">	
-</div>
-<form role="form" action="/inicio/{{usuario}}" method="POST">
-	<button type="submit" class="btn btn-danger"> << Atrás </button>
-	</form>
-</body>
+    <meta charset="utf-8">
+    <title>Metodologías</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+   <link rel="stylesheet" type="text/css" href="/css/metodologias.css">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+      	 <form role="form" action="/inicio/{{usuario}}" method="POST">
+              <button class="navbar-brand" style="border-color: transparent; background-color: transparent;">¿Dónde Invierto?</button>
+          </form>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+            	 <form role="form" action="/inicio/{{usuario}}/cuenta" method="POST">
+              <button class="nav-link" style="border-color: transparent;background-color: transparent;">Cuentas</button>
+          </form>
+            </li>
+            <li class="nav-item">
+            	 <form role="form" action="/inicio/{{usuario}}/indicador" method="POST">
+              <button class="nav-link" style="border-color: transparent; background-color: transparent;">Indicadores</button>
+          </form>
+            </li>
+            <li class="nav-item">
+            	 <form role="form" action="/inicio/{{usuario}}/metodologia" method="POST">
+              <button class="nav-link" style="border-color: transparent; background-color: transparent;">Metodologías</button>
+            </li>
+        </form>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Jumbotron Header -->
+      <header class="jumbotron my-4" id="jumbotron">
+        <h1 class="display-3">Metodologías</h1>
+        <p class="lead">Por favor seleccione una opción</p>
+      </header>
+
+      <!-- Page Features -->
+      <center>
+      <div class="row text-center">
+      	
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img class="card-img-top" src="https://puserscontentstorage.blob.core.windows.net/userimages/3e95c146-511a-4f4e-8c2d-0110d46d4bcd/dab90c85-7bc2-40e5-9c94-a021d70ff8c4image35.png" style="width:500; height:325;" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Crear Metodología</h4>
+              <p class="card-text">Cree una nueva metodología</p>
+            </div>
+            <div class="card-footer">
+              <form role="form" action="/inicio/{{usuario}}/metodologia/crearMetodologia" method="POST">
+              <button  class="btn btn-success">Ingresar</button>
+            </form>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img class="card-img-top" src="https://userscontent2.emaze.com/images/5a3bec3b-41ef-465a-a8c9-5bf162098a52/19970d96-b10a-445c-ac71-b7a8245b68e0.png"  style="width:500; height:325;" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Aplicar Metodologías</h4>
+              <p class="card-text">Aplique sus metodologías para un mejor análisis de sus empresas</p>
+            </div>
+            <div class="card-footer">
+               <form role="form" action="/inicio/{{usuario}}/metodologia/aplicarMetodologia" method="POST">
+              <button  class="btn btn-success">Ingresar</button>
+            </form>
+            </div>
+          </div>
+        </div>
+    
+    </div>
+    <center>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Dónde Invierto &copy; 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+
+  </body>
+
 </html>

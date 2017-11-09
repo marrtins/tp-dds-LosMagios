@@ -1,35 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Cuenta</title>
+	<title>Cuentas</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/cuentas.css">
 </head>
 <body>
-<div id="ventanaCuentas">	
-	<h1 div class="p-3 mb-2 bg-success text-white"> Cuenta </h1>
-	
-	<div class="container">
-		<h3>Seleccione una empresa</h3>
-		
-	<div class="form-group">
-	<form role="form" action="/inicio/cuenta/{{usuario}}/consultarCuenta" method="POST">
-		<select name="empresaSeleccionada" class="custom-select">
-			<option value="-1">Seleccionar</option>
-			{{#each empresas}}
-			<option value= {{nombreEmpresa}}> {{nombreEmpresa}}</option>
-			{{/each}}
-		</select>
-		<button  type="submit" class="btn btn-primary">Ver Cuentas</button>
-	</form>
-	</div>
+		    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+       <form role="form" action="/inicio/{{usuario}}" method="POST">
+            <button class="navbar-brand" style="border-color: transparent; background-color: transparent;">¿Dónde Invierto?</button>
+          </form>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+            	 <form role="form" action="/inicio/{{usuario}}/cuenta" method="POST">
+              <button class="nav-link" style="border-color: transparent;background-color: transparent;">Cuentas</button>
+          </form>
+            </li>
+            <li class="nav-item">
+            	 <form role="form" action="/inicio/{{usuario}}/indicador" method="POST">
+              <button class="nav-link" style="border-color: transparent; background-color: transparent;">Indicadores</button>
+          </form>
+            </li>
+            <li class="nav-item">
+            	 <form role="form" action="/inicio/{{usuario}}/metodologia" method="POST">
+              <button class="nav-link" style="border-color: transparent; background-color: transparent;">Metodologías</button>
+            </li>
+        </form>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-	<img src="/images/cuenta.jpg" class="imagenCuenta" style="width:300px;height:150px;" align="right">	
-</div>
-</div>
-	<form role="form" action="/inicio/{{usuario}}" method="POST">
-	<button type="submit" class="btn btn-danger"> << Atrás </button>
-	</form>
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Jumbotron Header -->
+      <header class="jumbotron my-4" id="jumbotron">
+        <h1 class="display-3">Cuentas</h1>
+        <p class="lead">Por favor seleccione una empresa para ver sus cuentas asociadas</p>
+      </header>
+
+  <div class="form-group">
+  <center>
+  <form role="form" action="/inicio/{{usuario}}/cuenta/consultarCuenta" method="POST">
+  <select name="empresaSeleccionada" class="form-control" form-control-lg"> <option value="-1">Seleccionar</option>
+      {{#each empresas}}
+      <option value= {{nombreEmpresa}}> {{nombreEmpresa}}</option>
+      {{/each}}
+    </select>
+    <button  type="submit" class="btn btn-warning">Ver cuentas de la empresa seleccionada</button>
+  </form>
+  </div>
+  </div>
+  <form role="form" action="/inicio/{{usuario}}" method="POST">
+  <button type="submit" class="btn btn-danger"> << Atrás </button>
+  </form>
+</center>
 
 </body>
 </html>
+

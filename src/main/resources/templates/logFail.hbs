@@ -3,35 +3,21 @@
 <head>
 	<title>¿Dónde invierto?</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/logFail.css">
 
 </head>
 <body>
 
-<div id="ventanaBase">
-	
-	<div class="encabezado">
-		<form role="form" action="/inicio" method="POST">
-  <h1 class="display-3">Bienvenido a "¿Donde invierto?"</h1>
-  
-  <p class="lead">Su solución en análisis de inversiones financieras</p>
-  <hr class="my-4">
-  
-  <h2>INICIO DE SESION INCORRECTO. INTENTE NUEVAMENTE</h1>
-  
-  
-   <div class="form-group">
-	<form role="form" action="/inicio" method="POST">
-		<select name="usuario" class="custom-select">
-			<h3>Nombre de usuario <input value="" type="text" name="usuario"></h3>
-		</select>
-		<select name="pass" class="custom-select">
-			<h3>Password <input value="" type="text" name="pass"></h3>
-		</select>
-		<button  type="submit" class="btn btn-primary">Ver Cuentas</button>
-	</form>
-  
-  
+<div class="alert alert-danger" role="alert">
+  <h4 class="alert-heading">Error! Inicio de sesión incorrecto! </h4>
+  <p><strong>Alguno de los datos ingresados son incorrectos</strong></p>
+  <p class="mb-0">Por favor reintente nuevamente con datos válidos.</p>
+</div>
+   
+<center>
+<form role="form" action="/" method="GET">
+	<button type="submit" class="btn btn-success"> << Regresar </button>
 </form>
-</div>
-</div>
+</center>
+
+</body>

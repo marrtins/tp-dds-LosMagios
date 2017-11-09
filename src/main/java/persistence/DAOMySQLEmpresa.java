@@ -8,6 +8,7 @@ import javax.persistence.Query;
 
 import db.EntityManagerHelper;
 import entities.Empresa;
+import entities.Metodologia;
 
 public class DAOMySQLEmpresa implements DAOEmpresa {
 	EntityManager entityManager= EntityManagerHelper.getEntityManager();
@@ -33,8 +34,16 @@ public class DAOMySQLEmpresa implements DAOEmpresa {
 
 	@Override
 	public ArrayList<Empresa> getAllEmpresas() throws IOException {
-		Query query = entityManager.createQuery("SELECT e FROM Empresa e");
-		return (ArrayList<Empresa>) query.getResultList();
+//		Query query = entityManager.createQuery("SELECT e FROM Empresa e");
+//		return (ArrayList<Empresa>) query.getResultList();
+		ArrayList<Empresa> empresas= new ArrayList<Empresa>();
+		Empresa empresa= new Empresa();
+		int i = 1;
+		while((empresa = entityManager.find(empresa.getClass(),i))!=null){
+			empresas.add(empresa);
+			i++;
+		}
+		return empresas;
 	}
 
 	@Override

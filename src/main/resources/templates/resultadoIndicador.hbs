@@ -1,25 +1,80 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Resultado Indicador</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-	<link rel="stylesheet"  href="style.css">
-</head>
-<body>
-	
-<div id="resultadoIndicador">
-	<h1 id="encabezados" div class="p-3 mb-2 bg-dark text-white"> RESULTADO INDICADOR </h1>
 
-		<h2>Empresa {{empresa.nombreEmpresa}}</h2>
-		<h2>Periodo {{periodo}}</h2>
-		<h2>Indicador {{indicador.nombreIndicador}}</h2>
-		<h2>Resultado {{resultado}}</h2>
-		
-		
-			<br>
-	<form role="form" action="/inicio/indicador/{{usuario}}" method="POST">
-	<button type="submit" class="btn btn-danger"> << Atrás </button>
-	</form>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>Indicadores</title>
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+   <link rel="stylesheet" type="text/css" href="/css/resultadoIndicador.css">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <form role="form" action="/inicio/{{usuario}}" method="POST">
+              <button class="navbar-brand" style="border-color: transparent; background-color: transparent;">¿Dónde Invierto?</button>
+          </form>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+            	 <form role="form" action="/inicio/{{usuario}}/cuenta" method="POST">
+              <button class="nav-link" style="border-color: transparent;background-color: transparent;">Cuentas</button>
+          </form>
+            </li>
+            <li class="nav-item">
+            	 <form role="form" action="/inicio/{{usuario}}/indicador" method="POST">
+              <button class="nav-link" style="border-color: transparent; background-color: transparent;">Indicadores</button>
+          </form>
+            </li>
+            <li class="nav-item">
+            	 <form role="form" action="/inicio/{{usuario}}/metodologia" method="POST">
+              <button class="nav-link" style="border-color: transparent; background-color: transparent;margin-right: 15px;">Metodologías</button>
+            </li>
+        </form>
+          <li class="nav-item">
+            	 <form role="form" action="/" method="GET">
+              <button class="nav-link" style="border-color: transparent; background-color: transparent;">Cerrar Sesión</button>
+            </li>
+        </form>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+        <!-- Page Content -->
+    <div class="container">
+
+      <!-- Jumbotron Header -->
+      <header class="jumbotron my-4" id="jumbotron">
+        <h1 class="display-3"  style="font-weight: bold;">Resultado Indicador {{indicador.nombreIndicador}}</h1>
+        <p class="lead"  style="font-weight: bolder;" >A continuación se detalla el nombre de la empresa, el período seleccionado y el resultado de su aplicación</p>
+      </header>
+
+      	<div class="alert alert-info" role="alert" >
+  		Empresa seleccionada: <strong> {{empresa.nombreEmpresa}}</strong>
+		</div>
+
+		<div class="alert alert-info" role="alert">
+  		Período seleccionado: <strong>{{periodo}} </strong>
+		</div>
+
+		<div class="alert alert-success" role="alert" style="font-size: 30px;text-align: center">
+  		Resultado: <strong> {{resultado}} </strong>
+		</div>
+		<center>
+		 <form role="form" action="/inicio/{{usuario}}/indicador" method="POST">
+  <button type="submit" class="btn btn-danger"> << Regresar </button>
+  </form>
+</center>
+	</div>
 </body>
-</html>
+

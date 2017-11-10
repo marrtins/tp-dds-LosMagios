@@ -9,19 +9,32 @@
 
 </head>
 <body>
- <nav class="navbar navbar-dark bg-dark navbar-expand">
-			<ul class="col-8 navbar-nav">
-				<li class="nav-item"><a class="nav-link navbar-brand text-white" href="/" title="">¿Dónde invierto?</a></li>
-			</ul>
-			<ul class="col-4 navbar-nav justify-content-end">
-				<li class="nav-item"><a class="nav-link btn btn-outline-secondary text-white" href="#">Iniciar Sesión</a></li>
-			</ul>
-	</nav>
-
-<div class="jumbotron">
-  <h1>Bienvenido a ¿Dónde Invierto?</h1>      
-  <p>Su solución en análisis de inversiones financieras</p>
-</div>
+     <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <form role="form" action="/" method="GET">
+              <button class="navbar-brand" style="border-color: transparent; background-color: transparent;">¿Dónde Invierto?</button>
+          </form>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item">
+            	 <form role="form" action="/inicioSesion" method="GET">
+              <button class="nav-link" style="border-color: transparent; background-color: transparent;">Iniciar Sesión</button>
+            </li>
+        </form>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <!-- Jumbotron Header -->
+      <header class="jumbotron my-4" id="jumbotron">
+        <h1 class="display-3"  style="font-weight: bolder;">Bienvenido a ¿Dónde Invierto?</h1>
+        <p class="lead"  style="font-weight: bolder;" >Su solución en análisis de inversiones financieras</p>
+      </header>
 
 <section class="seccion">
 			<div class = "container">
@@ -62,18 +75,4 @@
 			</div>
 		</section>
 	
-<div class = "container2">
-	<div class="wrapper">
-		<form role="form" action="/inicio" method="POST">  
-		    <h3 class="form-signin-heading">Ingrese a ¿Dónde Invierto?</h3>
-			  <hr class="colorgraph"><br>
-			  
-			  <input type="text" class="form-control" name="usuario" placeholder="Nombre De Usuario" required="" autofocus="" />
-			  <input type="password" class="form-control" name="pass" placeholder="Contraseña" required=""/>     		  
-			 
-			  <button class="btn btn-lg btn-primary btn-block"  name="Submit" value="Login" type="Submit">Iniciar Sesión</button>  			
-		</form>			
-	</div>
-</div>
-
 </body>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Iniciar Sesión</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/inicioSesion.css">
+	<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Istok+Web" rel="stylesheet">
+
+</head>
+
+<body>
+	     <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <form role="form" action="/" method="GET">
+              <button class="navbar-brand" style="border-color: transparent; background-color: transparent;font-weight: bolder;">¿Dónde Invierto?</button>
+          </form>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+        </div>
+      </div>
+    </nav>
+<div class = "container2">
+	<div class="wrapper">
+		<form role="form" action="/inicio" method="POST">  
+		    <h3 class="form-signin-heading" style="font-weight: bolder;font-size: 30px;">Ingrese a ¿Dónde Invierto?</h3>
+			  <hr class="colorgraph"><br>
+			  
+			  <input type="text" class="form-control" name="usuario" placeholder="Nombre De Usuario" required="" autofocus="" />
+			  <input type="password" class="form-control" name="pass" placeholder="Contraseña" required=""/>     		  
+			 
+			  <button class="btn btn-lg btn-success btn-block"  name="Submit" value="Login" type="Submit">Iniciar Sesión</button>  			
+		</form>			
+	</div>
+</div>
+</body>

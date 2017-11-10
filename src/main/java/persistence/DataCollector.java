@@ -37,9 +37,9 @@ public class DataCollector {
 	
 	
 	public ArrayList<Empresa> cargarEmpresas() throws IOException{
-		DAOJsonEmpresa dao = new DAOJsonEmpresa();
-		//DAOMySQLEmpresa dao = new DAOMySQLEmpresa();
-		dao.setFilePath(rutaEmpresas);
+		//DAOJsonEmpresa dao = new DAOJsonEmpresa();
+		DAOMySQLEmpresa dao = new DAOMySQLEmpresa();
+		//dao.setFilePath(rutaEmpresas);
 		this.repoEmpresas = new RepositorioDeEmpresas(dao);
 		
 		try {

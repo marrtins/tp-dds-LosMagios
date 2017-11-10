@@ -20,7 +20,7 @@ public class Router {
 	VentanasController inicioController = new VentanasController();
 	
 	Spark.get("/", inicioController::arranque, engine);
-	Spark.get("/relog", inicioController::arranque, engine);
+	Spark.get("/inicioSesion", inicioController::arranqueSesion, engine);
 	
 	Spark.post("/inicio", inicioController::inicio,engine);
 	Spark.post("/inicio/:nombreUsuario", inicioController::inicioLog,engine);

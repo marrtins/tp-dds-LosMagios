@@ -36,8 +36,13 @@
           </form>
             </li>
             <li class="nav-item">
-            	 <form role="form" action="/inicio/{{usuario}}/metodologia" method="POST">
-              <button class="nav-link" style="border-color: transparent; background-color: transparent;">Metodologías</button>
+               <form role="form" action="/inicio/{{usuario}}/metodologia" method="POST">
+              <button class="nav-link" style="border-color: transparent; background-color: transparent;margin-right: 15px;">Metodologías</button>
+            </li>
+        </form>
+          <li class="nav-item">
+               <form role="form" action="/" method="GET">
+              <button class="nav-link" style="border-color: transparent; background-color: transparent;">Cerrar Sesión</button>
             </li>
         </form>
           </ul>
@@ -50,25 +55,27 @@
 
       <!-- Jumbotron Header -->
       <header class="jumbotron my-4" id="jumbotron">
-        <h1 class="display-3">Crear Nuevo Indicador</h1>
-        <p class="lead">A continuación deberá ingresar el nombre del mismo y su fórmula asociada</p>
+        <h1 class="display-3"  style="font-weight: bolder;">Crear Nuevo Indicador</h1>
+        <p class="lead"  style="font-weight: bolder;" >A continuación deberá ingresar el nombre del mismo y su fórmula asociada</p>
       </header>
 
  <div class="form-group">
 	<form role="form" action="/inicio/{{usuario}}/indicador/indicadorCreado" method="POST">
-		<select name="nombreI" class="custom-select">
-			<h3>Nombre del indicador <input value="Nombre Indicador" type="text" name="nombreI"></h3>
-		</select>
-		<select name="valorI" class="custom-select">
-			<h3>Valor del Indicador <input value="Formula Asociada" type="text" name="valorI"></h3>
-		</select>
-		<button  type="submit" class="btn btn-primary">Crear Indicador</button>
+		
+			 <input name="nombreI" type="FormulaI" class="form-control" id="exampleInputPassword1" placeholder="Nombre del Indicador">
+		
+			 <input name="valorI" type="FormulaI" class="form-control" id="exampleInputPassword1" placeholder="Fórmula asociada">
+		<center>
+		<button  type="submit" class="btn btn-primary" >Crear Indicador</button>
 	</form>
  
 <br>
+<br>
+
 	<form role="form" action="/inicio/{{usuario}}/indicador" method="POST">
 	<button id ="atras" type="submit" class="btn btn-danger"> << Atrás </button>
 	</form>
+</center>
 </div>
 </div>
 </body>

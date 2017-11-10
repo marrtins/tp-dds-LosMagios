@@ -11,21 +11,16 @@ body {
 @media (min-width: 992px) {
   body {
     padding-top: 56px;
-    background-color: lightgray;
   }
 }
 
 #jumbotron{
 	text-align: center;
-	background-image: url("http://blog.empleate.com/wp-content/uploads/2013/01/indicadores.jpg");
-	color:black;
-	font-weight: 500px;
-
+	background-image: url("http://static.wixstatic.com/media/ed7054_1ead7b6813744f1b846cbfc7dcc5ccfe.jpg_srz_480_360_85_22_0.50_1.20_0.00_jpg_srz");
+	
 }
 
-input{
-	margin-bottom: 30px;
-}
+
 
 .container button{
 	
@@ -53,6 +48,7 @@ input{
 	font-weight: bolder;
 	padding: 12px 35px;
 	background: red;
+	margin-top: 30px;
 	
 }
 
@@ -61,7 +57,15 @@ input{
 	background-color: white;
 	color: red;
 }
-
 .card {
   height: 100%;
+}
+
+
+select{
+	margin-bottom: 40px;
+}
+
+body{
+	background-color: lightgray;
 }

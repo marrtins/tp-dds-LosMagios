@@ -30,6 +30,12 @@ public class VentanasController {
 		model.clear();
 		return new ModelAndView(model, "base.hbs");
 	}
+	
+	public ModelAndView arranqueSesion(Request req, Response res){
+		model.put("usuarios", modelUsuario.getAll());
+		model.clear();
+		return new ModelAndView(model, "inicioSesion.hbs");
+	}
 
 
 	public ModelAndView inicio(Request req, Response res){

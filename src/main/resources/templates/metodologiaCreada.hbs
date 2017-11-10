@@ -1,18 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Metodología Creada</title>
+	<title>Indicador Creado</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-	<link rel="stylesheet"  href="../../../css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/indicadorCreado.css">
+
 </head>
 <body>
-<div id="indicadorCreado">
-	<h1 id="encabezados" div class="p-3 mb-2 bg-dark text-white"> METODOLOGIA CREADA </h1>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <form role="form" action="/inicio/{{usuario}}" method="POST">
+              <button class="navbar-brand" style="border-color: transparent; background-color: transparent;">Donde Invierto?</button>
+          </form>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+            	 <form role="form" action="/inicio/{{usuario}}/cuenta" method="POST">
+              <button class="nav-link" style="border-color: transparent;background-color: transparent;">Cuentas</button>
+          </form>
+            </li>
+            <li class="nav-item">
+            	 <form role="form" action="/inicio/{{usuario}}/indicador" method="POST">
+              <button class="nav-link" style="border-color: transparent; background-color: transparent;">Indicadores</button>
+          </form>
+            </li>
+            <li class="nav-item">
+               <form role="form" action="/inicio/{{usuario}}/metodologia" method="POST">
+              <button class="nav-link" style="border-color: transparent; background-color: transparent;margin-right: 15px;">Metodologias</button>
+            </li>
+        </form>
+          <li class="nav-item">
+               <form role="form" action="/" method="GET">
+              <button class="nav-link" style="border-color: transparent; background-color: transparent;">Cerrar Sesion</button>
+            </li>
+        </form>
+          </ul>
+        </div>
+      </div>
+    </nav>
+ <br>
+ <br>
 
-	<br>
-	<form role="form" action="/inicio/metodologia/{{usuario}}" method="POST">
-	<button type="submit" class="btn btn-danger"> << Atras </button>
-	</form>
+<div class="alert alert-success" role="alert">
+  <h4 class="alert-heading">Metodologia creada con exito! </h4>
+  <p><strong>Ahora podra aplicarla para conocer sus resultados</strong></p>
 </div>
+   
+<center>
+<form role="form" action="/inicio/{{usuario}}/metodologia" method="POST">
+	<button type="submit" class="btn btn-success"> << Regresar </button>
+</form>
+</center>
+
 </body>
 </html>

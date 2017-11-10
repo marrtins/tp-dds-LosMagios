@@ -45,5 +45,32 @@ body{
     position: relative;
  	min-height: 100%;
  	padding-bottom: 348px;
+    background-color: lightgray;
 }
 
+#columna{
+    margin-left: 160px;
+}
+
+.container button{
+    
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    border: solid 1px green;
+    font-weight: bolder;
+    padding: 12px 35px;
+    background: green;
+    
+}
+
+.container button:hover{
+    border: 2px solid black;
+    background-color: white;
+    color: green;
+}
+
+#jumbotron{
+    text-align: center;
+    background-image: url("https://i1.wp.com/bytecnologia.com/wp-content/uploads/2016/03/hotmail-iniciar-sesi%C3%B3n-correo-electr%C3%B3nico.jpg?resize=600%2C338");
+}

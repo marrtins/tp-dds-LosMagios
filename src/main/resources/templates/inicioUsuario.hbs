@@ -1,57 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Inicio - ¿Dónde Invierto?</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="/css/inicioUsuario.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-</head>
-<body>
-<div class = "navbar">
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/">¿Dónde Invierto?</a>
-    </div>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="/"><span class="glyphicon glyphicon-user"></span> Cerrar Sesión</a></li>
-       
-      </ul>
-    </div>
-  </div>
-</nav>
+  <head>
 
-<div class="container">   
-<center> 
-  <div class="row">
-    <div class="col-sm-4">
-      <div class="panel panel-primary">
-        <div class="panel-heading"><form role="form" action="/inicio/{{usuario}}/cuenta" method="POST"><button class="btn btn-primary" title="">CUENTAS</button> </form></div>
-        <div class="panel-body"><img src="https://www.ziclope.net/imagenes/mis-cuentas-claras.png" class="img-responsive" style="background-position:center;width:100%" alt="Image"></div>
-        <div class="panel-footer"><strong>Analice cuentas de empresas que tiene precargadas</strong></div>
+    <meta charset="utf-8">
+    <title>Indicadores</title>
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+   <link rel="stylesheet" type="text/css" href="/css/inicioUsuario.css">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <form role="form" action="/inicio/{{usuario}}" method="POST">
+              <button class="navbar-brand" style="border-color: transparent; background-color: transparent;">¿Dónde Invierto?</button>
+          </form>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+               <form role="form" action="/inicio/{{usuario}}/cuenta" method="POST">
+              <button class="nav-link" style="border-color: transparent;background-color: transparent;">Cuentas</button>
+          </form>
+            </li>
+            <li class="nav-item">
+               <form role="form" action="/inicio/{{usuario}}/indicador" method="POST">
+              <button class="nav-link" style="border-color: transparent; background-color: transparent;">Indicadores</button>
+          </form>
+            </li>
+               <li class="nav-item">
+               <form role="form" action="/inicio/{{usuario}}/metodologia" method="POST">
+              <button class="nav-link" style="border-color: transparent; background-color: transparent;margin-right: 15px;">Metodologías</button>
+            </li>
+        </form>
+          <li class="nav-item">
+               <form role="form" action="/" method="GET">
+              <button class="nav-link" style="border-color: transparent; background-color: transparent;">Cerrar Sesión</button>
+            </li>
+        </form>
+          </ul>
+        </div>
       </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Jumbotron Header -->
+      <header class="jumbotron my-4" id="jumbotron">
+        <h1 class="display-3" style="font-weight: bolder;">{{usuario}}, ha iniciado sesión</h1>
+        <p class="lead"  style="font-weight: bolder;">Por favor seleccione una opción</p>
+      </header>
+
+      <!-- Page Features -->
+      
+      <div class="row text-center">
+        <div class="col-lg-3 col-md-6 mb-4" id="columna">
+          <div class="card">
+            <img class="card-img-top" src="https://www.ziclope.net/imagenes/mis-cuentas-claras.png"  style="width:500; height:200px;" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Cuentas</h4>
+              <p class="card-text">Analice cuentas de empresas que tiene precargadas</p>
+            </div>
+            <div class="card-footer">
+              <form role="form" action="/inicio/{{usuario}}/cuenta" method="POST">
+              <button  class="btn btn-success">Ingresar</button>
+            </form>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img class="card-img-top" src="https://www.sebascelis.com/imagenes/indicadores-de-exito.jpg" style="width:500; height:200px;" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Indicadores</h4>
+              <p class="card-text">Cree nuevos indicadores y aplíquelos para tener más control sobre sus empresas</p>
+            </div>
+            <div class="card-footer">
+               <form role="form" action="/inicio/{{usuario}}/indicador" method="POST">
+              <button  class="btn btn-success">Ingresar</button>
+            </form>
+            </div>
+          </div>
+        </div>
+
+          <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img class="card-img-top" src="https://okhosting.com/resources/uploads/2015/12/Metodologias-de-disen%CC%83o-de-software.jpg"  style="width:500; height:200px;" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Metodologías</h4>
+              <p class="card-text">ree y aplique metodologías en base a sus indicadores</p>
+            </div>
+            <div class="card-footer">
+               <form role="form" action="/inicio/{{usuario}}/metodologia" method="POST">
+              <button  class="btn btn-success">Ingresar</button>
+            </form>
+            </div>
+          </div>
+        </div>
+    
     </div>
-    <div class="col-sm-4"> 
-      <div class="panel panel-primary">
-        <div class="panel-heading"> <form role="form" action="/inicio/{{usuario}}/indicador" method="POST"><button class="btn btn-primary" title="">INDICADORES</button> </form></div>
-        <div class="panel-body"><img src="http://www.sapaf.gob.mx/images/titulos/INDICADORES.png" class="img-responsive" style="background-position: center;width:100%" alt="Image"></div>
-        <div class="panel-footer"><strong>Aplique sus indicadores y cree nuevos para tener más control sobre sus datos</strong></div>
+   
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Dónde Invierto &copy; 2017</p>
       </div>
-    </div>
-    <div class="col-sm-4"> 
-      <div class="panel panel-primary">
-        <div class="panel-heading"> <form role="form" action="/inicio/{{usuario}}/metodologia" method="POST"><button class="btn btn-primary" title="">METODOLOGIAS</button> </form></div>
-        <div class="panel-body"><img src="http://salesandoperationsteam.com/images/metodologia_banner.png" class="img-responsive" style="background-position:center;width:100%" alt="Image"></div>
-        <div class="panel-footer"><strong>Cree y aplique metodologías en base a sus indicadores</strong></div>
-      </div>
-    </div>
-  </div>
-</div><br><br>
-</center>
-</div>
-</body>
+      <!-- /.container -->
+    </footer>
+
+  </body>
+
 </html>

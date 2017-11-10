@@ -34,9 +34,14 @@
               <button class="nav-link" style="border-color: transparent; background-color: transparent;">Indicadores</button>
           </form>
             </li>
-            <li class="nav-item">
-            	 <form role="form" action="/inicio/{{usuario}}/metodologia" method="POST">
-              <button class="nav-link" style="border-color: transparent; background-color: transparent;">Metodologías</button>
+               <li class="nav-item">
+               <form role="form" action="/inicio/{{usuario}}/metodologia" method="POST">
+              <button class="nav-link" style="border-color: transparent; background-color: transparent;margin-right: 15px;">Metodologías</button>
+            </li>
+        </form>
+          <li class="nav-item">
+               <form role="form" action="/" method="GET">
+              <button class="nav-link" style="border-color: transparent; background-color: transparent;">Cerrar Sesión</button>
             </li>
         </form>
           </ul>
@@ -49,8 +54,8 @@
 
       <!-- Jumbotron Header -->
       <header class="jumbotron my-4" id="jumbotron">
-        <h1 class="display-3">Indicadores</h1>
-        <p class="lead">Por favor seleccione una opción</p>
+        <h1 class="display-3" style="font-weight: bolder;">Indicadores</h1>
+        <p class="lead"  style="font-weight: bolder;">Por favor seleccione una opción</p>
       </header>
 
       <!-- Page Features -->
@@ -71,7 +76,7 @@
           </div>
         </div>
         
-        <div class="col-lg-3 col-md-6 mb-4" id="columna">
+        <div class="col-lg-3 col-md-6 mb-4">
           <div class="card">
             <img class="card-img-top" src="http://www.mujeresdeempresa.com/wp-content/uploads/2001/05/data-analytics.jpg"  style="width:500; height:325;" alt="">
             <div class="card-body">

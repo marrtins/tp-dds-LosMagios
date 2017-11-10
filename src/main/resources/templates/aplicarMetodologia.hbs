@@ -1,18 +1,68 @@
+
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Aplicar Metodología</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-	<link rel="stylesheet"  href="../../../css/style.css">
-</head>
-<body>
-<div id="aplicarMetodologia">
-<h1 id="encabezados" div class="p-3 mb-2 bg-dark text-white"> APLICAR METODOLOGIA </h1>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>Metodologias</title>
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+   <link rel="stylesheet" type="text/css" href="/css/aplicarMetodologia.css">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <form role="form" action="/inicio/{{usuario}}" method="POST">
+              <button class="navbar-brand" style="border-color: transparent; background-color: transparent;">Donde Invierto?</button>
+          </form>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+            	 <form role="form" action="/inicio/{{usuario}}/cuenta" method="POST">
+              <button class="nav-link" style="border-color: transparent;background-color: transparent;">Cuentas</button>
+          </form>
+            </li>
+            <li class="nav-item">
+            	 <form role="form" action="/inicio/{{usuario}}/indicador" method="POST">
+              <button class="nav-link" style="border-color: transparent; background-color: transparent;">Indicadores</button>
+          </form>
+            </li>
+            <li class="nav-item">
+               <form role="form" action="/inicio/{{usuario}}/metodologia" method="POST">
+              <button class="nav-link" style="border-color: transparent; background-color: transparent;margin-right: 15px;">Metodologias</button>
+            </li>
+        </form>
+          <li class="nav-item">
+               <form role="form" action="/" method="GET">
+              <button class="nav-link" style="border-color: transparent; background-color: transparent;">Cerrar Sesion</button>
+            </li>
+        </form>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+        <!-- Page Content -->
+    <div class="container">
+
+      <!-- Jumbotron Header -->
+      <header class="jumbotron my-4" id="jumbotron">
+        <h1 class="display-3"  style="font-weight: bolder;">Aplicar Metodologia</h1>
+        <p class="lead"  style="font-weight: bolder;" >A continuacion debera seleccionar alguna de ellas para poder ver su resultado</p>
+      </header>
 
 <div class="form-group">
-	<form role="form" action="/inicio/metodologia/{{usuario}}/resultadoMetodologia" method="POST">
-				
-		<select name="metodologiaSeleccionada" class="custom-select">
+	<form role="form" action="/inicio/{{usuario}}/metodologia/resultadoMetodologia" method="POST">
+		<center>		
+		<select name="metodologiaSeleccionada" class="form-control">
 			<option value="-1">Seleccionar Metodologia</option>
 			{{#each metodologias}}
 			<option value= {{nombreMetodologia}}> {{nombreMetodologia}}</option>
@@ -20,15 +70,15 @@
 		</select>
 		<button  type="submit" class="btn btn-primary">Ver Resultado</button>
 	</form>
+</center>
 	</div>
 
-
-
-
 <br>
-	<form role="form" action="/inicio/metodologia/{{usuario}}" method="POST">
-	<button type="submit" class="btn btn-danger"> << Atras </button>
+<center>
+	<form role="form" action="/inicio/{{usuario}}/metodologia" method="POST">
+	<button type="submit" id="atras" class="btn btn-danger"> << Atras </button>
 	</form>
+</center>
 </div>
 </body>
 </html>

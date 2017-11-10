@@ -1,125 +1,178 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Crear metodologÃ­a</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-	<link rel="stylesheet"  href="../../../css/style.css">
 
-<body>
-<div id="crearMetodologia">
-<h1 id="encabezados" div class="p-3 mb-2 bg-dark text-white"> NUEVA METODOLOGIA </h1>
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>Metodologias</title>
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+   <link rel="stylesheet" type="text/css" href="/css/crearMetodologia.css">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <form role="form" action="/inicio/{{usuario}}" method="POST">
+              <button class="navbar-brand" style="border-color: transparent; background-color: transparent;">Donde Invierto?</button>
+          </form>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+            	 <form role="form" action="/inicio/{{usuario}}/cuenta" method="POST">
+              <button class="nav-link" style="border-color: transparent;background-color: transparent;">Cuentas</button>
+          </form>
+            </li>
+            <li class="nav-item">
+            	 <form role="form" action="/inicio/{{usuario}}/indicador" method="POST">
+              <button class="nav-link" style="border-color: transparent; background-color: transparent;">Indicadores</button>
+          </form>
+            </li>
+            <li class="nav-item">
+               <form role="form" action="/inicio/{{usuario}}/metodologia" method="POST">
+              <button class="nav-link" style="border-color: transparent; background-color: transparent;margin-right: 15px;">Metodologias</button>
+            </li>
+        </form>
+          <li class="nav-item">
+               <form role="form" action="/" method="GET">
+              <button class="nav-link" style="border-color: transparent; background-color: transparent;">Cerrar Sesion</button>
+            </li>
+        </form>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+        <!-- Page Content -->
+    <div class="container">
+
+      <!-- Jumbotron Header -->
+      <header class="jumbotron my-4" id="jumbotron">
+        <h1 class="display-3"  style="font-weight: bolder;">Crear Nueva Metodologia</h1>
+        <p class="lead"  style="font-weight: bolder;" >A continuacion debera ingresar el nombre de la misma, los indicadores asociados y sus condiciones</p>
+      </header>
 
 <div class="form-group">
 	<div>
-	<form role="form" action="/inicio/metodologia/{{usuario}}/metodologiaCreada" method="POST">
-		<select name="nombreMetodologia" class="custom-select">
-			<h3>Nombre de Metodologia<input value="Nombre Metodologia" type="text" name="nombreMetodologia"></h3>
-		</select>
+	<form role="form" action="/inicio/{{usuario}}/metodologia/metodologiaCreada" method="POST">
+		 <input name="nombreMetodologia" type="FormulaI" class="form-control" id="exampleInputPassword1" placeholder="Nombre de la Metodologia">
 		
 		</div>
+
+		<center>
 		<div>
-		<select name="indicador1" class="custom-select">
+		<select name="indicador1" class="form-control">
 			<option value="-1">Seleccionar Indicador</option>
 			{{#each indicadores}}
 			<option value= {{nombreIndicador}}> {{nombreIndicador}}</option>
 			{{/each}}
 		</select>
 		
-		<select name="condicion1" class="custom-select">
-			<option value="-1">Seleccionar Condición</option>
+		<select name="condicion1" class="form-control">
+			<option value="-1">Seleccionar Condicion</option>
 			<option value="higherThan">mayor que</option>
 			<option value="lowerThan">menor que</option>
 		</select>
 								
-		<select name="valor1" class="custom-select">
-			<h3><input value="" type="text" name="valor1"></h3>
-		</select>
+		
+			<input name="valor1" type="FormulaI" class="form-control" id="exampleInputPassword1" placeholder="Ingrese Valor">
+	
 		</div>
 		
 		<div>
-		<select name="indicador2" class="custom-select">
+		<select name="indicador2" class="form-control">
 			<option value="-1">Seleccionar Indicador</option>
 			{{#each indicadores}}
 			<option value= {{nombreIndicador}}> {{nombreIndicador}}</option>
 			{{/each}}
 		</select>
-		<select name="condicion2" class="custom-select">
-			<option value="-1">Seleccionar Condición</option>
-			<option value="higherThan">mayor que</option>
-			<option value="lowerThan">menor que</option>
+		<select name="condicion2" class="form-control">
+			<option value="-1">Seleccionar Condicion</option>
+			<option value="higherThan">Mayor Que</option>
+			<option value="lowerThan">Menor Que</option>
 		</select>
 								
-		<select name="valor2" class="custom-select">
-			<h3><input value="" type="text" name="valor1"></h3>
-		</select>
+		
+			 <input name="valor2" type="FormulaI" class="form-control" id="exampleInputPassword1" placeholder="Ingrese Valor">
+		
 		</div>
 		<div>
 		
-		<select name="indicador3" class="custom-select">
+		<select name="indicador3" class="form-control">
 			<option value="-1">Seleccionar Indicador</option>
 			{{#each indicadores}}
 			<option value= {{nombreIndicador}}> {{nombreIndicador}}</option>
 			{{/each}}
 		</select>
-		<select name="condicion3" class="custom-select">
-			<option value="-1">Seleccionar Condición</option>
-			<option value="higherThan">mayor que</option>
-			<option value="lowerThan">menor que</option>
+		<select name="condicion3" class="form-control">
+			<option value="-1">Seleccionar Condicion</option>
+			<option value="higherThan">Mayor que</option>
+			<option value="lowerThan">Menor que</option>
 		</select>
 								
-		<select name="valor3" class="custom-select">
-			<h3><input value="" type="text" name="valor1"></h3>
-		</select>
+		
+			<input name="valor1" type="FormulaI" class="form-control" id="exampleInputPassword1" placeholder="Ingrese Valor">
+		
 		
 		</div>
 		<div>
-		<select name="indicador4" class="custom-select">
+		<select name="indicador4" class="form-control">
 			<option value="-1">Seleccionar Indicador</option>
 			{{#each indicadores}}
 			<option value= {{nombreIndicador}}> {{nombreIndicador}}</option>
 			{{/each}}
 		</select>
-		<select name="condicion4" class="custom-select">
-			<option value="-1">Seleccionar Condición</option>
-			<option value="highest">mas alto posible</option>
-			<option value="lowest">mas bajo posible</option>
+		<select name="condicion4" class="form-control" id="condicion">
+			<option value="-1">Seleccionar Condicion</option>
+			<option value="highest">Mas alto posible</option>
+			<option value="lowest">Mas bajo posible</option>
 		</select>
 		</div>
 		<div>
-		<select name="indicador5" class="custom-select">
+		<select name="indicador5" class="form-control">
 			<option value="-1">Seleccionar Indicador</option>
 			{{#each indicadores}}
 			<option value= {{nombreIndicador}}> {{nombreIndicador}}</option>
 			{{/each}}
 		</select>
-		<select name="condicion5" class="custom-select">
-			<option value="-1">Seleccionar Condición</option>
-			<option value="highest">mas alto posible</option>
-			<option value="lowest">mas bajo posible</option>
+		<select name="condicion5" class="form-control" id="condicion">
+			<option value="-1">Seleccionar Condicion</option>
+			<option value="highest">Mas alto posible</option>
+			<option value="lowest">Mas bajo posible</option>
 		</select>
 		</div>
 		<div>
-		<select name="indicador6" class="custom-select">
+		<select name="indicador6" class="form-control">
 			<option value="-1">Seleccionar Indicador</option>
 			{{#each indicadores}}
 			<option value= {{nombreIndicador}}> {{nombreIndicador}}</option>
 			{{/each}}
 		</select>
-		<select name="condicion6" class="custom-select">
-			<option value="-1">Seleccionar Condición</option>
-			<option value="highest">mas alto posible</option>
-			<option value="lowest">mas bajo posible</option>
+		<select name="condicion6" class="form-control" id="condicion">
+			<option value="-1">Seleccionar Condicion</option>
+			<option value="highest">Mas alto posible</option>
+			<option value="lowest">Mas bajo posible</option>
 		</select>
 		</div>
 
-		<button  type="submit" class="btn btn-primary">Crear Metodología</button>
+		<button  type="submit" class="btn btn-primary" style="margin-top: 30px;">Crear Metodologia</button>
 	</form>
+</center>
 </div>
 </div>
 </div>
 <br>
-	<form role="form" action="/inicio/metodologia/{{usuario}}" method="POST">
-	<button type="submit" class="btn btn-danger"> << Atras </button>
+<center>
+	<form role="form" action="/inicio/{{usuario}}/metodologia" method="POST">
+	<button type="submit" id="atras" class="btn btn-danger"> << Atras </button>
 	</form>
+</center>
 </body> 
 </html>

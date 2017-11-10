@@ -27,9 +27,14 @@
               <button class="nav-link" style="border-color: transparent; background-color: transparent;">Indicadores</button>
           </form>
             </li>
-            <li class="nav-item">
-            	 <form role="form" action="/inicio/{{usuario}}/metodologia" method="POST">
-              <button class="nav-link" style="border-color: transparent; background-color: transparent;">Metodologías</button>
+                <li class="nav-item">
+               <form role="form" action="/inicio/{{usuario}}/metodologia" method="POST">
+              <button class="nav-link" style="border-color: transparent; background-color: transparent;margin-right: 15px;">Metodologías</button>
+            </li>
+        </form>
+          <li class="nav-item">
+               <form role="form" action="/" method="GET">
+              <button class="nav-link" style="border-color: transparent; background-color: transparent;">Cerrar Sesión</button>
             </li>
         </form>
           </ul>
@@ -42,8 +47,8 @@
 
       <!-- Jumbotron Header -->
       <header class="jumbotron my-4" id="jumbotron">
-        <h1 class="display-3">Cuentas</h1>
-        <p class="lead">Por favor seleccione una empresa para ver sus cuentas asociadas</p>
+        <h1 class="display-3" style="font-weight: bolder;">Cuentas</h1>
+        <p class="lead" style="font-weight: bolder;">Por favor seleccione una empresa para ver sus cuentas asociadas</p>
       </header>
 
   <div class="form-group">
@@ -58,9 +63,6 @@
   </form>
   </div>
   </div>
-  <form role="form" action="/inicio/{{usuario}}" method="POST">
-  <button type="submit" class="btn btn-danger"> << Atrás </button>
-  </form>
 </center>
 
 </body>

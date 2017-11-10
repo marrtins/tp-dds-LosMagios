@@ -6,23 +6,21 @@
 
 body {
   padding-top: 54px;
+  background-color: lightgray;
 }
 
 @media (min-width: 992px) {
   body {
     padding-top: 56px;
-    background-color: lightgray;
   }
 }
 
 #jumbotron{
 	text-align: center;
-	background-image: url("https://www.definicionabc.com/wp-content/uploads/indicadores.jpg");
+	background-image: url("https://www.autentia.com/wp-content/uploads/2016/10/Mentoring.png");
+	
 }
 
-.card-img-top{
-	background-color: white;
-}
 
 .container button{
 	
@@ -42,10 +40,25 @@ body {
 	color: green;
 }
 
-.card {
-  height: 100%;
+
+
+#atras{
+	border-radius: 5px;
+	text-decoration: none;
+	color: white;
+	border: solid 1px red;
+	font-weight: bolder;
+	padding: 12px 35px;
+	background: red;
+	
 }
 
-#columna{
-	margin-left: 280px;
+#atras:hover{
+	border: 2px solid black;
+	background-color: white;
+	color: red;
+}
+
+.card {
+  height: 100%;
 }

@@ -130,7 +130,10 @@ insert into cuenta (idCuenta, nombreCuenta, valorCuenta, empresa_idEmpresa, peri
 DATOS EXTRAS
 */
 
+ insert into cuenta_periodo_empresa (idEmpresa, periodos_anio, cuenta_idCuenta) values (4, 2016, 1);
+
 -- EMPRESA_PERIODO
+/*
 insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (1, 2014);
 insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (1, 2015);
 insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (1, 2016);
@@ -141,4 +144,13 @@ insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (2, 2016);
 insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (2, 2017);
 insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (7, 2016);
 insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (5, 2016);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (12, 2016)
+insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (12, 2016);
+*/
+
+-- PERIODO_CUENTA
+insert into periodo_cuenta (Periodo_anio, cuentas_idCuenta) values (2016, 1);
+insert into periodo_cuenta (Periodo_anio, cuentas_idCuenta) values (2016, 2);
+insert into periodo_cuenta (Periodo_anio, cuentas_idCuenta) values (2016, 3);
+insert into periodo_cuenta (Periodo_anio, cuentas_idCuenta) values (2016, 4);
+insert into periodo_cuenta (Periodo_anio, cuentas_idCuenta) values (2016, 5);
+

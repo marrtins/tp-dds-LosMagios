@@ -8,6 +8,7 @@ import analisisMetodologico.OperadorTaxativo;
 import analisisMetodologico.OperadoresFactory;
 import entities.Empresa;
 import entities.Indicador;
+import entities.Metodologia;
 import entities.TipoCondicion;
 import persistence.DataCollector;
 
@@ -44,8 +45,12 @@ public class CondicionTaxativa implements TipoCondicion  {
 	@Transient
 	OperadorTaxativo operador;
 	
-	@ManyToOne(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
+//	@ManyToOne(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
+	@Transient
 	Indicador indicador;
+	
+	@ManyToOne(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
+	Metodologia metodologia;
 	
 	public int getId() {
 		return id;

@@ -13,6 +13,9 @@
     	<class>entities.Indicador</class>
     	<class>entities.Metodologia</class>
     	<class>entities.Usuario</class>
+    	<class>entities.Periodo</class>
+    	<class>entities.TiposCondicion.CondicionNoTaxativa</class>
+    	<class>entities.TiposCondicion.CondicionTaxativa</class>
     	 
         <properties> 
 	    <property name="hibernate.archive.autodetection" value="class"/>        

@@ -14,8 +14,11 @@ public class Periodo {
 	@Id
 	private int anio;
 	
-//	@OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
-	@Transient
+	@OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+//	@ElementCollection
+//	@CollectionTable(name="cuenta_periodo_empresa", joinColumns=@JoinColumn(name="anio"))
+//	@Column(name="cuenta")
+//	@Transient
 	private List<Cuenta> cuentas = new ArrayList<>();
 
 	public Periodo(/*int unAnio*/) { 

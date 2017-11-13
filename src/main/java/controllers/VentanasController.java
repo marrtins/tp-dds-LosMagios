@@ -7,6 +7,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+import analizadorIndicadores.AnalizadorSintactico;
 import entities.Cuenta;
 import entities.Empresa;
 import entities.Indicador;
@@ -98,12 +99,13 @@ public class VentanasController {
 		return new ModelAndView(model,"indicadores.hbs");
 	}
 	public ModelAndView indicadorCreado(Request req, Response res){
+		AnalizadorSintactico sintax = new AnalizadorSintactico();
 		String nombreIndicador = req.queryParams("nombreI");
 		String valorIndicador = req.queryParams("valorI");
 		DataCollector persistence= new DataCollector();
 		String nombreUsuario = req.params(":nombreUsuario");
-
-		persistence.crearIndicador(nombreIndicador, valorIndicador,nombreUsuario);
+		String formulaI = sintax.parseInput(valorIndicador);
+		persistence.crearIndicador(nombreIndicador, formulaI,nombreUsuario);
 		
 		return new ModelAndView(model,"indicadorCreado.hbs");
 	}

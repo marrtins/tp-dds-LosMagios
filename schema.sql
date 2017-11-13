@@ -1,8 +1,7 @@
 create schema dondeinvierto -- para crear la bd. NECESARIO PARA QUE ARRANQUE EL PROGRAMA POR PRIMERA VEZ Y CREE LAS TABLAS
 
-
-select * from metodologia_condicionnotaxativa
-select * from condiciontaxativa
+select * from metodologia
+select * from indicador
 /*
  *AUXILIARES
 */
@@ -172,32 +171,32 @@ insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (20, 'PN', 86169
 insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (21, 'PN', 6820002);
 insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (22, 'PN', 203304);
 
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (23, 'Caja', 5828812);
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (24, 'Caja', 4838928);
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (25, 'Caja', 8989639);
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (26, 'Caja', 4544159);
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (27, 'Caja', 8542615);
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (28, 'Caja', 164381);
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (29, 'Caja', 5574875);
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (30, 'Caja', 3150037);
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (31, 'Caja', 6717517);
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (32, 'Caja', 589838);
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (33, 'Caja', 2944155);
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (34, 'Caja', 5808696);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (23, 'CAJA', 5828812);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (24, 'CAJA', 4838928);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (25, 'CAJA', 8989639);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (26, 'CAJA', 4544159);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (27, 'CAJA', 8542615);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (28, 'CAJA', 164381);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (29, 'CAJA', 5574875);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (30, 'CAJA', 3150037);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (31, 'CAJA', 6717517);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (32, 'CAJA', 589838);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (33, 'CAJA', 2944155);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (34, 'CAJA', 5808696);
 
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (35, 'Capital', 4858992);
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (36, 'Capital', 7679606);
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (37, 'Capital', 4265562);
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (38, 'Capital', 2085991);
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (39, 'Capital', 5453409);
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (40, 'Capital', 3063223);
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (41, 'Capital', 4472861);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (35, 'CAPITAL', 4858992);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (36, 'CAPITAL', 7679606);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (37, 'CAPITAL', 4265562);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (38, 'CAPITAL', 2085991);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (39, 'CAPITAL', 5453409);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (40, 'CAPITAL', 3063223);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (41, 'CAPITAL', 4472861);
 
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (42, 'Reservas', 7679606);
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (43, 'Reservas', 506304);
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (44, 'Reservas', 1812340);
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (45, 'Reservas', 5560749);
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (75, 'Reservas', 4412444);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (42, 'RESERVAS', 7679606);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (43, 'RESERVAS', 506304);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (44, 'RESERVAS', 1812340);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (45, 'RESERVAS', 5560749);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (75, 'RESERVAS', 4412444);
 
 
 insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (46, 'EBIT', 4033729);
@@ -212,22 +211,22 @@ insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (54, 'EBIT', 425
 insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (55, 'EBIT', 2122003);
 insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (56, 'EBIT', 7448294);
 
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (57, 'Intereses', 4694222);
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (58, 'Intereses', 4820035);
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (59, 'Intereses', 8484657);
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (60, 'Intereses', 3028061);
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (61, 'Intereses', 8884005);
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (62, 'Intereses', 717907);
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (63, 'Intereses', 7737434);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (57, 'INTERESES', 4694222);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (58, 'INTERESES', 4820035);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (59, 'INTERESES', 8484657);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (60, 'INTERESES', 3028061);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (61, 'INTERESES', 8884005);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (62, 'INTERESES', 717907);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (63, 'INTERESES', 7737434);
 
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (64, 'DocumentosACobrar', 2129448);
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (65, 'DocumentosACobrar', 4538260);
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (66, 'DocumentosACobrar', 1547371);
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (67, 'DocumentosACobrar', 4673395);
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (68, 'DocumentosACobrar', 5181443);
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (69, 'DocumentosACobrar', 2383084);
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (80, 'DocumentosACobrar', 0);
-insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (81, 'DocumentosACobrar', 0);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (64, 'DOCUMENTOSACOBRAR', 2129448);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (65, 'DOCUMENTOSACOBRAR', 4538260);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (66, 'DOCUMENTOSACOBRAR', 1547371);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (67, 'DOCUMENTOSACOBRAR', 4673395);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (68, 'DOCUMENTOSACOBRAR', 5181443);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (69, 'DOCUMENTOSACOBRAR', 2383084);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (90, 'DOCUMENTOSACOBRAR', 0);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (91, 'DOCUMENTOSACOBRAR', 0);
 
 
 
@@ -419,50 +418,50 @@ insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (66, 66);
 insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (70, 67); 
 insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (30, 68); 
 insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (26, 69);
-insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (18, 80);
-insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (38, 81);
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (18, 90);
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (38, 91);
 
 -- INDICADORES
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (1, '{AC}/{PC}', 'LIQUIDEZCORRIENTE', 'grupo3');
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (2, '{AC}-{PC}', 'CAPITALDETRABAJO', 'grupo3');
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (3, '{P}/{PN}', 'ENDEUDAMIENTO', 'grupo3');
-insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (4, '{EBIT}/{Ventas}', 'RENTABILIDADOPERATIVA', 'grupo3');
-insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (5, '{EBIT}/{Intereses}', 'COBERTURADEINTERESES', 'grupo3');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (4, '{EBIT}/{VENTAS}', 'RENTABILIDADOPERATIVA', 'grupo3');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (5, '{EBIT}/{INTERESES}', 'COBERTURADEINTERESES', 'grupo3');
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (6, '{OCF}-{TDS}', 'COBERTURADEDEUDA', 'grupo3');
 
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (7, '{AC}/{PC}', 'LIQUIDEZCORRIENTE', 'Paula');
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (8, '{AC}-{PC}', 'CAPITALDETRABAJO', 'Paula');
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (9, '{P}/{PN}', 'ENDEUDAMIENTO', 'Paula');
-insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (10, '{EBIT}/{Ventas}', 'RENTABILIDADOPERATIVA', 'Paula');
-insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (11, '{EBIT}/{Intereses}', 'COBERTURADEINTERESES', 'Paula');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (10, '{EBIT}/{VENTAS}', 'RENTABILIDADOPERATIVA', 'Paula');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (11, '{EBIT}/{INTERESES}', 'COBERTURADEINTERESES', 'Paula');
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (12, '{OCF}-{TDS}', 'COBERTURADEDEUDA', 'Paula');
 
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (13, '{AC}/{PC}', 'LIQUIDEZCORRIENTE', 'Eze');
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (14, '{AC}-{PC}', 'CAPITALDETRABAJO', 'Eze');
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (15, '{P}/{PN}', 'ENDEUDAMIENTO', 'Eze');
-insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (16, '{EBIT}/{Ventas}', 'RENTABILIDADOPERATIVA', 'Eze');
-insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (17, '{EBIT}/{Intereses}', 'COBERTURADEINTERESES', 'Eze');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (16, '{EBIT}/{VENTAS}', 'RENTABILIDADOPERATIVA', 'Eze');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (17, '{EBIT}/{INTERESES}', 'COBERTURADEINTERESES', 'Eze');
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (18, '{OCF}-{TDS}', 'COBERTURADEDEUDA', 'Eze');
-insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (31, '{Caja}', 'CAJA', 'Eze');
-insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (32, '{Reservas}', 'RESERVAS', 'Eze');
+ insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (31, '{CAJA}', 'CAJA', 'Eze');
+ insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (32, '{RESERV}', 'RESERVAS', 'Eze');
 
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (19, '{AC}/{PC}', 'LIQUIDEZCORRIENTE', 'Miguel');
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (20, '{AC}-{PC}', 'CAPITALDETRABAJO', 'Miguel');
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (21, '{P}/{PN}', 'ENDEUDAMIENTO', 'Miguel');
-insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (22, '{EBIT}/{Ventas}', 'RENTABILIDADOPERATIVA', 'Miguel');
-insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (23, '{EBIT}/{Intereses}', 'COBERTURADEINTERESES', 'Miguel');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (22, '{EBIT}/{VENTAS}', 'RENTABILIDADOPERATIVA', 'Miguel');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (23, '{EBIT}/{INTERESES}', 'COBERTURADEINTERESES', 'Miguel');
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (24, '{OCF}-{TDS}', 'COBERTURADEDEUDA', 'Miguel');
-insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (34, '{DeudoresVarios}', 'DEUDORESVARIOS', 'Miguel');
+ insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (34, '{DEUDORESVARIOS}', 'DEUDORESVARIOS', 'Miguel');
 
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (25, '{AC}/{PC}', 'LIQUIDEZCORRIENTE', 'David');
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (26, '{AC}-{PC}', 'CAPITALDETRABAJO', 'David');
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (27, '{P}/{PN}', 'ENDEUDAMIENTO', 'David');
-insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (28, '{EBIT}/{Ventas}', 'RENTABILIDADOPERATIVA', 'David');
-insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (29, '{EBIT}/{Intereses}', 'COBERTURADEINTERESES', 'David');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (28, '{EBIT}/{VENTAS}', 'RENTABILIDADOPERATIVA', 'David');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (29, '{EBIT}/{INTERESES}', 'COBERTURADEINTERESES', 'David');
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (30, '{OCF}-{TDS}', 'COBERTURADEDEUDA', 'David');
-insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (33, '{DocumentosACobrar}+{Intereses}', 'PODER', 'David');
-insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (35, '{ResultadoDelEjercicio}', 'RESULTADODELEJERCICIO', 'David');
-insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (36, '{Proveedores}', 'PROVEEDORES', 'David');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (33, '{DOCUMENTOSACOBRAR}+{INTERESES}', 'PODER', 'David');
+ insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (35, '{ResultadoDelEjercicio}', 'RESULTADODELEJERCICIO', 'David');
+ insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (36, '{Proveedores}', 'PROVEEDORES', 'David');
 
 -- METODOLOGIAS
 insert into metodologia (idMetodologia, nombreMetodologia, usuario) values (1, 'SuperLiquida', 'Paula');

@@ -24,20 +24,11 @@ public class Empresa implements Serializable {
 
 	private String nombreEmpresa;
 	
-//	@ManyToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
-	@ElementCollection
-	@CollectionTable(name="cuenta_periodo_empresa", joinColumns=@JoinColumn(name="idEmpresa"))
-	@Column(name="periodo")
+	@ManyToMany(fetch = FetchType.LAZY ,cascade = CascadeType.ALL)
+//	@ElementCollection
+//	@CollectionTable(name="cuenta_periodo_empresa", joinColumns=@JoinColumn(name="idEmpresa"))
+//	@Column(name="periodo", table="Periodo", unique=false)
 	private List<Periodo> periodos = new ArrayList<>();
-	
-//	@ManyToMany(fetch=FetchType.LAZY, cascade = CascadeType.ALL)
-//	private List<Metodologia> metodologias= new LinkedList<>();;
-	
-
-	@ElementCollection
-	@CollectionTable(name="cuenta_periodo_empresa", joinColumns=@JoinColumn(name="idEmpresa"))
-	@Column(name="cuenta")
-	private List<Cuenta> cuenta;
 	
 	public Empresa(/*String _nombre*/) { 
 		super();

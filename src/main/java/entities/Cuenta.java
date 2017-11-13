@@ -13,14 +13,9 @@ public class Cuenta  {
 	private String descripcion; 
 	private String nombreCuenta;
 	
-	@JoinTable(name="cuenta_periodo_empresa", joinColumns=@JoinColumn(name="cuenta_idCuenta"))
+//	@JoinTable(name="cuenta_periodo_empresa", joinColumns=@JoinColumn(name="cuenta_idCuenta"))
+//	@JoinTable(name="cuenta_periodo_empresa")
 	private int valorCuenta;
-	
-	@ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
-	private Empresa empresa;
-	
-	@ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
-	private Periodo periodo;
 	
 	
 	public String getNombreCuenta() {

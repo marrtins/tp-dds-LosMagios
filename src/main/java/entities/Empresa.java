@@ -7,6 +7,7 @@ import java.util.List;
 
 import entities.Periodo;
 
+import java.io.IOException;
 import java.io.Serializable;
 
 import javax.persistence.*;
@@ -130,7 +131,7 @@ public class Empresa implements Serializable {
 	
 	
 	
-	public Boolean tieneIndicadorEnUltimosAnios(Indicador unIndicador, int anios){
+	public Boolean tieneIndicadorEnUltimosAnios(Indicador unIndicador, int anios) throws IOException{
 		int lastYear = Calendar.getInstance().get(Calendar.YEAR) - 1;
 		int firstYear = 1+lastYear-anios;
 		int i;
@@ -138,10 +139,19 @@ public class Empresa implements Serializable {
 			if(!this.tienePeriodo(i)) return false;
 			Periodo periodoTemp = this.getPeriodoOrCreate(i);
 			if(!unIndicador.puedeAplicarA(this,periodoTemp)) return false;
+			if(unIndicador.aplicarIndicadorA(this,periodoTemp)!=-999.9)return true;
 		}
-		return true;
+		return false;
 	}
 	
+	
+	public Boolean tieneIndicadorEnPeriodoSeleccionado(Indicador unIndicador, String periodo) throws IOException{
+	
+		Periodo periodoTemp = this.getPeriodoOrCreate(Integer.valueOf(periodo));
+		if(!unIndicador.puedeAplicarA(this,periodoTemp)) return false;
+		if(unIndicador.aplicarIndicadorA(this,periodoTemp)==-999.9)return false;
+		return true;
+	}
 	
 	
 	public int getAntiguedad(){
@@ -168,7 +178,7 @@ public class Empresa implements Serializable {
 		return true;
 	}
 	
-	public Boolean indicadorCrecienteEn(Indicador unIndicador, int anios){
+	public Boolean indicadorCrecienteEn(Indicador unIndicador, int anios) throws IOException{
 		int lastYear = Calendar.getInstance().get(Calendar.YEAR) - 1;
 		int firstYear = lastYear-anios;
 		int i;
@@ -183,7 +193,7 @@ public class Empresa implements Serializable {
 
 
 
-	public Double getValorIndicadorEn(int anio,Indicador unIndicador) {
+	public Double getValorIndicadorEn(int anio,Indicador unIndicador) throws IOException {
 
 		Periodo unPeriodo=this.getPeriodoOrCreate(anio);
 		return unIndicador.aplicarIndicadorA(this,unPeriodo);
@@ -192,15 +202,24 @@ public class Empresa implements Serializable {
 	}
 	
 	
-	public ArrayList<Double> getValoresIndicadorEn(Indicador unIndicador, int anios){ 
+	public ArrayList<Double> getValoresIndicadorEn(Indicador unIndicador, int anios) throws IOException{ 
 		int lastYear = Calendar.getInstance().get(Calendar.YEAR) - 1;
 		int firstYear = 1+lastYear-anios;
 		int i;
 		ArrayList<Double> valoresIndicador = new ArrayList<Double>();
+		
+		
 		for(i=firstYear;i<=lastYear;i++){
+		
 			valoresIndicador.add(this.getValorIndicadorEn(i,unIndicador));
 		}
 		return valoresIndicador;
+	}
+	
+	
+	public Double getValorIndicador(Indicador unIndicador, String periodoSeleccionado) throws IOException{ 
+				
+		return this.getValorIndicadorEn(Integer.valueOf(periodoSeleccionado),unIndicador);
 	}
 	
 	

@@ -1,5 +1,6 @@
 package analisisMetodologico;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 import entities.Empresa;
@@ -15,13 +16,13 @@ public class LowerThan extends OperadorTaxativo{
 	
 	
 	@Override
-	public Boolean analizarEmpresaTaxativamente(Empresa unaEmpresa, Indicador unIndicador, int anios,Double valorComparacion) {
-
-		if(!unaEmpresa.tieneIndicadorEnUltimosAnios(unIndicador, anios))return false;
-
-		ArrayList<Double> valoresIndicador = unaEmpresa.getValoresIndicadorEn( unIndicador, anios);
+	public Boolean analizarEmpresaTaxativamente(Empresa unaEmpresa, Indicador unIndicador, String periodoSeleccionado,Double valorComparacion) throws IOException {
 		
-		return (sumatoria(valoresIndicador)/anios) < valorComparacion;
+		if(!unaEmpresa.tieneIndicadorEnPeriodoSeleccionado(unIndicador, periodoSeleccionado))return false;
+
+		Double valorIndicador = unaEmpresa.getValorIndicador( unIndicador,periodoSeleccionado);
+		
+		return valorIndicador > valorComparacion;
 	}
 
 }

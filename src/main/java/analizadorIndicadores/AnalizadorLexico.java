@@ -41,11 +41,16 @@ public class AnalizadorLexico {
 				}
 				end = i;
 				cName=formula.substring(init+1,end);
-				try {
+				/*try {
 					cte = getcNameValue(cName);
 				} catch (ErrorLexico e) {
 					throw e;
+				}*/
+				cte = getcNameValue(cName);
+				if(cte.equals("cNull")) {
+					return "";
 				}
+				
 				anterior = formula.substring(0,init);
 				siguiente = formula.substring(end+1,formula.length());
 				formula=anterior.concat(cte);
@@ -77,8 +82,10 @@ public class AnalizadorLexico {
 			return this.analizar(formula,empresaAplicada,periodoAplicado);
 		}
 		else {
-			Exception e = new Exception();
-			throw new ErrorConstantesEnIndicador(e);
+			/*Exception e = new Exception();
+			throw new ErrorConstantesEnIndicador(e);*/
+			
+			return "cNull";
 		}
 
 

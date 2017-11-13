@@ -104,16 +104,21 @@ public class CondicionTaxativa implements TipoCondicion  {
 	}
 
 	
-	public Boolean empresaCalifica(Empresa unaEmpresa) throws IOException{
+	public Boolean empresaCalifica(Empresa unaEmpresa,String periodoSeleccionado) throws IOException{
 		
 		DataCollector persistence=new DataCollector();
 		OperadoresFactory creador = new OperadoresFactory();
 		
 		indicador= persistence.getIndicador(indicadorString);
+		if(indicador==null) {
+			Indicador nuevoIndicador = new Indicador();
+			nuevoIndicador.setCalculoIndicador("{"+indicadorString+"}");
+			nuevoIndicador.setNombreIndicador(indicadorString);
+			indicador=nuevoIndicador;
+		}
 		operador=creador.crearOperadorTaxativo(operadorString);
 		
-		
-		return operador.analizarEmpresaTaxativamente(unaEmpresa,indicador,anios,valorComparacion);
+		return operador.analizarEmpresaTaxativamente(unaEmpresa,indicador,periodoSeleccionado,valorComparacion);
 		
 		
 	}

@@ -12,6 +12,7 @@ import javax.swing.text.html.HTMLDocument.Iterator;
 import entities.TiposCondicion.CondicionNoTaxativa;
 import entities.TiposCondicion.CondicionTaxativa;
 import excepciones.ErrorCargaDatos;
+import persistence.DataCollector;
 
 import javax.persistence.*;
 
@@ -132,38 +133,53 @@ public String getDescripcionCondicionNoTaxativas(){
 
 
 
-	public List<Empresa> aplicarMetodologia(List<Empresa> empresas){
+	public List<Empresa> aplicarMetodologia(List<Empresa> empresas,String periodoSeleccionado) throws IOException{
 		//A cada una de las empresas le aplico las condiciones TAXATIVAS, si no las pasa, las dejo de analizar (no las agrego a la lista link)
 		//empresas.removeIf(unaEmpresa -> !this.cumpleCondicionesTaxativas(unaEmpresa));
+		
+		
+		
 		int i;
 		for(i=0;i<empresas.size();i++){
 			
 			Empresa empresa = empresas.get(i);
-			if(this.cumpleCondicionesTaxativas(empresa)) listaOrdenada.add(empresa);
+			if(this.cumpleCondicionesTaxativas(empresa,periodoSeleccionado)) listaOrdenada.add(empresa);
+		}	
+		
+		
+		if(this.soyTaxativa()) {
+			return (List<Empresa>) listaOrdenada;		
 		}
 		
 		
 		//Todas las empresas que quedaron, cumplen todas las condiciones taxativas. Las agrego a la lista linkeada para luego ordenar x prioridad
 		//listaOrdenada.addAll(empresas);
 		//Les aplico las comparaciones basadas en las condiciones no taxativas para ordenarlas
-		this.ordenarEmpresas();
-		return (List<Empresa>) listaOrdenada;
+		this.ordenarEmpresas(periodoSeleccionado);
+		return (List<Empresa>) listaOrdenada;		
+
+		
 		
 	}
 	
+	public Boolean soyTaxativa() {
+		if(cTaxativas.size()>0) return true;
+		return false;
+	}
 
 	
-	public Boolean cumpleCondicionesTaxativas(Empresa unaEmpresa){
+	public Boolean cumpleCondicionesTaxativas(Empresa unaEmpresa,String periodoSeleccionado){
 		
 		
 		for(CondicionTaxativa unaCondicion:cTaxativas){
 			try {
-				if(!unaCondicion.empresaCalifica(unaEmpresa))return false;
+				if(!unaCondicion.empresaCalifica(unaEmpresa,periodoSeleccionado))return false;
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		}	
+		}
+		
 		return true;
 	}
 	
@@ -171,37 +187,61 @@ public String getDescripcionCondicionNoTaxativas(){
 	
 	
 	
-	public void ordenarEmpresas(){
+	public void ordenarEmpresas(String periodoSeleccionado) throws IOException{
 		Empresa temp;
-		int n = listaOrdenada.size();
+		
+		List<Empresa> listaFiltrada = new ArrayList<Empresa>();
+		
 		int i;
-		for (i = n-1; i >= 0; i--){
-			for(int j=1;j<=i;j++){
-				Empresa empresa1 = listaOrdenada.get(j-1);Empresa empresa2=listaOrdenada.get(j);
-				if(!this.empresaConMayorPrioridadQue(empresa1,empresa2)){
-					
-					temp = empresa1;
-					listaOrdenada.remove(j);
-					listaOrdenada.remove(j-1);
-					listaOrdenada.add((j-1),empresa2);
-					listaOrdenada.add(j,empresa1);
-					
-	
-					
-					
-					
-					
+		Indicador unIndicador = null;
+		DataCollector persistence = new DataCollector();
+		for(i=0;i<listaOrdenada.size();i++) {
+			Empresa empresaAux = listaOrdenada.get(i);
+			for(CondicionNoTaxativa unaCondicion:cNoTaxativas){
+				unIndicador = persistence.getIndicador(unaCondicion.getIndicadorString());
+				if(unIndicador==null) {
+					Indicador nuevoIndicador = new Indicador();
+					nuevoIndicador.setCalculoIndicador("{"+unaCondicion.getIndicadorString()+"}");
+					nuevoIndicador.setNombreIndicador(unaCondicion.getIndicadorString());
+					unIndicador = nuevoIndicador;
 				}
+				Periodo unPeriodo = empresaAux.getPeriodoOrCreate(Integer.valueOf(periodoSeleccionado));
+				Double resultadoEmpresa=unIndicador.aplicarIndicadorA(empresaAux,unPeriodo);
+				//Double resultadoEmpresa = empresaAux.getValorIndicador(unaCondicion.getUnIndicador(), periodoSeleccionado);
+				if(resultadoEmpresa!=-999.9) listaFiltrada.add(empresaAux);
 			}
-		}	
-	}
+		}
+		
+		//listaOrdenada.clear();
+		listaOrdenada=listaFiltrada;
+		if(!listaOrdenada.isEmpty()){
+			int n = listaOrdenada.size();
+
+
+			for (i = n-1; i >= 0; i--){
+				for(int j=1;j<=i;j++){
+					Empresa empresa1 = listaOrdenada.get(j-1);Empresa empresa2=listaOrdenada.get(j);
+					if(!this.empresaConMayorPrioridadQue(empresa1,empresa2,periodoSeleccionado)){
+
+						temp = empresa1;
+						listaOrdenada.remove(j);
+						listaOrdenada.remove(j-1);
+						listaOrdenada.add((j-1),empresa2);
+						listaOrdenada.add(j,empresa1);
+
+
+					}
+				}
+			}	
+		}
+	}	
 	
 	
 	
-	public Boolean empresaConMayorPrioridadQue(Empresa empresa1, Empresa empresa2) {
+	public Boolean empresaConMayorPrioridadQue(Empresa empresa1, Empresa empresa2,String periodoSeleccionado) throws IOException {
 		int peso=0;
 		for(CondicionNoTaxativa unaCondicion:cNoTaxativas){
-			peso+=unaCondicion.aplicarCondicion(empresa1, empresa2);
+			peso+=unaCondicion.aplicarCondicion(empresa1, empresa2,periodoSeleccionado);
 		}
 		if(peso<0) return false;
 		return true;

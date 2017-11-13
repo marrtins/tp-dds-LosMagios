@@ -1,5 +1,6 @@
 package controllers;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -244,7 +245,7 @@ public class VentanasController {
 		return new ModelAndView(model,"crearIndicador.hbs");
 		
 	}
-	public ModelAndView resultadoIndicador(Request req, Response res){
+	public ModelAndView resultadoIndicador(Request req, Response res) throws IOException{
 		
 		CuentaModel modelCuentas=CuentaModel.getInstance();
 		
@@ -267,17 +268,20 @@ public class VentanasController {
 		
 	}
 	
-	public ModelAndView resultadoMetodologia(Request req, Response res){
+	public ModelAndView resultadoMetodologia(Request req, Response res) throws IOException{
 		CuentaModel modelCuentas=CuentaModel.getInstance();
 		
 		String metodologiaSeleccionada = req.queryParams("metodologiaSeleccionada");
+		String periodoSeleccionado=req.queryParams("periodoSeleccionado");
 		Metodologia metodologia = modelCuentas.getMetodologia(metodologiaSeleccionada);
 		List<Empresa> resultado=new LinkedList<>();
 		
+			
 		
 		
+		resultado= metodologia.aplicarMetodologia(modelCuentas.getArrayEmpresas(),periodoSeleccionado);
 		
-		resultado= metodologia.aplicarMetodologia(modelCuentas.getArrayEmpresas());
+		if(resultado.isEmpty()) return new ModelAndView(model,"resultadoMetodologiaVacio.hbs");
 		
 		model.put("resultado",resultado);
 		model.put("metodologia",metodologiaSeleccionada);

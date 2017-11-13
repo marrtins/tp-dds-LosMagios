@@ -6,15 +6,7 @@ public class OperadoresFactory {
 		OperadorTaxativo operadorReturn = null;
 				
 		switch (nombre) {
-		case "consistence":
-			operadorReturn= new Consistence();
-			break;
-		case "crescent":
-			operadorReturn= new Crescent();
-			break;
-		case "antique":
-			operadorReturn= new AntiqueFilter();
-			break;
+		
 		case "lowerThan": 
 			operadorReturn=new LowerThan();
 			break;
@@ -39,9 +31,7 @@ public class OperadoresFactory {
 		case "lowest":
 			operadorReturn= new Lowest();
 			break;
-		case "antique":
-			operadorReturn= new AntiqueSort();
-			break;
+		
 		default:
 			break;
 		}

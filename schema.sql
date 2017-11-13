@@ -1,5 +1,8 @@
 create schema dondeinvierto -- para crear la bd. NECESARIO PARA QUE ARRANQUE EL PROGRAMA POR PRIMERA VEZ Y CREE LAS TABLAS
 
+
+select * from metodologia_condicionnotaxativa
+select * from condiciontaxativa
 /*
  *AUXILIARES
 */
@@ -194,6 +197,8 @@ insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (42, 'Reservas',
 insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (43, 'Reservas', 506304);
 insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (44, 'Reservas', 1812340);
 insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (45, 'Reservas', 5560749);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (75, 'Reservas', 4412444);
+
 
 insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (46, 'EBIT', 4033729);
 insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (47, 'EBIT', 8442162);
@@ -221,6 +226,8 @@ insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (66, 'Documentos
 insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (67, 'DocumentosACobrar', 4673395);
 insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (68, 'DocumentosACobrar', 5181443);
 insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (69, 'DocumentosACobrar', 2383084);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (80, 'DocumentosACobrar', 0);
+insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (81, 'DocumentosACobrar', 0);
 
 
 
@@ -380,10 +387,11 @@ insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (17, 39);
 insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (21, 40); 
 insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (25, 41);
  
-insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (1, 42); 
-insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (5, 43); 
-insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (9, 44); 
-insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (13, 45);
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (5, 42); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (9, 43); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (13, 44); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (17, 45);
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (25, 75);
 
 insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (2, 46); 
 insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (6, 47); 
@@ -411,6 +419,8 @@ insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (66, 66);
 insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (70, 67); 
 insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (30, 68); 
 insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (26, 69);
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (18, 80);
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (38, 81);
 
 -- INDICADORES
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (1, '{AC}/{PC}', 'LIQUIDEZCORRIENTE', 'grupo3');
@@ -450,7 +460,7 @@ insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsu
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (28, '{EBIT}/{Ventas}', 'RENTABILIDADOPERATIVA', 'David');
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (29, '{EBIT}/{Intereses}', 'COBERTURADEINTERESES', 'David');
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (30, '{OCF}-{TDS}', 'COBERTURADEDEUDA', 'David');
-insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (33, '{DocumentosACobrar}+{Intereses}', 'PODEROSA', 'David');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (33, '{DocumentosACobrar}+{Intereses}', 'PODER', 'David');
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (35, '{ResultadoDelEjercicio}', 'RESULTADODELEJERCICIO', 'David');
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (36, '{Proveedores}', 'PROVEEDORES', 'David');
 
@@ -476,18 +486,18 @@ insert into condiciontaxativa (id, anios, indicadorString, operadorString, valor
 insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (4, 3, 'CAPITALDETRABAJO', 'higherThan', 400000);
 
 insert into condicionnotaxativa (id, anios, indicadorString, operadorString, peso) values (1, 3, 'ENDEUDAMIENTO', 'lowest', 3);
-insert into condicionnotaxativa (id, anios, indicadorString, operadorString, peso) values (2, 3, 'CAJA', 'highest', 3);
-insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (5, 3, 'CAPITALDETRABAJO', 'higherThan', 420000);
-insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (6, 3, 'RESERVAS', 'higherThan', 430000);
+insert into condicionnotaxativa (id, anios, indicadorString, operadorString, peso) values (2, 3, 'Caja', 'highest', 3);
+insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (5, 3, 'Capital', 'higherThan', 4200000);
+insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (6, 3, 'Reservas', 'higherThan', 4300000);
 insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (7, 3, 'CAPITALDETRABAJO', 'higherThan', 420000);
 insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (8, 3, 'RESERVAS', 'higherThan', 430000);
-insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (9, 3, 'COBERTURADEDEUDA', 'higherThan', 1);
+insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (9, 3, 'ENDEUDAMIENTO', 'lowerThan', 1);
 
-insert into condicionnotaxativa (id, anios, indicadorString, operadorString, peso) values (3, 3, 'COBERTURADEINTERES', 'lowest', 3);
+insert into condicionnotaxativa (id, anios, indicadorString, operadorString, peso) values (3, 3, 'COBERTURADEINTERESES', 'lowest', 3);
 insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (10, 3, 'ENDEUDAMIENTO', 'lowerThan', 1);
 insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (11, 3, 'DEUDORESVARIOS', 'lowerThan', 7500250);
 
-insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (12, 3, 'PODEROSA', 'higherThan', 5000000);
+insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (12, 3, 'PODER', 'higherThan', 5000000);
 insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (13, 3, 'RESULTADODELEJERCICIO', 'higherThan', 8000000);
 insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (14, 3, 'PROVEEDORES', 'lowerThan', 1400000);
 

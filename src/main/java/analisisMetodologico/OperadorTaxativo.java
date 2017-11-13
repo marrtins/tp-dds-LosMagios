@@ -2,6 +2,7 @@ package analisisMetodologico;
 
 
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 import entities.Empresa;
@@ -18,7 +19,7 @@ public abstract class OperadorTaxativo{
 		
 	}
 
-	public abstract Boolean analizarEmpresaTaxativamente(Empresa unaEmpresa, Indicador unIndicador, int anios, Double valorComparativo);
+	public abstract Boolean analizarEmpresaTaxativamente(Empresa unaEmpresa, Indicador unIndicador, String periodoSeleccionado, Double valorComparativo) throws IOException;
 	
 	public  Double sumatoria(ArrayList<Double> m){
 		double sum = 0;

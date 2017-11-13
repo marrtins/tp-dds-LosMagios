@@ -110,8 +110,8 @@ public class VentanaAplicarIndicador extends JFrame {
 				lblValor.setText("Resultado: ");
 				indicadorSeleccionado = indicadores.get(cboIndicador.getSelectedIndex());
 				periodoSeleccionado = periodos.get(cboPeriodo.getSelectedIndex());
-				String resultado = String.valueOf(indicadorSeleccionado.aplicarIndicadorA(empresaSeleccionada, periodoSeleccionado));
-				lblValor.setText(("Resultado: " +resultado ));
+				//String resultado = String.valueOf(indicadorSeleccionado.aplicarIndicadorA(empresaSeleccionada, periodoSeleccionado));
+			//	lblValor.setText(("Resultado: " +resultado ));
 				
 				
 			}

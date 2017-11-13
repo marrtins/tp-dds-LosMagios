@@ -64,27 +64,32 @@ public class Indicador {
 	}
 	
 	
-	public  Double aplicarIndicadorA(Empresa unaEmpresa, Periodo unPeriodo){
+	public  Double aplicarIndicadorA(Empresa unaEmpresa, Periodo unPeriodo) throws IOException{
 		
 		AnalizadorLexico analizadorLexico = new AnalizadorLexico();
 		AnalizadorSintactico sintax = new AnalizadorSintactico();
 		if(sintax.indicadorValido(this.getCalculoIndicador())){
-			try {
+			/*try {
 				formulaString = analizadorLexico.analizar(this.getCalculoIndicador(), unaEmpresa, unPeriodo);
 				
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
+			}*/
+			formulaString = analizadorLexico.analizar(this.getCalculoIndicador(), unaEmpresa, unPeriodo);
+			if(formulaString.equals("")) {
+				return -999.9;
 			}
 		}
 		else {
-				Exception e = new Exception();
+				/*Exception e = new Exception();
 				try {
 					throw new ErrorConstantesEnIndicador(e);
 				} catch (ErrorConstantesEnIndicador e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
-				}
+				}*/
+			return -999.9;
 			}
 		
 		return Parser.eval(formulaString);

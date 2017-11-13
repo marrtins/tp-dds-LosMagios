@@ -1,5 +1,6 @@
 package analisisMetodologico;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 import entities.Empresa;
@@ -10,20 +11,20 @@ public abstract class OperadorNoTaxativo  {
 
 	public abstract int aplicarOperador(Double prom1,Double prom2,int peso);
 	
-	public int aplicarPesos(Empresa empresa1, Empresa empresa2,Indicador unIndicador,int anios,int peso){
+	public int aplicarPesos(Empresa empresa1, Empresa empresa2,Indicador unIndicador,String periodoSeleccionado,int peso) throws IOException{
 		
-		Double promedio1=this.calcularPromedio(empresa1, unIndicador, anios);
-		Double promedio2=this.calcularPromedio(empresa2, unIndicador, anios);
+		Double promedio1=this.calcularPromedio(empresa1, unIndicador, periodoSeleccionado);
+		Double promedio2=this.calcularPromedio(empresa2, unIndicador, periodoSeleccionado);
 			
 		return aplicarOperador(promedio1,promedio2,peso);
 	}
 
 	
-	public Double calcularPromedio(Empresa empresa,Indicador unIndicador,int anios){
+	public Double calcularPromedio(Empresa empresa,Indicador unIndicador,String periodoSeleccionado) throws IOException{
 			
-		ArrayList<Double> valoresEmpresa = empresa.getValoresIndicadorEn(unIndicador, anios);
+		Double valorEmpresa = empresa.getValorIndicadorEn(Integer.valueOf(periodoSeleccionado),unIndicador);
 		
-		return this.sumatoria(valoresEmpresa)/anios;
+		return valorEmpresa;
 	}
 
 

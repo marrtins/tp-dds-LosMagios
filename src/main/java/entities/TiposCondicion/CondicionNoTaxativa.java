@@ -129,7 +129,7 @@ public class CondicionNoTaxativa implements TipoCondicion {
 
 	
 	
-	public int aplicarCondicion(Empresa empresa1, Empresa empresa2){
+	public int aplicarCondicion(Empresa empresa1, Empresa empresa2,String periodoSeleccionado) throws IOException{
 		
 		DataCollector persistence=new DataCollector();
 		OperadoresFactory creador=new OperadoresFactory();
@@ -144,7 +144,7 @@ public class CondicionNoTaxativa implements TipoCondicion {
 		operador=creador.crearOperadorNoTaxativo(operadorString);
 		
 		
-		return operador.aplicarPesos(empresa1, empresa2,unIndicador, anios,peso);
+		return operador.aplicarPesos(empresa1, empresa2,unIndicador, periodoSeleccionado,peso);
 		
 		
 		

@@ -198,16 +198,16 @@ public class VentanaAplicarMetodologia extends JFrame {
 				
 				
 				
-				LinkedList<Empresa> listaOrdenada= (LinkedList<Empresa>) metodologiaAAplicar.aplicarMetodologia(empresasAAnalizar);
+		//		LinkedList<Empresa> listaOrdenada= (LinkedList<Empresa>) metodologiaAAplicar.aplicarMetodologia(empresasAAnalizar);
 							
-				listaOrdenada.forEach(unaEmpresa->{
+			/*	listaOrdenada.forEach(unaEmpresa->{
 					lstResModel.addElement(unaEmpresa.getNombreEmpresa());	
 				});
 				if(listaOrdenada.size()==0){
 					lstResModel.addElement("Ninguna empresa cumple con las condiciones estipuladas");
 				}
 				listaOrdenada.clear();
-								
+				*/				
 			}
 
 			

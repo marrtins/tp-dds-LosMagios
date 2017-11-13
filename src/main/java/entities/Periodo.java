@@ -12,6 +12,9 @@ import entities.Cuenta;
 public class Periodo {
 	
 	@Id
+	@GeneratedValue
+	private int id;
+	
 	private int anio;
 	
 	@OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL)

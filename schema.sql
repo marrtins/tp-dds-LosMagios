@@ -41,10 +41,106 @@ insert into empresa (idEmpresa, nombreEmpresa) values (19, 'BankOfChina');
 insert into empresa (idEmpresa, nombreEmpresa) values (20, 'Citigroup');
 
 -- PERIODOS
-insert into periodo(anio) values(2017);
-insert into periodo(anio) values(2016);
-insert into periodo(anio) values(2015);
-insert into periodo(anio) values(2014);
+
+insert into periodo(anio,id) values(2017,1); -- 2017 para empresa1
+insert into periodo(anio,id) values(2016,2);	-- 2016 para empresa 1
+insert into periodo(anio,id) values(2015,3); -- 2015 para empresa 1
+insert into periodo(anio,id) values(2014,4); -- 2014 ára empresa 1
+
+insert into periodo(anio,id) values(2017,5); -- 2017 para empresa2
+insert into periodo(anio,id) values(2016,6); -- 2016 para empresa2
+insert into periodo(anio,id) values(2015,7); -- 2015 para empresa2
+insert into periodo(anio,id) values(2014,8); -- 2014 para empresa2
+
+insert into periodo(anio,id) values(2017,9); -- 2017 para empresa3
+insert into periodo(anio,id) values(2016,10); -- 2016 para empresa3
+insert into periodo(anio,id) values(2015,11); -- 2015 para empresa3
+insert into periodo(anio,id) values(2014,12); -- 2014 para empresa3
+
+insert into periodo(anio,id) values(2017,13); -- 2017 para empresa3
+insert into periodo(anio,id) values(2016,14); -- 2016 para empresa3
+insert into periodo(anio,id) values(2015,15); -- 2015 para empresa3
+insert into periodo(anio,id) values(2014,16); -- 2014 para empresa3
+
+insert into periodo(anio,id) values(2017,17); -- 2017 para empresa3
+insert into periodo(anio,id) values(2016,18); -- 2016 para empresa3
+insert into periodo(anio,id) values(2015,19); -- 2015 para empresa3
+insert into periodo(anio,id) values(2014,20); -- 2014 para empresa3
+
+insert into periodo(anio,id) values(2017,21); -- 2017 para empresa3
+insert into periodo(anio,id) values(2016,22); -- 2016 para empresa3
+insert into periodo(anio,id) values(2015,23); -- 2015 para empresa3
+insert into periodo(anio,id) values(2014,24); -- 2014 para empresa3
+
+insert into periodo(anio,id) values(2017,25); -- 2017 para empresa3
+insert into periodo(anio,id) values(2016,26); -- 2016 para empresa3
+insert into periodo(anio,id) values(2015,27); -- 2015 para empresa3
+insert into periodo(anio,id) values(2014,28); -- 2014 para empresa3
+
+insert into periodo(anio,id) values(2017,29); -- 2017 para empresa3
+insert into periodo(anio,id) values(2016,30); -- 2016 para empresa3
+insert into periodo(anio,id) values(2015,31); -- 2015 para empresa3
+insert into periodo(anio,id) values(2014,32); -- 2014 para empresa3
+
+insert into periodo(anio,id) values(2017,33); -- 2017 para empresa3
+insert into periodo(anio,id) values(2016,34); -- 2016 para empresa3
+insert into periodo(anio,id) values(2015,35); -- 2015 para empresa3
+insert into periodo(anio,id) values(2014,36); -- 2014 para empresa3
+
+insert into periodo(anio,id) values(2017,37); -- 2017 para empresa3
+insert into periodo(anio,id) values(2016,38); -- 2016 para empresa3
+insert into periodo(anio,id) values(2015,39); -- 2015 para empresa3
+insert into periodo(anio,id) values(2014,40); -- 2014 para empresa3
+
+insert into periodo(anio,id) values(2017,41); -- 2017 para empresa3
+insert into periodo(anio,id) values(2016,42); -- 2016 para empresa3
+insert into periodo(anio,id) values(2015,43); -- 2015 para empresa3
+insert into periodo(anio,id) values(2014,44); -- 2014 para empresa3
+
+insert into periodo(anio,id) values(2017,45); -- 2017 para empresa3
+insert into periodo(anio,id) values(2016,46); -- 2016 para empresa3
+insert into periodo(anio,id) values(2015,47); -- 2015 para empresa3
+insert into periodo(anio,id) values(2014,48); -- 2014 para empresa3
+
+insert into periodo(anio,id) values(2017,49); -- 2017 para empresa3
+insert into periodo(anio,id) values(2016,50); -- 2016 para empresa3
+insert into periodo(anio,id) values(2015,51); -- 2015 para empresa3
+insert into periodo(anio,id) values(2014,52); -- 2014 para empresa3
+
+insert into periodo(anio,id) values(2017,53); -- 2017 para empresa3
+insert into periodo(anio,id) values(2016,54); -- 2016 para empresa3
+insert into periodo(anio,id) values(2015,55); -- 2015 para empresa3
+insert into periodo(anio,id) values(2014,56); -- 2014 para empresa3
+
+insert into periodo(anio,id) values(2017,57); -- 2017 para empresa3
+insert into periodo(anio,id) values(2016,58); -- 2016 para empresa3
+insert into periodo(anio,id) values(2015,59); -- 2015 para empresa3
+insert into periodo(anio,id) values(2014,60); -- 2014 para empresa3
+
+insert into periodo(anio,id) values(2017,61); -- 2017 para empresa3
+insert into periodo(anio,id) values(2016,62); -- 2016 para empresa3
+insert into periodo(anio,id) values(2015,63); -- 2015 para empresa3
+insert into periodo(anio,id) values(2014,64); -- 2014 para empresa3
+
+insert into periodo(anio,id) values(2017,65); -- 2017 para empresa3
+insert into periodo(anio,id) values(2016,66); -- 2016 para empresa3
+insert into periodo(anio,id) values(2015,67); -- 2015 para empresa3
+insert into periodo(anio,id) values(2014,68); -- 2014 para empresa3
+
+insert into periodo(anio,id) values(2017,69); -- 2017 para empresa3
+insert into periodo(anio,id) values(2016,70); -- 2016 para empresa3
+insert into periodo(anio,id) values(2015,71); -- 2015 para empresa3
+insert into periodo(anio,id) values(2014,72); -- 2014 para empresa3
+
+insert into periodo(anio,id) values(2017,73); -- 2017 para empresa3
+insert into periodo(anio,id) values(2016,74); -- 2016 para empresa3
+insert into periodo(anio,id) values(2015,75); -- 2015 para empresa3
+insert into periodo(anio,id) values(2014,76); -- 2014 para empresa3
+
+insert into periodo(anio,id) values(2017,77); -- 2017 para empresa3
+insert into periodo(anio,id) values(2016,78); -- 2016 para empresa3
+insert into periodo(anio,id) values(2015,79); -- 2015 para empresa3
+insert into periodo(anio,id) values(2014,80); -- 2014 para empresa3
 
 -- CUENTAS
 insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (1, 'AC', 3265682);
@@ -126,132 +222,295 @@ insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (67, 'Documentos
 insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (68, 'DocumentosACobrar', 5181443);
 insert into cuenta (idCuenta, nombreCuenta, valorCuenta) values (69, 'DocumentosACobrar', 2383084);
 
+
+
 /*
 DATOS EXTRAS
-*/
-/*
-insert into cuenta_periodo_empresa (idEmpresa, periodos_anio, cuenta_idCuenta) values (4, 2016, 1);
-insert into cuenta_periodo_empresa (idEmpresa, periodos_anio, cuenta_idCuenta) values (8, 2016, 2);
-insert into cuenta_periodo_empresa (idEmpresa, periodos_anio, cuenta_idCuenta) values (7, 2016, 3);
-insert into cuenta_periodo_empresa (idEmpresa, periodos_anio, cuenta_idCuenta) values (5, 2016, 4);
 */
 
 -- EMPRESA_PERIODO
 
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (1, 2014);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (1, 2015);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (1, 2016);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (1, 2017);
-
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (2, 2014);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (2, 2015);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (2, 2016);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (2, 2017);
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (1, 1); -- 2017 p empresa 1
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (1, 2); -- 2016 p empresa 1
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (1, 3); -- 2015 p empresa 1
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (1, 4); -- 2014 p empresa 1
 
 
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (3, 2014);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (3, 2015);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (3, 2016);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (3, 2017);
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (2, 5); -- 2017 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (2, 6); -- 2016 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (2, 7); -- 2015 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (2, 8); -- 2014 p empresa 2
 
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (3, 9); -- 2017 p empresa 3
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (3, 10); -- 2016 p empresa 3
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (3, 11); -- 2015 p empresa 3
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (3, 12); -- 2014 p empresa 3
 
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (4, 2014);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (4, 2015);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (4, 2016);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (4, 2017);
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (4, 13); -- 2017 p empresa 4
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (4, 14); -- 2016 p empresa 4
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (4, 15); -- 2015 p empresa 4
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (4, 16); -- 2014 p empresa 4
 
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (5, 2014);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (5, 2015);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (5, 2016);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (5, 2017);
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (5, 17); -- 2017 p empresa 5
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (5, 18); -- 2016 p empresa 5
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (5, 19); -- 2015 p empresa 5
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (5, 20); -- 2014 p empresa 5
 
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (6, 2014);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (6, 2015);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (6, 2016);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (6, 2017);
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (6, 21); -- 2017 p empresa 6
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (6, 22); -- 2016 p empresa 6
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (6, 23); -- 2015 p empresa 6
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (6, 24); -- 2014 p empresa 6
 
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (7, 2014);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (7, 2015);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (7, 2016);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (7, 2017);
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (7, 25); -- 2017 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (7, 26); -- 2016 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (7, 27); -- 2015 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (7, 28); -- 2014 p empresa 2
 
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (8, 2014);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (8, 2015);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (8, 2016);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (8, 2017);
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (8, 29); -- 2017 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (8, 30); -- 2016 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (8, 31); -- 2015 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (8, 32); -- 2014 p empresa 2
 
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (9, 2014);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (9, 2015);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (9, 2016);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (9, 2017);
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (9, 33); -- 2017 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (9, 34); -- 2016 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (9, 35); -- 2015 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (9, 36); -- 2014 p empresa 2
 
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (10, 2014);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (10, 2015);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (10, 2016);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (10, 2017);
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (10, 37); -- 2017 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (10, 38); -- 2016 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (10, 39); -- 2015 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (10, 40); -- 2014 p empresa 2
 
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (11, 2014);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (11, 2015);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (11, 2016);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (11, 2017);
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (11, 41); -- 2017 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (11, 42); -- 2016 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (11, 43); -- 2015 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (11, 44); -- 2014 p empresa 2
 
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (12, 2014);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (12, 2015);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (12, 2016);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (12, 2017);
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (12, 45); -- 2017 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (12, 46); -- 2016 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (12, 47); -- 2015 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (12, 48); -- 2014 p empresa 2
 
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (13, 2014);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (13, 2015);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (13, 2016);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (13, 2017);
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (13, 49); -- 2017 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (13, 50); -- 2016 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (13, 51); -- 2015 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (13, 52); -- 2014 p empresa 2
 
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (14, 2014);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (14, 2015);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (14, 2016);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (14, 2017);
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (14, 53); -- 2017 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (14, 54); -- 2016 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (14, 55); -- 2015 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (14, 56); -- 2014 p empresa 2
 
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (15, 2014);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (15, 2015);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (15, 2016);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (15, 2017);
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (15, 57); -- 2017 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (15, 58); -- 2016 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (15, 59); -- 2015 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (15, 60); -- 2014 p empresa 2
 
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (16, 2014);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (16, 2015);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (16, 2016);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (16, 2017);
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (16, 61); -- 2017 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (16, 62); -- 2016 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (16, 63); -- 2015 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (16, 64); -- 2014 p empresa 2
 
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (17, 2014);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (17, 2015);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (17, 2016);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (17, 2017);
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (17, 65); -- 2017 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (17, 66); -- 2016 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (17, 67); -- 2015 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (17, 68); -- 2014 p empresa 2
 
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (18, 2014);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (18, 2015);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (18, 2016);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (18, 2017);
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (18, 69); -- 2017 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (18, 70); -- 2016 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (18, 71); -- 2015 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (18, 72); -- 2014 p empresa 2
 
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (19, 2014);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (19, 2015);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (19, 2016);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (19, 2017);
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (19, 73); -- 2017 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (19, 74); -- 2016 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (19, 75); -- 2015 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (19, 76); -- 2014 p empresa 2
 
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (20, 2014);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (20, 2015);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (20, 2016);
-insert into empresa_periodo (Empresa_idEmpresa, periodos_anio) values (20, 2017);
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (20, 77); -- 2017 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (20, 78); -- 2016 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (20, 79); -- 2015 p empresa 2
+insert into empresa_periodo (Empresa_idEmpresa, periodos_id) values (20, 80); -- 2014 p empresa 2
 
 -- PERIODO_CUENTA
-insert into periodo_cuenta (Periodo_anio, cuentas_idCuenta) values (2016, 1);
-insert into periodo_cuenta (Periodo_anio, cuentas_idCuenta) values (2016, 2);
-insert into periodo_cuenta (Periodo_anio, cuentas_idCuenta) values (2016, 3);
-insert into periodo_cuenta (Periodo_anio, cuentas_idCuenta) values (2016, 4);
-insert into periodo_cuenta (Periodo_anio, cuentas_idCuenta) values (2016, 5);
 
-insert into periodo_cuenta (Periodo_anio, cuentas_idCuenta) values (2016, 6);
-insert into periodo_cuenta (Periodo_anio, cuentas_idCuenta) values (2016, 7);
-insert into periodo_cuenta (Periodo_anio, cuentas_idCuenta) values (2016, 8);
-insert into periodo_cuenta (Periodo_anio, cuentas_idCuenta) values (2016, 9);
-insert into periodo_cuenta (Periodo_anio, cuentas_idCuenta) values (2016, 10);
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (14, 1);
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (30, 2); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (26, 3);
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (18, 4); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (46, 5); 
 
-insert into periodo_cuenta (Periodo_anio, cuentas_idCuenta) values (2015, 11);
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (14, 6);
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (30, 7); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (26, 8); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (18, 9); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (46, 10); 
+
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (19, 11); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (47, 12); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (31, 13); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (59, 14); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (63, 15); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (67, 16); 
+
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (19, 17); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (47, 18); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (31, 19); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (59, 20); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (63, 21); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (67, 22); 
+
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (32, 23); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (36, 24); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (40, 25); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (44, 26); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (48, 27); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (52, 28); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (8, 29); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (60, 30); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (64, 31); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (68, 32); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (72, 33); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (76, 34);
+
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (1, 35); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (5, 36); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (9, 37); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (13, 38); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (17, 39); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (21, 40); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (25, 41);
+ 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (1, 42); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (5, 43); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (9, 44); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (13, 45);
+
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (2, 46); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (6, 47); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (10, 48); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (14, 49); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (18, 50); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (22, 51); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (26, 52);
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (30, 53); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (34, 54); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (38, 55); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (42, 56); 
+
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (2, 57); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (6, 58); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (38, 59);
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (30, 60); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (18, 61); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (22, 62); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (26, 63); 
+
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (58, 64); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (62, 65);
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (66, 66); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (70, 67); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (30, 68); 
+insert into periodo_cuenta (Periodo_id, cuentas_idCuenta) values (26, 69);
+
+-- INDICADORES
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (1, '{AC}/{PC}', 'LIQUIDEZCORRIENTE', 'grupo3');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (2, '{AC}-{PC}', 'CAPITALDETRABAJO', 'grupo3');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (3, '{P}/{PN}', 'ENDEUDAMIENTO', 'grupo3');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (4, '{EBIT}/{Ventas}', 'RENTABILIDADOPERATIVA', 'grupo3');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (5, '{EBIT}/{Intereses}', 'COBERTURADEINTERESES', 'grupo3');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (6, '{OCF}-{TDS}', 'COBERTURADEDEUDA', 'grupo3');
+
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (7, '{AC}/{PC}', 'LIQUIDEZCORRIENTE', 'Paula');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (8, '{AC}-{PC}', 'CAPITALDETRABAJO', 'Paula');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (9, '{P}/{PN}', 'ENDEUDAMIENTO', 'Paula');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (10, '{EBIT}/{Ventas}', 'RENTABILIDADOPERATIVA', 'Paula');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (11, '{EBIT}/{Intereses}', 'COBERTURADEINTERESES', 'Paula');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (12, '{OCF}-{TDS}', 'COBERTURADEDEUDA', 'Paula');
+
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (13, '{AC}/{PC}', 'LIQUIDEZCORRIENTE', 'Eze');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (14, '{AC}-{PC}', 'CAPITALDETRABAJO', 'Eze');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (15, '{P}/{PN}', 'ENDEUDAMIENTO', 'Eze');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (16, '{EBIT}/{Ventas}', 'RENTABILIDADOPERATIVA', 'Eze');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (17, '{EBIT}/{Intereses}', 'COBERTURADEINTERESES', 'Eze');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (18, '{OCF}-{TDS}', 'COBERTURADEDEUDA', 'Eze');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (31, '{Caja}', 'CAJA', 'Eze');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (32, '{Reservas}', 'RESERVAS', 'Eze');
+
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (19, '{AC}/{PC}', 'LIQUIDEZCORRIENTE', 'Miguel');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (20, '{AC}-{PC}', 'CAPITALDETRABAJO', 'Miguel');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (21, '{P}/{PN}', 'ENDEUDAMIENTO', 'Miguel');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (22, '{EBIT}/{Ventas}', 'RENTABILIDADOPERATIVA', 'Miguel');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (23, '{EBIT}/{Intereses}', 'COBERTURADEINTERESES', 'Miguel');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (24, '{OCF}-{TDS}', 'COBERTURADEDEUDA', 'Miguel');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (34, '{DeudoresVarios}', 'DEUDORESVARIOS', 'Miguel');
+
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (25, '{AC}/{PC}', 'LIQUIDEZCORRIENTE', 'David');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (26, '{AC}-{PC}', 'CAPITALDETRABAJO', 'David');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (27, '{P}/{PN}', 'ENDEUDAMIENTO', 'David');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (28, '{EBIT}/{Ventas}', 'RENTABILIDADOPERATIVA', 'David');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (29, '{EBIT}/{Intereses}', 'COBERTURADEINTERESES', 'David');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (30, '{OCF}-{TDS}', 'COBERTURADEDEUDA', 'David');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (33, '{DocumentosACobrar}+{Intereses}', 'PODEROSA', 'David');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (35, '{ResultadoDelEjercicio}', 'RESULTADODELEJERCICIO', 'David');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (36, '{Proveedores}', 'PROVEEDORES', 'David');
+
+-- METODOLOGIAS
+insert into metodologia (idMetodologia, nombreMetodologia, usuario) values (1, 'SuperLiquida', 'Paula');
+insert into metodologia (idMetodologia, nombreMetodologia, usuario) values (2, 'Cumplidora', 'Paula');
+insert into metodologia (idMetodologia, nombreMetodologia, usuario) values (3, 'Segura', 'Paula');
+insert into metodologia (idMetodologia, nombreMetodologia, usuario) values (4, 'LaMenosJugada', 'Eze');
+insert into metodologia (idMetodologia, nombreMetodologia, usuario) values (5, 'LaMasRobable', 'Eze');
+insert into metodologia (idMetodologia, nombreMetodologia, usuario) values (6, 'Rica', 'Eze');
+insert into metodologia (idMetodologia, nombreMetodologia, usuario) values (7, 'Bancadora', 'Eze');
+insert into metodologia (idMetodologia, nombreMetodologia, usuario) values (8, 'LaMenosCubierta', 'Miguel');
+insert into metodologia (idMetodologia, nombreMetodologia, usuario) values (9, 'Solvente', 'Miguel');
+insert into metodologia (idMetodologia, nombreMetodologia, usuario) values (10, 'Endeudada', 'Miguel');
+insert into metodologia (idMetodologia, nombreMetodologia, usuario) values (11, 'Poderosa', 'David');
+insert into metodologia (idMetodologia, nombreMetodologia, usuario) values (12, 'SegunResultado', 'David');
+insert into metodologia (idMetodologia, nombreMetodologia, usuario) values (13, 'Endeudada', 'David');
+
+-- CONDICIONES
+insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (1, 3, 'LIQUIDEZCORRIENTE', 'higherThan', 1.5);
+insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (2, 3, 'CAPITALDETRABAJO', 'higherThan', 400000);
+insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (3, 3, 'LIQUIDEZCORRIENTE', 'higherThan', 1.5);
+insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (4, 3, 'CAPITALDETRABAJO', 'higherThan', 400000);
+
+insert into condicionnotaxativa (id, anios, indicadorString, operadorString, peso) values (1, 3, 'ENDEUDAMIENTO', 'lowest', 3);
+insert into condicionnotaxativa (id, anios, indicadorString, operadorString, peso) values (2, 3, 'CAJA', 'highest', 3);
+insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (5, 3, 'CAPITALDETRABAJO', 'higherThan', 420000);
+insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (6, 3, 'RESERVAS', 'higherThan', 430000);
+insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (7, 3, 'CAPITALDETRABAJO', 'higherThan', 420000);
+insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (8, 3, 'RESERVAS', 'higherThan', 430000);
+insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (9, 3, 'COBERTURADEDEUDA', 'higherThan', 1);
+
+insert into condicionnotaxativa (id, anios, indicadorString, operadorString, peso) values (3, 3, 'COBERTURADEINTERES', 'lowest', 3);
+insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (10, 3, 'ENDEUDAMIENTO', 'lowerThan', 1);
+insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (11, 3, 'DEUDORESVARIOS', 'lowerThan', 7500250);
+
+insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (12, 3, 'PODEROSA', 'higherThan', 5000000);
+insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (13, 3, 'RESULTADODELEJERCICIO', 'higherThan', 8000000);
+insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (14, 3, 'PROVEEDORES', 'lowerThan', 1400000);
+
+-- METODOLOGIA_CONDICIONES
+
+insert into metodologia_condiciontaxativa (Metodologia_idMetodologia, cTaxativas_id) values (1, 1);
+insert into metodologia_condiciontaxativa (Metodologia_idMetodologia, cTaxativas_id) values (2, 2);
+insert into metodologia_condiciontaxativa (Metodologia_idMetodologia, cTaxativas_id) values (3, 3);
+insert into metodologia_condiciontaxativa (Metodologia_idMetodologia, cTaxativas_id) values (3, 4);
+
+insert into metodologia_condicionnotaxativa (Metodologia_idMetodologia, cNoTaxativas_id) values (4, 1);
+insert into metodologia_condicionnotaxativa (Metodologia_idMetodologia, cNoTaxativas_id) values (5, 2);
+insert into metodologia_condiciontaxativa (Metodologia_idMetodologia, cTaxativas_id) values (6, 5);
+insert into metodologia_condiciontaxativa (Metodologia_idMetodologia, cTaxativas_id) values (6, 6);
+insert into metodologia_condiciontaxativa (Metodologia_idMetodologia, cTaxativas_id) values (7, 7);
+insert into metodologia_condiciontaxativa (Metodologia_idMetodologia, cTaxativas_id) values (7, 8);
+insert into metodologia_condiciontaxativa (Metodologia_idMetodologia, cTaxativas_id) values (7, 9);
+
+insert into metodologia_condicionnotaxativa (Metodologia_idMetodologia, cNoTaxativas_id) values (8, 3);
+insert into metodologia_condiciontaxativa (Metodologia_idMetodologia, cTaxativas_id) values (9, 10);
+insert into metodologia_condiciontaxativa (Metodologia_idMetodologia, cTaxativas_id) values (10, 11);
+
+insert into metodologia_condiciontaxativa (Metodologia_idMetodologia, cTaxativas_id) values (11, 12);
+insert into metodologia_condiciontaxativa (Metodologia_idMetodologia, cTaxativas_id) values (12, 13);
+insert into metodologia_condiciontaxativa (Metodologia_idMetodologia, cTaxativas_id) values (13, 14);
 

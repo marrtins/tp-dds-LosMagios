@@ -442,8 +442,8 @@ insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsu
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (16, '{EBIT}/{VENTAS}', 'RENTABILIDADOPERATIVA', 'Eze');
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (17, '{EBIT}/{INTERESES}', 'COBERTURADEINTERESES', 'Eze');
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (18, '{OCF}-{TDS}', 'COBERTURADEDEUDA', 'Eze');
- insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (31, '{CAJA}', 'CAJA', 'Eze');
- insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (32, '{RESERV}', 'RESERVAS', 'Eze');
+-- insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (31, '{CAJA}', 'CAJA', 'Eze');
+-- insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (32, '{RESERV}', 'RESERVAS', 'Eze');
 
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (19, '{AC}/{PC}', 'LIQUIDEZCORRIENTE', 'Miguel');
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (20, '{AC}-{PC}', 'CAPITALDETRABAJO', 'Miguel');
@@ -451,7 +451,7 @@ insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsu
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (22, '{EBIT}/{VENTAS}', 'RENTABILIDADOPERATIVA', 'Miguel');
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (23, '{EBIT}/{INTERESES}', 'COBERTURADEINTERESES', 'Miguel');
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (24, '{OCF}-{TDS}', 'COBERTURADEDEUDA', 'Miguel');
- insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (34, '{DEUDORESVARIOS}', 'DEUDORESVARIOS', 'Miguel');
+-- insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (34, '{DEUDORESVARIOS}', 'DEUDORESVARIOS', 'Miguel');
 
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (25, '{AC}/{PC}', 'LIQUIDEZCORRIENTE', 'David');
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (26, '{AC}-{PC}', 'CAPITALDETRABAJO', 'David');
@@ -459,9 +459,9 @@ insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsu
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (28, '{EBIT}/{VENTAS}', 'RENTABILIDADOPERATIVA', 'David');
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (29, '{EBIT}/{INTERESES}', 'COBERTURADEINTERESES', 'David');
 insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (30, '{OCF}-{TDS}', 'COBERTURADEDEUDA', 'David');
-insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (33, '{DOCUMENTOSACOBRAR}+{INTERESES}', 'PODER', 'David');
- insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (35, '{ResultadoDelEjercicio}', 'RESULTADODELEJERCICIO', 'David');
- insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (36, '{Proveedores}', 'PROVEEDORES', 'David');
+insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (31, '{DOCUMENTOSACOBRAR}+{INTERESES}', 'PODER', 'David');
+-- insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (31, '{ResultadoDelEjercicio}', 'RESULTADODELEJERCICIO', 'David');
+-- insert into indicador (idIndicador, calculoIndicador, nombreIndicador, nombreUsuario) values (32, '{Proveedores}', 'PROVEEDORES', 'David');
 
 -- METODOLOGIAS
 insert into metodologia (idMetodologia, nombreMetodologia, usuario) values (1, 'SuperLiquida', 'Paula');
@@ -485,12 +485,12 @@ insert into condiciontaxativa (id, anios, indicadorString, operadorString, valor
 insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (4, 3, 'CAPITALDETRABAJO', 'higherThan', 400000);
 
 insert into condicionnotaxativa (id, anios, indicadorString, operadorString, peso) values (1, 3, 'ENDEUDAMIENTO', 'lowest', 3);
-insert into condicionnotaxativa (id, anios, indicadorString, operadorString, peso) values (2, 3, 'Caja', 'highest', 3);
-insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (5, 3, 'Capital', 'higherThan', 4200000);
-insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (6, 3, 'Reservas', 'higherThan', 4300000);
+insert into condicionnotaxativa (id, anios, indicadorString, operadorString, peso) values (2, 3, 'CAJA', 'highest', 3);
+insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (5, 3, 'CAPITAL', 'higherThan', 4200000);
+insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (6, 3, 'RESERVAS', 'higherThan', 4300000);
 insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (7, 3, 'CAPITALDETRABAJO', 'higherThan', 420000);
 insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (8, 3, 'RESERVAS', 'higherThan', 430000);
-insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (9, 3, 'ENDEUDAMIENTO', 'lowerThan', 1);
+insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (9, 3, 'ENDEUDAMIENTO', 'higherThan', 1);
 
 insert into condicionnotaxativa (id, anios, indicadorString, operadorString, peso) values (3, 3, 'COBERTURADEINTERESES', 'lowest', 3);
 insert into condiciontaxativa (id, anios, indicadorString, operadorString, valorComparacion) values (10, 3, 'ENDEUDAMIENTO', 'lowerThan', 1);

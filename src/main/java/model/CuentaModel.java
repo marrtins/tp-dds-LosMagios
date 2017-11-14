@@ -42,7 +42,10 @@ public class CuentaModel {
 	
 public void boot(){
 		
-		
+	empresas.clear();
+	indicadores.clear();
+	metodologias.clear();
+	cuentas.clear();
 	
 	DataCollector persistence = new DataCollector();
 	
@@ -80,7 +83,7 @@ public void boot(){
 		
 		
 
-	}
+}
 	
 	public void addCuenta(Cuenta cuenta){
 		this.cuentas.add(cuenta);

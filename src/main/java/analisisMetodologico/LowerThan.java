@@ -22,7 +22,7 @@ public class LowerThan extends OperadorTaxativo{
 
 		Double valorIndicador = unaEmpresa.getValorIndicador( unIndicador,periodoSeleccionado);
 		
-		return valorIndicador > valorComparacion;
+		return valorIndicador < valorComparacion;
 	}
 
 }

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>Indicadores</title>
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+   <link rel="stylesheet" type="text/css" href="/css/indicadores.css">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <form role="form" action="/inicio/{{usuario}}" method="POST">
+              <button class="navbar-brand" style="border-color: transparent; background-color: transparent;">¿Dónde Invierto?</button>
+          </form>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+            	 <form role="form" action="/inicio/{{usuario}}/cuenta" method="POST">
+              <button class="nav-link" style="border-color: transparent;background-color: transparent;">Cuentas</button>
+          </form>
+            </li>
+            <li class="nav-item">
+            	 <form role="form" action="/inicio/{{usuario}}/indicador" method="POST">
+              <button class="nav-link" style="border-color: transparent; background-color: transparent;">Indicadores</button>
+          </form>
+            </li>
+               <li class="nav-item">
+               <form role="form" action="/inicio/{{usuario}}/metodologia" method="POST">
+              <button class="nav-link" style="border-color: transparent; background-color: transparent;margin-right: 15px;">Metodologías</button>
+            </li>
+        </form>
+          <li class="nav-item">
+               <form role="form" action="/" method="GET">
+              <button class="nav-link" style="border-color: transparent; background-color: transparent;">Cerrar Sesión</button>
+            </li>
+        </form>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Jumbotron Header -->
+      <header class="jumbotron my-4" id="jumbotron">
+        <h1 class="display-3" style="font-weight: bolder;">Indicadores</h1>
+        <p class="lead"  style="font-weight: bolder;">Por favor seleccione una opción</p>
+      </header>
+
+      <!-- Page Features -->
+      
+      <div class="row text-center">
+        <div class="col-lg-3 col-md-6 mb-4" id="columna">
+          <div class="card">
+            <img class="card-img-top" src="http://s3-eu-west-1.amazonaws.com/rankia/images/valoraciones/0023/9663/13.png?1465999211" style="width:500; height:325;" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Crear Indicador</h4>
+              <p class="card-text">Cree nuevo indicador</p>
+            </div>
+            <div class="card-footer">
+              <form role="form" action="/inicio/{{usuario}}/indicador/crearIndicador" method="POST">
+              <button  class="btn btn-success">Ingresar</button>
+            </form>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img class="card-img-top" src="http://www.mujeresdeempresa.com/wp-content/uploads/2001/05/data-analytics.jpg"  style="width:500; height:325;" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Aplicar Indicadores</h4>
+              <p class="card-text">Aplique sus indicadores para un mejor análisis de sus empresas</p>
+            </div>
+            <div class="card-footer">
+               <form role="form" action="/inicio/{{usuario}}/indicador/aplicarIndicadores" method="POST">
+              <button  class="btn btn-success">Ingresar</button>
+            </form>
+            </div>
+          </div>
+        </div>
+    
+    </div>
+   
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Dónde Invierto &copy; 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+  </body>
+
+</html>

@@ -188,13 +188,7 @@ public class DataCollector {
 			return true;
 		}
 		else{
-			Exception e = new Exception();
-			try {
-				throw new ErrorLexico(e);
-			} catch (ErrorLexico e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
+			
 			return false;
 		}
 	}

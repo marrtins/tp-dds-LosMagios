@@ -141,6 +141,14 @@ public class CondicionNoTaxativa implements TipoCondicion {
 			e.printStackTrace();
 		}
 		
+		if(unIndicador==null) {
+			Indicador nuevoIndicador = new Indicador();
+			nuevoIndicador.setCalculoIndicador("{"+indicadorString+"}");
+			nuevoIndicador.setNombreIndicador(indicadorString);
+			unIndicador = nuevoIndicador;
+		}
+		
+		
 		operador=creador.crearOperadorNoTaxativo(operadorString);
 		
 		
